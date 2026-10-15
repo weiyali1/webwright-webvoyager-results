@@ -28,6 +28,20 @@ tasks.
 - Unsuccessful tasks: 14
 - Success rate: 97.72%
 
+## Public evidence
+
+- [`results.csv`](results.csv) contains the reported result for every task.
+- [`manifest.json`](manifest.json) records the selected run and judge-result
+  counts for all 615 tasks.
+- [Full task artifacts](https://github.com/weiyali1/webwright-webvoyager-results/releases/tag/webvoyager-2026-10-15)
+  are split into 15 website archives. Each task contains its `task.json` and
+  `final_runs` evidence, including final answers and screenshots.
+- [`SHA256SUMS`](SHA256SUMS) provides checksums for all evidence archives.
+
+Published copies redact local filesystem paths, company model endpoints, and
+credential-shaped values. Compiled Python cache files are omitted. Original
+evaluation outputs remain unchanged.
+
 ## Reporting
 
 - Reporting organization: Independent
