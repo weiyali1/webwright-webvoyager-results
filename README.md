@@ -33,6 +33,8 @@ this evaluation.
 
 ## Public evidence
 
+- [`tasks/`](tasks/) contains the 15 website JSON files defining all 615 tasks
+  evaluated in this WebVoyager-derived variant.
 - [`results.csv`](results.csv) contains the reported result for every task.
 - [`manifest.json`](manifest.json) records the selected run and judge-result
   counts for all 615 tasks.

@@ -6,6 +6,8 @@ The evaluation used all 615 tasks from the WebVoyager-derived
 [`browser-control-fable-5`](https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5)
 variant. This variant was produced through task filtering and task updates.
 Dates in stale tasks were additionally updated before this evaluation.
+The exact task definitions used for the run are published in the
+[`tasks`](tasks/) directory.
 
 ## System
 
