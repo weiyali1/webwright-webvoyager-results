@@ -6,13 +6,16 @@
 | --- | --- | --- | --- |
 | Webwright + Qwen3.8-Max | Independent | browser-control-fable-5 | 601/615 (97.72%) |
 
-This is a self-reported system-level result on the full 615-task
-`browser-control-fable-5` task set. Dates were additionally updated for stale
-tasks.
+This is a self-reported system-level result on all 615 tasks in
+`browser-control-fable-5`, a WebVoyager-derived variant produced through task
+filtering and task updates. Dates were additionally updated for stale tasks in
+this evaluation.
 
 ## Evaluation setup
 
 - Benchmark source: <https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5>
+- Benchmark variant: 615 WebVoyager-derived tasks after task filtering and task
+  updates.
 - Evaluation type: self-reported system-level evaluation.
 - Evaluator: a custom critical-point judge using task critical points,
   screenshots, and execution logs.

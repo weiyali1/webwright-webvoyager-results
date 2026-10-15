@@ -2,9 +2,10 @@
 
 ## Task set
 
-The evaluation used all 615 tasks from the
+The evaluation used all 615 tasks from the WebVoyager-derived
 [`browser-control-fable-5`](https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5)
-task set. Dates in stale tasks were updated before evaluation.
+variant. This variant was produced through task filtering and task updates.
+Dates in stale tasks were additionally updated before this evaluation.
 
 ## System
 
