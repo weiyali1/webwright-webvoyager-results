@@ -16,15 +16,10 @@ The evaluated system was Webwright + Qwen3.8-Max.
 
 ## Judge
 
-The result was evaluated with a custom critical-point judge. The judge used
-the task's critical points together with screenshots, execution logs, final
-answers, and saved evidence to determine whether the task was completed
-successfully.
-
-The judge verdict for an internal final execution is stored in
-`final_runs/run_NNN/judge_result.json`. A `predicted_label` value of `1`
-indicates that the execution satisfied the required critical points, while a
-value of `0` indicates failure.
+The result was evaluated with a custom critical-point judge. The judge used the task's critical points together with screenshots, execution logs, final answers, and saved evidence to determine whether the task was completed successfully.
+For each task, the execution agent generated a task-specific critical-point list and judging prompts based on the task definition. 
+In stage one, the judge reviewed each execution screenshot individually. For each screenshot, it described which critical points the image supported or contradicted and assigned an evidence score from 1 to 5. In stage two, the judge received the original screenshots, the per-image analyses, and the corresponding execution log, including the final answer recorded in that log. It checked the critical points item by item. The judging prompt required all necessary critical points to be satisfied for a success verdict. The per-image evidence scores were not summed or averaged to produce the final verdict.
+Each execution's verdict is stored in final_runs/run_NNN/judge_result.json: predicted_label: 1 means automatic judge acceptance, 0 means judge rejection, and null means the verdict could not be parsed.
 
 ## Internal final-run workflow
 
