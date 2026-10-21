@@ -17,8 +17,10 @@ The evaluated system was Webwright + Qwen3.8-Max.
 ## Judge
 
 The result was evaluated with a custom critical-point judge. The judge used the task's critical points together with screenshots, execution logs, final answers, and saved evidence to determine whether the task was completed successfully.
+
 For each task, the execution agent generated a task-specific critical-point list and judging prompts based on the task definition. 
 In stage one, the judge reviewed each execution screenshot individually. For each screenshot, it described which critical points the image supported or contradicted and assigned an evidence score from 1 to 5. In stage two, the judge received the original screenshots, the per-image analyses, and the corresponding execution log, including the final answer recorded in that log. It checked the critical points item by item. The judging prompt required all necessary critical points to be satisfied for a success verdict. The per-image evidence scores were not summed or averaged to produce the final verdict.
+
 Each execution's verdict is stored in final_runs/run_NNN/judge_result.json: predicted_label: 1 means automatic judge acceptance, 0 means judge rejection, and null means the verdict could not be parsed.
 
 ## Internal final-run workflow
@@ -40,14 +42,29 @@ record contained a verified final execution whose `judge_result.json` had
 audit evidence. Regardless of the number of internal `run_NNN` directories,
 each benchmark task contributed at most one result to the reported score.
 
-## Recovery, self-check, and reruns
+## Within-task self-healing
 
-Every task included an internal self-healing and self-check workflow. A failed
-final-script verification could trigger an internal revision followed by
-another clean execution within that same task-level workflow.
+Within a task-level execution, the agent could revise its final script after
+an unsuccessful verification and perform another clean execution. These
+sequential executions are stored in `final_runs/run_NNN/`. They belong to the
+same task-level execution record and are part of the system's internal
+self-healing and verification workflow; they are not separate benchmark
+submissions.
 
-Tasks affected by stale dates, model API errors, or browser crashes were also
-rerun. 
+## Task-level reruns for external failures
+
+Separately from within-task self-healing, a task could be rerun at the
+task level when its execution was affected by a stale date, a model API error,
+or a browser crash. A task-level rerun creates another execution record for
+the same benchmark task and may itself contain one or more internal
+`final_runs/run_NNN/` executions.
+
+Each unique `task_id` contributed at most one result to the score. For each
+task, the scoring script selected the newest task-level record containing at
+least one internal judge result with `predicted_label: 1`; if no record
+contained a passing judge result, it selected the newest record. The task was
+counted as accepted if the selected record contained at least one such
+passing internal execution.
 
 ## Score calculation
 
