@@ -1,0 +1,151 @@
+{
+  "task_id": "Google Search--3",
+  "website": "Google Search",
+  "task": "Show me a list of comedy movies, sorted by user ratings. Show me the Top 5 movies.",
+  "task_record": "Google Search--3/Google Search--3_20261025_105621",
+  "task_definition_sha256": "9660b1473649aad582f0ad881fd7db6cdc9d7f66e6552a5efbb03c1ebe78efff",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google Search--3/Google Search--3_20261025_105621"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "final_response.txt with final_script_log.txt fallback",
+  "answer": "Top 5 comedy movies (Google's top-rated comedy movies list, sorted by user ratings, from the Google Search AI Overview 'Top-Rated and Classic Comedies'): 1. The Naked Gun: From the Files of Police Squad! (1988); 2. Groundhog Day (1993); 3. Young Frankenstein (1974); 4. Monty Python and the Holy Grail (1975); 5. Annie Hall (1977)",
+  "answer_source": "final_response.txt",
+  "screenshots": [
+    {
+      "path": "Google Search--3/Google Search--3_20261025_105621/final_runs/run_002/screenshots/final_execution_1_search.png",
+      "sha256": "15f2e2b589de5ebd30ec2f3934793c8f8de7176c68cb3d0a581dec356f9c0d9c"
+    },
+    {
+      "path": "Google Search--3/Google Search--3_20261025_105621/final_runs/run_002/screenshots/final_execution_2_top_rated_list.png",
+      "sha256": "06239d2f9d7490bf7fe417edb53a9a6ecf52799691635cf0f128d87d67e39056"
+    },
+    {
+      "path": "Google Search--3/Google Search--3_20261025_105621/final_runs/run_002/screenshots/final_execution_3_top5_visible.png",
+      "sha256": "06239d2f9d7490bf7fe417edb53a9a6ecf52799691635cf0f128d87d67e39056"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "76d4114fe5ca358f5416d52a98d50c57e76aa1cc6624ed015d65ada9e315c080",
+  "fingerprint": "033e5a59affd57477b26d62539212ceac53c8636eb5b146b6eaf7e7cbc21af69",
+  "evaluated_at": "2026-10-26T09:13:10.150703+00:00",
+  "status": "failure",
+  "predicted_label": 0,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\nThe instruction has two components:\n1. Show a list of comedy movies **sorted by user ratings**\n2. Show the **Top 5 movies**\n\n## Screenshot Analysis\n- The screenshots show a Google search for \"comedy movies\" with an AI Overview section titled **\"Top-Rated and Classic Comedies\"** listing: The Naked Gun (1988), Groundhog Day (1993), Young Frankenstein (1974), Monty Python and the Holy Grail (1975), and Annie Hall (1977), followed by a \"Fan-Favorite Modern Comedies\" section.\n- **No user ratings are displayed anywhere** in the screenshots (no numeric scores such as 8.2, 7.9, etc.).\n- The AI Overview list is an AI-generated curated mix of \"Top-Rated **and Classic**\" comedies — not an actual list sorted by user ratings. For example, the description for The Naked Gun cites \"classic critic lists\" (critic-based, not user ratings), and the inclusion of \"classics\" indicates the ordering is editorial/curated rather than a user-rating sort.\n- The IMDb result visible in the search (\"Best comedy movies\": Step Brothers, White Chicks, The Hot Chick...) is clearly not sorted by user ratings either, and the agent did not navigate to IMDb or any page where comedy movies are actually sorted by user rating.\n\n## Response Analysis\n- The response does list 5 comedy movies, so the \"Top 5\" portion is superficially present.\n- However, the response claims the list is \"sorted by user ratings,\" which is not supported by the screenshots — the source list is an AI Overview summary of \"Top-Rated and Classic Comedies,\" with no user ratings shown or used for sorting. In fact, by actual user ratings, this ordering would not hold (e.g., Monty Python and the Holy Grail rates higher than The Naked Gun).\n\n## Conclusion\nWhile the agent did surface a list of 5 comedy movies, the core requirement — a list **sorted by user ratings** — was not fulfilled. No user ratings appear in the results, no sorting by user ratings was performed, and the list presented is an AI-generated blend of \"top-rated and classic\" films rather than a user-rating-ranked list. The task was accomplished only in a loose, approximate sense, not as instructed.\n\n**Verdict: NOT SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 5112,
+    "completion_tokens": 3301,
+    "total_tokens": 8413,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2793
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-26T09:13:10.495764+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 3,
+  "image_transports": [
+    {
+      "path": "Google Search--3/Google Search--3_20261025_105621/final_runs/run_002/screenshots/final_execution_1_search.png",
+      "source_sha256": "15f2e2b589de5ebd30ec2f3934793c8f8de7176c68cb3d0a581dec356f9c0d9c",
+      "source_bytes": 396749,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 190103,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "876a1c0679f0ea42d4ee065d8545afeb91b59fc08e2d1119520b69ef552b193a"
+    },
+    {
+      "path": "Google Search--3/Google Search--3_20261025_105621/final_runs/run_002/screenshots/final_execution_2_top_rated_list.png",
+      "source_sha256": "06239d2f9d7490bf7fe417edb53a9a6ecf52799691635cf0f128d87d67e39056",
+      "source_bytes": 425521,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 191562,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "bbea55b092e9afb471c6f71caf89546ba8c5452de6f7ab0440db859853acad3c"
+    },
+    {
+      "path": "Google Search--3/Google Search--3_20261025_105621/final_runs/run_002/screenshots/final_execution_3_top5_visible.png",
+      "source_sha256": "06239d2f9d7490bf7fe417edb53a9a6ecf52799691635cf0f128d87d67e39056",
+      "source_bytes": 425521,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 191562,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "bbea55b092e9afb471c6f71caf89546ba8c5452de6f7ab0440db859853acad3c"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 3,
+  "request_json_bytes": 767447,
+  "response_id": "89e3bc27-8d49-4104-8b69-615b808e67d8",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2191,
+    "reasoning_content_chars": 12017
+  }
+}

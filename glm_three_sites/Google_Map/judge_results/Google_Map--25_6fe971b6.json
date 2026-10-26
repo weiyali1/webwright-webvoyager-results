@@ -1,0 +1,181 @@
+{
+  "task_id": "Google Map--25",
+  "website": "Google Map",
+  "task": "Search for a parking facility near the Fox Theater in Detroit that closes at night.",
+  "task_record": "Google Map--25/Google Map--25_20261025_010745",
+  "task_definition_sha256": "965d00a88dd5c30b3d8825de08fec400cde9a68f02feff9f692a7e03541c2247",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google Map--25/Google Map--25_20261025_010745"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "final_response.txt with final_script_log.txt fallback",
+  "answer": "SP+ Parking (25 W Elizabeth St, Detroit, MI 48201) — a parking facility near the Fox Theater in Detroit that closes at night. Its Google Maps listing shows 已打烊 (Closed) · 開始營業時間：週一00:00 (reopens Monday 00:00), while nearby Comerica Garage, The Z Garage, and Tigers Parking Garage are open 24 hours.",
+  "answer_source": "final_response.txt",
+  "screenshots": [
+    {
+      "path": "Google Map--25/Google Map--25_20261025_010745/final_runs/run_002/screenshots/final_execution_1_maps_home_search_ready.png",
+      "sha256": "b0b20ed5abba2d235da64454c2e82a2eff8d890b95290c12be39bd554a1099b9"
+    },
+    {
+      "path": "Google Map--25/Google Map--25_20261025_010745/final_runs/run_002/screenshots/final_execution_2_parking_results_fox_theater.png",
+      "sha256": "88ecc6d62eac08072dbd694c6de7281654504d3d44a01ec32e368b22ade5197f"
+    },
+    {
+      "path": "Google Map--25/Google Map--25_20261025_010745/final_runs/run_002/screenshots/final_execution_3_identify_closes_at_night.png",
+      "sha256": "2f3a7c58269cb8294e66e861f499a3a5437f212af71847a231aeda9dfd1e5d1f"
+    },
+    {
+      "path": "Google Map--25/Google Map--25_20261025_010745/final_runs/run_002/screenshots/final_execution_4_detail_hours_closes_night.png",
+      "sha256": "aa4feb70961af5cdb34cce5835f669a937ef6ab647539a5505bb6dfee6bfa9e3"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "0a76dd8ba190d7fe89459a36635266c57bd4b2cc583d5f525ebdd2ff0da5d40d",
+  "fingerprint": "c7fe439dced812f183efcdfa0d7e07c6e55e3348539143af7a4fc8e4a9864d43",
+  "evaluated_at": "2026-10-26T09:53:12.627606+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\n1. Search for a parking facility near the Fox Theater in Detroit\n2. The facility should close at night (i.e., not be open 24 hours)\n\n## Screenshot Evidence Review\n\n**Screenshot 1:** Initial Google Maps page (starting state, showing Hong Kong region).\n\n**Screenshot 2:** A search for \"parking near Fox Theater Detr...\" was performed. Results list appears with multiple parking options: Comerica Garage (24小時營業 / 24 hours), PARKING at Fox Theatre, The Z Garage (24小時營業), Parking at 125 W Elizabeth St, Olympic parking, and SP+ Parking at 25 W Elizabeth St. The map displays the Fox Theatre area in Detroit with numerous parking pins.\n\n**Screenshot 3:** Scrolled results show **SP+ Parking** (4.4★, 8 reviews) at 25 W Elizabeth St with the status \"已打烊 · 開始營業時間：週一 00:00\" (Closed · Opens Monday 00:00) — confirming this facility is not open 24 hours and does close, unlike Comerica Garage and The Z Garage which are marked as 24-hour facilities.\n\n**Screenshot 4:** The SP+ Parking detail page confirms:\n- Name: SP+ Parking (4.4★, 8 reviews, 停車場/parking lot)\n- Address: 25 W Elizabeth St, Detroit, MI 48201\n- Status: 已打烊 · 開始營業時間：週一 00:00 (Closed · reopens Monday 00:00)\n- The map shows the red pin (SP+ Parking) located very close to the Fox Theatre pin, verifying proximity.\n\n## Response Consistency Check\nThe result response accurately matches the screenshots: SP+ Parking at 25 W Elizabeth St is identified as a parking facility near Fox Theater that closes at night (shown as Closed/reopening Monday 00:00), while nearby alternatives (Comerica Garage, The Z Garage, Tigers Parking Garage) are open 24 hours. No contradictions exist between the response and the visual evidence.\n\n## Conclusion\nThe task was fully accomplished: a search was conducted for parking near the Fox Theater in Detroit, and a facility (SP+ Parking) that closes at night was successfully identified and verified with its closed status displayed.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 6798,
+    "completion_tokens": 1614,
+    "total_tokens": 8412,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1094
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-26T09:53:13.026443+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 4,
+  "image_transports": [
+    {
+      "path": "Google Map--25/Google Map--25_20261025_010745/final_runs/run_002/screenshots/final_execution_1_maps_home_search_ready.png",
+      "source_sha256": "b0b20ed5abba2d235da64454c2e82a2eff8d890b95290c12be39bd554a1099b9",
+      "source_bytes": 548881,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        937
+      ],
+      "transmitted_bytes": 237669,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "955d41078ff9516ba33c3f4fa5cc4d94cdea9a21d206460112c0a9ca73d3c7fa"
+    },
+    {
+      "path": "Google Map--25/Google Map--25_20261025_010745/final_runs/run_002/screenshots/final_execution_2_parking_results_fox_theater.png",
+      "source_sha256": "88ecc6d62eac08072dbd694c6de7281654504d3d44a01ec32e368b22ade5197f",
+      "source_bytes": 631733,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        937
+      ],
+      "transmitted_bytes": 326016,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "152ebe965fb4fcd1c05cd92ebd62e9a1cfe5880757b584ff70a1d308c3b6cc0a"
+    },
+    {
+      "path": "Google Map--25/Google Map--25_20261025_010745/final_runs/run_002/screenshots/final_execution_3_identify_closes_at_night.png",
+      "source_sha256": "2f3a7c58269cb8294e66e861f499a3a5437f212af71847a231aeda9dfd1e5d1f",
+      "source_bytes": 623910,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        937
+      ],
+      "transmitted_bytes": 310150,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "cb3f47f6928fb023a07b075949593cc7387efcd1d3076ccce848d26d3b314ac6"
+    },
+    {
+      "path": "Google Map--25/Google Map--25_20261025_010745/final_runs/run_002/screenshots/final_execution_4_detail_hours_closes_night.png",
+      "source_sha256": "aa4feb70961af5cdb34cce5835f669a937ef6ab647539a5505bb6dfee6bfa9e3",
+      "source_bytes": 631140,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        937
+      ],
+      "transmitted_bytes": 276962,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "dd84cc29cadf51a2225c9c28230732fae7f3a20f25f3e672c7b63c40b75061c3"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 4,
+  "request_json_bytes": 1537611,
+  "response_id": "e47137d2-f8bc-4439-aba5-89db8c096de4",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1984,
+    "reasoning_content_chars": 4180
+  }
+}

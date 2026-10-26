@@ -1,0 +1,220 @@
+{
+  "task_id": "Google Map--19",
+  "website": "Google Map",
+  "task": "I will arrive Pittsburgh Airport soon. Provide the name of the Hilton hotel closest to the airport. Then, tell me the the walking time to the nearest supermarket from the hotel.",
+  "task_record": "Google Map--19/Google Map--19_20261024_230701",
+  "task_definition_sha256": "23a3b4873cda34fd1503324cad23a9857bd716e11fd401de63c9500e83686575",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google Map--19/Google Map--19_20261024_230701"
+  ],
+  "final_run": "run_003",
+  "answer_input_mode": "final_response.txt with final_script_log.txt fallback",
+  "answer": "Final Response: The Hilton hotel closest to Pittsburgh Airport is Hilton Garden Inn Pittsburgh Airport. The walking time from the hotel to the nearest supermarket (bp) is 4 min.",
+  "answer_source": "final_response.txt",
+  "screenshots": [
+    {
+      "path": "Google Map--19/Google Map--19_20261024_230701/final_runs/run_003/screenshots/final_execution_1_airport_anchored.png",
+      "sha256": "b0d7c80cb7404c00d745cbbc911b1e328a974e062fe15843ee6b7f5bf27d0e44"
+    },
+    {
+      "path": "Google Map--19/Google Map--19_20261024_230701/final_runs/run_003/screenshots/final_execution_2_hilton_hotel_results.png",
+      "sha256": "7f291184637efc87197e9a8b96366a8017e9e8b70d042cec6ff2f62cd4120e38"
+    },
+    {
+      "path": "Google Map--19/Google Map--19_20261024_230701/final_runs/run_003/screenshots/final_execution_3_closest_hilton_place.png",
+      "sha256": "909073f9988cbda0ea6bf92d7db1130f1a18989b031c9ca56b5cd74d427c7d93"
+    },
+    {
+      "path": "Google Map--19/Google Map--19_20261024_230701/final_runs/run_003/screenshots/final_execution_4_supermarkets_near_hotel.png",
+      "sha256": "b04cc40a501cdf284222119f28dc1621ebd7bb206897e95a41369e5a68490fba"
+    },
+    {
+      "path": "Google Map--19/Google Map--19_20261024_230701/final_runs/run_003/screenshots/final_execution_5_walking_time.png",
+      "sha256": "f9b96a640875cec88053c16d00dc2b4d7fb4e110a1f0218bb6a585f18c29a963"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "f86e8b13ce467c9269fdc3ac07416d06337e4c3cd708e516ec3d410bd85154d8",
+  "fingerprint": "02e92b839fa98c5adf313ee776566b637390dacdc1ace179d56ad4e1bb649a23",
+  "evaluated_at": "2026-10-26T09:46:28.870211+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\n1. **Identify the Hilton hotel closest to Pittsburgh Airport**\n2. **Provide the walking time to the nearest supermarket from that hotel**\n\n## Screenshot Analysis\n\n**Screenshot 1:** Pittsburgh International Airport was searched on Google Maps, establishing the starting point.\n\n**Screenshot 2:** A search for \"Hilton hotels near Pittsburgh\" was performed. Results include:\n- Hilton Garden Inn Pittsburgh Airport (HK$1,351)\n- DoubleTree by Hilton Hotel Pittsburgh Airport (HK$1,425)\n- Hilton Garden Inn Pittsburgh Airport South-Robinson Mall (HK$1,428)\n- Homewood Suites by Hilton Pittsburgh Airport Robinson Mall (HK$1,992)\n\nOn the map, the Hilton Garden Inn Pittsburgh Airport marker (HK$1,351) appears positioned closest to the Pittsburgh International Airport label, supporting the choice of this hotel as the closest Hilton property.\n\n**Screenshot 3:** The Hilton Garden Inn Pittsburgh Airport details page is displayed, confirming the hotel selection.\n\n**Screenshot 4:** A search for \"supermarkets\" near the hotel returned results including Walmart Supercenter, Pittsburgh Area Commissary, ALDI, **bp (9411 University Blvd — categorized as \"Supermarket\")**, and Giant Eagle. Based on the map, bp is the closest result to the hotel's location.\n\n**Screenshot 5:** Walking directions from \"Hilton Garden Inn Pittsburgh Airport\" to \"bp, 9411 University Blvd\" show **4 min (0.2 mile) via University Blvd**, with the walking mode tab confirming \"4 min.\"\n\n## Response Consistency Check\n- Hotel name: \"Hilton Garden Inn Pittsburgh Airport\" ✓ (matches screenshots 2–3)\n- Nearest supermarket: bp ✓ (closest supermarket per search results and map)\n- Walking time: 4 min ✓ (confirmed by the directions in screenshot 5)\n\nBoth parts of the task were completed, and the response is fully consistent with the visual evidence.\n\n## Verdict\n**SUCCESS**",
+  "api_attempts": 2,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 7181,
+    "completion_tokens": 7045,
+    "total_tokens": 14226,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6628
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-26T09:46:29.293296+00:00",
+      "outcome": "error",
+      "error": "HTTP 503: upstream connect error or disconnect/reset before headers. reset reason: connection termination",
+      "http_status": 503,
+      "retryable": true,
+      "retry_wait_seconds": 2.0
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-10-26T09:47:36.758071+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Google Map--19/Google Map--19_20261024_230701/final_runs/run_003/screenshots/final_execution_1_airport_anchored.png",
+      "source_sha256": "b0d7c80cb7404c00d745cbbc911b1e328a974e062fe15843ee6b7f5bf27d0e44",
+      "source_bytes": 382213,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        800
+      ],
+      "transmitted_bytes": 149908,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "07697d0af90a42f11e353fc742ac4e2ab9e792bb7541b5e8ae660f88eb3c7f89"
+    },
+    {
+      "path": "Google Map--19/Google Map--19_20261024_230701/final_runs/run_003/screenshots/final_execution_2_hilton_hotel_results.png",
+      "source_sha256": "7f291184637efc87197e9a8b96366a8017e9e8b70d042cec6ff2f62cd4120e38",
+      "source_bytes": 715393,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        800
+      ],
+      "transmitted_bytes": 290346,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "940e0a9ee76912b6a72d5f4ba85913cb59f0fa99cd81fce7af5275130caf6466"
+    },
+    {
+      "path": "Google Map--19/Google Map--19_20261024_230701/final_runs/run_003/screenshots/final_execution_3_closest_hilton_place.png",
+      "source_sha256": "909073f9988cbda0ea6bf92d7db1130f1a18989b031c9ca56b5cd74d427c7d93",
+      "source_bytes": 551681,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        800
+      ],
+      "transmitted_bytes": 213268,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "d4abae15d34fb54528162a21ddc8b0485cdee5e978af2c96c454e12ad2dc953a"
+    },
+    {
+      "path": "Google Map--19/Google Map--19_20261024_230701/final_runs/run_003/screenshots/final_execution_4_supermarkets_near_hotel.png",
+      "source_sha256": "b04cc40a501cdf284222119f28dc1621ebd7bb206897e95a41369e5a68490fba",
+      "source_bytes": 513115,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        800
+      ],
+      "transmitted_bytes": 237256,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "92ad2ace909cb418f101153e3ee33818b64c688f941b6927d547de9e5f852d36"
+    },
+    {
+      "path": "Google Map--19/Google Map--19_20261024_230701/final_runs/run_003/screenshots/final_execution_5_walking_time.png",
+      "source_sha256": "f9b96a640875cec88053c16d00dc2b4d7fb4e110a1f0218bb6a585f18c29a963",
+      "source_bytes": 400518,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        800
+      ],
+      "transmitted_bytes": 181903,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "05c624381c943b0bcd13456bd57a3d012cff1ee057dbe4a0d8f2bfdb28236672"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1433481,
+  "response_id": "03fd6c91-edc6-98ad-92fb-0ce684e591b4",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1881,
+    "reasoning_content_chars": 27745
+  }
+}

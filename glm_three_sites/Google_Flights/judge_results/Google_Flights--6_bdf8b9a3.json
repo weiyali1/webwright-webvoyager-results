@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Flights--6",
+  "website": "Google Flights",
+  "task": "Search for a flight on December 19, 2026 and return on December 26, 2026 from Tel Aviv to Venice and Select First Class.",
+  "task_record": "Google Flights--6/Google Flights--6_20261020_124938",
+  "task_definition_sha256": "be1987f6694b69e8a049fec0b216728e0719eafa1ba1d044a2de57ff71dd286d",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google Flights--6/Google Flights--6_20261020_124938"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "final_response.txt with final_script_log.txt fallback",
+  "answer": "Final Response: Searched Google Flights for a round-trip First Class flight from Tel Aviv (TLV) to Venice (VCE), departing December 19, 2026 and returning December 26, 2026. Flight results are displayed. All 7 critical points verified in final_runs/run_001 with screenshots and evidence.json; self-reflection judge passed (predicted_label=1).",
+  "answer_source": "final_response.txt",
+  "screenshots": [
+    {
+      "path": "Google Flights--6/Google Flights--6_20261020_124938/final_runs/run_001/screenshots/final_execution_4_calendar_dates.png",
+      "sha256": "89b6b27d620825131b5cf0e3a1ae449df517757b88f35a9e6a9a01616b19c86b"
+    },
+    {
+      "path": "Google Flights--6/Google Flights--6_20261020_124938/final_runs/run_001/screenshots/final_execution_5_dates_committed.png",
+      "sha256": "a1713f05575c1a5c9bb27883b7cc392a0aa778db78072e06b13463f6be1d5e65"
+    },
+    {
+      "path": "Google Flights--6/Google Flights--6_20261020_124938/final_runs/run_001/screenshots/final_execution_6_cabin_open.png",
+      "sha256": "a293577cc369ce7f1280ec1965559c7cfae3ad98d82fff6c7574280e03492cf5"
+    },
+    {
+      "path": "Google Flights--6/Google Flights--6_20261020_124938/final_runs/run_001/screenshots/final_execution_7_cabin_first.png",
+      "sha256": "72345bb2df5019a5351f247fecd407bf4e2152f489ef0fbf04ca8bbb07f0463d"
+    },
+    {
+      "path": "Google Flights--6/Google Flights--6_20261020_124938/final_runs/run_001/screenshots/final_execution_8_results.png",
+      "sha256": "ad096ced92d64843270320d5341d20b56d9fcf2296a161bb476c06025c8d7be0"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "db655d684cdf66330a4ecb4a85d68333e5315a6a9ee3c9a9a6da8a66dc3d4205",
+  "fingerprint": "d8a79a1d447330151f50d150ec35e5f26e1a8f92fc55736d0f7396072cee4e5e",
+  "evaluated_at": "2026-10-26T10:05:17.513175+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements Breakdown\nThe task required:\n1. Searching for a round-trip flight departing **December 19, 2026** and returning **December 26, 2026**\n2. Route: **Tel Aviv → Venice**\n3. Cabin class: **First Class**\n\n## Screenshot-by-Screenshot Verification\n\n**Screenshot 1 (Date Selection):** The Google Flights calendar is open with **Sat, Dec 19** and **Sat, Dec 26** selected (Dec 19 circled as departure, Dec 26 highlighted blue as return). The calendar displays \"December\" alongside \"January 2027,\" confirming the December in question is **2026**. The origin field shows \"Tel Aviv-Yafo.\"\n\n**Screenshot 2 (Search Form):** The form shows Round trip, Tel Aviv-Yafo → **Venice**, dates Sat, Dec 19 → Sat, Dec 26, ready to search.\n\n**Screenshot 3 (Class Dropdown):** The cabin class dropdown is open showing options: Economy (currently checked), Premium economy, Business, and **First**.\n\n**Screenshot 4 (First Class Selected):** The class dropdown now displays **\"First\"**, with all other parameters intact (Tel Aviv-Yafo → Venice, Sat, Dec 19 → Sat, Dec 26).\n\n**Screenshot 5 (Results Page):** The final results page confirms all criteria:\n- Round trip, **First** class\n- **Tel Aviv-Yafo → Venice** (TLV–VCE)\n- Dates: **Sat, Dec 19 → Sat, Dec 26** (also confirmed by \"Track prices Dec 19 – 26\" chip)\n- Departing flights displayed, e.g., Air France 3:55 PM – 11:15 PM, 8 hr 20 min, 1 stop, **First Class + Business Class**, HK$64,949 round trip\n\n## Conclusion\nAll task components were executed correctly: the correct dates (Dec 19–26, 2026), correct route (Tel Aviv to Venice), and First Class selection are all visibly confirmed, and the flight search results are displayed. The response text is consistent with the screenshots.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 9755,
+    "completion_tokens": 1299,
+    "total_tokens": 11054,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 831
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-26T10:05:17.708998+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Google Flights--6/Google Flights--6_20261020_124938/final_runs/run_001/screenshots/final_execution_4_calendar_dates.png",
+      "source_sha256": "89b6b27d620825131b5cf0e3a1ae449df517757b88f35a9e6a9a01616b19c86b",
+      "source_bytes": 185387,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1100
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1100
+      ],
+      "transmitted_bytes": 170826,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "533ef90eafd679cf0f67b93557c36b483ebd31dd91fc25e7092e2f9035e52ff3"
+    },
+    {
+      "path": "Google Flights--6/Google Flights--6_20261020_124938/final_runs/run_001/screenshots/final_execution_5_dates_committed.png",
+      "source_sha256": "a1713f05575c1a5c9bb27883b7cc392a0aa778db78072e06b13463f6be1d5e65",
+      "source_bytes": 210230,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1100
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1100
+      ],
+      "transmitted_bytes": 178944,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "e30d84eb38a21d7d32c325ccb722f93473c1d1bd292aa9e369e5dcf0a9b69ce7"
+    },
+    {
+      "path": "Google Flights--6/Google Flights--6_20261020_124938/final_runs/run_001/screenshots/final_execution_6_cabin_open.png",
+      "source_sha256": "a293577cc369ce7f1280ec1965559c7cfae3ad98d82fff6c7574280e03492cf5",
+      "source_bytes": 220560,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1100
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1100
+      ],
+      "transmitted_bytes": 181385,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "3af1abe51c0f476997f32486cb5837e1b4ded6c755477bcabe789e0db298e0c7"
+    },
+    {
+      "path": "Google Flights--6/Google Flights--6_20261020_124938/final_runs/run_001/screenshots/final_execution_7_cabin_first.png",
+      "source_sha256": "72345bb2df5019a5351f247fecd407bf4e2152f489ef0fbf04ca8bbb07f0463d",
+      "source_bytes": 219972,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1100
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1100
+      ],
+      "transmitted_bytes": 184912,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "82ee22cf7e484e3657622a0697175b1655a7a6fdc5e087a4828de00b7e5581ca"
+    },
+    {
+      "path": "Google Flights--6/Google Flights--6_20261020_124938/final_runs/run_001/screenshots/final_execution_8_results.png",
+      "source_sha256": "ad096ced92d64843270320d5341d20b56d9fcf2296a161bb476c06025c8d7be0",
+      "source_bytes": 124896,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1100
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1100
+      ],
+      "transmitted_bytes": 213165,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "1dbb57ec23560b33ddeb4f14208362baa299dc15f1ea4c67ac1d5e28891a6e12"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1242317,
+  "response_id": "c134a398-adc0-433c-80fb-cded0dbfde5c",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1778,
+    "reasoning_content_chars": 2904
+  }
+}

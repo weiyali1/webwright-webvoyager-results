@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Map--20",
+  "website": "Google Map",
+  "task": "Find Tesla Destination Charger closest to the National Air and Space Museum.",
+  "task_record": "Google Map--20/Google Map--20_20261024_235703",
+  "task_definition_sha256": "f1d9e232445cd020f446e59d56d72b9c3b25c07597054e91997429050a80c57b",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google Map--20/Google Map--20_20261024_235703"
+  ],
+  "final_run": "run_003",
+  "answer_input_mode": "final_response.txt with final_script_log.txt fallback",
+  "answer": "The Tesla Destination Charger closest to the National Air and Space Museum is the Tesla Destination Charger at 1330 Maryland Ave SW, Washington, DC 20024 (phone +1 202-554-8588). It is the top result of Google Maps' nearby search for 'Tesla Destination Charger' anchored to the National Air and Space Museum (650 Jefferson Dr SW).",
+  "answer_source": "final_response.txt",
+  "screenshots": [
+    {
+      "path": "Google Map--20/Google Map--20_20261024_235703/final_runs/run_003/screenshots/final_execution_1_museum_panel.png",
+      "sha256": "d1964154dea525b65ca9618e04fa3e56d572a27baf25bb3fd072bba098739323"
+    },
+    {
+      "path": "Google Map--20/Google Map--20_20261024_235703/final_runs/run_003/screenshots/final_execution_2_nearby_search.png",
+      "sha256": "50588aed0ec4300d76a9fe43edf782b8941930ff9dca09e32b903bb34510a135"
+    },
+    {
+      "path": "Google Map--20/Google Map--20_20261024_235703/final_runs/run_003/screenshots/final_execution_3_tesla_results.png",
+      "sha256": "551ff3190f41667c9e2d2c348e24ee9d59eee686001d88b5b402ecb4a7f67d47"
+    },
+    {
+      "path": "Google Map--20/Google Map--20_20261024_235703/final_runs/run_003/screenshots/final_execution_4_closest_charger.png",
+      "sha256": "1e8fee34cec0884deb6450088d8b221b5e1c06976263c5d6e1a780555659ac02"
+    },
+    {
+      "path": "Google Map--20/Google Map--20_20261024_235703/final_runs/run_003/screenshots/final_execution_5_final_state.png",
+      "sha256": "7dd5dd6cc5ddcbd89c194bc03d72cc08b5c70ed20dfcfd9c13e82532178842a7"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "2aa780f9ebcf083c1c05b1f0644224087327435a31ac50085ee460cb1e06acd9",
+  "fingerprint": "55e66592cc7d47ce9eb70b310350f430ffc1d9c2d928ed40d5494dd494aa2166",
+  "evaluated_at": "2026-10-26T09:50:17.946358+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation Analysis\n\n**Task Requirement:** Find the Tesla Destination Charger closest to the National Air and Space Museum.\n\n**Step-by-step review of the evidence:**\n\n1. **Screenshot 1:** The National Air and Space Museum (美國國家航空太空博物館) was successfully located on Google Maps, with its details panel showing the address 650 Jefferson Dr SW, Washington, DC 20004. This establishes the anchor point for the search.\n\n2. **Screenshot 2:** The search box was updated to \"搜尋美國國家航空太空博物館附近\" (Search near the National Air and Space Museum), indicating a nearby search was being anchored to the museum.\n\n3. **Screenshot 3:** A nearby search for \"Tesla Destination Charger\" was executed. The results list shows the top result as \"Tesla Destination Charger – 1330 Maryland Ave SW – +1 202-554-8588,\" followed by other chargers farther away (15 St NW, 2117 E St NW, 400 New Jersey Ave NW, etc.). The map displays the search radius centered on the museum with charger pins plotted.\n\n4. **Screenshots 4 & 5:** The top result was opened, confirming its details: Tesla Destination Charger (電動車充電站) at 1330 Maryland Ave SW, Washington, DC 20024, phone +1 202-554-8588, located at the Mandarin Oriental Hotel (華盛頓特區文華東方酒店). The map shows this location is southwest of the museum, geographically closer than the other listed chargers (e.g., 15 St NW, 2117 E St NW, 400/415 New Jersey Ave NW, which are all farther north/east).\n\n**Assessment of the Result Response:** The response states the closest charger is at 1330 Maryland Ave SW, Washington, DC 20024 (+1 202-554-8588), identified as the top result of the nearby search anchored to the museum. This matches the screenshots exactly. Geographically, this location (Mandarin Oriental Hotel, ~0.5–0.6 miles from the museum) is indeed closer than all other listed results, consistent with Google Maps' distance-sorted nearby results.\n\nThe task was fully accomplished: the museum was located, a nearby search for Tesla Destination Chargers was performed, and the closest one was identified with its address and phone number.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8120,
+    "completion_tokens": 2089,
+    "total_tokens": 10209,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1572
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-26T09:50:18.621840+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Google Map--20/Google Map--20_20261024_235703/final_runs/run_003/screenshots/final_execution_1_museum_panel.png",
+      "source_sha256": "d1964154dea525b65ca9618e04fa3e56d572a27baf25bb3fd072bba098739323",
+      "source_bytes": 1238671,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 309454,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "51a18bbe347235573db4d21f822fecf7feec83e3fb20a3e9eb93b2685e4a490c"
+    },
+    {
+      "path": "Google Map--20/Google Map--20_20261024_235703/final_runs/run_003/screenshots/final_execution_2_nearby_search.png",
+      "source_sha256": "50588aed0ec4300d76a9fe43edf782b8941930ff9dca09e32b903bb34510a135",
+      "source_bytes": 1099774,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 286064,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a19ed85467b8af615aae6829a13270628b01577eec2ac88dedad0ce7e6005742"
+    },
+    {
+      "path": "Google Map--20/Google Map--20_20261024_235703/final_runs/run_003/screenshots/final_execution_3_tesla_results.png",
+      "source_sha256": "551ff3190f41667c9e2d2c348e24ee9d59eee686001d88b5b402ecb4a7f67d47",
+      "source_bytes": 1101388,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 369869,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "03a00e1a8f5f3ee19a95b5c652475352ff41e50160f941d8aa527fc658af78d2"
+    },
+    {
+      "path": "Google Map--20/Google Map--20_20261024_235703/final_runs/run_003/screenshots/final_execution_4_closest_charger.png",
+      "source_sha256": "1e8fee34cec0884deb6450088d8b221b5e1c06976263c5d6e1a780555659ac02",
+      "source_bytes": 935943,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 269991,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "9ceb504d0e3fe509443d40c1ac50da3995ced33c44df540fca8f3a82dbd0aeac"
+    },
+    {
+      "path": "Google Map--20/Google Map--20_20261024_235703/final_runs/run_003/screenshots/final_execution_5_final_state.png",
+      "source_sha256": "7dd5dd6cc5ddcbd89c194bc03d72cc08b5c70ed20dfcfd9c13e82532178842a7",
+      "source_bytes": 936506,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 270047,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "6501617abd5f256d88486a179100124464775563d76e034894de29312d47545e"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 2010521,
+  "response_id": "04c67814-9b48-4331-a591-45fce7a92367",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2078,
+    "reasoning_content_chars": 6280
+  }
+}

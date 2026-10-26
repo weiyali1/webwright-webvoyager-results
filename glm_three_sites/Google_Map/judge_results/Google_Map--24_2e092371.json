@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Map--24",
+  "website": "Google Map",
+  "task": "Plan a journey from San Francisco International Airport to Union Square via driving.",
+  "task_record": "Google Map--24/Google Map--24_20261025_005253",
+  "task_definition_sha256": "71b7a97961884363107b6caf07b8332652ecea91849291131685e45085d99334",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google Map--24/Google Map--24_20261025_005253"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "final_response.txt with final_script_log.txt fallback",
+  "answer": "Planned a driving journey on Google Maps from San Francisco International Airport (SFO) to Union Square, San Francisco. Opened the directions panel, set origin to San Francisco International Airport, set destination to Union Square, selected the driving travel mode, and driving route results were displayed (fastest route: 29 min, 14.9 miles via US-101 N).",
+  "answer_source": "final_response.txt",
+  "screenshots": [
+    {
+      "path": "Google Map--24/Google Map--24_20261025_005253/final_runs/run_001/screenshots/final_execution_1_directions_panel.png",
+      "sha256": "14b6ac52e54606633c6f1ea282dcc5ea79ad5908bd67df6993a6b93eacb78f6b"
+    },
+    {
+      "path": "Google Map--24/Google Map--24_20261025_005253/final_runs/run_001/screenshots/final_execution_2_origin_set.png",
+      "sha256": "c345242f40472e68a01b36020f4f4e92d5ead5fbdae7df19312fe983690b3768"
+    },
+    {
+      "path": "Google Map--24/Google Map--24_20261025_005253/final_runs/run_001/screenshots/final_execution_3_destination_set.png",
+      "sha256": "8ba186f8ca6685dd3a909a8978920ddaaca502f4e4776f1b320bbedb0e0dc970"
+    },
+    {
+      "path": "Google Map--24/Google Map--24_20261025_005253/final_runs/run_001/screenshots/final_execution_4_driving_mode.png",
+      "sha256": "6265c793276a4198aa979052d3fe5472d4524970397be436fa73f262eb77f3fc"
+    },
+    {
+      "path": "Google Map--24/Google Map--24_20261025_005253/final_runs/run_001/screenshots/final_execution_5_route_results.png",
+      "sha256": "6265c793276a4198aa979052d3fe5472d4524970397be436fa73f262eb77f3fc"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "1f07c86ef87e32febed2a3cbc7ca2ba00f103c67b47165d55ddc582ad499408e",
+  "fingerprint": "6a8ec69cf9de014f952968be1cbdbb4db38d707a91a18a28d3bfd21684756c8d",
+  "evaluated_at": "2026-10-26T09:52:52.553759+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\nPlan a journey from San Francisco International Airport (SFO) to Union Square via **driving**.\n\n## Screenshot Analysis\n\n**Screenshot 1:** Google Maps directions panel is open with the driving mode (car icon) selected. Origin and destination fields are empty.\n\n**Screenshot 2:** The origin field has been filled with \"三藩市國際機場\" (San Francisco International Airport in Chinese).\n\n**Screenshots 3-5:** The complete route is displayed:\n- **Origin:** 三藩市國際機場 (San Francisco International Airport) ✓\n- **Destination:** Union Square, 舊金山加利福尼亞美國 (Union Square, San Francisco, California, USA) ✓\n- **Travel mode:** Driving (car icon highlighted, with tooltip \"開車\" meaning \"Driving\") ✓\n- **Route results displayed:**\n  - Via US-101 N: 30 min, 14.7 miles (best route, currently recommended)\n  - Via US-101 N and Post St: 30 min, 15.5 miles\n  - Via US-101 N and I-280 N: 30 min, 14.8 miles\n- The map clearly shows the route drawn from SFO (bottom) to Union Square in San Francisco (top), with the route highlighted in blue.\n\n## Response vs. Screenshot Comparison\nThe response claims the fastest route is \"29 min, 14.9 miles via US-101 N,\" while the screenshot shows \"30 min, 14.7 miles via US-101 N.\" This is a minor numerical discrepancy, but per evaluation guidelines, the screenshot prevails. This discrepancy does not affect the core task completion — the driving route was successfully planned and displayed.\n\n## Conclusion\nAll required elements of the task were accomplished:\n1. ✓ Directions panel opened\n2. ✓ Origin set to San Francisco International Airport\n3. ✓ Destination set to Union Square\n4. ✓ Driving mode selected\n5. ✓ Driving route results displayed with route options\n\n## Verdict: **SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8810,
+    "completion_tokens": 1044,
+    "total_tokens": 9854,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 605
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-26T09:52:52.841449+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Google Map--24/Google Map--24_20261025_005253/final_runs/run_001/screenshots/final_execution_1_directions_panel.png",
+      "source_sha256": "14b6ac52e54606633c6f1ea282dcc5ea79ad5908bd67df6993a6b93eacb78f6b",
+      "source_bytes": 442729,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_bytes": 215688,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "8f9f8911827094b9a694fdc8769ad69c16dc3d28688febd15ed4c96eab11c6d2"
+    },
+    {
+      "path": "Google Map--24/Google Map--24_20261025_005253/final_runs/run_001/screenshots/final_execution_2_origin_set.png",
+      "source_sha256": "c345242f40472e68a01b36020f4f4e92d5ead5fbdae7df19312fe983690b3768",
+      "source_bytes": 442355,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_bytes": 215269,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "683b24d09f232c36975ebaccc68ed3fc7a193cfd42f9f2888441a4fd7464cb2a"
+    },
+    {
+      "path": "Google Map--24/Google Map--24_20261025_005253/final_runs/run_001/screenshots/final_execution_3_destination_set.png",
+      "source_sha256": "8ba186f8ca6685dd3a909a8978920ddaaca502f4e4776f1b320bbedb0e0dc970",
+      "source_bytes": 729870,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_bytes": 327204,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "0d0df46e517baa31930f81bcf9fcb8398337e717282c626d8baf1c217fdc13b1"
+    },
+    {
+      "path": "Google Map--24/Google Map--24_20261025_005253/final_runs/run_001/screenshots/final_execution_4_driving_mode.png",
+      "source_sha256": "6265c793276a4198aa979052d3fe5472d4524970397be436fa73f262eb77f3fc",
+      "source_bytes": 729906,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_bytes": 324327,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "674742051109168f168445f82208105d1d1e509ebf4beec38c0f5fff3d0df46f"
+    },
+    {
+      "path": "Google Map--24/Google Map--24_20261025_005253/final_runs/run_001/screenshots/final_execution_5_route_results.png",
+      "source_sha256": "6265c793276a4198aa979052d3fe5472d4524970397be436fa73f262eb77f3fc",
+      "source_bytes": 729906,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_bytes": 324327,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "674742051109168f168445f82208105d1d1e509ebf4beec38c0f5fff3d0df46f"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1879072,
+  "response_id": "6ee082f9-b367-475a-966c-34cded698dbf",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1741,
+    "reasoning_content_chars": 2267
+  }
+}

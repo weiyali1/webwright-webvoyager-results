@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Flights--19",
+  "website": "Google Flights",
+  "task": "Find the cheapest one-way flight from London to Paris, departing on July 25, 2027. Include the airline, total travel time, and layovers for the chosen flight.",
+  "task_record": "Google Flights--19/Google Flights--19_20261022_124806",
+  "task_definition_sha256": "dc7b10766612229b852dd7635106fab615113b1b3591a0d5f2c75209dfbfe44c",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google Flights--19/Google Flights--19_20261022_124806"
+  ],
+  "final_run": "run_004",
+  "answer_input_mode": "final_response.txt with final_script_log.txt fallback",
+  "answer": "Cheapest one-way flight from London to Paris on July 25, 2027: Airline: easyJet; Total travel time: 1 hr 10 min; Layovers: Nonstop (London Southend Airport 7:50 PM to Paris Charles de Gaulle 10:00 PM); Price: HK$536.",
+  "answer_source": "final_response.txt",
+  "screenshots": [
+    {
+      "path": "Google Flights--19/Google Flights--19_20261022_124806/final_runs/run_004/screenshots/final_execution_3_destination_paris.png",
+      "sha256": "dad7add8792751846d9060e756bc32ae7d75cad4cd6feed50107a1f28af13f21"
+    },
+    {
+      "path": "Google Flights--19/Google Flights--19_20261022_124806/final_runs/run_004/screenshots/final_execution_4_departure_date.png",
+      "sha256": "c95692cc5764ab73855a275482453f9d2a843455024012c3b30aa0d05577f806"
+    },
+    {
+      "path": "Google Flights--19/Google Flights--19_20261022_124806/final_runs/run_004/screenshots/final_execution_5_results.png",
+      "sha256": "02b31ec1a0fc61e631237c78d5f908dedab1a8d96af2754b6d4b4109c6596b35"
+    },
+    {
+      "path": "Google Flights--19/Google Flights--19_20261022_124806/final_runs/run_004/screenshots/final_execution_6_sorted_by_price.png",
+      "sha256": "58339640de5fb80f88ab26ab0dc3f066bec17ba7a576522a15159b0a674cdd5b"
+    },
+    {
+      "path": "Google Flights--19/Google Flights--19_20261022_124806/final_runs/run_004/screenshots/final_execution_7_cheapest_flight.png",
+      "sha256": "4c380dda31b8161d36077ceca73df072bb5c1f9605d2817b6ec385e2cc7a225b"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "94177b9eb6cf229ae5aa94bb93c243caaa27de8cec504095eb858f83c4974bd6",
+  "fingerprint": "f0d00be70e6f062a8ee52cb9b3629dae68d6475c0ac396f0e7d0d1b63a89b1d0",
+  "evaluated_at": "2026-10-26T10:16:41.481867+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements:\n1. Find the cheapest one-way flight from London to Paris departing July 25, 2027\n2. Include the airline\n3. Include total travel time\n4. Include layovers for the chosen flight\n\n## Screenshot Verification:\n\n**Search Setup (Screenshots 1-2):**\n- Google Flights was used with \"One way\" selected\n- Origin: London, Destination: Paris\n- Departure date set to \"Sun, Jul 25\" — July 25, 2027 falls on a Sunday, consistent with the requested date\n\n**Search Results (Screenshots 3-5):**\n- The results page shows \"Cheapest from HK$536\" tab\n- All flights sorted by price confirm the cheapest option at the top:\n  - **Airline:** easyJet ✓\n  - **Time:** 7:50 PM – 10:00 PM ✓\n  - **Total travel time:** 1 hr 10 min ✓\n  - **Route:** SEN–CDG (London Southend to Paris Charles de Gaulle) ✓\n  - **Stops:** Nonstop ✓\n  - **Price:** HK$536 ✓\n- All other flights shown are more expensive (HK$747, HK$857, HK$941, etc.), confirming this is indeed the cheapest option\n\n## Response Verification:\nThe response accurately reports:\n- Airline: easyJet ✓\n- Total travel time: 1 hr 10 min ✓\n- Layovers: Nonstop ✓ (correctly identified as nonstop, meaning no layovers)\n- Airports and times: London Southend 7:50 PM to Paris CDG 10:00 PM ✓\n- Price: HK$536 ✓\n\nAll information in the response matches the screenshot evidence exactly. The task required finding the cheapest flight with airline, travel time, and layover details — all components were provided and verified.\n\n## Verdict: **SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 9747,
+    "completion_tokens": 1054,
+    "total_tokens": 10801,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 640
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-26T10:16:42.084052+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Google Flights--19/Google Flights--19_20261022_124806/final_runs/run_004/screenshots/final_execution_3_destination_paris.png",
+      "source_sha256": "dad7add8792751846d9060e756bc32ae7d75cad4cd6feed50107a1f28af13f21",
+      "source_bytes": 302852,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 189412,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "151fc2849fddc00d092de4190e1b45996f1be094e29c0c4e8fc90201b21715f0"
+    },
+    {
+      "path": "Google Flights--19/Google Flights--19_20261022_124806/final_runs/run_004/screenshots/final_execution_4_departure_date.png",
+      "source_sha256": "c95692cc5764ab73855a275482453f9d2a843455024012c3b30aa0d05577f806",
+      "source_bytes": 290668,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 207359,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "5ac69b47014e9577d5ac8572f6e92228b5dc00651f308b1d57dd9e41b4f9f31a"
+    },
+    {
+      "path": "Google Flights--19/Google Flights--19_20261022_124806/final_runs/run_004/screenshots/final_execution_5_results.png",
+      "source_sha256": "02b31ec1a0fc61e631237c78d5f908dedab1a8d96af2754b6d4b4109c6596b35",
+      "source_bytes": 231499,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 214708,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "18122931e8691a3ebb1353e796d84be967695b90f1a3260a9e50294a4946bfa0"
+    },
+    {
+      "path": "Google Flights--19/Google Flights--19_20261022_124806/final_runs/run_004/screenshots/final_execution_6_sorted_by_price.png",
+      "source_sha256": "58339640de5fb80f88ab26ab0dc3f066bec17ba7a576522a15159b0a674cdd5b",
+      "source_bytes": 239726,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 213460,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "324e6bf1f6296897aac1f45a5dd80fe838c9234eb2d54188efba8211c0d0f4df"
+    },
+    {
+      "path": "Google Flights--19/Google Flights--19_20261022_124806/final_runs/run_004/screenshots/final_execution_7_cheapest_flight.png",
+      "source_sha256": "4c380dda31b8161d36077ceca73df072bb5c1f9605d2817b6ec385e2cc7a225b",
+      "source_bytes": 239713,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 213460,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a2ab731fabfc921abcfd1a5562e6fabfc53e6d9e470bb9d0e1689b62f700ae62"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1387793,
+  "response_id": "d479ad1a-393a-4d7a-b766-cdc54d2b29f1",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1504,
+    "reasoning_content_chars": 2261
+  }
+}

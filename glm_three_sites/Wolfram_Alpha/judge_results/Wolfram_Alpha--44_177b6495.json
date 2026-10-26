@@ -1,0 +1,181 @@
+{
+  "task_id": "Wolfram Alpha--44",
+  "website": "Wolfram Alpha",
+  "task": "Solve the ODE, g' + cos(g) = 0, if there is a constant in the result, determine the value of the constant by the condition that g(0) = 1.",
+  "task_record": "Wolfram Alpha--44/Wolfram Alpha--44_20261024_180435",
+  "task_definition_sha256": "d82799b01a2f0ae0d5922d26269e816523dce11d44ea106b4fadfc919d5ce695",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Wolfram Alpha--44/Wolfram Alpha--44_20261024_180435"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "final_response.txt with final_script_log.txt fallback",
+  "answer": "The solution of the ODE g' + cos(g) = 0 satisfying g(0) = 1 is: g(x) = -sin^(-1)(coth(x - coth^(-1)(sin(1)))). Wolfram Alpha result: g(x) = -sin^(-1)(coth(x - coth^(-1)(sin(1))))",
+  "answer_source": "final_response.txt",
+  "screenshots": [
+    {
+      "path": "Wolfram Alpha--44/Wolfram Alpha--44_20261024_180435/final_runs/run_001/screenshots/final_execution_1_query_entered.png",
+      "sha256": "fb2fb7913c3b298f940cfaff3aa21ab4280dd256e66f52cc4f3cc747019aaca6"
+    },
+    {
+      "path": "Wolfram Alpha--44/Wolfram Alpha--44_20261024_180435/final_runs/run_001/screenshots/final_execution_2_results_loaded.png",
+      "sha256": "0c4255a57892c2d48bf7b5c27cf5ef5ca8b596b2647a4a2443c5d53c06911ec3"
+    },
+    {
+      "path": "Wolfram Alpha--44/Wolfram Alpha--44_20261024_180435/final_runs/run_001/screenshots/final_execution_3_solution_pod.png",
+      "sha256": "a6ac189c529669d2094dd198a93b899e5248bed948744bf3c5eb9bcaa26a685d"
+    },
+    {
+      "path": "Wolfram Alpha--44/Wolfram Alpha--44_20261024_180435/final_runs/run_001/screenshots/final_execution_4_final_state.png",
+      "sha256": "e6c71c07df370b4621272b8442957a969fc90dc866cab7d30698aed5803e5189"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "87e7ac156c9c6e1cb91599842b8015f424a26823ec3ec458cb0c65821ada0158",
+  "fingerprint": "da42b3d3be5b928b2449f28faf37c875cb4a968b10b39909ba56df4e9a12e6d7",
+  "evaluated_at": "2026-10-26T09:18:08.892712+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation\n\n**Task Requirements:**\n1. Solve the ODE: g' + cos(g) = 0\n2. If a constant appears in the result, determine its value using the condition g(0) = 1\n\n**Analysis of Screenshots:**\n\n1. **Screenshot 1:** Shows the Wolfram Alpha homepage with the query \"g' + cos(g) = 0, g(0) = 1\" correctly entered in the search input box, incorporating both the ODE and the initial condition.\n\n2. **Screenshots 2–4:** Show the results page with:\n   - **Input:** {g'(x) + cos(g(x)) = 0, g(0) = 1} — correctly interpreted\n   - **Separable equation:** -g'(x)/cos(g(x)) = 1\n   - **ODE classification:** first-order nonlinear ordinary differential equation\n   - **Differential equation solution:** g(x) = -sin⁻¹(coth(x - coth⁻¹(sin(1))))\n   - Plots of the solution are also displayed\n\n**Analysis of Result Response:**\n\nThe response states the solution is g(x) = -sin⁻¹(coth(x - coth⁻¹(sin(1)))), which exactly matches the solution displayed in the Wolfram Alpha screenshots.\n\n**Verification of the constant determination:**\n- The solution includes the term coth⁻¹(sin(1)), which is the integration constant determined by the initial condition g(0) = 1. Checking: at x = 0, sin(g(0)) = -coth(-coth⁻¹(sin(1))) = sin(1), so g(0) = 1 ✓\n- The constant was properly evaluated using the given condition, satisfying the second part of the task.\n\n**Consistency Check:**\n- The result response matches the screenshot content exactly (no discrepancies).\n- Both parts of the task (solving the ODE and applying the initial condition to fix the constant) were completed — the query included g(0) = 1, and the resulting solution has the constant fully determined (no free constant remains).\n\n## Verdict\n\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8058,
+    "completion_tokens": 1516,
+    "total_tokens": 9574,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1057
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-26T09:18:09.330156+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 4,
+  "image_transports": [
+    {
+      "path": "Wolfram Alpha--44/Wolfram Alpha--44_20261024_180435/final_runs/run_001/screenshots/final_execution_1_query_entered.png",
+      "source_sha256": "fb2fb7913c3b298f940cfaff3aa21ab4280dd256e66f52cc4f3cc747019aaca6",
+      "source_bytes": 146566,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1400
+      ],
+      "transmitted_dimensions": [
+        1170,
+        1280
+      ],
+      "transmitted_bytes": 205014,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "75332f3e209c4a3c33af8c82243f3e22b7b484cff3e601100fb26a186ed27dec"
+    },
+    {
+      "path": "Wolfram Alpha--44/Wolfram Alpha--44_20261024_180435/final_runs/run_001/screenshots/final_execution_2_results_loaded.png",
+      "source_sha256": "0c4255a57892c2d48bf7b5c27cf5ef5ca8b596b2647a4a2443c5d53c06911ec3",
+      "source_bytes": 219962,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1400
+      ],
+      "transmitted_dimensions": [
+        1170,
+        1280
+      ],
+      "transmitted_bytes": 171075,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "d2836e3c605574910c983d777b5f208c7fd192bbbf326d6042843921d5eaf61d"
+    },
+    {
+      "path": "Wolfram Alpha--44/Wolfram Alpha--44_20261024_180435/final_runs/run_001/screenshots/final_execution_3_solution_pod.png",
+      "source_sha256": "a6ac189c529669d2094dd198a93b899e5248bed948744bf3c5eb9bcaa26a685d",
+      "source_bytes": 219861,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1400
+      ],
+      "transmitted_dimensions": [
+        1170,
+        1280
+      ],
+      "transmitted_bytes": 171107,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "952c6ebf92666c1aef09aacd6f70364a6b082931ce069c8b8cafdedf54179e84"
+    },
+    {
+      "path": "Wolfram Alpha--44/Wolfram Alpha--44_20261024_180435/final_runs/run_001/screenshots/final_execution_4_final_state.png",
+      "source_sha256": "e6c71c07df370b4621272b8442957a969fc90dc866cab7d30698aed5803e5189",
+      "source_bytes": 241139,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1273,
+        1588
+      ],
+      "transmitted_dimensions": [
+        1026,
+        1280
+      ],
+      "transmitted_bytes": 153142,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "2b7ba3910d48edb6f139933107db0f91a924add6f1ca4dc8fbbdcc43d5c4c0d4"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 4,
+  "request_json_bytes": 936906,
+  "response_id": "b6ee0627-983d-4560-a6f9-cee0e3b6fd73",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1687,
+    "reasoning_content_chars": 3094
+  }
+}

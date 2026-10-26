@@ -1,0 +1,211 @@
+{
+  "task_id": "Booking--34",
+  "website": "Booking",
+  "task": "Search for a hotel in Berlin available for a three-night stay from July 15 to July 18, 2027, for one adult. Tell me the price in USD and CNY for the three-night stay.",
+  "task_record": "Booking--34/Booking--34_20261026_051115",
+  "task_definition_sha256": "34c7eed0dd34366184d9b3807cfc7e3d6c1d41e3b1026ddbd5054138c7e10001",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Booking--34/Booking--34_20261026_051115"
+  ],
+  "final_run": "run_004",
+  "answer_input_mode": "final_response.txt with final_script_log.txt fallback",
+  "answer": "PULLMAN Berlin Schweizerhof - City Center, Zoo und Kurfürstendamm (Berlin), three-night stay July 15-18, 2027 for 1 adult: US$373 in USD and CNY 2,489 in CNY",
+  "answer_source": "final_response.txt",
+  "screenshots": [
+    {
+      "path": "Booking--34/Booking--34_20261026_051115/final_runs/run_004/screenshots/final_execution_3_one_adult.png",
+      "sha256": "8915e52055f2f98392d678d00ab6ec654a08644afbd7843b5458af3956dbc0e4"
+    },
+    {
+      "path": "Booking--34/Booking--34_20261026_051115/final_runs/run_004/screenshots/final_execution_4_berlin_results.png",
+      "sha256": "3b14fe7b179c76bdf6328cfec7e490ba7af4fe60d5eb7e9c9c00423af8434627"
+    },
+    {
+      "path": "Booking--34/Booking--34_20261026_051115/final_runs/run_004/screenshots/final_execution_5_hotel_price.png",
+      "sha256": "0abaaf0037c5fb15014878a48fe2c456ff63f5e615de5251d3e78e060df8be39"
+    },
+    {
+      "path": "Booking--34/Booking--34_20261026_051115/final_runs/run_004/screenshots/final_execution_6_currency_usd.png",
+      "sha256": "d485dd367b1e087c2ecbb2379c689f66cb02325fae066763754e7518c0ef097a"
+    },
+    {
+      "path": "Booking--34/Booking--34_20261026_051115/final_runs/run_004/screenshots/final_execution_7_currency_cny.png",
+      "sha256": "8468b02d24a3aa01945a976b61918ab6d155657a42eab07e3f45e4af8f5d211b"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "945b8938c76206c554dd37e987022afc9f9e2f507f0d7df1dcf5f29e8e9cfa6d",
+  "fingerprint": "d146974789ad6c143e2a04cfda4515e1a50a029f23071311ce88fe5fb921f07e",
+  "evaluated_at": "2026-10-26T11:22:04.917629+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\n1. Search for a hotel in Berlin for a three-night stay from **July 15 to July 18, 2027**\n2. For **one adult**\n3. Report the price in **USD** and **CNY**\n\n## Screenshot Verification\n\n**Screenshot 1 (Search Setup):**\n- Destination: \"Berlin, Berlin Federal State, Germany\" ✓\n- Dates: \"Thu, Jul 15 — Sun, Jul 18\" ✓ (Note: July 15 falling on a Thursday and July 18 on a Sunday is consistent with the year 2027)\n- Occupancy: \"1 adult · 0 children · 1 room\" ✓ (dropdown confirms Adults: 1, Children: 0, Rooms: 1)\n- Currency set to USD\n\n**Screenshots 2–4 (Search Results in USD):**\n- \"Berlin: 1,225 properties found\" — search executed successfully\n- First result: **PULLMAN Berlin Schweizerhof - City Center, Zoo und Kurfürstendamm** (a hotel in Mitte, Berlin)\n- Shows \"3 nights, 1 adult\" — **US$373** (+US$26 taxes and fees) ✓\n- \"See availability\" button confirms the hotel is available for these dates\n\n**Screenshot 5 (Search Results in CNY):**\n- Currency switched to CNY (visible in header)\n- Same hotel: PULLMAN Berlin Schweizerhof — **CNY 2,489** (+CNY 174 taxes and fees) ✓\n\n## Response Verification\nThe response states: PULLMAN Berlin Schweizerhof - City Center, Zoo und Kurfürstendamm, three-night stay July 15-18, 2027 for 1 adult: **US$373** and **CNY 2,489**.\n\nThis matches the screenshots exactly:\n- US$373 ✓ (screenshots 2–4)\n- CNY 2,489 ✓ (screenshot 5)\n- Hotel name ✓\n- Dates and occupancy ✓\n\nAll components of the task were completed: the search was performed with correct destination, dates, and occupancy; a hotel was found available for the stay; and prices were retrieved in both required currencies.\n\n## Verdict\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 10201,
+    "completion_tokens": 1590,
+    "total_tokens": 11791,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1109
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-26T11:22:05.489729+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Booking--34/Booking--34_20261026_051115/final_runs/run_004/screenshots/final_execution_3_one_adult.png",
+      "source_sha256": "8915e52055f2f98392d678d00ab6ec654a08644afbd7843b5458af3956dbc0e4",
+      "source_bytes": 648952,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1500
+      ],
+      "transmitted_dimensions": [
+        1166,
+        1280
+      ],
+      "transmitted_bytes": 269031,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "b314c68182ea20018c88bdfcb7c6bc5df40855773b10bb418b4882d0c639713e"
+    },
+    {
+      "path": "Booking--34/Booking--34_20261026_051115/final_runs/run_004/screenshots/final_execution_4_berlin_results.png",
+      "source_sha256": "3b14fe7b179c76bdf6328cfec7e490ba7af4fe60d5eb7e9c9c00423af8434627",
+      "source_bytes": 612655,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1500
+      ],
+      "transmitted_dimensions": [
+        1166,
+        1280
+      ],
+      "transmitted_bytes": 308116,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "932b7e6863d85a40092bf6446607c72074454cabddf16da29a24a174ad47f181"
+    },
+    {
+      "path": "Booking--34/Booking--34_20261026_051115/final_runs/run_004/screenshots/final_execution_5_hotel_price.png",
+      "source_sha256": "0abaaf0037c5fb15014878a48fe2c456ff63f5e615de5251d3e78e060df8be39",
+      "source_bytes": 662723,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1500
+      ],
+      "transmitted_dimensions": [
+        1166,
+        1280
+      ],
+      "transmitted_bytes": 318270,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "b50fb523335b079cbae3c0821ab7bcbd3d40f6cb027df7e75aa88b1b7d9b0364"
+    },
+    {
+      "path": "Booking--34/Booking--34_20261026_051115/final_runs/run_004/screenshots/final_execution_6_currency_usd.png",
+      "source_sha256": "d485dd367b1e087c2ecbb2379c689f66cb02325fae066763754e7518c0ef097a",
+      "source_bytes": 662730,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1500
+      ],
+      "transmitted_dimensions": [
+        1166,
+        1280
+      ],
+      "transmitted_bytes": 318262,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "ad83f819dc482a50b7d8090a5b28e351c1fe74becf458bc8bb8e9ebcc60dbe78"
+    },
+    {
+      "path": "Booking--34/Booking--34_20261026_051115/final_runs/run_004/screenshots/final_execution_7_currency_cny.png",
+      "source_sha256": "8468b02d24a3aa01945a976b61918ab6d155657a42eab07e3f45e4af8f5d211b",
+      "source_bytes": 663477,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1500
+      ],
+      "transmitted_dimensions": [
+        1166,
+        1280
+      ],
+      "transmitted_bytes": 319993,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "1183cc4be25f3e0f38c400ca89d2ecd675bb0153c3c1f9a511859cd22b7baa24"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 2048103,
+  "response_id": "3c9d5009-b4d5-4fcf-89d9-71d3f546c53e",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1680,
+    "reasoning_content_chars": 3487
+  }
+}

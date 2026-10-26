@@ -1,0 +1,211 @@
+{
+  "task_id": "Booking--38",
+  "website": "Booking",
+  "task": "Look up Vienna hotel options with availability for a 4-night stay from June 28 to July 2, 2027, with amenities that include a Parking, breakfast included, and a rating of 8+ on Booking.com.",
+  "task_record": "Booking--38/Booking--38_20261026_071140",
+  "task_definition_sha256": "13c5f8c29f36e5d8d485a6fa8dc9b5b2a33731c8ff75ae87f786f2f6ca92cf9e",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Booking--38/Booking--38_20261026_071140"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "final_response.txt with final_script_log.txt fallback",
+  "answer": "Vienna hotel options for a 4-night stay June 28 - July 2, 2027 were found on Booking.com with Parking, Breakfast included, and 8+ review score filters applied via site controls. 221 filtered properties matched (e.g., Hotel Zeitgeist Vienna Hauptbahnhof 8.7, Austria Trend Hotel Savoyen Vienna 8.7, Hotel Erzherzog Rainer 8.7). Final URL filters: Parking(hotelfacility=2)=True, Breakfast(mealplan=1)=True, 8+ rating(review_score=80)=True.",
+  "answer_source": "final_response.txt",
+  "screenshots": [
+    {
+      "path": "Booking--38/Booking--38_20261026_071140/final_runs/run_001/screenshots/final_execution_3_results.png",
+      "sha256": "7ec39c868b61ab6ca1126cb748e7f603575989a6709b356507df72734352f538"
+    },
+    {
+      "path": "Booking--38/Booking--38_20261026_071140/final_runs/run_001/screenshots/final_execution_4_parking.png",
+      "sha256": "da4e4b2cb150c3c97e78d776f1656d38128d7e3883d14f2fb7ea7e63679cdf0e"
+    },
+    {
+      "path": "Booking--38/Booking--38_20261026_071140/final_runs/run_001/screenshots/final_execution_5_breakfast.png",
+      "sha256": "f67b46f49d060c83c3d2184a3e56699c10c4b13ddf453c26528eb4586aba84c4"
+    },
+    {
+      "path": "Booking--38/Booking--38_20261026_071140/final_runs/run_001/screenshots/final_execution_6_rating.png",
+      "sha256": "a9d0ecb6ae207cbe59561e0526db325ea07751cd611680ac6b63f1167fd26c23"
+    },
+    {
+      "path": "Booking--38/Booking--38_20261026_071140/final_runs/run_001/screenshots/final_execution_7_final.png",
+      "sha256": "a9d0ecb6ae207cbe59561e0526db325ea07751cd611680ac6b63f1167fd26c23"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "8b40fd9d5c99c896b9a6a45ae46a529b318a8d2e0bd6ec69da19b24bf3ef422e",
+  "fingerprint": "4df8c77b594ddfd3d7978f09135f033c0ff273d8bcb5e2beaa8c0116ed6759b2",
+  "evaluated_at": "2026-10-26T11:23:39.955620+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation Analysis\n\n**Task Requirements:**\n1. Search Vienna hotels on Booking.com\n2. Dates: 4-night stay, June 28 – July 2, 2027\n3. Filters: Parking, Breakfast included, rating 8+\n\n**Screenshot Verification:**\n\n1. **Destination & Dates:** The search bar shows \"Vienna\" as destination with dates \"Mon, Jun 28 — Fri, Jul 2\". Cross-checking the calendar: June 28, 2027 falls on a Monday and July 2, 2027 falls on a Friday, so the displayed dates are consistent with the requested 2027 dates. The pricing results show \"4 nights, 1 adult,\" confirming the 4-night duration.\n\n2. **Filter Application Progression:**\n   - Screenshot 1: Initial search — 2,256 properties, no filters applied.\n   - Screenshot 2: \"Parking\" checkbox checked — 1,085 properties, \"Parking\" filter chip visible.\n   - Screenshot 3: \"Breakfast included\" + \"Parking\" checked — 247 properties, both chips visible.\n   - Screenshots 4 & 5: \"Very Good: 8+\" + \"Breakfast included\" + \"Parking\" all checked — **221 properties found**, with all three filter chips (\"Very Good: 8+\", \"Breakfast included\", \"Parking\") displayed at the top.\n\n3. **Results with Availability:** The filtered results display available properties with ratings above 8 (e.g., Doubletree By Hilton Vienna Bosei — 8.9, Rioca Vienna Posto 2 — 8.9), breakfast included labels, prices for the 4-night stay, and \"See availability\" buttons.\n\n4. **Response Consistency:** The response states 221 filtered properties matched, which matches the screenshot exactly. The example hotel names in the response (Hotel Zeitgeist Vienna Hauptbahnhof 8.7, etc.) are not visible in the screenshots, but per evaluation guidelines, such uncontradicted content can be believed. The URL filter parameters cited (hotelfacility=2, mealplan=1, review_score=80) are consistent with the filters shown.\n\nAll task components — correct destination, correct 2027 dates with 4-night duration, and all three required filters (Parking, Breakfast included, 8+ rating) — were properly applied, and matching available options were retrieved.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 7743,
+    "completion_tokens": 1686,
+    "total_tokens": 9429,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1172
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-26T11:23:40.281442+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Booking--38/Booking--38_20261026_071140/final_runs/run_001/screenshots/final_execution_3_results.png",
+      "source_sha256": "7ec39c868b61ab6ca1126cb748e7f603575989a6709b356507df72734352f538",
+      "source_bytes": 351012,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 206961,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "7f64006027841fa7a21224856f790d8bd49201ad6326b888da61fb9c42121e49"
+    },
+    {
+      "path": "Booking--38/Booking--38_20261026_071140/final_runs/run_001/screenshots/final_execution_4_parking.png",
+      "source_sha256": "da4e4b2cb150c3c97e78d776f1656d38128d7e3883d14f2fb7ea7e63679cdf0e",
+      "source_bytes": 360167,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 214247,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "59d16395150dc000e21a51a3c43fe7f138a1058d58d61659ffe5a5d5278f869c"
+    },
+    {
+      "path": "Booking--38/Booking--38_20261026_071140/final_runs/run_001/screenshots/final_execution_5_breakfast.png",
+      "source_sha256": "f67b46f49d060c83c3d2184a3e56699c10c4b13ddf453c26528eb4586aba84c4",
+      "source_bytes": 369133,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 221262,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "d361b70cea3ae5b752df3b57ebacd0aaa6c3046e98ec179270ed1f1b06742109"
+    },
+    {
+      "path": "Booking--38/Booking--38_20261026_071140/final_runs/run_001/screenshots/final_execution_6_rating.png",
+      "source_sha256": "a9d0ecb6ae207cbe59561e0526db325ea07751cd611680ac6b63f1167fd26c23",
+      "source_bytes": 370653,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 224637,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "5fa62ca43c3c51c4f4bb27d5c92c11a354925b20e8930ac8b00e03229c16bd52"
+    },
+    {
+      "path": "Booking--38/Booking--38_20261026_071140/final_runs/run_001/screenshots/final_execution_7_final.png",
+      "source_sha256": "a9d0ecb6ae207cbe59561e0526db325ea07751cd611680ac6b63f1167fd26c23",
+      "source_bytes": 370653,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 224637,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "5fa62ca43c3c51c4f4bb27d5c92c11a354925b20e8930ac8b00e03229c16bd52"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1459161,
+  "response_id": "cfacb195-ba26-40d3-9da9-00943b5c774a",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2058,
+    "reasoning_content_chars": 4398
+  }
+}

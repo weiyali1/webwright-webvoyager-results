@@ -1,0 +1,211 @@
+{
+  "task_id": "Huggingface--11",
+  "website": "Huggingface",
+  "task": "Identify the latest updated image to video model available on Huggingface and summarize its main features.",
+  "task_record": "Huggingface--11/Huggingface--11_20261024_132626",
+  "task_definition_sha256": "138275e805691186f783f00ed4e29d20413a6bc5d743cf72f0a8ff99949949ab",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Huggingface--11/Huggingface--11_20261024_132626"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "final_response.txt with final_script_log.txt fallback",
+  "answer": "The latest updated image-to-video model on Hugging Face is Kompaktion/40fuku (updated 3 minutes ago, per the Models list filtered by the Image-to-Video task and sorted by Recently updated). Main features: 40fuku is a compact distilled image-to-video denoiser based on the Wan2.1 architecture. It has ~722M parameters and generates 2-second videos of 33 frames at 480×832 resolution in roughly 4 denoising steps, enabling fast and lightweight text/image-to-video generation. Tags: image-to-video, pytorch, wan, distillation.",
+  "answer_source": "final_response.txt",
+  "screenshots": [
+    {
+      "path": "Huggingface--11/Huggingface--11_20261024_132626/final_runs/run_001/screenshots/final_execution_1_apply_i2v_filter.png",
+      "sha256": "55eff72067cfb996c408eb8408972338e68f61d1f9f3f4ba188b542390cdce4c"
+    },
+    {
+      "path": "Huggingface--11/Huggingface--11_20261024_132626/final_runs/run_001/screenshots/final_execution_2_sort_recently_updated.png",
+      "sha256": "1c596e20116c6a114972910a8eb0a9640c0fe42af8c4cabe8fb9aea8d75445a7"
+    },
+    {
+      "path": "Huggingface--11/Huggingface--11_20261024_132626/final_runs/run_001/screenshots/final_execution_3_latest_model_results.png",
+      "sha256": "1c596e20116c6a114972910a8eb0a9640c0fe42af8c4cabe8fb9aea8d75445a7"
+    },
+    {
+      "path": "Huggingface--11/Huggingface--11_20261024_132626/final_runs/run_001/screenshots/final_execution_4_model_page_features.png",
+      "sha256": "fd75d567ad9b030b38546457f2613b80b1ef98251aadd185bdae706a03d83242"
+    },
+    {
+      "path": "Huggingface--11/Huggingface--11_20261024_132626/final_runs/run_001/screenshots/final_execution_5_final_state.png",
+      "sha256": "fd75d567ad9b030b38546457f2613b80b1ef98251aadd185bdae706a03d83242"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "0045ede798cc8878e614807ab5da02e9bc63c9e6536314a35356964ece5e698f",
+  "fingerprint": "9f3be74c977778098abfe9ab328beef0628a2d39a72bf7a1e6a3a9e30fc3d8c9",
+  "evaluated_at": "2026-10-26T08:55:02.731644+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation Analysis\n\n**Task Requirements:**\n1. Identify the latest updated image-to-video model on Hugging Face\n2. Summarize its main features\n\n**Screenshot Evidence:**\n\n- **Screenshot 1:** Shows the Hugging Face Models page with the \"Image-to-Video\" task filter selected in the sidebar (initial/intermediate state, sorted by Trending).\n- **Screenshots 2 & 3:** Show the Models list filtered by the **Image-to-Video** task (1,812 models) and sorted by **\"Recently updated\"**. The top result is **Kompaktion/40fuku** — Image-to-Video, 0.7B, **Updated 3 minutes ago** — confirming it is the latest updated image-to-video model.\n- **Screenshots 4 & 5:** Show the model card for Kompaktion/40fuku, which contains:\n  - Title: \"40fuku: a small distilled image-to-video model\"\n  - \"Give it a picture and a sentence, and it makes a 2-second, 33-frame, 480×832 video in about 4 denoising steps.\"\n  - \"40fuku is a 722M-parameter denoiser, half the depth of its teacher... distilled from Causal Forcing's frame-wise image-to-video model (1.42B), which is itself built on Wan2.1-T2V-1.3B.\"\n  - Tags: image-to-video, PyTorch, Safetensors, video-generation, distillation, wan2.1, causal-forcing, Apache-2.0 license\n  - Additional specs: output 480×832, 33 frames @ 16 fps; speed ~2s on H100; 5.6 GB GPU memory peak.\n\n**Response Consistency Check:**\n\n- Model identification: **Kompaktion/40fuku, updated 3 minutes ago** — matches the sorted list exactly. ✓\n- \"Compact distilled image-to-video denoiser based on Wan2.1 architecture\" — matches model card. ✓\n- \"~722M parameters\" — matches \"722M-parameter denoiser.\" ✓\n- \"2-second videos of 33 frames at 480×832 resolution in roughly 4 denoising steps\" — matches model card exactly. ✓\n- Tags listed (image-to-video, pytorch, wan, distillation) — mostly accurate; \"wan\" is a slight shorthand for the actual \"wan2.1\" tag, a minor discrepancy that doesn't affect the substance.\n\nBoth parts of the task were completed: the latest updated image-to-video model was correctly identified using the appropriate filter and sort, and its main features were accurately summarized based on the model card content shown in the screenshots.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8177,
+    "completion_tokens": 1897,
+    "total_tokens": 10074,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1306
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-26T08:55:03.331649+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Huggingface--11/Huggingface--11_20261024_132626/final_runs/run_001/screenshots/final_execution_1_apply_i2v_filter.png",
+      "source_sha256": "55eff72067cfb996c408eb8408972338e68f61d1f9f3f4ba188b542390cdce4c",
+      "source_bytes": 681988,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 186270,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "5c4dfce617191560b6ff6e77b6b7ad01c5259bb145dfd8abe701be42db7adb9b"
+    },
+    {
+      "path": "Huggingface--11/Huggingface--11_20261024_132626/final_runs/run_001/screenshots/final_execution_2_sort_recently_updated.png",
+      "source_sha256": "1c596e20116c6a114972910a8eb0a9640c0fe42af8c4cabe8fb9aea8d75445a7",
+      "source_bytes": 684018,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 194161,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a323730174c43639b7f279d7502c50b756e9bcdd8851232bcb5cbc1358fd9b72"
+    },
+    {
+      "path": "Huggingface--11/Huggingface--11_20261024_132626/final_runs/run_001/screenshots/final_execution_3_latest_model_results.png",
+      "source_sha256": "1c596e20116c6a114972910a8eb0a9640c0fe42af8c4cabe8fb9aea8d75445a7",
+      "source_bytes": 684018,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 194161,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a323730174c43639b7f279d7502c50b756e9bcdd8851232bcb5cbc1358fd9b72"
+    },
+    {
+      "path": "Huggingface--11/Huggingface--11_20261024_132626/final_runs/run_001/screenshots/final_execution_4_model_page_features.png",
+      "source_sha256": "fd75d567ad9b030b38546457f2613b80b1ef98251aadd185bdae706a03d83242",
+      "source_bytes": 247702,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 192423,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "fb900d327ca12609391ac4880a24651930028f90cae10104939c55fd9f1430a1"
+    },
+    {
+      "path": "Huggingface--11/Huggingface--11_20261024_132626/final_runs/run_001/screenshots/final_execution_5_final_state.png",
+      "source_sha256": "fd75d567ad9b030b38546457f2613b80b1ef98251aadd185bdae706a03d83242",
+      "source_bytes": 247702,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 192423,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "fb900d327ca12609391ac4880a24651930028f90cae10104939c55fd9f1430a1"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1282761,
+  "response_id": "2ad98258-e739-461b-9233-241e86ed37b6",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2182,
+    "reasoning_content_chars": 4784
+  }
+}
