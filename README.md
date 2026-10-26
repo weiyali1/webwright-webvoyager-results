@@ -24,12 +24,8 @@ The evaluation results were assessed using GLM-5.3-Flash acting as the judge, ut
 - Benchmark variant: 615 WebVoyager-derived tasks after task filtering and task
   updates.
 - Evaluation type: self-reported system-level evaluation.
-- Evaluator: a custom critical-point judge using task critical points,
-  screenshots, and execution logs.
-- Each task includes internal self-healing and self-check mechanisms within the
-  task run.
-- Tasks whose runs failed because of stale dates, model API errors, or browser
-  crashes were rerun.
+- Evaluator: Evaluation was performed using GLM-5.3-Flash with the official WebVoyager judging prompts. 
+
 
 ## Result summary
 
