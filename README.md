@@ -43,7 +43,7 @@ The evaluation results were assessed using GLM-5.3-Flash acting as the judge, ut
 - [`tasks/`](tasks/) contains the 15 website JSON files defining all 615 tasks
   evaluated in this WebVoyager-derived variant.
   counts for all 615 tasks.
-- [Full task artifacts](https://github.com/weiyali1/webwright-webvoyager-results/releases/tag/webvoyager-2026-10-15)
+- [Full task artifacts](https://github.com/weiyali1/webwright-webvoyager-results/releases/tag/webvoyager-2026-10-26)
   are split into 15 website archives. Each task contains its `task.json` and
   `final_runs` evidence, including final answers and screenshots.
 - [`SHA256SUMS`](SHA256SUMS) provides checksums for all evidence archives.
