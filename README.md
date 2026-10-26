@@ -2,14 +2,21 @@
 
 ## Result
 
-| System | Organization | Benchmark | Score |
+| System | Organization | Judge | Score |
 | --- | --- | --- | --- |
-| Webwright + Qwen3.8-Max | Independent | browser-control-fable-5 | 601/615 (97.72%) |
+| Webwright + Qwen3.8-Max | Independent |  GLM-5.3-Flash (Official Prompts) | 598/615 (97.23%) |
 
-This is a self-reported system-level result on all 615 tasks in
-`browser-control-fable-5`, a WebVoyager-derived variant produced through task
-filtering and task updates. Dates were additionally updated for stale tasks in
-this evaluation.
+
+Task set
+The evaluation used all 615 tasks from the WebVoyager-derived browser-control-fable-5 variant. This variant was produced through task filtering and task updates. Dates in stale tasks were additionally updated before this evaluation.
+
+The exact task definitions used for the evaluation are published in the tasks directory.
+
+Execution System
+The evaluated execution system was Webwright + Qwen3.8-Max. This system is responsible for navigating the browser, generating task-specific critical-point lists, and executing the tasks to produce screenshots, logs, evidence, and final answers.
+
+Judge / Evaluation Model
+The evaluation results were assessed using GLM-5.3-Flash acting as the judge, utilizing the official judging prompts (the custom critical-point judge prompts provided by the benchmark). The judge used the task's critical points together with screenshots, execution logs, final answers, and saved evidence to determine whether the task was completed successfully.
 
 ## Evaluation setup
 
