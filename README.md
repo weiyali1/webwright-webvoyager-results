@@ -34,9 +34,9 @@ The evaluation results were assessed using GLM-5.3-Flash acting as the judge, ut
 ## Result summary
 
 - Total tasks: 615
-- Successful tasks: 601
-- Unsuccessful tasks: 14
-- Success rate: 97.72%
+- Successful tasks: 598
+- Unsuccessful tasks: 17
+- Success rate: 97.23%
 
 ## Public evidence
 
@@ -57,4 +57,4 @@ evaluation outputs remain unchanged.
 ## Reporting
 
 - Reporting organization: Independent
-- Published: 2026-10-15
+- Published: 2026-10-16
