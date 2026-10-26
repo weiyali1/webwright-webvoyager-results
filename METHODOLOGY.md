@@ -2,78 +2,55 @@
 
 ## Task set
 
-The evaluation used all 615 tasks from the WebVoyager-derived
-[`browser-control-fable-5`](https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5)
-variant. This variant was produced through task filtering and task updates.
-Dates in stale tasks were additionally updated before this evaluation.
+The evaluation uses all 615 tasks from the `browser-control-fable-5` variant derived from WebVoyager:
 
-The exact task definitions used for the evaluation are published in the
-[`tasks`](tasks/) directory.
+<https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5>
+
+The variant was created by filtering and updating tasks. Dates in tasks that had become stale were also updated before this evaluation. The exact task definitions used for the evaluation are included in the [`tasks/`](tasks/) directory.
 
 ## System
 
-The evaluated system was Webwright + Qwen3.8-Max.
+The evaluated system is Webwright running with Qwen3.8-Max.
 
-## Judge
+## Judge model and evaluation inputs
 
-The result was evaluated with a custom critical-point judge. The judge used the task's critical points together with screenshots, execution logs, final answers, and saved evidence to determine whether the task was completed successfully.
+The judge model is `glm-5.3-flash`. The evaluation uses the official WebVoyager judging prompt from [`evaluation/auto_eval.py`](https://github.com/MinorJerry/WebVoyager/blob/main/evaluation/auto_eval.py).
 
-For each task, the execution agent generated a task-specific critical-point list and judging prompts based on the task definition. 
-In stage one, the judge reviewed each execution screenshot individually. For each screenshot, it described which critical points the image supported or contradicted and assigned an evidence score from 1 to 5. In stage two, the judge received the original screenshots, the per-image analyses, and the corresponding execution log, including the final answer recorded in that log. It checked the critical points item by item. The judging prompt required all necessary critical points to be satisfied for a success verdict. The per-image evidence scores were not summed or averaged to produce the final verdict.
+For each unique `task_id`, the evaluator sends the selected run's task instruction, final answer, and up to the last five screenshots to the judge model. The screenshots are evidence for the final state of the browser task; the evaluator does not execute the task again.
 
-Each execution's verdict is stored in final_runs/run_NNN/judge_result.json: predicted_label: 1 means automatic judge acceptance, 0 means judge rejection, and null means the verdict could not be parsed.
+The answer input is selected using this rule:
 
-## Internal final-run workflow
+1. Use `final_response.txt` from the selected run when it exists and contains a usable answer.
+2. If that file is missing, empty, or marked incomplete, read `final_script_log.txt` from the same run.
+3. From that log, extract the last complete labelled `Final Response:` block, including its following multi-line content.
+4. If neither source provides a usable answer, mark the task as missing evidence and count it as unsuccessful in the task-level denominator.
 
-The `final_runs/run_NNN` directories represent sequential clean executions
-inside a single task-level self-healing and verification workflow. They are
-not separate benchmark submissions or independently reported benchmark
-trials.
+The evaluator does not use an answer from an evidence JSON file or from an older run. The source `judge_result.json` files are retained as execution artifacts, but they are not used as the verdict for this `glm-5.3-flash` evaluation.
 
-During a task, the system may revise its final script and execute it again in
-the next `run_NNN` directory when the current execution does not satisfy the
-task's critical points. Each internal run directory contains the script,
-execution log, screenshots, evidence, final response, and judge result for
-that execution.
+## Execution records and internal final runs
 
-A task was counted as successful when its selected task-level evaluation
-record contained a verified final execution whose `judge_result.json` had
-`predicted_label: 1`. Earlier failed internal executions were retained as
-audit evidence. Regardless of the number of internal `run_NNN` directories,
-each benchmark task contributed at most one result to the reported score.
+Each of the 615 benchmark tasks was executed once by Webwright. There was no second benchmark execution or task-level rerun for these results. Each task has one task directory and one timestamped execution record.
 
-## Within-task self-healing
+The `final_runs/run_NNN/` directories are outputs produced by the Webwright framework during that single task execution. They describe the framework's internal execution, validation, and final-result stages. They are implementation artifacts, not independent benchmark submissions and not additional task runs. Regardless of how many such directories a task contains, that task contributes at most one score entry.
 
-Within a task-level execution, the agent could revise its final script after
-an unsuccessful verification and perform another clean execution. These
-sequential executions are stored in `final_runs/run_NNN/`. They belong to the
-same task-level execution record and are part of the system's internal
-self-healing and verification workflow; they are not separate benchmark
-submissions.
+For evaluation, the framework's final output is taken from the highest-numbered `run_NNN` directory in that task's `final_runs/` directory. Earlier internal run directories are retained for audit and are not counted separately.
 
-## Task-level reruns for external failures
+The only retries described here are judge-side request or response-handling retries caused by transport or parsing problems. They do not rerun the Webwright task. A judge retry replaces the unresolved judge result for the same task and cannot increase the number of benchmark tasks.
 
-Separately from within-task self-healing, a task could be rerun at the
-task level when its execution was affected by a stale date, a model API error,
-or a browser crash. A task-level rerun creates another execution record for
-the same benchmark task and may itself contain one or more internal
-`final_runs/run_NNN/` executions.
+## Verdict and score calculation
 
-Each unique `task_id` contributed at most one result to the score. For each
-task, the scoring script selected the newest task-level record containing at
-least one internal judge result with `predicted_label: 1`; if no record
-contained a passing judge result, it selected the newest record. The task was
-counted as accepted if the selected record contained at least one such
-passing internal execution.
+The external judge response is parsed for an unambiguous `SUCCESS` or `NOT SUCCESS` verdict. A task contributes at most one result after task-level selection and retry deduplication.
 
-## Score calculation
+After evaluating the 615 selected final outputs and resolving judge-side parse-error retries, the final task-level counts are:
 
-The numerator counts unique successful benchmark tasks rather than successful
-internal executions. Multiple internal final runs belonging to the same task
-do not increase the numerator.
+- 598 successful tasks;
+- 14 judge failures;
+- 3 tasks with missing evidence.
 
-The system successfully completed 601 unique tasks out of 615 evaluated tasks:
+Therefore, the reported system-level success rate is:
 
-`601 / 615 = 97.72%`
+```text
+598 / 615 = 97.23%
+```
 
-This is a self-reported system-level success rate.
+This is a task-level success rate. Multiple `run_NNN` directories or judge retries for the same `task_id` do not increase the numerator.
