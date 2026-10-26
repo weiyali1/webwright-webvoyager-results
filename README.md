@@ -7,25 +7,28 @@
 | Webwright + Qwen3.8-Max | Independent |  GLM-5.3-Flash (Official Prompts) | 598/615 (97.23%) |
 
 
-Task set
-The evaluation used all 615 tasks from the WebVoyager-derived browser-control-fable-5 variant. This variant was produced through task filtering and task updates. Dates in stale tasks were additionally updated before this evaluation.
+## Task set
 
-The exact task definitions used for the evaluation are published in the tasks directory.
+The evaluation used all 615 tasks from the WebVoyager-derived `browser-control-fable-5` variant. This variant was produced through task filtering and task updates. Dates in stale tasks were also updated before this evaluation.
 
-Execution System
-The evaluated execution system was Webwright + Qwen3.8-Max. This system is responsible for navigating the browser, generating task-specific critical-point lists, and executing the tasks to produce screenshots, logs, evidence, and final answers.
+The exact task definitions used for the evaluation are published in the [`tasks/`](https://github.com/weiyali1/webwright-webvoyager-results/tree/main/tasks) directory.
 
-Judge / Evaluation Model
-The evaluation results were assessed using GLM-5.3-Flash acting as the judge, utilizing the official judging prompts (the custom critical-point judge prompts provided by the benchmark). The judge used the task's critical points together with screenshots, execution logs, final answers, and saved evidence to determine whether the task was completed successfully.
+## Execution system
+
+The evaluated system was Webwright + Qwen3.8-Max. Each benchmark task was executed once. The `final_runs/run_NNN/` directories are internal execution and validation artifacts produced by the framework during that task execution; they are not separate benchmark runs or submissions.
+
+## Judge / evaluation model
+
+The post-hoc evaluation used GLM-5.3-Flash with the official WebVoyager judging prompt. For each task, the evaluator selected the highest-numbered `final_runs/run_NNN/` directory and sent the task instruction, final answer, and up to five screenshots from that run to the judge.
+
+The answer was read from `final_response.txt`. If that file was missing or did not contain a usable answer, the evaluator extracted the final answer from `final_script_log.txt` in the same run. The original `judge_result.json` files were retained as execution artifacts and were not used as verdicts for this post-hoc evaluation.
 
 ## Evaluation setup
 
 - Benchmark source: <https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5>
-- Benchmark variant: 615 WebVoyager-derived tasks after task filtering and task
-  updates.
+- Benchmark variant: 615 WebVoyager-derived tasks after task filtering and task updates.
 - Evaluation type: self-reported system-level evaluation.
-- Evaluator: Evaluation was performed using GLM-5.3-Flash with the official WebVoyager judging prompts. 
-
+- Judge: GLM-5.3-Flash using the official WebVoyager judging prompt.
 
 ## Result summary
 
