@@ -25,6 +25,8 @@ The answer was read from `final_response.txt`. If that file was missing or did n
 
 Note on Judge Errors: The categories of parse_error and evaluation_error refer solely to infrastructure or formatting issues on the judge model's side (e.g., API timeouts, empty responses, or failure to output a valid SUCCESS/NOT SUCCESS verdict). These do not reflect the Webwright agent's execution performance. To ensure evaluation fairness and accuracy, any tasks encountering these judge-side errors are automatically retried (or manually resumed via --resume) until a valid verdict is obtained. Retries are capped at 3 attempts. 
 
+Note on Missing Evidence: A task is marked as missing_evidence if neither final_response.txt nor final_script_log.txt provides a usable answer, or if the required execution screenshots are absent. Following strict evaluation criteria, these tasks are counted as unsuccessful in the task-level denominator, as the system failed to leave a verifiable evidence trail. In this run, 3 tasks fell into this category.
+
 ## Evaluation setup
 
 - Benchmark source: <https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5>
