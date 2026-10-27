@@ -23,6 +23,8 @@ The post-hoc evaluation used GLM-5.3-Flash with the official WebVoyager judging 
 
 The answer was read from `final_response.txt`. If that file was missing or did not contain a usable answer, the evaluator extracted the final answer from `final_script_log.txt` in the same run. The original `judge_result.json` files were retained as execution artifacts and were not used as verdicts for this post-hoc evaluation.
 
+Note on Judge Errors: The categories of parse_error and evaluation_error refer solely to infrastructure or formatting issues on the judge model's side (e.g., API timeouts, empty responses, or failure to output a valid SUCCESS/NOT SUCCESS verdict). These do not reflect the Webwright agent's execution performance. To ensure evaluation fairness and accuracy, any tasks encountering these judge-side errors are automatically retried (or manually resumed via --resume) until a valid verdict is obtained. They are only counted as unsuccessful if the final retry fails to produce a valid verdict.
+
 ## Evaluation setup
 
 - Benchmark source: <https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5>
