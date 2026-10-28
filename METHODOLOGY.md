@@ -43,7 +43,7 @@ The external judge response is parsed for an unambiguous `SUCCESS` or `NOT SUCCE
 
 After evaluating the 615 selected final outputs and resolving judge-side parse-error retries, the final task-level counts are:
 
-- 598 successful tasks;
+- 601 successful tasks;
 - 11 judge failures;
 - 3 tasks with missing evidence.
 
