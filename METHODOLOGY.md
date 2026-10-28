@@ -44,13 +44,13 @@ The external judge response is parsed for an unambiguous `SUCCESS` or `NOT SUCCE
 After evaluating the 615 selected final outputs and resolving judge-side parse-error retries, the final task-level counts are:
 
 - 598 successful tasks;
-- 14 judge failures;
+- 11 judge failures;
 - 3 tasks with missing evidence.
 
 Therefore, the reported system-level success rate is:
 
 ```text
-598 / 615 = 97.23%
+601 / 615 = 97.72%
 ```
 
 This is a task-level success rate. Multiple `run_NNN` directories or judge retries for the same `task_id` do not increase the numerator.
