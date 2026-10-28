@@ -37,7 +37,7 @@ Note on Missing Evidence: A task is marked as missing_evidence if neither final_
 ## Result summary
 
 - Total tasks: 615
-- Successful tasks: 601
+- Successful tasks: 599
 - Unsuccessful tasks: 16
 - Success rate: 97.39%
 
