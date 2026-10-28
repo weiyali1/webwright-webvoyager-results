@@ -10,13 +10,13 @@ Model: glm-5.3-flash; prompt variant: standard.
 
 Answer input: final_response.txt (fallback: final_script_log.txt:Final Response). Use the selected run's final_response.txt when it contains a usable answer. If that file is absent, empty, or incomplete, extract the last non-empty Final Response block from that same run's final_script_log.txt. Never use evidence files or older runs; INCOMPLETE placeholders are excluded.
 
-Tasks: 40; accepted: 38; acceptance rate: 95.00%.
+Tasks: 40; accepted: 36; acceptance rate: 90.00%.
 
 Missing evidence is unsuccessful. API/parse/evaluation errors are unresolved, not silently dropped.
 
 | Website | Tasks | Accepted | Rejected | Missing evidence | Unresolved | Rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Google Flights | 40 | 38 | 2 | 0 | 0 | 95.00% |
+| Google Flights | 40 | 36 | 4 | 0 | 0 | 90.00% |
 
 Selected task records and image hashes are frozen in selection_manifest.json.
 Only the selected final execution is judged; old self-reflection labels are never inputs.
