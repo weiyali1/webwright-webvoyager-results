@@ -4,7 +4,7 @@
 
 | System | Organization | Judge | Score |
 | --- | --- | --- | --- |
-| Webwright + Qwen3.8-Max | Independent |  GLM-5.3-Flash (Official Prompts) | 598/615 (97.23%) |
+| Webwright + Qwen3.8-Max | Independent |  GLM-5.3-Flash (Official Prompts) | 601/615 (97.72%) |
 
 
 ## Task set
@@ -37,9 +37,9 @@ Note on Missing Evidence: A task is marked as missing_evidence if neither final_
 ## Result summary
 
 - Total tasks: 615
-- Successful tasks: 598
-- Unsuccessful tasks: 17
-- Success rate: 97.23%
+- Successful tasks: 601
+- Unsuccessful tasks: 14
+- Success rate: 97.72%
 
 ## Public evidence
 
