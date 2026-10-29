@@ -88,5 +88,5 @@ Local filesystem paths, company model endpoints, and credential information have
 
 ## Reporting Information
 
-- Reporting organization: XYDT
+- Reporting organization: XYDT（ Beijing XingYun Digital Technology Co., Ltd, a ZTE subsidiary）
 - Updated: 2026-10-29
