@@ -32,7 +32,7 @@ Before evaluation, the final answer was extracted from the selected run's output
 2. If that file is missing , extract the final answer from `final_script_log.txt` in the same run.
 3. Retain only the answer content, excluding execution logs, internal self-check results, and verdict statements such as `self-reflection judge verdict: PASS`, to prevent those statements from influencing the external judge.
 
-During evaluation, the evaluator reads only `answer.txt`. It does not directly read `final_response.txt`, `final_script_log.txt`, or other internal verdict files, and it does not fall back to earlier runs for an answer. The original `judge_result.json` files are not used as verdicts for this post-hoc evaluation.
+For the answer input, the evaluator reads only `answer.txt`. Task instructions and screenshots are also provided to the judge. It does not directly read `final_response.txt`, `final_script_log.txt`, or other internal verdict files, and it does not fall back to earlier runs for an answer. The original `judge_result.json` files are not used as verdicts for this post-hoc evaluation.
 
 ### Judge-Side Errors and Retries
 
