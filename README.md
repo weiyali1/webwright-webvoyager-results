@@ -4,7 +4,7 @@
 
 | System | Organization | Judge Model | Score |
 | --- | --- | --- | --- |
-| Webwright + Qwen3.8-Max | Independent | GLM-5.3-Flash (using the official WebVoyager judging prompt) | 597/615 (97.07%) |
+| Webwright + Qwen3.8-Max | XYDT | GLM-5.3-Flash (using the official WebVoyager judging prompt) | 597/615 (97.07%) |
 
 ## Task Set
 
