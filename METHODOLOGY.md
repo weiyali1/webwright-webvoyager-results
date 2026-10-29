@@ -1,56 +1,65 @@
 # Evaluation Methodology
 
-## Task set
+## Task Set
 
-The evaluation uses all 615 tasks from the `browser-control-fable-5` variant derived from WebVoyager:
+This evaluation used all 615 tasks from `browser-control-fable-5`, a WebVoyager-derived variant:
 
-<https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5>
+https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5
 
-The variant was created by filtering and updating tasks. Dates in tasks that had become stale were also updated before this evaluation. The exact task definitions used for the evaluation are included in the [`tasks/`](tasks/) directory.
+The variant was created through task filtering and updates. Dates in tasks that had become stale were updated before execution. The exact task definitions used in this evaluation are included in the [`tasks/`](tasks/) directory.
 
-## System
+## Execution System
 
-The evaluated system is Webwright running with Qwen3.8-Max.
+The evaluated system was Webwright + Qwen3.8-Max.
 
-## Judge model and evaluation inputs
+## Judge Model and Evaluation Inputs
 
-The judge model is `glm-5.3-flash`. The evaluation uses the official WebVoyager judging prompt from [`evaluation/auto_eval.py`](https://github.com/MinorJerry/WebVoyager/blob/main/evaluation/auto_eval.py).
+The post-hoc evaluation used `glm-5.3-flash` with the official WebVoyager judging prompt from [`evaluation/auto_eval.py`](https://github.com/MinorJerry/WebVoyager/blob/main/evaluation/auto_eval.py).
 
-For each unique `task_id`, the evaluator sends the selected run's task instruction, final answer, and up to the last five screenshots to the judge model. The screenshots are evidence for the final state of the browser task; the evaluator does not execute the task again.
+For each unique `task_id`, the evaluator sent the selected run's task instruction, final answer, and up to the last five screenshots to the judge model. The screenshots provided visual evidence of the task outcome; the evaluator itself did not rerun the browser task.
 
-The answer input is selected using this rule:
+### Final Answer Extraction
 
-1. Use `final_response.txt` from the selected run when it exists and contains a usable answer.
-2. If that file is missing, empty, or marked incomplete, read `final_script_log.txt` from the same run.
-3. From that log, extract the last complete labelled `Final Response:` block, including its following multi-line content.
-4. If neither source provides a usable answer, mark the task as missing evidence and count it as unsuccessful in the task-level denominator.
+Before evaluation, the final answer was extracted from the selected run's output files and saved as `answer.txt`:
 
-The evaluator does not use an answer from an evidence JSON file or from an older run. The source `judge_result.json` files are retained as execution artifacts, but they are not used as the verdict for this `glm-5.3-flash` evaluation.
+1. Preferentially extract the final answer from `final_response.txt` in the selected run.
+2. If that file is missing, extract the final answer from `final_script_log.txt` in the same run.
+3. Retain only the answer content, excluding execution logs, internal self-check results, and verdict statements such as `self-reflection judge verdict: PASS`, to prevent those statements from influencing the external judge.
+4. If neither source provides a usable answer, mark the task as missing evidence, retain it in the total task count, and count it as unsuccessful.
 
-## Execution records and internal final runs
+During evaluation, the evaluator reads only the generated `answer.txt`. It does not directly use raw logs as the answer or supplement the answer with content from evidence JSON files or earlier runs.
 
-Each of the 615 benchmark tasks was executed once by Webwright. There was no second benchmark execution or task-level rerun for these results. Each task has one task directory and one timestamped execution record.
+The original `judge_result.json` files are retained as execution artifacts but are not used as verdicts for this `glm-5.3-flash` post-hoc evaluation.
 
-The `final_runs/run_NNN/` directories are outputs produced by the Webwright framework during that single task execution. They describe the framework's internal execution, validation, and final-result stages. They are implementation artifacts, not independent benchmark submissions and not additional task runs. Regardless of how many such directories a task contains, that task contributes at most one score entry.
+## Execution Records and Internal Run Directories
 
-For evaluation, the framework's final output is taken from the highest-numbered `run_NNN` directory in that task's `final_runs/` directory. Earlier internal run directories are retained for audit and are not counted separately.
+This evaluation used task execution records from the same batch. Failed tasks were not repeatedly rerun until successful. Each task corresponds to one task directory and one timestamped execution record.
 
-The only retries described here are judge-side request or response-handling retries caused by transport or parsing problems. They do not rerun the Webwright task. A judge retry replaces the unresolved judge result for the same task and cannot increase the number of benchmark tasks.
+The `final_runs/run_NNN/` directories are internal artifacts produced by the Webwright framework during task execution. They record the framework's internal execution, validation, and final-output generation stages. These directories do not represent independent benchmark submissions or additional task-level runs. Regardless of how many such directories a task contains, it contributes at most one final evaluation result.
 
-## Verdict and score calculation
+For evaluation, the highest-numbered `run_NNN` directory within the task's `final_runs/` directory is selected as the final output. Earlier internal run directories are retained for auditing and are not scored separately.
 
-The external judge response is parsed for an unambiguous `SUCCESS` or `NOT SUCCESS` verdict. A task contributes at most one result after task-level selection and retry deduplication.
+## Judge-Side Retries
 
-After evaluating the 615 selected final outputs and resolving judge-side parse-error retries, the final task-level counts are:
+The retries described here apply only to judge requests or response processing affected by transport or parsing problems. They do not rerun the Webwright task.
 
-- 599 successful tasks;
-- 13 judge failures;
-- 3 tasks with missing evidence.
+Judge-side retries resolve incomplete evaluations for the same task without increasing the number of benchmark tasks. After retry results are deduplicated by `task_id`, only one final verdict is retained for each task. Multiple judge requests do not cause a task to be counted more than once.
 
-Therefore, the reported system-level success rate is:
+## Verdict and Score Calculation
 
-```text
-599 / 615 = 97.39%
-```
+The evaluator parses the external judge model's response for an unambiguous `SUCCESS` or `NOT SUCCESS` verdict. After task-level selection and retry deduplication, each task contributes at most one result.
 
-This is a task-level success rate. Multiple `run_NNN` directories or judge retries for the same `task_id` do not increase the numerator.
+After evaluating the selected final outputs for all 615 tasks and resolving judge-side parsing errors through retries, the final counts were:
+
+| Category | Number of Tasks |
+| --- | ---: |
+| Successful tasks | 597 |
+| Tasks judged unsuccessful | 15 |
+| Tasks with missing evidence | 3 |
+| Total | 615 |
+
+Tasks with missing evidence are counted as unsuccessful and remain in the denominator of all 615 tasks. There are therefore 18 unsuccessful tasks in total, and the system-level success rate is:
+
+597 / 615 × 100% = 97.07%
+
+This is a task-level success rate. Neither multiple internal `run_NNN` directories nor judge-side retries for the same `task_id` increase the total task count or the successful task count.
