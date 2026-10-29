@@ -1,62 +1,91 @@
-# Webwright WebVoyager Results
+# Webwright WebVoyager Evaluation Results
 
 ## Result
 
-| System | Organization | Judge | Score |
+| System | Organization | Judge Model | Score |
 | --- | --- | --- | --- |
-| Webwright + Qwen3.8-Max | Independent |  GLM-5.3-Flash (Official Prompts) | 599/615 (97.39%) |
+| Webwright + Qwen3.8-Max | Independent | GLM-5.3-Flash (using the official WebVoyager judging prompt) | 597/615 (97.07%) |
+
+## Task Set
+
+This evaluation used all 615 tasks from `browser-control-fable-5`, a WebVoyager-derived task set. This variant was created through task filtering and updates. Dates in tasks that had become stale were updated before execution.
+
+The exact task definitions used in this evaluation are published in the [`tasks/`](tasks/) directory.
+
+## Execution System
+
+The evaluated system was Webwright + Qwen3.8-Max. Each benchmark task was executed once, with the framework able to perform internal validation and repair during that task execution.
+
+The `final_runs/run_NNN/` directories contain the internal execution and validation artifacts produced during this process. They do not represent independent benchmark task runs or additional submissions. Each task contributes only one final evaluation result.
+
+## Judge Model and Evaluation Inputs
+
+The post-hoc evaluation used GLM-5.3-Flash with the official WebVoyager judging prompt.
+
+For each task, the evaluator selected the highest-numbered `final_runs/run_NNN/` directory and sent the task instruction, the contents of that directory's `answer.txt`, and up to the last five screenshots to the judge model.
+
+### Final Answer Extraction
+
+Before evaluation, the final answer was extracted from the selected run's output files and saved as `answer.txt`:
+
+1. Preferentially extract the final answer from `final_response.txt` in the selected run.
+2. If that file is missing or does not contain a usable answer, extract the final answer from `final_script_log.txt` in the same run.
+3. Retain only the answer content, excluding execution logs, internal self-check results, and verdict statements such as `self-reflection judge verdict: PASS`, to prevent those statements from influencing the external judge.
+
+During evaluation, the evaluator reads only `answer.txt`. It does not directly read `final_response.txt`, `final_script_log.txt`, or other internal verdict files, and it does not fall back to earlier runs for an answer. The original `judge_result.json` files are not used as verdicts for this post-hoc evaluation.
+
+### Judge-Side Errors and Retries
+
+`parse_error`, `evaluation_error`, and `api_error` indicate problems encountered while submitting judge requests or processing their results, such as API timeouts, empty responses, failure to parse a valid `SUCCESS` / `NOT SUCCESS` verdict, or evaluation-processing exceptions. These statuses do not directly indicate that the agent failed to execute the task.
+
+Retryable judge-side errors are handled through automatic retries or by resuming evaluation with `--resume`, with a maximum of three retries. These retries apply only to the judging process for the same task. They do not rerun the benchmark task or increase the total task count.
 
 
-## Task set
+### Missing Evidence
 
-The evaluation used all 615 tasks from the WebVoyager-derived `browser-control-fable-5` variant. This variant was produced through task filtering and task updates. Dates in stale tasks were also updated before this evaluation.
+A task is marked as `missing_evidence` if the selected run's `answer.txt` is missing or empty, or if the required execution screenshots are missing.
 
-The exact task definitions used for the evaluation are published in the [`tasks/`](https://github.com/weiyali1/webwright-webvoyager-results/tree/main/tasks) directory.
+Tasks with missing evidence remain in the denominator of all 615 tasks and are counted as unsuccessful. Three tasks fell into this category in this evaluation.
 
-## Execution system
+## Evaluation Setup
 
-The evaluated system was Webwright + Qwen3.8-Max. Each benchmark task was executed once. The `final_runs/run_NNN/` directories are internal execution and validation artifacts produced by the framework during that task execution; they are not separate benchmark runs or submissions.
+- Benchmark source: [browser-control-fable-5](https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5)
+- Task scope: 615 filtered and updated WebVoyager-derived tasks.
+- Execution system: Webwright + Qwen3.8-Max.
+- Evaluation type: Self-reported, system-level post-hoc evaluation.
+- Judge model: GLM-5.3-Flash.
+- Judging prompt: The official WebVoyager judging prompt.
+- Answer input: `answer.txt` from the selected run.
+- Screenshot input: Up to the last five screenshots from the selected run.
+- Scoring unit: Each unique task is counted once.
 
-## Judge / evaluation model
+## Result Summary
 
-The post-hoc evaluation used GLM-5.3-Flash with the official WebVoyager judging prompt. For each task, the evaluator selected the highest-numbered `final_runs/run_NNN/` directory and sent the task instruction, final answer, and up to five screenshots from that run to the judge.
+| Metric | Result |
+| --- | ---: |
+| Total tasks | 615 |
+| Successful tasks | 597 |
+| Unsuccessful tasks (including missing evidence) | 18 |
+| Of which: missing evidence | 3 |
+| Success rate | 97.07% |
 
-The answer was read from `final_response.txt`. If that file was missing or did not contain a usable answer, the evaluator extracted the final answer from `final_script_log.txt` in the same run. The original `judge_result.json` files were retained as execution artifacts and were not used as verdicts for this post-hoc evaluation.
+The success rate uses all 615 tasks as the denominator:
 
-Note on Judge Errors: The categories of parse_error and evaluation_error refer solely to infrastructure or formatting issues on the judge model's side (e.g., API timeouts, empty responses, or failure to output a valid SUCCESS/NOT SUCCESS verdict). These do not reflect the Webwright agent's execution performance. To ensure evaluation fairness and accuracy, any tasks encountering these judge-side errors are automatically retried (or manually resumed via --resume) until a valid verdict is obtained. Retries are capped at 3 attempts. 
+597 / 615 × 100% = 97.07%
 
-Note on Missing Evidence: A task is marked as missing_evidence if neither final_response.txt nor final_script_log.txt provides a usable answer, or if the required execution screenshots are absent. Following strict evaluation criteria, these tasks are counted as unsuccessful in the task-level denominator, as the system failed to leave a verifiable evidence trail. In this run, 3 tasks fell into this category.
+Neither the number of internal run directories nor the number of judge-side retries increases the total task count or the successful task count.
 
-## Evaluation setup
+## Public Evidence
 
-- Benchmark source: <https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5>
-- Benchmark variant: 615 WebVoyager-derived tasks after task filtering and task updates.
-- Evaluation type: self-reported system-level evaluation.
-- Judge: GLM-5.3-Flash using the official WebVoyager judging prompt.
+- [`tasks/`](tasks/): The 15 website task JSON files used in this evaluation, containing 615 tasks in total.
+- [Execution evidence archives](https://github.com/weiyali1/webwright-webvoyager-results/releases/tag/webvoyager-2026-10-26): Separate archives for the 15 websites, provided for auditing execution artifacts, final answers, and screenshots.
+- [`eval_result/`](eval_result/): Evaluation results, summary reports, and associated configurations and records.
+- [`evaluate_webvoyager.py`](evaluate_webvoyager.py): The script used for this evaluation.
+- [`SHA256SUMS`](SHA256SUMS): SHA-256 checksums for the execution evidence archives.
 
-## Result summary
+Local filesystem paths, company model endpoints, and credential information have been redacted from the published copies. Compiled Python cache files have been omitted. The original evaluation outputs remain unchanged.
 
-- Total tasks: 615
-- Successful tasks: 599
-- Unsuccessful tasks: 16
-- Success rate: 97.39%
-
-## Public evidence
-
-- [`tasks/`](tasks/) contains the 15 website JSON files defining all 615 tasks
-  evaluated in this WebVoyager-derived variant.
-- [Full task artifacts](https://github.com/weiyali1/webwright-webvoyager-results/releases/tag/webvoyager-2026-10-26)
-  are split into 15 website archives. Each task contains its `task.json` and
-  `final_runs` evidence, including final answers and screenshots.
-- [`eval_result`](https://github.com/weiyali1/webwright-webvoyager-results/tree/main/eval_result)
-  contains the final evaluation outputs generated by `evaluate_webvoyager.py` using GLM-5.3-Flash with the official WebVoyager judging prompts.
-- [`SHA256SUMS`](SHA256SUMS) provides checksums for all evidence archives.
-
-Published copies redact local filesystem paths, company model endpoints, and
-credential-shaped values. Compiled Python cache files are omitted. Original
-evaluation outputs remain unchanged.
-
-## Reporting
+## Reporting Information
 
 - Reporting organization: Independent
-- Published: 2026-10-26
+- Updated: 2026-10-29
