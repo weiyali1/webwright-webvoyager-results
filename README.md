@@ -14,7 +14,7 @@ The exact task definitions used in this evaluation are published in the [`tasks/
 
 ## Execution System
 
-The evaluated system was Webwright + Qwen3.8-Max. Each benchmark task was executed once, with the framework able to perform internal validation and repair during that task execution.
+The evaluated system was Webwright + Qwen3.8-Max.  This evaluation used one independent execution batch and did not combine task records from other batches.
 
 The `final_runs/run_NNN/` directories contain the internal execution and validation artifacts produced during this process. They do not represent independent benchmark task runs or additional submissions. Each task contributes only one final evaluation result.
 
@@ -38,7 +38,7 @@ During evaluation, the evaluator reads only `answer.txt`. It does not directly r
 
 `parse_error`, `evaluation_error`, and `api_error` indicate problems encountered while submitting judge requests or processing their results, such as API timeouts, empty responses, failure to parse a valid `SUCCESS` / `NOT SUCCESS` verdict, or evaluation-processing exceptions. These statuses do not directly indicate that the agent failed to execute the task.
 
-We handle these issues through automatic retries or by resuming evaluation with --resume, with a maximum of three retries. These retries apply only to the judging process for the same task. They do not rerun the benchmark task or increase the total task count.
+We handle these issues through automatic retries, with a maximum of three retries. These retries apply only to the judging process for the same task. They do not rerun the benchmark task or increase the total task count.
 
 
 ### Missing Evidence
