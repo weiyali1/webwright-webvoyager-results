@@ -92,4 +92,4 @@ The success rate is:
 597 / 615 × 100% = 97.07%
 ```
 
-This is a task-level success rate. Neither multiple internal `run_NNN` directories nor judge-side retries for the same `task_id` increase the total task count or the successful task count.
+This is a task-level success rate. Final statistics are calculated over unique task IDs. Judge-side re-evaluations replace unresolved judgments rather than add duplicate task results.
