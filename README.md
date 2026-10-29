@@ -88,5 +88,5 @@ Local filesystem paths, company model endpoints, and credential information have
 
 ## Reporting Information
 
-- Reporting organization: Independent
+- Reporting organization: XYDT
 - Updated: 2026-10-29
