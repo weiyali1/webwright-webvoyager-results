@@ -39,7 +39,7 @@ Some `final_response.txt` files contained internal self-evaluation or verdict in
 
 To prevent this content from influencing the external judging, the final answer text was extracted and cleaned before evaluation, and the result was saved as `answer.txt` in the corresponding run directory.
 
-The cleaning covered trailing internal self-evaluation or verdict segments, as well as additional leading success statements. The evaluation stage read only the cleaned `answer.txt` and did not submit the raw response files or full execution logs directly to the judge model as answers.
+Retain only the answer content, excluding execution logs, internal self-check results, and verdict statements such as self-reflection judge verdict: PASS, to prevent those statements from influencing the external judge. The evaluation stage read only the cleaned `answer.txt` and did not submit the raw response files or full execution logs directly to the judge model as answers.
 
 ### Answer Source Selection
 
