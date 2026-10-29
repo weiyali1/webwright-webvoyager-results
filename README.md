@@ -29,7 +29,7 @@ For each task, the evaluator selected the highest-numbered `final_runs/run_NNN/`
 Before evaluation, the final answer was extracted from the selected run's output files and saved as `answer.txt`:
 
 1. Preferentially extract the final answer from `final_response.txt` in the selected run.
-2. If that file is missing or does not contain a usable answer, extract the final answer from `final_script_log.txt` in the same run.
+2. If that file is missing , extract the final answer from `final_script_log.txt` in the same run.
 3. Retain only the answer content, excluding execution logs, internal self-check results, and verdict statements such as `self-reflection judge verdict: PASS`, to prevent those statements from influencing the external judge.
 
 During evaluation, the evaluator reads only `answer.txt`. It does not directly read `final_response.txt`, `final_script_log.txt`, or other internal verdict files, and it does not fall back to earlier runs for an answer. The original `judge_result.json` files are not used as verdicts for this post-hoc evaluation.
