@@ -59,7 +59,7 @@ Among them, `parse_error` indicates that the response was not accepted by the pa
 
 In this evaluation, the 6 tasks initially recorded as `parse_error` were re-judged in the independent `parse_error_retry/` output directory. After the first re-evaluation, 1 task still could not be parsed, and this task was subsequently re-judged in `parse_error_retry2/` and ultimately received a `NOT SUCCESS` verdict.
 
-These re-evaluations used the same task instructions, answers, and screenshots, only adding judging requests, without re-executing the browser tasks or changing the selected execution evidence. The above parsing-error re-evaluations were completed in new output directories, not automatically through `--resume`.
+These re-evaluations used the same task instructions, answers, and screenshots, only adding judging requests, without re-executing the browser tasks or changing the selected execution evidence. The above parsing-error re-evaluations were completed in new output directories.
 
 The original judging responses and subsequent re-evaluation results were retained in their respective output directories. The final results were merged by `task_id`, replacing the corresponding unresolved records with the subsequent re-evaluation results; each task was counted only once in the final result.
 
