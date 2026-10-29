@@ -38,8 +38,9 @@ During evaluation, the evaluator reads only `answer.txt`. It does not directly r
 
 `parse_error`, `evaluation_error`, and `api_error` indicate problems encountered while submitting judge requests or processing their results, such as API timeouts, empty responses, failure to parse a valid `SUCCESS` / `NOT SUCCESS` verdict, or evaluation-processing exceptions. These statuses do not directly indicate that the agent failed to execute the task.
 
-We handle these issues through automatic retries. These retries apply only to the judging process for the same task. They do not rerun the benchmark task or increase the total task count.
+We handle these issues through automatic retries and, for responses that remain unparseable, through re-evaluation in separate output directories. These retries and re-evaluations apply only to the judging process for the same task. They do not rerun the benchmark task or increase the total task count.
 
+In this evaluation, the 6 tasks initially recorded as parse_error were re-judged in parse_error_retry/. One task still could not be parsed after the first re-evaluation and was subsequently re-judged in parse_error_retry2/, ultimately receiving a NOT SUCCESS verdict. These re-evaluations used the same task instructions, answers, and screenshots; they did not re-execute the browser tasks or change the selected execution evidence. Final results were merged by task_id, with each task counted only once.
 
 ### Missing Evidence
 
