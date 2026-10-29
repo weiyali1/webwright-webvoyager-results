@@ -74,7 +74,7 @@ The success rate uses all 615 tasks as the denominator:
 
 597 / 615 × 100% = 97.07%
 
-Neither the number of internal run directories nor the number of judge-side retries increases the total task count or the successful task count.
+Final statistics are calculated over unique task IDs. Judge-side re-evaluations replace unresolved judgments rather than add duplicate task results.
 
 ## Public Evidence
 
