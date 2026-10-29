@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Map--36",
+  "website": "Google Map",
+  "task": "Identify 5 restaurants serving pizza near the 30309 zip code and rank them by their ratings.",
+  "task_record": "Google_Map/Google Map--36/Google Map--36_20261025_045615",
+  "task_definition_sha256": "078255c644d70ab95dd46f2a743560dbb1df5b3b28e8551913ce5ffb34e95bd6",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google_Map/Google Map--36/Google Map--36_20261025_045615"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Top 5 restaurants serving pizza near the 30309 zip code (Atlanta, GA), ranked by their Google Maps ratings (highest to lowest): 1. Varasano's Pizzeria - Buckhead - 4.9 (3,196 reviews); 2. Tandoori Pizza & Wing Co - 4.7 (868 reviews); 3. Antico Pizza Napoletana - 4.6 (6,590 reviews); 4. Varuni Napoli - 4.6 (1,528 reviews); 5. Fellini's Pizza - 4.5 (3,366 reviews). Note: Google Maps offers no sort-by-rating control for this search (only a minimum-rating filter), so the ranking was computed from the displayed ratings in the results feed.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Google_Map/Google Map--36/Google Map--36_20261025_045615/final_runs/run_001/screenshots/final_execution_1_search_results.png",
+      "sha256": "490e0ac8a483def1abea8009447562d4502c82fca8d846fdfe8c5d70f7112165"
+    },
+    {
+      "path": "Google_Map/Google Map--36/Google Map--36_20261025_045615/final_runs/run_001/screenshots/final_execution_3_results_scoped_30309.png",
+      "sha256": "490e0ac8a483def1abea8009447562d4502c82fca8d846fdfe8c5d70f7112165"
+    },
+    {
+      "path": "Google_Map/Google Map--36/Google Map--36_20261025_045615/final_runs/run_001/screenshots/final_execution_4_rating_control_check.png",
+      "sha256": "864d55bb77bbfa74bd7f5d54868a8662508ce2c94c9ca3890505debeed091168"
+    },
+    {
+      "path": "Google_Map/Google Map--36/Google Map--36_20261025_045615/final_runs/run_001/screenshots/final_execution_5_extracted_results.png",
+      "sha256": "0b1547e2304fe096f565787da9ffb365d55d70bb572b4f12474af8ee789dffab"
+    },
+    {
+      "path": "Google_Map/Google Map--36/Google Map--36_20261025_045615/final_runs/run_001/screenshots/final_execution_6_final_ranking_state.png",
+      "sha256": "0b1547e2304fe096f565787da9ffb365d55d70bb572b4f12474af8ee789dffab"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "e6b7461318e87a826b359fbfd56bc32957495bd628de0fa5eea7a12ec6d04ad7",
+  "fingerprint": "677c0e1a4bcf820b42d5b7f164b9dc78215e13097ba2c0d71cfc741a8d700f6d",
+  "evaluated_at": "2026-10-28T23:10:40.088167+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\n1. Identify 5 restaurants serving pizza near zip code 30309\n2. Rank them by their ratings\n\n## Screenshot Verification\n\nThe screenshots show a Google Maps search for **\"pizza near 30309\"**, which directly matches the task's location requirement. The results panel displays pizza restaurants with their ratings and review counts:\n\n- **Varasano's Pizzeria - Buckhead** — 4.9 (3,196 reviews) ✓ matches response\n- **Atwoods Pizza Cafe** — 4.5 (1,114 reviews)\n- **Mellow Mushroom Atlanta - Buckhead** — 4.4 (1,335 reviews)\n- **Night Owl Pizza - Midtown** — 4.5 (1,344 reviews)\n- **Tandoori Pizza & Wing Co** — 4.7 (868 reviews) ✓ matches response\n- **Antico Pizza Napoletana** — 4.6 (6,590 reviews) ✓ matches response\n- **Varuni Napoli** — 4.6 (1,528 reviews) ✓ matches response\n- **Pasta da Pulcinella** — 4.4 (1,141 reviews)\n- **Nancy's Pizza Midtown** — 4.1 (2,581 reviews)\n\nThe third screenshot shows the rating (評分) filter dropdown open, displaying only minimum-rating thresholds (2.0–4.5), which corroborates the response's note that Google Maps provides no sort-by-rating option, so the ranking had to be computed manually from displayed ratings.\n\n## Response Verification\n\nThe response lists 5 pizza restaurants ranked highest to lowest:\n1. Varasano's Pizzeria - Buckhead — 4.9 ✓ (confirmed in screenshot)\n2. Tandoori Pizza & Wing Co — 4.7 ✓ (confirmed in screenshot)\n3. Antico Pizza Napoletana — 4.6 ✓ (confirmed in screenshot)\n4. Varuni Napoli — 4.6 ✓ (confirmed in screenshot)\n5. Fellini's Pizza — 4.5 (not visible in screenshots, but per evaluation guidelines, content in the response not shown on the screenshot is believed; it is plausibly a result further down the feed)\n\nThe ranking order is consistent with the ratings shown: 4.9 > 4.7 > 4.6 = 4.6 > 4.5. The choice of Fellini's Pizza (4.5) for the fifth spot is valid since it ties with other 4.5-rated restaurants (Atwoods, Night Owl), and it has the highest review count among them, making it a defensible tie-break.\n\n## Conclusion\n\nBoth components of the task were fulfilled: 5 pizza restaurants near 30309 were identified, and they were ranked by rating (highest to lowest), with ratings and review counts matching the screenshot evidence. The methodology note about the lack of a sort-by-rating feature is also supported by the filter dropdown shown.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8217,
+    "completion_tokens": 2564,
+    "total_tokens": 10781,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1928
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T23:10:40.803371+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Google_Map/Google Map--36/Google Map--36_20261025_045615/final_runs/run_001/screenshots/final_execution_1_search_results.png",
+      "source_sha256": "490e0ac8a483def1abea8009447562d4502c82fca8d846fdfe8c5d70f7112165",
+      "source_bytes": 1371789,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 368974,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "fd754080d583caac8bb69892235a9a299edb52bb4e7e109f6a993174666ff114"
+    },
+    {
+      "path": "Google_Map/Google Map--36/Google Map--36_20261025_045615/final_runs/run_001/screenshots/final_execution_3_results_scoped_30309.png",
+      "source_sha256": "490e0ac8a483def1abea8009447562d4502c82fca8d846fdfe8c5d70f7112165",
+      "source_bytes": 1371789,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 368974,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "fd754080d583caac8bb69892235a9a299edb52bb4e7e109f6a993174666ff114"
+    },
+    {
+      "path": "Google_Map/Google Map--36/Google Map--36_20261025_045615/final_runs/run_001/screenshots/final_execution_4_rating_control_check.png",
+      "source_sha256": "864d55bb77bbfa74bd7f5d54868a8662508ce2c94c9ca3890505debeed091168",
+      "source_bytes": 1359301,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 368690,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "e30b6fb55312bbae5c1740df50573dc30624c053f34a9d6d6e12e2220c20ce3a"
+    },
+    {
+      "path": "Google_Map/Google Map--36/Google Map--36_20261025_045615/final_runs/run_001/screenshots/final_execution_5_extracted_results.png",
+      "source_sha256": "0b1547e2304fe096f565787da9ffb365d55d70bb572b4f12474af8ee789dffab",
+      "source_bytes": 1372481,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 369020,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "9810b80e4844b1655cc02f0b10a418e4086e1cc76d012bb6db144515ddef3772"
+    },
+    {
+      "path": "Google_Map/Google Map--36/Google Map--36_20261025_045615/final_runs/run_001/screenshots/final_execution_6_final_ranking_state.png",
+      "source_sha256": "0b1547e2304fe096f565787da9ffb365d55d70bb572b4f12474af8ee789dffab",
+      "source_bytes": 1372481,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 369020,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "9810b80e4844b1655cc02f0b10a418e4086e1cc76d012bb6db144515ddef3772"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 2463087,
+  "response_id": "d4db3030-e0e6-4cd7-a987-13c9d82c56e8",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2383,
+    "reasoning_content_chars": 6668
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Flights--4",
+  "website": "Google Flights",
+  "task": "Search for one-way flights from New York to London on Dec. 26th and filter the results to show only non-stop flights.",
+  "task_record": "Google_Flights/Google Flights--4/Google Flights--4_20261028_091815",
+  "task_definition_sha256": "1d3b0f718f69cbe333aa7c6f469ea1fffff6af1c9c807ccbc709ad5c12a6d4e2",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google_Flights/Google Flights--4/Google Flights--4_20261028_091815"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "answer.txt only",
+  "answer": "One-way nonstop flights from New York to London on Saturday, December 26, 2026: Google Flights shows 22 results returned with the Stops filter set to Nonstop (cheapest from HK$3,879). The task was completed by setting trip type to One way, entering New York as origin and London as destination via suggestion lists, selecting Dec 26 in the date picker, submitting the search, and applying the 'Nonstop only' option in the dedicated Stops filter; the filtered results list displays only nonstop flights.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Google_Flights/Google Flights--4/Google Flights--4_20261028_091815/final_runs/run_001/screenshots/final_execution_3_destination_suggestions.png",
+      "sha256": "eb5169ad23f36d5a9eda751bda531a8d4c9e19a73b88e4e073968eb3ebbe7465"
+    },
+    {
+      "path": "Google_Flights/Google Flights--4/Google Flights--4_20261028_091815/final_runs/run_001/screenshots/final_execution_4_date_picker_dec26.png",
+      "sha256": "9b310a8c53d965ca4f7f06977964d26ddd89d7fe414000e668921d23ff415e2b"
+    },
+    {
+      "path": "Google_Flights/Google Flights--4/Google Flights--4_20261028_091815/final_runs/run_001/screenshots/final_execution_5_results_displayed.png",
+      "sha256": "ff2d7a395e43fc2214567c210c674eceaf2b6e002d03f20da1896928c0a019f4"
+    },
+    {
+      "path": "Google_Flights/Google Flights--4/Google Flights--4_20261028_091815/final_runs/run_001/screenshots/final_execution_6_stops_nonstop_selected.png",
+      "sha256": "50cbd973c500cb03b8c1619c05c54e3d2a0aeba88f8c6f1a4d21d4dc052c8bca"
+    },
+    {
+      "path": "Google_Flights/Google Flights--4/Google Flights--4_20261028_091815/final_runs/run_001/screenshots/final_execution_7_final_nonstop_results.png",
+      "sha256": "b607893572c5bb9d677a44da30a63700127051f0912579d0714d68f79ba4b15e"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "b539440c41bbf90236d5b4e5368d3c43673b8fcbbaec14447c687d909f14954a",
+  "fingerprint": "439f3243931f1bd3b6eb80771b9c07ab880c0173beac33aa3f7adc0b2cb1de3d",
+  "evaluated_at": "2026-10-28T21:46:01.215238+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation Analysis\n\n**Task Requirements:**\n1. Search for one-way flights from New York to London\n2. Departure date: Dec. 26th\n3. Filter results to show only non-stop flights\n\n**Screenshot-by-Screenshot Verification:**\n\n1. **Screenshot 1:** Google Flights homepage shows the trip type set to \"One way\", origin entered as \"New York\", and the destination dropdown open with \"London, United Kingdom\" suggestions — confirming origin/destination setup.\n\n2. **Screenshot 2:** The date picker shows \"Sat, Dec 26\" selected (highlighted in blue on the December calendar, with January 2027 visible, confirming Dec 26, 2026). Trip type remains \"One way\".\n\n3. **Screenshot 3:** Search results page displays New York → London, Sat, Dec 26, One way. Results initially include both \"1 stop\" and \"Nonstop\" flights (cheapest HK$2,994), confirming the search was executed before filtering.\n\n4. **Screenshot 4:** The Stops filter dialog is open with the \"Nonstop only\" radio button selected, and a \"Nonstop ✕\" filter chip appears in the filter bar. Results now show only Nonstop flights, and the cheapest price updated to HK$3,879.\n\n5. **Screenshot 5:** Final filtered results confirm every listed flight is marked \"Nonstop\" (e.g., 9:00 PM–9:15 AM Nonstop HK$3,879; 9:10 PM–9:25 AM Nonstop HK$4,122, etc.), with the \"Nonstop\" filter chip active and \"All filters (1)\" indicated.\n\n**Response Consistency:** The result response accurately matches the screenshots — one-way trip, New York to London, Dec 26, Nonstop filter applied, cheapest at HK$3,879. All steps of the instruction were executed correctly.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 9089,
+    "completion_tokens": 991,
+    "total_tokens": 10080,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 582
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T21:46:01.771435+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Google_Flights/Google Flights--4/Google Flights--4_20261028_091815/final_runs/run_001/screenshots/final_execution_3_destination_suggestions.png",
+      "source_sha256": "eb5169ad23f36d5a9eda751bda531a8d4c9e19a73b88e4e073968eb3ebbe7465",
+      "source_bytes": 304733,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 212972,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "1bc263b64a3c2f19c79a4f916ed6d8a28ea632530fb44110c4d25f281e1ec6be"
+    },
+    {
+      "path": "Google_Flights/Google Flights--4/Google Flights--4_20261028_091815/final_runs/run_001/screenshots/final_execution_4_date_picker_dec26.png",
+      "source_sha256": "9b310a8c53d965ca4f7f06977964d26ddd89d7fe414000e668921d23ff415e2b",
+      "source_bytes": 257617,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 193511,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "05abd9d1d181a7c062cd34c2dd563169d03156846b8b1f70bb36e8fd4265c51a"
+    },
+    {
+      "path": "Google_Flights/Google Flights--4/Google Flights--4_20261028_091815/final_runs/run_001/screenshots/final_execution_5_results_displayed.png",
+      "source_sha256": "ff2d7a395e43fc2214567c210c674eceaf2b6e002d03f20da1896928c0a019f4",
+      "source_bytes": 247381,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 225485,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a0bd7ebb54c8712920f0fa617df25e1f54158a6b9875f21b8f6643ad6e57ceda"
+    },
+    {
+      "path": "Google_Flights/Google Flights--4/Google Flights--4_20261028_091815/final_runs/run_001/screenshots/final_execution_6_stops_nonstop_selected.png",
+      "source_sha256": "50cbd973c500cb03b8c1619c05c54e3d2a0aeba88f8c6f1a4d21d4dc052c8bca",
+      "source_bytes": 279484,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 233563,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "7818596c1bce3188e25698ba1cca3317bb6a146c000ba5d75a166e66eaed1abc"
+    },
+    {
+      "path": "Google_Flights/Google Flights--4/Google Flights--4_20261028_091815/final_runs/run_001/screenshots/final_execution_7_final_nonstop_results.png",
+      "source_sha256": "b607893572c5bb9d677a44da30a63700127051f0912579d0714d68f79ba4b15e",
+      "source_bytes": 276516,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 241335,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a1f90fa3bcf5a41039b9597ff96d9478c3f878778326d48a78afd1cb4a51fbb7"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1479322,
+  "response_id": "3f9a32f0-31db-42b6-ac60-e045a2e9b884",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1609,
+    "reasoning_content_chars": 2155
+  }
+}

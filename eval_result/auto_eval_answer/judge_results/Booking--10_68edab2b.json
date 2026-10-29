@@ -1,0 +1,211 @@
+{
+  "task_id": "Booking--10",
+  "website": "Booking",
+  "task": "Find a well-reviewed hotel in Paris with available bookings suitable for a couple (2 adults) on Valentine's Day week, February 14-21, 2027, that offers free cancellation options.",
+  "task_record": "Booking/Booking--10/Booking--10_20261026_020655",
+  "task_definition_sha256": "3d884c593974e0d2d8f0541aee1b0104dd117fb30c7c98ddc570d6ae29ebaa5f",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Booking/Booking--10/Booking--10_20261026_020655"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Hotel Malte - Astotel in Paris is a well-reviewed option with availability for 2 adults from February 14 to February 21, 2027, offering free cancellation. It has a review score of 9.2 (Wonderful) and a price of US$1,779 for the week. The search used destination Paris, dates Feb 14-Feb 21, 2027, 2 adults, 0 children, 1 room, with the Free cancellation and Wonderful: 9+ review-score filters applied.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Booking/Booking--10/Booking--10_20261026_020655/final_runs/run_001/screenshots/final_execution_3_occupancy_2_adults.png",
+      "sha256": "9f6473b966dbe53b9c1b3ab12cd982b686719293c0b453e800c9d926e7208626"
+    },
+    {
+      "path": "Booking/Booking--10/Booking--10_20261026_020655/final_runs/run_001/screenshots/final_execution_4_search_results.png",
+      "sha256": "3c18d05c204a73f1fabe6be5e3a9aea0447439708b2a1a38a56118f3a5014242"
+    },
+    {
+      "path": "Booking/Booking--10/Booking--10_20261026_020655/final_runs/run_001/screenshots/final_execution_5_free_cancellation_filter.png",
+      "sha256": "0c61ff1fdd930957f0c9793a4dd98e72c2891a1c939a13f84f18ef5d8d58ee20"
+    },
+    {
+      "path": "Booking/Booking--10/Booking--10_20261026_020655/final_runs/run_001/screenshots/final_execution_6_review_score_filter.png",
+      "sha256": "c254e6102152cfd01fc93861e50ad8becbdd9504de9e8aff7afcaab60d96fcc0"
+    },
+    {
+      "path": "Booking/Booking--10/Booking--10_20261026_020655/final_runs/run_001/screenshots/final_execution_7_final_hotel.png",
+      "sha256": "64837a7db3f94db32d90797a25d8a661f3437f61e11fcd2415507449e1a63cc5"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "aea6b7740013d8906e7e7c2007406baf301c0d45d7c6fc08fd0b117de4eee678",
+  "fingerprint": "f716962dbaf34f3908391df09c69bef7b0ba1892a8463ca648bd538fbd7712f4",
+  "evaluated_at": "2026-10-28T19:50:21.632677+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements Breakdown\nThe task required finding a hotel that satisfies ALL of the following criteria:\n1. **Location**: Paris\n2. **Well-reviewed**: High review scores\n3. **Occupancy**: Suitable for a couple (2 adults)\n4. **Dates**: February 14-21, 2027 (Valentine's Day week)\n5. **Free cancellation**: Available\n\n## Screenshot Verification\n\n**Screenshot 1 (Search Setup):**\n- Destination: \"Paris, Ile de France, France\" ✓\n- Dates: \"Sun, Feb 14 — Sun, Feb 21\" ✓ (Feb 14, 2027 falls on a Sunday, consistent with the requested year)\n- Occupancy dropdown open showing: Adults: 2, Children: 0, Rooms: 1 ✓\n\n**Screenshot 2 (Initial Results):**\n- 6,981 properties found in Paris with correct dates/occupancy\n- Filters visible but not yet applied\n\n**Screenshot 3 (Free Cancellation Filter Applied):**\n- \"Free cancellation\" checkbox checked, reducing results to 4,936 properties ✓\n\n**Screenshot 4 (Both Filters Applied):**\n- \"Wonderful: 9+\" and \"Free cancellation\" filters both active, 1,141 properties found ✓ (addresses \"well-reviewed\" requirement)\n\n**Screenshot 5 (Hotel Identified):**\n- **Hotel Malte - Astotel** (2nd arr., Paris) clearly displayed:\n  - Review score: **Wonderful 9.2** (985 reviews) ✓\n  - Room: **Double Room, 1 full bed** — suitable for a couple ✓\n  - Pricing: \"1 week, 2 adults — US$1,779\" confirming availability for the specified dates and occupancy ✓\n  - **Free cancellation** shown with green checkmark ✓\n  - \"See availability\" button present ✓\n\n## Response vs. Screenshot Consistency\nThe result response accurately matches the screenshots: Hotel Malte - Astotel, 9.2 (Wonderful) score, US$1,779 for the week, 2 adults, Feb 14-21 dates, and both filters (Free cancellation + Wonderful: 9+) applied. No contradictions found.\n\n## Conclusion\nAll task requirements were fulfilled: a well-reviewed (9.2) Paris hotel was found with confirmed availability for 2 adults during Feb 14-21 (2027), featuring a double room and free cancellation. The search methodology was sound and the final answer is fully supported by visual evidence.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 7720,
+    "completion_tokens": 1995,
+    "total_tokens": 9715,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1454
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T19:50:21.960505+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Booking/Booking--10/Booking--10_20261026_020655/final_runs/run_001/screenshots/final_execution_3_occupancy_2_adults.png",
+      "source_sha256": "9f6473b966dbe53b9c1b3ab12cd982b686719293c0b453e800c9d926e7208626",
+      "source_bytes": 138339,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 163741,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "9f9f72eb585a4a641a05947df5db364c1cc2072c57916b235f46fcdd7ec9a23d"
+    },
+    {
+      "path": "Booking/Booking--10/Booking--10_20261026_020655/final_runs/run_001/screenshots/final_execution_4_search_results.png",
+      "source_sha256": "3c18d05c204a73f1fabe6be5e3a9aea0447439708b2a1a38a56118f3a5014242",
+      "source_bytes": 310392,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 194993,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "5c77e0437f78659ff4191b3fe1329f49a0f9a953cd59ca9212cdedbc2be741fb"
+    },
+    {
+      "path": "Booking/Booking--10/Booking--10_20261026_020655/final_runs/run_001/screenshots/final_execution_5_free_cancellation_filter.png",
+      "source_sha256": "0c61ff1fdd930957f0c9793a4dd98e72c2891a1c939a13f84f18ef5d8d58ee20",
+      "source_bytes": 317953,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 209759,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "500f276c4b80b8ebfc77528ccb3d3bd47e6b2b389c3b9176781b8588f9716898"
+    },
+    {
+      "path": "Booking/Booking--10/Booking--10_20261026_020655/final_runs/run_001/screenshots/final_execution_6_review_score_filter.png",
+      "source_sha256": "c254e6102152cfd01fc93861e50ad8becbdd9504de9e8aff7afcaab60d96fcc0",
+      "source_bytes": 344132,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 222009,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "79dcffc426fce8419d4370d82f3c98a346680febd9a324e39b172586d717a06c"
+    },
+    {
+      "path": "Booking/Booking--10/Booking--10_20261026_020655/final_runs/run_001/screenshots/final_execution_7_final_hotel.png",
+      "source_sha256": "64837a7db3f94db32d90797a25d8a661f3437f61e11fcd2415507449e1a63cc5",
+      "source_bytes": 352814,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 191232,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "9a4422551832a262e5561ea240d5d883c468717823cb280ef9b1f58d12dd481e"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1312437,
+  "response_id": "e6b8f426-1558-4301-a572-0ab304c467e5",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2096,
+    "reasoning_content_chars": 5075
+  }
+}

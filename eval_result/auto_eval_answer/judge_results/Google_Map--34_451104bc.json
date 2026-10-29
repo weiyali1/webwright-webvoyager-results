@@ -1,0 +1,121 @@
+{
+  "task_id": "Google Map--34",
+  "website": "Google Map",
+  "task": "Find a hiking trail within 2 miles of zip code 80202.",
+  "task_record": "Google_Map/Google Map--34/Google Map--34_20261025_043928",
+  "task_definition_sha256": "597b883f57359f754ff44242cedccae62c290d98cb0cb9dffee7aa76a21e012d",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google_Map/Google Map--34/Google Map--34_20261025_043928"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Cherry Creek Trail (Hiking area at 2250 15th St, Denver, CO 80202) is within 2 miles of zip code 80202. Google Maps directions show 0.7 mile driving distance from 80202.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Google_Map/Google Map--34/Google Map--34_20261025_043928/final_runs/run_002/screenshots/final_execution_1_search_results.png",
+      "sha256": "11a221b2f706408ee17977fae7287836c7628dde7deb00ddde2090e99b7d1cff"
+    },
+    {
+      "path": "Google_Map/Google Map--34/Google Map--34_20261025_043928/final_runs/run_002/screenshots/final_execution_2_directions_distance.png",
+      "sha256": "297588b02f507c0b438d022e7de47b22c92f4b43daf6683b6a4edd569b054c1b"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "6e38689b5b6607e12c80116e29f7ba47792397bb92a51f8c721cdb06a1e2cea4",
+  "fingerprint": "70a62fe544132094b4d9bb6e9f8a64242db4ed267e7a923381fcc6948f502387",
+  "evaluated_at": "2026-10-28T23:10:03.374468+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation\n\n**Task Instruction:** Find a hiking trail within 2 miles of zip code 80202.\n\n**Analysis of Evidence:**\n\n1. **Screenshot 1:** Shows a Google Maps search for \"hiking trails near 80202\" was performed. The results list includes \"Cherry Creek Trail\" which is explicitly labeled as a \"Hiking area\" located at 2250 15th St, with a 4.8-star rating. This confirms a hiking trail was identified near the target zip code.\n\n2. **Screenshot 2:** Shows Google Maps directions from \"Denver, CO 80202, USA\" to \"Cherry Creek Trail, 2250 15th St, Denver.\" The route details confirm:\n   - Best route: 4 min, **0.7 mile** via 15th St\n   - Alternative routes: 0.9 miles and 1.1 miles\n   \n   All route options are well under the 2-mile threshold specified in the instruction.\n\n3. **Result Response:** States that Cherry Creek Trail (Hiking area at 2250 15th St, Denver, CO 80202) is within 2 miles of zip code 80202, with a 0.7 mile driving distance. This is fully consistent with both screenshots.\n\n**Verification:**\n- ✅ A hiking trail was found (Cherry Creek Trail, explicitly categorized as \"Hiking area\")\n- ✅ Distance verification was performed (0.7 miles from 80202, which is within the 2-mile requirement)\n- ✅ The response matches the visual evidence in the screenshots\n\nThe task required finding a hiking trail within 2 miles of zip code 80202, and both the search results and the directions verification confirm this was accomplished.\n\n## Verdict: **SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 3449,
+    "completion_tokens": 826,
+    "total_tokens": 4275,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 447
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T23:10:03.585835+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 2,
+  "image_transports": [
+    {
+      "path": "Google_Map/Google Map--34/Google Map--34_20261025_043928/final_runs/run_002/screenshots/final_execution_1_search_results.png",
+      "source_sha256": "11a221b2f706408ee17977fae7287836c7628dde7deb00ddde2090e99b7d1cff",
+      "source_bytes": 873987,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        889
+      ],
+      "transmitted_bytes": 366891,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "3b1965a4a78fb17d7cc7c1078ed6b6e943cfa2d662c8e7d97cb1dda0377a4f30"
+    },
+    {
+      "path": "Google_Map/Google Map--34/Google Map--34_20261025_043928/final_runs/run_002/screenshots/final_execution_2_directions_distance.png",
+      "source_sha256": "297588b02f507c0b438d022e7de47b22c92f4b43daf6683b6a4edd569b054c1b",
+      "source_bytes": 855284,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        889
+      ],
+      "transmitted_bytes": 359574,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "9612bea0890a63906f55b56a544625b1842f869cd1f2c095669a24eebdcd1d41"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 2,
+  "request_json_bytes": 971501,
+  "response_id": "65c81f6b-ffc4-4911-b326-6c91ac315af6",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1460,
+    "reasoning_content_chars": 1643
+  }
+}

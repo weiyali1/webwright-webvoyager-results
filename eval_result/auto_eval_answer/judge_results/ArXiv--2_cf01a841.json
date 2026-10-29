@@ -1,0 +1,181 @@
+{
+  "task_id": "ArXiv--2",
+  "website": "ArXiv",
+  "task": "Look up the most recent papers related to 'cs.CL', select one and show its abstract.",
+  "task_record": "ArXiv/ArXiv--2/ArXiv--2_20261025_115200",
+  "task_definition_sha256": "2fbeae471b77c60f8011ae5530c2907d418fa7f68c46d1be7fb7593631169130",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "ArXiv/ArXiv--2/ArXiv--2_20261025_115200"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Selected paper from the most recent cs.CL papers: 'Low-Bit N-Gram Embeddings for Language Models' (https://arxiv.org/abs/2610.31646). Abstract: Many recent open-weight language models use n-gram embedding tables to improve performance. These tables store learned representations of short token sequences, such as pairs or triples of consecutive tokens, which the model retrieves during processing. However, they can require substantial memory: DeepSeek-V4.1-Flash, for example, allocates 196 billion parameters to its Engram n-gram memory. We therefore investigate whether this memory cost can be reduced while preserving the performance improvement that the tables provide. We propose storing n-gram embeddings at low precision and systematically investigate different quantization methods and bit allocations across tables. Across nanochat-, Llama-, and GPT-2-family models trained from scratch, four-bit tables save approximately 75% of table memory while preserving more than 99% of the validation-loss improvement from adding the tables. Using fewer bits leads to a larger drop in performance, although we find that a short fine-tuning phase recovers a significant part of this loss. In addition, reinvesting the saved memory in larger tables can improve performance beyond that of the original full-precision tables while still using less memory. These table memory savings also extend to large existing models: on DeepSeek-V4.1-Flash and Qwen3.8-Flash-Next, low-bit tables save 47-55% of table memory, with perplexity increases of less than 1.2% and largely preserved downstream task performance. These findings establish low-bit precision as a practical way to reduce the memory requirements of n-gram embeddings and use the saved capacity to improve model performance.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "ArXiv/ArXiv--2/ArXiv--2_20261025_115200/final_runs/run_001/screenshots/final_execution_1_home_cscl_control.png",
+      "sha256": "7ca6967a3c048fd76be259e9d9f61e77b9d9bf62f869ea41db823f7bcbf311e0"
+    },
+    {
+      "path": "ArXiv/ArXiv--2/ArXiv--2_20261025_115200/final_runs/run_001/screenshots/final_execution_2_cscl_recent_listing.png",
+      "sha256": "9d0d9d06d14919fe7efd69be762db0213c165da2ce1240f8cee9e65382959aab"
+    },
+    {
+      "path": "ArXiv/ArXiv--2/ArXiv--2_20261025_115200/final_runs/run_001/screenshots/final_execution_3_select_paper.png",
+      "sha256": "9d0d9d06d14919fe7efd69be762db0213c165da2ce1240f8cee9e65382959aab"
+    },
+    {
+      "path": "ArXiv/ArXiv--2/ArXiv--2_20261025_115200/final_runs/run_001/screenshots/final_execution_4_abstract_displayed.png",
+      "sha256": "7de6ac65ed6149e7a3faddb96273a3ebb4755a12598d580303c8bfcbcaea52ad"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "4cca2f3b5bd108c4476512f3caca330ec801787e0f0740db45144348ec85cda1",
+  "fingerprint": "aa14b4e767461fe416763ddc495fb371d5d2dbe36954540e47945f1d6e1d84e2",
+  "evaluated_at": "2026-10-28T18:26:06.813873+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation\n\n**Task requirements:**\n1. Look up the most recent papers related to 'cs.CL'\n2. Select one paper\n3. Show its abstract\n\n**Step-by-step analysis of the screenshots:**\n\n1. **Screenshot 1 (arXiv homepage):** The agent started at arXiv.org, which lists subject categories. Under \"Computer Science,\" the CoRR (Computing Research Repository) entry includes \"Computation and Language\" (cs.CL) with links for \"new, recent, search\" — this is the correct entry point for looking up cs.CL papers.\n\n2. **Screenshots 2 & 3 (Computation and Language recent submissions):** The agent navigated to the \"Computation and Language\" page showing \"Authors and titles for recent submissions\" with the most recent date (Fri, 23 Oct 2026) listed first. The page displays the newest papers, with paper [1] being \"Low-Bit N-Gram Embeddings for Language Models\" (arXiv:2610.31646), categorized under \"Computation and Language (cs.CL)\". This confirms the most recent cs.CL papers were successfully looked up.\n\n3. **Screenshot 4 (Abstract page):** The agent selected the paper \"Low-Bit N-Gram Embeddings for Language Models\" by Stephen Chung and Wenyu Du, and its abstract page is displayed. The full abstract is visible on the page, along with metadata (Submitted on 22 Oct 2026, Subjects: Computation and Language (cs.CL), Artificial Intelligence (cs.AI), arXiv:2610.31646).\n\n**Comparison with Result Response:**\n- The response identifies the selected paper: \"Low-Bit N-Gram Embeddings for Language Models\" (https://arxiv.org/abs/2610.31646) — matches the screenshot.\n- The abstract text in the response matches the abstract shown in the screenshot word-for-word (starting with \"Many recent open-weight language models use n-gram embedding tables...\" and ending with \"...improve model performance.\").\n\n**Conclusion:** All three task components were completed: the most recent cs.CL papers were looked up, one paper was selected, and its abstract was shown both on-screen and provided in the response. The response is fully consistent with the screenshots.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 7628,
+    "completion_tokens": 834,
+    "total_tokens": 8462,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 346
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T18:26:07.336176+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 4,
+  "image_transports": [
+    {
+      "path": "ArXiv/ArXiv--2/ArXiv--2_20261025_115200/final_runs/run_001/screenshots/final_execution_1_home_cscl_control.png",
+      "source_sha256": "7ca6967a3c048fd76be259e9d9f61e77b9d9bf62f869ea41db823f7bcbf311e0",
+      "source_bytes": 254992,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 445767,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "6ecbe3b4ff1371d947e5f90ce10e0653656e84327818e6b0b42baebe9dcd330f"
+    },
+    {
+      "path": "ArXiv/ArXiv--2/ArXiv--2_20261025_115200/final_runs/run_001/screenshots/final_execution_2_cscl_recent_listing.png",
+      "source_sha256": "9d0d9d06d14919fe7efd69be762db0213c165da2ce1240f8cee9e65382959aab",
+      "source_bytes": 241029,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 362113,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "e25e949473ace78c8f3895587ed88e47435792dcfa262249ceaf7d2fadc49cad"
+    },
+    {
+      "path": "ArXiv/ArXiv--2/ArXiv--2_20261025_115200/final_runs/run_001/screenshots/final_execution_3_select_paper.png",
+      "source_sha256": "9d0d9d06d14919fe7efd69be762db0213c165da2ce1240f8cee9e65382959aab",
+      "source_bytes": 241029,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 362113,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "e25e949473ace78c8f3895587ed88e47435792dcfa262249ceaf7d2fadc49cad"
+    },
+    {
+      "path": "ArXiv/ArXiv--2/ArXiv--2_20261025_115200/final_runs/run_001/screenshots/final_execution_4_abstract_displayed.png",
+      "source_sha256": "7de6ac65ed6149e7a3faddb96273a3ebb4755a12598d580303c8bfcbcaea52ad",
+      "source_bytes": 171386,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 258798,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "f0a47dc783653b41cd844d32cf9033372311c1f8afb02cb894956be85b83978a"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 4,
+  "request_json_bytes": 1909724,
+  "response_id": "9344faff-0580-4bff-8f47-6bcb104a1fd0",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2063,
+    "reasoning_content_chars": 1414
+  }
+}

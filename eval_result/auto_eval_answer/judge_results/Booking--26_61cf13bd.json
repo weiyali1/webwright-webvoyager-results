@@ -1,0 +1,211 @@
+{
+  "task_id": "Booking--26",
+  "website": "Booking",
+  "task": "Check Booking.com for a 3-star hotel or higher in Paris with a guest rating above 8.0 and available parking for dates July 20-23, 2027.",
+  "task_record": "Booking/Booking--26/Booking--26_20261026_011622",
+  "task_definition_sha256": "5e135a8d103ad85e330b9c0c65fc13c71f30e2fef5fdcd0acd7704d6f55538ae",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Booking/Booking--26/Booking--26_20261026_011622"
+  ],
+  "final_run": "run_003",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Found 543 properties in Paris for July 20-23, 2027 matching all constraints (3+ stars, guest review score 8+, parking available). Example qualifying property: Mercure Paris 17 Batignolles — 4-star, review score 8.4 (Very Good), parking filter applied, HK$ 3,330.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Booking/Booking--26/Booking--26_20261026_011622/final_runs/run_003/screenshots/final_execution_4_stars.png",
+      "sha256": "4bce50f3cde28243a946a8a784e45cca25c3222bf61db65c2773320baf603c54"
+    },
+    {
+      "path": "Booking/Booking--26/Booking--26_20261026_011622/final_runs/run_003/screenshots/final_execution_5_review8.png",
+      "sha256": "bf53bf4f18a109fbac30382c777b298fc486f584daea8ae24f7fa39470819731"
+    },
+    {
+      "path": "Booking/Booking--26/Booking--26_20261026_011622/final_runs/run_003/screenshots/final_execution_6_parking.png",
+      "sha256": "63153cfdb3d4cf74da5db0fddf9fe27494a118000d3b83099d3c947530da5e24"
+    },
+    {
+      "path": "Booking/Booking--26/Booking--26_20261026_011622/final_runs/run_003/screenshots/final_execution_7_filtered_results.png",
+      "sha256": "63153cfdb3d4cf74da5db0fddf9fe27494a118000d3b83099d3c947530da5e24"
+    },
+    {
+      "path": "Booking/Booking--26/Booking--26_20261026_011622/final_runs/run_003/screenshots/final_execution_8_property.png",
+      "sha256": "63153cfdb3d4cf74da5db0fddf9fe27494a118000d3b83099d3c947530da5e24"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "4c3b899b6716bc07567656d2e699f14de4e3c9dcbeb1caf956fdafbcba2ef212",
+  "fingerprint": "03f47cfb8c58785ef32f34e89c013e05282e6305f6d9007946d44e9c36b14e02",
+  "evaluated_at": "2026-10-28T19:57:09.111059+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation\n\n**Task requirements:**\n1. Search Booking.com for hotels in Paris\n2. Dates: July 20–23, 2027\n3. Filter: 3-star or higher\n4. Filter: guest rating above 8.0\n5. Filter: parking available\n\n**Screenshot analysis:**\n\n- **Screenshot 1:** Search initiated for Paris with dates \"Tue, Jul 20 — Fri, Jul 23\" (the Tue/Fri day-of-week alignment matches 2027). Property rating filters for 3, 4, and 5 stars are checked (5,221 properties found). Parking and rating filters not yet applied.\n- **Screenshot 2:** \"Very Good: 8+\" guest review filter applied (3,146 properties found), with 3/4/5-star filters still active.\n- **Screenshots 3–5:** Parking filter applied — \"Parking ✓\", \"Very Good: 8+ ✓\", and 3/4/5 stars ✓ are all checked. Filter chips at top confirm: \"Very Good: 8+\", \"Property rating 3\", \"Parking\". Result: **543 properties found**. The top result, **Mercure Paris 17 Batignolles**, is a 4-star hotel with a review score of **8.4 (Very Good)** at HK$ 3,330 — satisfying all constraints (3+ stars, rating above 8.0, parking).\n\n**Result Response analysis:**\nThe response states 543 properties were found matching all constraints (3+ stars, review score 8+, parking) for July 20–23, 2027, and cites Mercure Paris 17 Batignolles (4-star, 8.4, HK$ 3,330) — this matches the screenshots exactly.\n\n**Consistency check:** All filters required by the instruction were progressively applied and verified in the screenshots. The example property meets every criterion. The dates align with 2027 (Tue Jul 20 – Fri Jul 23), and the response confirms the year.\n\nThe task was fully executed: search performed, all three constraints applied, and a qualifying hotel identified.\n\n## Verdict\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 9751,
+    "completion_tokens": 1581,
+    "total_tokens": 11332,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1123
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T19:57:09.744331+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Booking/Booking--26/Booking--26_20261026_011622/final_runs/run_003/screenshots/final_execution_4_stars.png",
+      "source_sha256": "4bce50f3cde28243a946a8a784e45cca25c3222bf61db65c2773320baf603c54",
+      "source_bytes": 739996,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 306228,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "c49785211e793756007e749679d4cf6967b0f99d20dc605283f6e740efbb8d13"
+    },
+    {
+      "path": "Booking/Booking--26/Booking--26_20261026_011622/final_runs/run_003/screenshots/final_execution_5_review8.png",
+      "source_sha256": "bf53bf4f18a109fbac30382c777b298fc486f584daea8ae24f7fa39470819731",
+      "source_bytes": 714256,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 305281,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "f3eb3539457f562d969bb97d6c9ff7f6f302bc722f0547a6f32bff4df21bbddc"
+    },
+    {
+      "path": "Booking/Booking--26/Booking--26_20261026_011622/final_runs/run_003/screenshots/final_execution_6_parking.png",
+      "source_sha256": "63153cfdb3d4cf74da5db0fddf9fe27494a118000d3b83099d3c947530da5e24",
+      "source_bytes": 710004,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 309052,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "5a705566f40485a477257dd6c1ce4ba4dc9c71c88f348b115b4b890567c6c1ec"
+    },
+    {
+      "path": "Booking/Booking--26/Booking--26_20261026_011622/final_runs/run_003/screenshots/final_execution_7_filtered_results.png",
+      "source_sha256": "63153cfdb3d4cf74da5db0fddf9fe27494a118000d3b83099d3c947530da5e24",
+      "source_bytes": 710004,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 309052,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "5a705566f40485a477257dd6c1ce4ba4dc9c71c88f348b115b4b890567c6c1ec"
+    },
+    {
+      "path": "Booking/Booking--26/Booking--26_20261026_011622/final_runs/run_003/screenshots/final_execution_8_property.png",
+      "source_sha256": "63153cfdb3d4cf74da5db0fddf9fe27494a118000d3b83099d3c947530da5e24",
+      "source_bytes": 710004,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 309052,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "5a705566f40485a477257dd6c1ce4ba4dc9c71c88f348b115b4b890567c6c1ec"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 2054838,
+  "response_id": "ab0efa43-1b81-43d7-b21c-5718742f3ad0",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1695,
+    "reasoning_content_chars": 3746
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Map--33",
+  "website": "Google Map",
+  "task": "Check out Denver International Airport's information and tell me: 1) which level has the least proportion in reviews; 2) what are its Accessibility and Amenities.",
+  "task_record": "Google_Map/Google Map--33/Google Map--33_20261025_034327",
+  "task_definition_sha256": "97d4ee97036952480d7952ae4f425068b1a21d1670d8c4c338f1a067ec70ae7a",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google_Map/Google Map--33/Google Map--33_20261025_034327"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "answer.txt only",
+  "answer": "1) The review level with the least proportion at Denver International Airport is 2 stars (2,309 reviews out of 51,050 total; histogram: 5★=27,825, 4★=11,666, 3★=4,536, 2★=2,309, 1★=4,714). 2) Accessibility: Assistive hearing loop; Wheelchair-accessible car park; Wheelchair-accessible entrance; Wheelchair-accessible seating; Wheelchair-accessible toilet. Amenities: not available for this listing on Google Maps — the About tab only provides an Accessibility section; the 'See more' control is sign-in gated and reveals no Amenities section.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Google_Map/Google Map--33/Google Map--33_20261025_034327/final_runs/run_002/screenshots/1_search.png",
+      "sha256": "b7199f66d675400d9bcfb58ee4f461e654dd5ebc99380e5d0485e5c890700ae8"
+    },
+    {
+      "path": "Google_Map/Google Map--33/Google Map--33_20261025_034327/final_runs/run_002/screenshots/2_place.png",
+      "sha256": "b7199f66d675400d9bcfb58ee4f461e654dd5ebc99380e5d0485e5c890700ae8"
+    },
+    {
+      "path": "Google_Map/Google Map--33/Google Map--33_20261025_034327/final_runs/run_002/screenshots/3_reviews_histogram.png",
+      "sha256": "143397cb18a29a2f3352fe666f55c2101032f01c281a6c258c8ff933a2bfb345"
+    },
+    {
+      "path": "Google_Map/Google Map--33/Google Map--33_20261025_034327/final_runs/run_002/screenshots/4_about_accessibility.png",
+      "sha256": "a58fa054b24df1628bed559cbe6b0beb9023cfee4c57145b0cb335639323ed65"
+    },
+    {
+      "path": "Google_Map/Google Map--33/Google Map--33_20261025_034327/final_runs/run_002/screenshots/5_about_amenities_absence.png",
+      "sha256": "5fe07e5eff2dc61ea5073b84f3640f191aecdd013edb86cb2004b1694b637ac1"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "5d9c7cf0ec70322896ef1189ac8d70572ae189f6b98d64b902884539e98a2007",
+  "fingerprint": "23e914541c3da16cbf2ae7f717bd96f27fd72a2f4c09c03a27afc6d511a5aa6e",
+  "evaluated_at": "2026-10-28T23:09:35.708294+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\n1. Identify which review level (star rating) has the least proportion in reviews for Denver International Airport\n2. Report the airport's Accessibility and Amenities information\n\n## Screenshot Evidence\n\n**Screenshots 1-2 (Overview tab):** Show Denver International Airport's Google Maps listing with a 4.1 rating and 51,050 reviews, address (8500 Peña Blvd, Denver, CO 80249), website, and phone number. This confirms the correct place was located.\n\n**Screenshot 3 (Reviews tab):** Displays the rating histogram with bars for 5★ through 1★. Visually, the **2-star bar is clearly the shortest**, indicating 2 stars has the least proportion of reviews. The response's specific figures (5★=27,825; 4★=11,666; 3★=4,536; 2★=2,309; 1★=4,714) sum exactly to 51,050 and produce a weighted average of ~4.1, consistent with the displayed rating. Per evaluation guidelines, details not visible in the screenshot but stated in the response can be believed, and they are internally consistent here.\n\n**Screenshots 4-5 (About tab):** Show the Accessibility section with exactly:\n- Assistive hearing loop\n- Wheelchair-accessible car park\n- Wheelchair-accessible entrance\n- Wheelchair-accessible seating\n- Wheelchair-accessible toilet\n\nThis matches the response's Accessibility list perfectly. No Amenities section appears in the About tab, so the response's statement that Amenities information is not available for this listing is an accurate and honest report of what the page contains.\n\n## Assessment\n- **Part 1:** Correctly identified 2 stars as the level with the least proportion, supported by the shortest bar in the histogram. ✓\n- **Part 2:** Accessibility fully and accurately reported; Amenities addressed by noting its absence on the listing, which the screenshot corroborates. ✓\n\nBoth sub-tasks were completed, and the response aligns with the visual evidence.\n\n## Verdict\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8678,
+    "completion_tokens": 1414,
+    "total_tokens": 10092,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 963
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T23:09:36.472364+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Google_Map/Google Map--33/Google Map--33_20261025_034327/final_runs/run_002/screenshots/1_search.png",
+      "source_sha256": "b7199f66d675400d9bcfb58ee4f461e654dd5ebc99380e5d0485e5c890700ae8",
+      "source_bytes": 695158,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1360,
+        1800
+      ],
+      "transmitted_dimensions": [
+        967,
+        1280
+      ],
+      "transmitted_bytes": 205676,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "56e993bdcf6303a40d60f87a2754903da0de98c4915ee04ccfa668a50bc317eb"
+    },
+    {
+      "path": "Google_Map/Google Map--33/Google Map--33_20261025_034327/final_runs/run_002/screenshots/2_place.png",
+      "source_sha256": "b7199f66d675400d9bcfb58ee4f461e654dd5ebc99380e5d0485e5c890700ae8",
+      "source_bytes": 695158,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1360,
+        1800
+      ],
+      "transmitted_dimensions": [
+        967,
+        1280
+      ],
+      "transmitted_bytes": 205676,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "56e993bdcf6303a40d60f87a2754903da0de98c4915ee04ccfa668a50bc317eb"
+    },
+    {
+      "path": "Google_Map/Google Map--33/Google Map--33_20261025_034327/final_runs/run_002/screenshots/3_reviews_histogram.png",
+      "source_sha256": "143397cb18a29a2f3352fe666f55c2101032f01c281a6c258c8ff933a2bfb345",
+      "source_bytes": 769259,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1360,
+        1800
+      ],
+      "transmitted_dimensions": [
+        967,
+        1280
+      ],
+      "transmitted_bytes": 221487,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "dc84c030e5e29c3dba8e427d6448fc00f90a54fdbe2d56b3db1de4a51bb03ccd"
+    },
+    {
+      "path": "Google_Map/Google Map--33/Google Map--33_20261025_034327/final_runs/run_002/screenshots/4_about_accessibility.png",
+      "source_sha256": "a58fa054b24df1628bed559cbe6b0beb9023cfee4c57145b0cb335639323ed65",
+      "source_bytes": 324270,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1360,
+        1800
+      ],
+      "transmitted_dimensions": [
+        967,
+        1280
+      ],
+      "transmitted_bytes": 148260,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "b1aa65d514e96f648409e7e8afb63261d52e47ca9dc1ef00a4e9c8f834d8e38a"
+    },
+    {
+      "path": "Google_Map/Google Map--33/Google Map--33_20261025_034327/final_runs/run_002/screenshots/5_about_amenities_absence.png",
+      "source_sha256": "5fe07e5eff2dc61ea5073b84f3640f191aecdd013edb86cb2004b1694b637ac1",
+      "source_bytes": 324205,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1360,
+        1800
+      ],
+      "transmitted_dimensions": [
+        967,
+        1280
+      ],
+      "transmitted_bytes": 148069,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "ba40e2690b2de98395337e31685b061d7e5c4ebe8358eda258d2d97f834ad6f0"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1242487,
+  "response_id": "92d426d5-68ee-4a9f-86b0-795299e5dea2",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1925,
+    "reasoning_content_chars": 3687
+  }
+}

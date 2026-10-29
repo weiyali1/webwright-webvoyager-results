@@ -1,0 +1,151 @@
+{
+  "task_id": "Allrecipes--43",
+  "website": "Allrecipes",
+  "task": "Find a recipe for a vegan pumpkin pie on Allrecipes with a minimum four-star rating and a total cook time exceeding 1 hour.",
+  "task_record": "Allrecipes/Allrecipes--43/Allrecipes--43_20261025_170705",
+  "task_definition_sha256": "281ba0a3bcec8bc497688ac16771a84f0d3feba88c73402098045275fe9a889b",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Allrecipes/Allrecipes--43/Allrecipes--43_20261025_170705"
+  ],
+  "final_run": "run_004",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Amazing Vegan Pumpkin Pie - https://www.allrecipes.com/recipe/255508/amazing-vegan-pumpkin-pie/ (rating 5.0 stars with 1 rating, total time 3 hrs 35 mins = 215 minutes, which exceeds 1 hour). The Allrecipes search page has no filter controls, so the vegan, >=4-star, and >1-hour constraints were verified directly from the recipe page content (visible rating 5.0, visible Total Time 3 hrs 35 mins, JSON-LD ratingValue=5.0 and totalTime=PT215M).",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Allrecipes/Allrecipes--43/Allrecipes--43_20261025_170705/final_runs/run_004/screenshots/cp1_search_results.png",
+      "sha256": "7b1989d15971cebbe351285ead3bf26972bbb7a162597844c57d1de62b872453"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--43/Allrecipes--43_20261025_170705/final_runs/run_004/screenshots/cp4_recipe_header_vegan.png",
+      "sha256": "d9c4a3482a00d2c5592926b871608a3ce8f286d99e3f714e4e2ac113bcfdd3c0"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--43/Allrecipes--43_20261025_170705/final_runs/run_004/screenshots/cp6_recipe_total_time.png",
+      "sha256": "d95dffadbbac1406fb4fcc0f02b0fdc9ab31d7f8ecdbd3b29b0bd40781c55413"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "23dd2d8ffb0186e7597c73d7d8786e8601f2bf5c9bb55285fed904c2dc8ad0d7",
+  "fingerprint": "76ee7b922a06d05592f32561ed43c026a7c394c7a499acdd0852ab210fd694da",
+  "evaluated_at": "2026-10-28T17:32:20.614000+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements Breakdown\nThe task requires finding a recipe on Allrecipes that satisfies ALL of the following criteria:\n1. **Vegan pumpkin pie recipe**\n2. **Minimum four-star rating**\n3. **Total cook time exceeding 1 hour**\n\n## Verification Against Screenshots\n\n**Screenshot 1 (Search Results):** Shows the Allrecipes search results for \"vegan pumpkin pie\" with multiple relevant results, including \"Amazing Vegan Pumpkin Pie\" (5 stars, 1 rating) among other options like \"Vegan Pumpkin Pie Blondies\" and \"Tofu Pumpkin Pie.\"\n\n**Screenshots 2 & 3 (Recipe Page):** Show the \"Amazing Vegan Pumpkin Pie\" recipe page with the following details:\n- **Recipe type:** The title explicitly states \"Amazing Vegan Pumpkin Pie,\" and the description confirms \"This vegan pumpkin pie is a modification of my mother's from-scratch pumpkin pie recipe\" ✓\n- **Rating:** 5.0 stars (1 rating) — clearly visible with five filled stars, exceeding the minimum four-star requirement ✓\n- **Time details:**\n  - Prep Time: 20 mins\n  - Cook Time: 1 hr 55 mins\n  - Additional Time: 1 hr 20 mins\n  - **Total Time: 3 hrs 35 mins** ✓\n\n## Assessment\n- The recipe is confirmed as vegan ✓\n- The rating of 5.0 stars exceeds the minimum four-star threshold ✓\n- The total time of 3 hrs 35 mins (215 minutes) far exceeds the 1-hour requirement. Even under the stricter interpretation of \"cook time\" alone, the Cook Time of 1 hr 55 mins still exceeds 1 hour ✓\n\nThe result response accurately matches the screenshot content — the recipe URL, rating (5.0), and total time (3 hrs 35 mins) are all consistent with what is visually displayed. All task constraints have been satisfied.\n\n## Verdict\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 5142,
+    "completion_tokens": 1024,
+    "total_tokens": 6166,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 615
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T17:32:20.996894+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 3,
+  "image_transports": [
+    {
+      "path": "Allrecipes/Allrecipes--43/Allrecipes--43_20261025_170705/final_runs/run_004/screenshots/cp1_search_results.png",
+      "source_sha256": "7b1989d15971cebbe351285ead3bf26972bbb7a162597844c57d1de62b872453",
+      "source_bytes": 1316962,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 273171,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "be9a5fc07d732f7d42e53c448e2f9213edcc77520b5c93e6e3f03f14e924c31b"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--43/Allrecipes--43_20261025_170705/final_runs/run_004/screenshots/cp4_recipe_header_vegan.png",
+      "source_sha256": "d9c4a3482a00d2c5592926b871608a3ce8f286d99e3f714e4e2ac113bcfdd3c0",
+      "source_bytes": 437518,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 138779,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "4c81c872bcd2b38f0d940f9dd751716594a3f04bf49bab19b41882899fffb1a6"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--43/Allrecipes--43_20261025_170705/final_runs/run_004/screenshots/cp6_recipe_total_time.png",
+      "source_sha256": "d95dffadbbac1406fb4fcc0f02b0fdc9ab31d7f8ecdbd3b29b0bd40781c55413",
+      "source_bytes": 490287,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 151367,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "2e39e3452d15a896d48fb1ef9c04b873367a685b6c0c61dfed5f4ad6c345d56a"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 3,
+  "request_json_bytes": 754390,
+  "response_id": "46d817b6-a704-417c-a9d8-3ed9a4f9e059",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1691,
+    "reasoning_content_chars": 2330
+  }
+}

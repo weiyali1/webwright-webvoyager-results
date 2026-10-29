@@ -1,0 +1,211 @@
+{
+  "task_id": "GitHub--28",
+  "website": "GitHub",
+  "task": "Identify the most starred JavaScript repositories on GitHub that were created after 2023-12-29.",
+  "task_record": "GitHub/GitHub--28/GitHub--28_20261026_061214",
+  "task_definition_sha256": "da94b84ed12210018c2022ecd466e42d7a550672c81752cec9e772d4b48a9d12",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "GitHub/GitHub--28/GitHub--28_20261026_061214"
+  ],
+  "final_run": "run_003",
+  "answer_input_mode": "answer.txt only",
+  "answer": "The most starred JavaScript repository on GitHub created after 2023-12-29 is polyfillpolyfill/fetch with 684 stars (https://github.com/polyfillpolyfill/fetch). Top 5 most starred JavaScript repositories created after 2023-12-29: polyfillpolyfill/fetch (684 stars); polyfillpolyfill/polyfill-library (674 stars); texel-org/color (535 stars); HumanAIGC/omnitalker (425 stars); popovicu/ultimate-linux (327 stars).",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "GitHub/GitHub--28/GitHub--28_20261026_061214/final_runs/run_003/screenshots/final_execution_2_language_filter_javascript.png",
+      "sha256": "afb20e7d6bc9b90c3cdcb0724fb7c881185ec4f8c69ab8eef651cb2b816081d3"
+    },
+    {
+      "path": "GitHub/GitHub--28/GitHub--28_20261026_061214/final_runs/run_003/screenshots/final_execution_3_created_date_filter.png",
+      "sha256": "f931855e95f8dfcc1b0d649e6c09e4b2f38f33581d4336250f71020b5cf34618"
+    },
+    {
+      "path": "GitHub/GitHub--28/GitHub--28_20261026_061214/final_runs/run_003/screenshots/final_execution_4_filtered_results.png",
+      "sha256": "84a6133c565ab979be5c3b6ce1cbef2a5faaf6262010e65a56a25b71e54ce0a7"
+    },
+    {
+      "path": "GitHub/GitHub--28/GitHub--28_20261026_061214/final_runs/run_003/screenshots/final_execution_5_sort_most_stars.png",
+      "sha256": "955f7acc8cce2737c6d265656b22af06ffd4f75ebd7ac5d904c1312ec0a9819f"
+    },
+    {
+      "path": "GitHub/GitHub--28/GitHub--28_20261026_061214/final_runs/run_003/screenshots/final_execution_6_top_result.png",
+      "sha256": "955f7acc8cce2737c6d265656b22af06ffd4f75ebd7ac5d904c1312ec0a9819f"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "b79cbff022675b93287015599ed07e68d7948e2683f68ca9276a45d3582b3863",
+  "fingerprint": "bc7e28dcf3e0c26721762cea11b5c7793a94d4c1b17c63c623a516ff44e9245e",
+  "evaluated_at": "2026-10-28T21:34:50.444934+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\nThe task was to identify the most starred JavaScript repositories on GitHub that were created after 2023-12-29.\n\n## Step-by-Step Assessment\n\n**Screenshot 1 & 2 (Search Setup):** The agent navigated to GitHub's Advanced search page and correctly constructed the query `created:>2023-12-29 language:JavaScript`. The \"Created on the dates\" field shows `>2023-12-29` and \"Written in this language\" shows \"JavaScript\", confirming both filters required by the task were applied.\n\n**Screenshot 3 (Initial Results):** The search results are displayed. While the result count shows \"22.1M results,\" the actual listed repositories (with relatively low star counts like 684, 674, 535) confirm the date filter was applied — if it hadn't been, globally famous repos like react or freeCodeCamp (hundreds of thousands of stars) would appear at the top.\n\n**Screenshot 4 & 5 (Sorted by Most Stars):** The agent changed the sort order to \"Most stars,\" which is the correct method to identify the most starred repositories. The results show:\n1. polyfillpolyfill/fetch — 684 stars\n2. polyfillpolyfill/polyfill-library — 674 stars\n3. texel-org/color — 535 stars\n4. HumanAIGC/omnitalker — 425 stars\n5. popovicu/ultimate-linux — 327 stars\n\n## Comparing Response to Screenshots\n\nThe Result Response states:\n- Most starred repo: **polyfillpolyfill/fetch with 684 stars** ✓ (matches screenshot)\n- Top 5 list: fetch (684), polyfill-library (674), color (535), omnitalker (425), ultimate-linux (327) ✓ (exactly matches the \"Most stars\" sorted results in screenshots 4 and 5)\n- Repository URL provided: https://github.com/polyfillpolyfill/fetch ✓\n\nThe response is fully consistent with the visual evidence. The methodology (filter by creation date + language, then sort by stars) is correct, and the reported results accurately reflect the final sorted output.\n\n## Verdict\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 7936,
+    "completion_tokens": 3105,
+    "total_tokens": 11041,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2630
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T21:34:50.975297+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "GitHub/GitHub--28/GitHub--28_20261026_061214/final_runs/run_003/screenshots/final_execution_2_language_filter_javascript.png",
+      "source_sha256": "afb20e7d6bc9b90c3cdcb0724fb7c881185ec4f8c69ab8eef651cb2b816081d3",
+      "source_bytes": 127722,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1265,
+        2180
+      ],
+      "transmitted_dimensions": [
+        743,
+        1280
+      ],
+      "transmitted_bytes": 97179,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "6a907fce69654b362f368c8262afb81da644c3f4a2f92db25acdf539fffea8ed"
+    },
+    {
+      "path": "GitHub/GitHub--28/GitHub--28_20261026_061214/final_runs/run_003/screenshots/final_execution_3_created_date_filter.png",
+      "source_sha256": "f931855e95f8dfcc1b0d649e6c09e4b2f38f33581d4336250f71020b5cf34618",
+      "source_bytes": 128809,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1265,
+        2180
+      ],
+      "transmitted_dimensions": [
+        743,
+        1280
+      ],
+      "transmitted_bytes": 99136,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "c971599b2d56b4f4154d800cb0220fe94fe759df1b11698b12ffb0be10c6c6c1"
+    },
+    {
+      "path": "GitHub/GitHub--28/GitHub--28_20261026_061214/final_runs/run_003/screenshots/final_execution_4_filtered_results.png",
+      "source_sha256": "84a6133c565ab979be5c3b6ce1cbef2a5faaf6262010e65a56a25b71e54ce0a7",
+      "source_bytes": 207447,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1265,
+        1749
+      ],
+      "transmitted_dimensions": [
+        926,
+        1280
+      ],
+      "transmitted_bytes": 158593,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "62b62bb62024e0ff976c66dcaf3a1b112527bd462b28d03714e05c054f2093e1"
+    },
+    {
+      "path": "GitHub/GitHub--28/GitHub--28_20261026_061214/final_runs/run_003/screenshots/final_execution_5_sort_most_stars.png",
+      "source_sha256": "955f7acc8cce2737c6d265656b22af06ffd4f75ebd7ac5d904c1312ec0a9819f",
+      "source_bytes": 205510,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1265,
+        1608
+      ],
+      "transmitted_dimensions": [
+        1007,
+        1280
+      ],
+      "transmitted_bytes": 176362,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "d7b00aa9e18d68fdf9a9f7e2ed2b0685304e4d6f99cec5604fb751a8273d4e4c"
+    },
+    {
+      "path": "GitHub/GitHub--28/GitHub--28_20261026_061214/final_runs/run_003/screenshots/final_execution_6_top_result.png",
+      "source_sha256": "955f7acc8cce2737c6d265656b22af06ffd4f75ebd7ac5d904c1312ec0a9819f",
+      "source_bytes": 205510,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1265,
+        1608
+      ],
+      "transmitted_dimensions": [
+        1007,
+        1280
+      ],
+      "transmitted_bytes": 176362,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "d7b00aa9e18d68fdf9a9f7e2ed2b0685304e4d6f99cec5604fb751a8273d4e4c"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 946901,
+  "response_id": "34ee894b-a2b1-454b-9245-aa0843cdb264",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1899,
+    "reasoning_content_chars": 10448
+  }
+}

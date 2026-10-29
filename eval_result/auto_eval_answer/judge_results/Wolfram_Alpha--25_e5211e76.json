@@ -1,0 +1,211 @@
+{
+  "task_id": "Wolfram Alpha--25",
+  "website": "Wolfram Alpha",
+  "task": "Calculate the final position and velocity of a projectile launched at 45 degrees with an initial speed of 30 m/s after 3 seconds.",
+  "task_record": "Wolfram_Alpha/Wolfram Alpha--25/Wolfram Alpha--25_20261024_115620",
+  "task_definition_sha256": "800cef10a6a5be92f726d6148bf29d2886a10792a03fd2761ce72007e99746d3",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Wolfram_Alpha/Wolfram Alpha--25/Wolfram Alpha--25_20261024_115620"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "answer.txt only",
+  "answer": "After 3 seconds the projectile is at position x = 63.6396 m, y = 19.4946 m (distance from launch point 66.56 m), with velocity vx = 21.2132 m/s, vy = -8.2168 m/s, i.e. speed 22.7490 m/s. Computed on Wolfram Alpha (https://www.wolframalpha.com/) by submitting the kinematic expressions for a 45-degree launch at 30 m/s evaluated at t=3 s with g=9.81 m/s^2; the Result pod showed {45 sqrt(2), 19.4946, 15 sqrt(2), -8.2168} and the Decimal approximation pod showed {63.6396, 19.4946, 21.2132, -8.2168} = (x, y, vx, vy).",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--25/Wolfram Alpha--25_20261024_115620/final_runs/run_002/screenshots/final_execution_1_homepage_input.png",
+      "sha256": "58bf9f06077a63f7495fe9e5833f3e5843ebb789e7c8579d60c51c2391f56f7f"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--25/Wolfram Alpha--25_20261024_115620/final_runs/run_002/screenshots/final_execution_2_query_entered.png",
+      "sha256": "0ed718437ba2f42602c9e66eb8afaf71dc2b79d4ac9bcaaca6f74b2ad6406d96"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--25/Wolfram Alpha--25_20261024_115620/final_runs/run_002/screenshots/final_execution_3_results_page.png",
+      "sha256": "9b9b4a8dc06a9880c3de3133f2fc8fa6d988175753e5706b019f308618133eac"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--25/Wolfram Alpha--25_20261024_115620/final_runs/run_002/screenshots/final_execution_4_position_velocity_pods.png",
+      "sha256": "9b9b4a8dc06a9880c3de3133f2fc8fa6d988175753e5706b019f308618133eac"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--25/Wolfram Alpha--25_20261024_115620/final_runs/run_002/screenshots/final_execution_5_results_fullpage.png",
+      "sha256": "b84ef6b6ad1b23ecbc44a49ab36fe467e38f0ff72e7e2ce3e5f1bab5d1f85df1"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "66c2ca120afa02fc510a0edd64bb484e9fbf34ebf666bfd64082a5db7b7b5360",
+  "fingerprint": "9388ed53b6ea956cee0e5aece6239a8fb3ea43fb2f38f5db5bd8d202ef7bc040",
+  "evaluated_at": "2026-10-29T00:01:35.567639+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation\n\n## Task Requirements\nCalculate the final position and velocity of a projectile launched at 45° with initial speed 30 m/s after 3 seconds.\n\n## Verification of Physics\nExpected values (using g = 9.81 m/s²):\n- v₀ₓ = 30·cos(45°) ≈ 21.2132 m/s; v₀ᵧ = 30·sin(45°) ≈ 21.2132 m/s\n- x = v₀ₓ·t = 21.2132 × 3 = **63.6396 m** ✓\n- y = v₀ᵧ·t − ½g·t² = 63.6396 − 44.145 = **19.4946 m** ✓\n- vₓ = **21.2132 m/s** (constant) ✓\n- vᵧ = v₀ᵧ − g·t = 21.2132 − 29.43 = **−8.2168 m/s** ✓\n\n## Screenshot Analysis\n1. **Screenshot 1**: Wolfram Alpha homepage with empty input box — starting state.\n2. **Screenshot 2**: Input box filled with the correct kinematic expressions: `30 cos(45 degrees)*3, 30 sin(45 degrees)*3 - 1/2*9.81*3^2, 30 cos(45 degrees), 30 sin(45 degrees) - 9.81*3` — these correctly encode x, y, vx, vy at t = 3 s.\n3. **Screenshots 3–5**: Results page confirms:\n   - Result pod: {45√2, 19.4946, 15√2, −8.2168} — matches the response's claim exactly.\n   - Decimal approximation pod: {63.6396, 19.4946, 21.2132, −8.2168} = (x, y, vx, vy) — matches the response exactly.\n\n## Response Consistency\n- The response's x, y, vx, vy values match the screenshot's decimal approximation pod perfectly.\n- Derived values not shown on the screenshot (distance from launch = 66.56 m and speed = 22.7490 m/s) are mathematically consistent: √(63.6396² + 19.4946²) ≈ 66.56 m and √(21.2132² + 8.2168²) ≈ 22.749 m/s. Per instructions, these unshown values are believable and correct.\n- Both required components (final position AND final velocity) are provided.\n\nThe computation was performed correctly on Wolfram Alpha with proper kinematic expressions, and all reported values are physically accurate.\n\n## Verdict\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8162,
+    "completion_tokens": 2028,
+    "total_tokens": 10190,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1421
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-29T00:01:36.142109+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--25/Wolfram Alpha--25_20261024_115620/final_runs/run_002/screenshots/final_execution_1_homepage_input.png",
+      "source_sha256": "58bf9f06077a63f7495fe9e5833f3e5843ebb789e7c8579d60c51c2391f56f7f",
+      "source_bytes": 151085,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 140429,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "561e0c5e7880f934440735e68b4ac52b18d4b2e370978cad45583af1c3d48657"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--25/Wolfram Alpha--25_20261024_115620/final_runs/run_002/screenshots/final_execution_2_query_entered.png",
+      "source_sha256": "0ed718437ba2f42602c9e66eb8afaf71dc2b79d4ac9bcaaca6f74b2ad6406d96",
+      "source_bytes": 155522,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 145666,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a86da38b8eba0b327a5f96356172c3820fb18cdb1e04ab4d4f6098fbf19102fa"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--25/Wolfram Alpha--25_20261024_115620/final_runs/run_002/screenshots/final_execution_3_results_page.png",
+      "source_sha256": "9b9b4a8dc06a9880c3de3133f2fc8fa6d988175753e5706b019f308618133eac",
+      "source_bytes": 244255,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 144774,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "935d8ec5bda52542807d0be5b2fc23565e9e45bb36169c174edffa4250386355"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--25/Wolfram Alpha--25_20261024_115620/final_runs/run_002/screenshots/final_execution_4_position_velocity_pods.png",
+      "source_sha256": "9b9b4a8dc06a9880c3de3133f2fc8fa6d988175753e5706b019f308618133eac",
+      "source_bytes": 244255,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 144774,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "935d8ec5bda52542807d0be5b2fc23565e9e45bb36169c174edffa4250386355"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--25/Wolfram Alpha--25_20261024_115620/final_runs/run_002/screenshots/final_execution_5_results_fullpage.png",
+      "source_sha256": "b84ef6b6ad1b23ecbc44a49ab36fe467e38f0ff72e7e2ce3e5f1bab5d1f85df1",
+      "source_bytes": 257547,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1273,
+        1904
+      ],
+      "transmitted_dimensions": [
+        856,
+        1280
+      ],
+      "transmitted_bytes": 135923,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "bca4d151880221ff9099d1482dc35f090b44a9808bc0f88c49b5b0be27a61c31"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 952280,
+  "response_id": "5703f702-7cc2-4cea-affd-a51d56afc3de",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1712,
+    "reasoning_content_chars": 3498
+  }
+}

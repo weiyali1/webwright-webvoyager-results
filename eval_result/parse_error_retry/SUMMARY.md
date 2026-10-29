@@ -8,22 +8,20 @@ Purpose: **pilot**. This report does not claim leaderboard approval.
 
 Model: glm-5.3-flash; prompt variant: standard.
 
-Answer input: final_response.txt (fallback: final_script_log.txt:Final Response). Use the selected run's final_response.txt when it contains a usable answer. If that file is absent, empty, or incomplete, extract the last non-empty Final Response block from that same run's final_script_log.txt. Never use evidence files or older runs; INCOMPLETE placeholders are excluded.
+Answer input: answer.txt only. Use only the selected run's answer.txt. If answer.txt is absent or empty, the task is missing an answer. Never read final_response.txt, final_script_log.txt, evidence files, or older runs.
 
-Tasks: 11; accepted: 9; acceptance rate: INCOMPLETE (not a final score).
+Tasks: 6; accepted: 4; acceptance rate: INCOMPLETE (not a final score).
 
 Missing evidence is unsuccessful. API/parse/evaluation errors are unresolved, not silently dropped.
 
 | Website | Tasks | Accepted | Rejected | Missing evidence | Unresolved | Rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Allrecipes | 1 | 1 | 0 | 0 | 0 | 100.00% |
-| Amazon | 2 | 1 | 1 | 0 | 0 | 50.00% |
-| Apple | 2 | 2 | 0 | 0 | 0 | 100.00% |
+| Amazon | 1 | 0 | 0 | 0 | 1 | incomplete |
 | ArXiv | 1 | 1 | 0 | 0 | 0 | 100.00% |
-| Booking | 1 | 1 | 0 | 0 | 0 | 100.00% |
+| ESPN | 1 | 1 | 0 | 0 | 0 | 100.00% |
 | GitHub | 1 | 1 | 0 | 0 | 0 | 100.00% |
-| Google Map | 2 | 2 | 0 | 0 | 0 | 100.00% |
-| Huggingface | 1 | 0 | 0 | 0 | 1 | incomplete |
+| Huggingface | 1 | 0 | 1 | 0 | 0 | 0.00% |
+| Wolfram Alpha | 1 | 1 | 0 | 0 | 0 | 100.00% |
 
 Selected task records and image hashes are frozen in selection_manifest.json.
 Only the selected final execution is judged; old self-reflection labels are never inputs.

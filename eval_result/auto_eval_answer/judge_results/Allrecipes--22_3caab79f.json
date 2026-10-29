@@ -1,0 +1,151 @@
+{
+  "task_id": "Allrecipes--22",
+  "website": "Allrecipes",
+  "task": "Find a recipe for a healthy avocado salad on Allrecipes that has a preparation time of less than 20 minutes and more than 30 user reviews. Include the nutritional information per serving.",
+  "task_record": "Allrecipes/Allrecipes--22/Allrecipes--22_20261025_080354",
+  "task_definition_sha256": "ef8434cfb80e7d795f46c856e4805d339464247dc27dda3210df8f0ea50e1ff5",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Allrecipes/Allrecipes--22/Allrecipes--22_20261025_080354"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Recipe: Avocado Salad\nURL: https://www.allrecipes.com/recipe/19960/avocado-salad/\nPrep Time: 15 minutes\nUser Reviews: 343 Ratings\nNutrition per serving:\nNutrition Facts (per serving)\n126\nCalories\n10g\nFat\n10g\nCarbs\n2g\nProtein\n\nFull nutrition label:\nNutrition Facts\nServings Per Recipe 6\nCalories 126\n% Daily Value *\nTotal Carbohydrate 10g\t4%\nDietary Fiber 6g\t20%\nTotal Sugars 3g\nProtein 2g\t4%\nTotal Fat 10g\t13%\nSaturated Fat 2g\t8%\nVitamin C 30mg\t33%\nSodium 9mg\t0%\nCalcium 20mg\t2%\nIron 1mg\t3%\nPotassium 474mg\t10%",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Allrecipes/Allrecipes--22/Allrecipes--22_20261025_080354/final_runs/run_002/screenshots/cp1_search_results.png",
+      "sha256": "a04fb931cd14b542444933b08d4dd366c4c2d4679fb93a2718805ed9b3ae1417"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--22/Allrecipes--22_20261025_080354/final_runs/run_002/screenshots/cp3_recipe_page.png",
+      "sha256": "470425e6845af80ee76a4f1f2c1f9d84868a9909ba23562577d08d0401af2680"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--22/Allrecipes--22_20261025_080354/final_runs/run_002/screenshots/cp5_nutrition.png",
+      "sha256": "48376139938afc785032ad181017251cb586c3315b32c5e7e4e6f832b2f1ada1"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "1d8b1373e79eeabeffbf853fe20b80c2b63f644c9d3ded9e3f2256f326b1e38e",
+  "fingerprint": "971630074c9cbbda21d0fb7d6c8ba4acc941b1a9b8cbea10dee7206378c1b3b8",
+  "evaluated_at": "2026-10-28T17:24:04.775403+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements:\n1. Find a healthy avocado salad recipe on Allrecipes\n2. Preparation time less than 20 minutes\n3. More than 30 user reviews\n4. Include nutritional information per serving\n\n## Verification Against Screenshots:\n\n**Screenshot 1 (Search Results):** Shows the Allrecipes search for \"avocado salad\" with the \"Avocado Salad\" recipe appearing as the first result with **343 Ratings** — this confirms the recipe exists and exceeds the 30+ review threshold.\n\n**Screenshot 2 (Recipe Page):** Shows the \"Avocado Salad\" recipe page with a 4.7 star rating (343), **251 Reviews**, and 71 photos. The recipe is described as \"a delicious combination of ripe avocados, sweet onions, fresh tomatoes, and cilantro\" — consistent with a healthy salad.\n\n**Screenshot 3 (Ingredients):** Shows the recipe ingredients: avocados, onion, bell pepper, tomato, cilantro, lime, and seasonings — all fresh, healthy whole-food ingredients supporting the \"healthy\" criterion.\n\n## Verification Against Result Response:\n\n- **Prep Time: 15 minutes** — Not directly visible in the screenshots, but per evaluation guidelines, content in the response not contradicted by screenshots should be believed. 15 minutes < 20 minutes ✓\n- **User Reviews: 343 Ratings** — Confirmed by screenshots (343 ratings, 251 reviews), well above 30 ✓\n- **Nutrition per serving: 126 Calories, 10g Fat, 10g Carbs, 2g Protein** — The response provides a complete nutrition label including servings per recipe (6), calories, macronutrients, fiber, sugars, sodium, vitamins, and minerals. This satisfies the nutritional information requirement ✓\n- **URL provided** for the recipe ✓\n\n## Conclusion:\nAll task requirements have been satisfied: a healthy avocado salad recipe was found on Allrecipes, the prep time (15 min) is under 20 minutes, the review count (343 ratings/251 reviews) exceeds 30, and detailed nutritional information per serving is included.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 5221,
+    "completion_tokens": 1115,
+    "total_tokens": 6336,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 662
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T17:24:04.906880+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 3,
+  "image_transports": [
+    {
+      "path": "Allrecipes/Allrecipes--22/Allrecipes--22_20261025_080354/final_runs/run_002/screenshots/cp1_search_results.png",
+      "source_sha256": "a04fb931cd14b542444933b08d4dd366c4c2d4679fb93a2718805ed9b3ae1417",
+      "source_bytes": 749397,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        900
+      ],
+      "transmitted_bytes": 260955,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "e06127d2650df2218958a250e0e451c138e2ad36b76d4be3b7c826964c4393e0"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--22/Allrecipes--22_20261025_080354/final_runs/run_002/screenshots/cp3_recipe_page.png",
+      "source_sha256": "470425e6845af80ee76a4f1f2c1f9d84868a9909ba23562577d08d0401af2680",
+      "source_bytes": 241753,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        900
+      ],
+      "transmitted_bytes": 157742,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "f245d2d6e06b1c37a19d4e987b3eb65a3281b751dfbf8968ec8406d8a5ba3917"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--22/Allrecipes--22_20261025_080354/final_runs/run_002/screenshots/cp5_nutrition.png",
+      "source_sha256": "48376139938afc785032ad181017251cb586c3315b32c5e7e4e6f832b2f1ada1",
+      "source_bytes": 129888,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        900
+      ],
+      "transmitted_bytes": 202423,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "9a75f4aedecf3ee14fd15df3c693e1503c076838a24f057fc6f58ffdc061e52c"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 3,
+  "request_json_bytes": 831632,
+  "response_id": "08242762-d16d-4397-acd3-1869e3f3f89d",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1959,
+    "reasoning_content_chars": 2752
+  }
+}

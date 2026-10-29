@@ -1,0 +1,211 @@
+{
+  "task_id": "Wolfram Alpha--3",
+  "website": "Wolfram Alpha",
+  "task": "Let g(x) be the integral of x^2 cos(2x). Write the expression of g(x).",
+  "task_record": "Wolfram_Alpha/Wolfram Alpha--3/Wolfram Alpha--3_20261024_051239",
+  "task_definition_sha256": "24fe577ed45631762cf03c186da25740c1c150bca2a7a8e75686ac6f649b1e29",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Wolfram_Alpha/Wolfram Alpha--3/Wolfram Alpha--3_20261024_051239"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "answer.txt only",
+  "answer": "g(x) = (x^2 sin(2x))/2 + (x cos(2x))/2 - sin(2x)/4 + constant, equivalently g(x) = 1/4 ((2 x^2 - 1) sin(2x) + 2x cos(2x)) + constant, as computed by Wolfram|Alpha for the integral of x^2 cos(2x).",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--3/Wolfram Alpha--3_20261024_051239/final_runs/run_002/screenshots/final_execution_1_homepage_input.png",
+      "sha256": "fd535b8bd329e21a58e4f13b6a38e4aa3e6cf83ac20872422b33b591a19c7396"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--3/Wolfram Alpha--3_20261024_051239/final_runs/run_002/screenshots/final_execution_2_query_entered.png",
+      "sha256": "dbd5b685867d5ece0ae05287be49b7ecd98275e72683c5f9a3cd6f688ce40857"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--3/Wolfram Alpha--3_20261024_051239/final_runs/run_002/screenshots/final_execution_3_results_page.png",
+      "sha256": "20882eafd6a20fb9401b7591b4428f152a50623a21ecf1f9fdb10f35706c0422"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--3/Wolfram Alpha--3_20261024_051239/final_runs/run_002/screenshots/final_execution_4_indefinite_integral_pod.png",
+      "sha256": "9aebf7e97b1476ac1dea1eabf1f35958d0bcae76789e3839cbea7f8b0ce4104e"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--3/Wolfram Alpha--3_20261024_051239/final_runs/run_002/screenshots/final_execution_5_final_state.png",
+      "sha256": "547779aef4da8ab8a9d6e8dcbc5acba4c0aa15644540113a5a0825469321eea6"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "e6e05aa20d20808bdd9b08a0e80ddcd9886c31613ac3bbd6ec6c5bd50f7c62ca",
+  "fingerprint": "e95d5957a4858f5c80dae4521921ad24c26d3f5731bd6b7572e9091e98962733",
+  "evaluated_at": "2026-10-28T23:54:45.946423+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation\n\n## Task Analysis\nThe task requires computing the indefinite integral of x² cos(2x) and expressing it as g(x).\n\n## Verification of the Mathematical Result\nThe response claims: g(x) = (x² sin(2x))/2 + (x cos(2x))/2 − sin(2x)/4 + constant, equivalently g(x) = 1/4 ((2x² − 1) sin(2x) + 2x cos(2x)) + constant.\n\nChecking this against the screenshots:\n- **Screenshot 3** shows Wolfram|Alpha's result: ∫ x² cos(2x) dx = 1/4 ((2x² − 1) sin(2x) + 2x cos(2x)) + constant — this matches the second form in the response exactly.\n- **Screenshots 4–5** show the \"Expanded form of the integral\": (1/2) x² sin(2x) − (1/4) sin(2x) + (1/2) x cos(2x) + constant — this matches the first form in the response exactly.\n\nIndependent verification via integration by parts:\n- ∫ x² cos(2x) dx = (x² sin(2x))/2 − ∫ x sin(2x) dx\n- ∫ x sin(2x) dx = −x cos(2x)/2 + sin(2x)/4\n- Result: (x² sin(2x))/2 + x cos(2x)/2 − sin(2x)/4 + C ✓\n\nThe math is correct and consistent with both the response and the screenshots.\n\n## Verification of the Process\n- Screenshot 1: Wolfram|Alpha homepage loaded.\n- Screenshot 2: Query \"integral of x^2 cos(2x)\" entered into the search box.\n- Screenshots 3–5: Results page displaying the indefinite integral, plots, and alternate/expanded forms of the integral.\n\nThe workflow correctly executed the computation, and the final response accurately reports the result shown on screen, including the constant of integration.\n\n## Conclusion\nThe expression for g(x) was correctly computed, matches Wolfram|Alpha's output in the screenshots, and is mathematically valid.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8832,
+    "completion_tokens": 1239,
+    "total_tokens": 10071,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 752
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T23:54:46.115092+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--3/Wolfram Alpha--3_20261024_051239/final_runs/run_002/screenshots/final_execution_1_homepage_input.png",
+      "source_sha256": "fd535b8bd329e21a58e4f13b6a38e4aa3e6cf83ac20872422b33b591a19c7396",
+      "source_bytes": 111965,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_bytes": 175910,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "6b9129cf4a60fbce49ceddfe063837b779cfe5006043dc88cd128c3bec54bc93"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--3/Wolfram Alpha--3_20261024_051239/final_runs/run_002/screenshots/final_execution_2_query_entered.png",
+      "source_sha256": "dbd5b685867d5ece0ae05287be49b7ecd98275e72683c5f9a3cd6f688ce40857",
+      "source_bytes": 112038,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_bytes": 175102,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "876dde52984d1491fe24db3ca3994aa5f1aaeeb77be572e0d264801454eda255"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--3/Wolfram Alpha--3_20261024_051239/final_runs/run_002/screenshots/final_execution_3_results_page.png",
+      "source_sha256": "20882eafd6a20fb9401b7591b4428f152a50623a21ecf1f9fdb10f35706c0422",
+      "source_bytes": 164441,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_bytes": 146959,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "3b79807784e8f52466a1be83ffb45e8f5df7ccb815427a9d234a4c81471b9884"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--3/Wolfram Alpha--3_20261024_051239/final_runs/run_002/screenshots/final_execution_4_indefinite_integral_pod.png",
+      "source_sha256": "9aebf7e97b1476ac1dea1eabf1f35958d0bcae76789e3839cbea7f8b0ce4104e",
+      "source_bytes": 154872,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_bytes": 133136,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "7621c6a979db5419065f830fa71a23d6e1d35ec1aa0c0c673cb60e23cac710e1"
+    },
+    {
+      "path": "Wolfram_Alpha/Wolfram Alpha--3/Wolfram Alpha--3_20261024_051239/final_runs/run_002/screenshots/final_execution_5_final_state.png",
+      "source_sha256": "547779aef4da8ab8a9d6e8dcbc5acba4c0aa15644540113a5a0825469321eea6",
+      "source_bytes": 155105,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_bytes": 132886,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "1028ac36630bd369a5ebeef998736a8b54a14100f924b48965c9dc8ca2324a7c"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1021808,
+  "response_id": "9e26afef-66ed-4389-8d39-bc7f3871d54b",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1597,
+    "reasoning_content_chars": 1842
+  }
+}

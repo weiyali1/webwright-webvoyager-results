@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Map--12",
+  "website": "Google Map",
+  "task": "Find 5 places that serve burgers near 44012 zip code and sort these 5 places by highest rating.",
+  "task_record": "Google_Map/Google Map--12/Google Map--12_20261024_164125",
+  "task_definition_sha256": "fc03cf8d645567519c19f569a5d9b3960857bdff06a243d6e93c681aaf93cd9e",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google_Map/Google Map--12/Google Map--12_20261024_164125"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Top 5 places that serve burgers near 44012, sorted by highest rating: 1. Sam's Supper Club - Avon Lake, OH — 4.9 (213 reviews) 2. Cooper's Hawk Winery & Restaurant — 4.8 (2,369 reviews) 3. Taki's Greek Kitchen — 4.8 (384 reviews) 4. Ibiza Mediterranean Restaurant - Avon Lake, OH — 4.7 (445 reviews) 5. Dirte Pi — 4.7 (337 reviews) Method: On Google Maps, searched 'burgers near 44012', applied the Rating filter's highest option (4.5+) via the site control, extracted all rated results, and sorted them by rating descending.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Google_Map/Google Map--12/Google Map--12_20261024_164125/final_runs/run_002/screenshots/final_execution_2_results_displayed.png",
+      "sha256": "80c5a5f063087b5ce41f8f5f91cdb3d7b5c5a9258222d2f7ae114a4096c21ecd"
+    },
+    {
+      "path": "Google_Map/Google Map--12/Google Map--12_20261024_164125/final_runs/run_002/screenshots/final_execution_3_rating_control_open.png",
+      "sha256": "dc6718b2c268271e2a6f263ec27a6c477221218c2ee8b5b1835fe81e1e7a3dc2"
+    },
+    {
+      "path": "Google_Map/Google Map--12/Google Map--12_20261024_164125/final_runs/run_002/screenshots/final_execution_4_highest_rating_applied.png",
+      "sha256": "2d53bf6641a34595c8cd6320e755d6eed3f22a819120c8da51e0a185203fde84"
+    },
+    {
+      "path": "Google_Map/Google Map--12/Google Map--12_20261024_164125/final_runs/run_002/screenshots/final_execution_5_sorted_results.png",
+      "sha256": "2d53bf6641a34595c8cd6320e755d6eed3f22a819120c8da51e0a185203fde84"
+    },
+    {
+      "path": "Google_Map/Google Map--12/Google Map--12_20261024_164125/final_runs/run_002/screenshots/final_execution_6_final_state.png",
+      "sha256": "2d53bf6641a34595c8cd6320e755d6eed3f22a819120c8da51e0a185203fde84"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "a786ddfafda20eb04b16cbec62a847b6875fc30231c5bd7bfbca00f6849f6f8b",
+  "fingerprint": "90c86880660a506224628458ceb5ff5293061bebee6bdcd3d6d931e470ae2a25",
+  "evaluated_at": "2026-10-28T22:25:31.819701+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\n1. Find 5 places that serve burgers near zip code 44012\n2. Sort these 5 places by highest rating\n\n## Screenshot Verification\n\n**Search execution:** The search bar shows \"burgers near 44012\" was entered on Google Maps ✓\n\n**Filter application:** Screenshots 2–3 show the rating filter dropdown (評分) being opened and the \"4.5+\" option applied, with the filter chip confirmed as active in subsequent screenshots ✓\n\n**Results visible in screenshots (after 4.5+ filter):**\n- Jake's On Lake — 4.6 (1,788)\n- Edacious Kitchen + Bar — 4.7 (195)\n- Sam's Supper Club - Avon Lake, OH — 4.9 (213)\n- Taki's Greek Kitchen — 4.8 (334)\n- Cooper's Hawk Winery & Restaurant — 4.8 (2,369)\n- Salad KraZe — 4.6 (1,022)\n- Dirte Pi — 4.7 (337)\n- Swensons Drive-In — 4.5 (2,301)\n- Ibiza Mediterranean Restaurant appears on the map as a result (rating not shown in list view)\n\n## Response Verification\n\nThe response lists:\n1. Sam's Supper Club — 4.9 ✓ (matches screenshot)\n2. Cooper's Hawk Winery & Restaurant — 4.8 ✓ (matches screenshot)\n3. Taki's Greek Kitchen — 4.8 ✓ (rating matches; review count 384 vs. 334 in screenshot — minor discrepancy, but rating and rank position are correct)\n4. Ibiza Mediterranean Restaurant — 4.7 (not visible in list, but the restaurant appears in the filtered map results; per evaluation rules, content not shown in screenshot is believed)\n5. Dirte Pi — 4.7 ✓ (matches screenshot)\n\n**Sorting check:** 4.9 → 4.8 → 4.8 → 4.7 → 4.7 — correctly sorted in descending order by rating, with ties reasonably ordered by review count ✓\n\n**Selection check:** All 5 places come from the \"burgers near 44012\" search results, so all serve burgers near the specified zip code. Among the tied 4.7-rated places (Edacious, Dirte Pi, Ibiza), only two could fit in the top 5, and the selection is defensible via review-count tiebreaking.\n\n## Conclusion\nThe search was performed correctly for the specified zip code, 5 burger-serving places were identified, and they are properly sorted from highest to lowest rating. The minor review-count discrepancy for Taki's does not affect the core task completion.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8220,
+    "completion_tokens": 3762,
+    "total_tokens": 11982,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3173
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T22:25:32.494223+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Google_Map/Google Map--12/Google Map--12_20261024_164125/final_runs/run_002/screenshots/final_execution_2_results_displayed.png",
+      "source_sha256": "80c5a5f063087b5ce41f8f5f91cdb3d7b5c5a9258222d2f7ae114a4096c21ecd",
+      "source_bytes": 735776,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 254493,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "7d0f8670a351773759c981bc912bfebb371f996441925a25fb5048abc5b402bb"
+    },
+    {
+      "path": "Google_Map/Google Map--12/Google Map--12_20261024_164125/final_runs/run_002/screenshots/final_execution_3_rating_control_open.png",
+      "source_sha256": "dc6718b2c268271e2a6f263ec27a6c477221218c2ee8b5b1835fe81e1e7a3dc2",
+      "source_bytes": 746197,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 260482,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "e5a77f3370e95d3c35181edad8782ec17e804af315613a88298dc0f68b9d1cc7"
+    },
+    {
+      "path": "Google_Map/Google Map--12/Google Map--12_20261024_164125/final_runs/run_002/screenshots/final_execution_4_highest_rating_applied.png",
+      "source_sha256": "2d53bf6641a34595c8cd6320e755d6eed3f22a819120c8da51e0a185203fde84",
+      "source_bytes": 731880,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 255491,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "be0135b091a358be0f786d08e537284927596b65561af5fc75cf472d23a5a2bc"
+    },
+    {
+      "path": "Google_Map/Google Map--12/Google Map--12_20261024_164125/final_runs/run_002/screenshots/final_execution_5_sorted_results.png",
+      "source_sha256": "2d53bf6641a34595c8cd6320e755d6eed3f22a819120c8da51e0a185203fde84",
+      "source_bytes": 731880,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 255491,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "be0135b091a358be0f786d08e537284927596b65561af5fc75cf472d23a5a2bc"
+    },
+    {
+      "path": "Google_Map/Google Map--12/Google Map--12_20261024_164125/final_runs/run_002/screenshots/final_execution_6_final_state.png",
+      "source_sha256": "2d53bf6641a34595c8cd6320e755d6eed3f22a819120c8da51e0a185203fde84",
+      "source_bytes": 731880,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 255491,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "be0135b091a358be0f786d08e537284927596b65561af5fc75cf472d23a5a2bc"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1712109,
+  "response_id": "dbf14a28-917d-4ade-b925-2a01f4049ab5",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2158,
+    "reasoning_content_chars": 10747
+  }
+}

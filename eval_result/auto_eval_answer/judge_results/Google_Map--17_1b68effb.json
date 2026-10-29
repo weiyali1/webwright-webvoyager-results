@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Map--17",
+  "website": "Google Map",
+  "task": "Search for locksmiths open now but not open 24 hours in Texas City.",
+  "task_record": "Google_Map/Google Map--17/Google Map--17_20261024_212952",
+  "task_definition_sha256": "4336a2fbbbddd1e40e6098dd8babb27cddb9a07f6c153b078107e680014f106c",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google_Map/Google Map--17/Google Map--17_20261024_212952"
+  ],
+  "final_run": "run_010",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Searched locksmiths in Texas City on Google Maps and applied the \"Open now\" filter via the Hours filter control. Locksmiths open now but NOT open 24 hours: 1st Choice Locksmith Houston; Goan Locksmith; KeyMe Locksmiths; Minute Key. (24-hour locksmiths excluded: Biscamp's Lock & Key LLC, Local Galveston Locksmith, Alamo key & lock, Island Locksmith, RoadRunner Locksmith, Auto Keys Now LLC.)",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Google_Map/Google Map--17/Google Map--17_20261024_212952/final_runs/run_010/screenshots/final_execution_2_hours_dialog.png",
+      "sha256": "ee82eaa22d42f08045ceee0fde0760c8eb12e031b07993e3aef53d95b5de54f6"
+    },
+    {
+      "path": "Google_Map/Google Map--17/Google Map--17_20261024_212952/final_runs/run_010/screenshots/final_execution_3_open_now_selected.png",
+      "sha256": "107f8822d14232b4a61aa108fd66c32c2726930ca500e9731ff99f76f8792459"
+    },
+    {
+      "path": "Google_Map/Google Map--17/Google Map--17_20261024_212952/final_runs/run_010/screenshots/final_execution_4_open_now_applied.png",
+      "sha256": "b250664d7cf34966be37c8d038ab8a9f0a0d7a0335795f53975a672a16c081c2"
+    },
+    {
+      "path": "Google_Map/Google Map--17/Google Map--17_20261024_212952/final_runs/run_010/screenshots/final_execution_6_filtered_results.png",
+      "sha256": "ff1d30116d33bbd58efe765fdc18c4f04b0182a62913337af6cba57f450bd89d"
+    },
+    {
+      "path": "Google_Map/Google Map--17/Google Map--17_20261024_212952/final_runs/run_010/screenshots/final_execution_7_final_state.png",
+      "sha256": "c5a86218e1fa94267b2bb39a4cd292ce22b482b18a3f64f5dc9735753d130a4b"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "09b642733b7536e51862f7284ca29dcc4755363ca342cdda9d8accf33a86b497",
+  "fingerprint": "bddf59cb9ffa24892fdb60c50e045380048bc8cf2beba31b939bfc1964901303",
+  "evaluated_at": "2026-10-28T22:36:01.440210+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\nThe task required: **Search for locksmiths open now but not open 24 hours in Texas City.** This involves two conditions: (1) currently open, and (2) NOT open 24 hours.\n\n## Screenshot Evidence\n\n**Screenshots 1–2:** The search \"locksmiths Texas City\" was entered in Google Maps. The Hours filter (營業時間) dropdown is open, and in screenshot 2 the \"營業中\" (Open now) radio button is selected — showing the filter was actively applied.\n\n**Screenshot 3:** The \"✓ 營業中\" (Open now) filter chip is now active on the results page. The filtered results show:\n- Biscamp's Lock & Key LLC — labeled \"24 小時營業\" (open 24 hours)\n- Goan Locksmith — 營業中 (open now), closes 12:00 → not 24 hours\n- Local Galveston Locksmith — \"24 小時營業\" (open 24 hours)\n- Minute Key — 營業中, closes 21:00 → not 24 hours\n- KeyMe Locksmiths — 營業中, closes 23:00 → not 24 hours\n- Alamo key & lock — \"24 小時營業\" (open 24 hours)\n- 1st Choice Locksmith — partially visible\n\n**Screenshots 4–5:** Scrolled results confirm Minute Key (closes 21:00), KeyMe Locksmiths (closes 23:00), and Alamo key & lock (24 hours).\n\n## Response Consistency Check\nThe response lists open-now-but-not-24-hour locksmiths: **1st Choice Locksmith, Goan Locksmith, KeyMe Locksmiths, Minute Key** — this matches the screenshots exactly (these entries show 營業中 with specific closing times rather than the \"24 小時營業\" label). The excluded 24-hour locksmiths (Biscamp's, Local Galveston, Alamo key & lock) also match the \"24 小時營業\" labels visible in the screenshots. The additional exclusions (Island Locksmith, RoadRunner, Auto Keys Now) are not contradicted by the screenshots.\n\n## Conclusion\nThe search was performed for Texas City, the \"Open now\" filter was correctly applied, and the results were correctly differentiated between 24-hour and non-24-hour locksmiths, fulfilling both conditions of the task.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 6631,
+    "completion_tokens": 1825,
+    "total_tokens": 8456,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1254
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T22:36:01.812999+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Google_Map/Google Map--17/Google Map--17_20261024_212952/final_runs/run_010/screenshots/final_execution_2_hours_dialog.png",
+      "source_sha256": "ee82eaa22d42f08045ceee0fde0760c8eb12e031b07993e3aef53d95b5de54f6",
+      "source_bytes": 422307,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        889
+      ],
+      "transmitted_bytes": 231340,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "02bbd45ac0dd924f9c1178a5cc7a0c06c89d0634e650383dbcdb091dd8aabeff"
+    },
+    {
+      "path": "Google_Map/Google Map--17/Google Map--17_20261024_212952/final_runs/run_010/screenshots/final_execution_3_open_now_selected.png",
+      "source_sha256": "107f8822d14232b4a61aa108fd66c32c2726930ca500e9731ff99f76f8792459",
+      "source_bytes": 421516,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        889
+      ],
+      "transmitted_bytes": 231404,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "dd55724c0ff61ea9ecc2158472bd2555fba7ca4808350b877e3db5089b35a9e4"
+    },
+    {
+      "path": "Google_Map/Google Map--17/Google Map--17_20261024_212952/final_runs/run_010/screenshots/final_execution_4_open_now_applied.png",
+      "source_sha256": "b250664d7cf34966be37c8d038ab8a9f0a0d7a0335795f53975a672a16c081c2",
+      "source_bytes": 558932,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        889
+      ],
+      "transmitted_bytes": 261758,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "63b09adc9693ec97ede5fe6289c3b09209c706ace353da080c89ca70499a8c3c"
+    },
+    {
+      "path": "Google_Map/Google Map--17/Google Map--17_20261024_212952/final_runs/run_010/screenshots/final_execution_6_filtered_results.png",
+      "source_sha256": "ff1d30116d33bbd58efe765fdc18c4f04b0182a62913337af6cba57f450bd89d",
+      "source_bytes": 296318,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        480
+      ],
+      "transmitted_dimensions": [
+        1280,
+        480
+      ],
+      "transmitted_bytes": 155652,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "25bc549ee9755df1487d2050a615c554374d38a1ffb72376834d1daee4a7e83d"
+    },
+    {
+      "path": "Google_Map/Google Map--17/Google Map--17_20261024_212952/final_runs/run_010/screenshots/final_execution_7_final_state.png",
+      "source_sha256": "c5a86218e1fa94267b2bb39a4cd292ce22b482b18a3f64f5dc9735753d130a4b",
+      "source_bytes": 296390,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        480
+      ],
+      "transmitted_dimensions": [
+        1280,
+        480
+      ],
+      "transmitted_bytes": 155617,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "8f06fa17f7e4530a6bc92cc52da56bbf41e7091d7b21052b5145897fc8d81ef7"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1384372,
+  "response_id": "b920e579-05ac-4bd1-89cb-433fcd512e88",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1889,
+    "reasoning_content_chars": 4684
+  }
+}

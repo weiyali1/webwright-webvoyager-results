@@ -1,0 +1,211 @@
+{
+  "task_id": "Booking--17",
+  "website": "Booking",
+  "task": "Find a hotel in Paris with a fitness center and a rating of 8 or higher available for a 5-night stay starting from February 14, 2027, and sort the results by best reviewed.",
+  "task_record": "Booking/Booking--17/Booking--17_20261025_144103",
+  "task_definition_sha256": "721a5394bd3d711265e00d31c247b6ef5d78b27dbdf8cc7186b533a0a2ed27d8",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Booking/Booking--17/Booking--17_20261025_144103"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Applied Paris search on Booking.com for a 5-night stay from 2027-02-14 to 2027-02-19, filtered by Fitness center and review score 8+ (Very Good), and sorted by 'Best reviewed & lowest price'. Results: 271 properties displayed. Final URL: https://www.booking.com/searchresults.html?ss=Paris&dest_id=-1456928&dest_type=city&checkin=2027-02-14&checkout=2027-02-19&group_adults=2&no_rooms=1&group_children=0&nflt=popular_activities%3D11%3Breview_score%3D80&order=review_score_and_price",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Booking/Booking--17/Booking--17_20261025_144103/final_runs/run_001/screenshots/final_execution_3_search_results.png",
+      "sha256": "23e09ff94bef892f5a2d4ecb0ce651870e4292a28d737b8c8982e12b362fb4aa"
+    },
+    {
+      "path": "Booking/Booking--17/Booking--17_20261025_144103/final_runs/run_001/screenshots/final_execution_4_fitness_center_filter.png",
+      "sha256": "5a5d0b43a9c91a73987ac36ef63fbbd21f2cf60f1064376b20e03bd7261c72e9"
+    },
+    {
+      "path": "Booking/Booking--17/Booking--17_20261025_144103/final_runs/run_001/screenshots/final_execution_5_review_score_8_filter.png",
+      "sha256": "90666760d6da3a587fe25f7cd8ae407f5c99e5c3d4d7b77d237d676f5c8f2181"
+    },
+    {
+      "path": "Booking/Booking--17/Booking--17_20261025_144103/final_runs/run_001/screenshots/final_execution_6_sort_best_reviewed.png",
+      "sha256": "7d87a440be15d27eef3573483fa78ea34e7d948c9f15b997cff418ac6e24fb24"
+    },
+    {
+      "path": "Booking/Booking--17/Booking--17_20261025_144103/final_runs/run_001/screenshots/final_execution_7_final_results.png",
+      "sha256": "7d87a440be15d27eef3573483fa78ea34e7d948c9f15b997cff418ac6e24fb24"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "2960276d8e875d9062b2a56ab56f3c255b254a72dba1b33e85152d28297aba8c",
+  "fingerprint": "0f4726a6d517f69d472c2c6a85f0a133314ed34b274d1d56fb88105dd8ae353c",
+  "evaluated_at": "2026-10-28T19:52:27.555535+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation Analysis\n\n**Task Requirements:**\n1. Search for a hotel/property in Paris\n2. Stay dates: 5 nights starting February 14, 2027 (Feb 14–19, 2027)\n3. Filter: Fitness center\n4. Filter: Rating 8 or higher\n5. Sort results by best reviewed\n\n**Screenshot Verification:**\n\n1. **Destination & Dates (Screenshot 1):** The search is set to \"Paris\" with dates \"Sun, Feb 14 — Fri, Feb 19\". Feb 14, 2027 falls on a Sunday (matching 2027's calendar), confirming the correct year. Feb 14 → Feb 19 = 5 nights. ✓\n\n2. **Fitness Center Filter (Screenshot 2):** The \"Fitness center\" checkbox is checked in the filter sidebar, and the \"Fitness center\" filter chip appears at the top. Results reduced to 450 properties. ✓\n\n3. **Rating 8+ Filter (Screenshot 3):** The \"Very Good: 8+\" checkbox is checked (both in \"Your previous filters\" and \"Popular filters\" sections), with the \"Very Good: 8+\" chip displayed. Results reduced to 271 properties. ✓\n\n4. **Sorting (Screenshots 4 & 5):** The sort option now reads \"Sort by: Best reviewed & lowest price\" — this is Booking.com's standard \"best reviewed\" sorting option. The results are visibly ordered by review score descending (10, 10, 10, 9.6...), confirming the sort was applied. ✓\n\n5. **Results:** The filtered results include hotels meeting the criteria (e.g., Hôtel des Arts Montmartre rated 9.6, Hôtel Alfred Sommier rated 8.6, Citadines Les Halles Paris rated 8.7), all showing \"5 nights, 2 adults\" pricing. The final URL in the response confirms checkin=2027-02-14, checkout=2027-02-19, fitness center filter, review_score=80, and order=review_score_and_price.\n\nAll task components — Paris location, correct 2027 dates for a 5-night stay, fitness center filter, 8+ rating filter, and best-reviewed sorting — are clearly demonstrated in the screenshots.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 9834,
+    "completion_tokens": 1360,
+    "total_tokens": 11194,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 868
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T19:52:28.288224+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Booking/Booking--17/Booking--17_20261025_144103/final_runs/run_001/screenshots/final_execution_3_search_results.png",
+      "source_sha256": "23e09ff94bef892f5a2d4ecb0ce651870e4292a28d737b8c8982e12b362fb4aa",
+      "source_bytes": 724281,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 289566,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "5bd1b3e71fae4a82c377dc3602ab9a517d72c44170b28622a825c2bdb909f33b"
+    },
+    {
+      "path": "Booking/Booking--17/Booking--17_20261025_144103/final_runs/run_001/screenshots/final_execution_4_fitness_center_filter.png",
+      "source_sha256": "5a5d0b43a9c91a73987ac36ef63fbbd21f2cf60f1064376b20e03bd7261c72e9",
+      "source_bytes": 728680,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 295439,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "f7d6a2c3b2746a071cd1036b878ebd2d127dc7e38230a93500c30fc11a91d22d"
+    },
+    {
+      "path": "Booking/Booking--17/Booking--17_20261025_144103/final_runs/run_001/screenshots/final_execution_5_review_score_8_filter.png",
+      "source_sha256": "90666760d6da3a587fe25f7cd8ae407f5c99e5c3d4d7b77d237d676f5c8f2181",
+      "source_bytes": 768197,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 301723,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "527b6b2aac0260416cc6b64d45f54c63273a45a12c3ec2065377bef2fbf64a19"
+    },
+    {
+      "path": "Booking/Booking--17/Booking--17_20261025_144103/final_runs/run_001/screenshots/final_execution_6_sort_best_reviewed.png",
+      "source_sha256": "7d87a440be15d27eef3573483fa78ea34e7d948c9f15b997cff418ac6e24fb24",
+      "source_bytes": 715191,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 314306,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "9c4c85b16954d3f0e5829af16e876b1524a181d1da0b653a4b74136fbc402c9e"
+    },
+    {
+      "path": "Booking/Booking--17/Booking--17_20261025_144103/final_runs/run_001/screenshots/final_execution_7_final_results.png",
+      "source_sha256": "7d87a440be15d27eef3573483fa78ea34e7d948c9f15b997cff418ac6e24fb24",
+      "source_bytes": 715191,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 314306,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "9c4c85b16954d3f0e5829af16e876b1524a181d1da0b653a4b74136fbc402c9e"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 2023988,
+  "response_id": "3ebfabc7-c170-4f44-92c4-ab601335e676",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1817,
+    "reasoning_content_chars": 3440
+  }
+}

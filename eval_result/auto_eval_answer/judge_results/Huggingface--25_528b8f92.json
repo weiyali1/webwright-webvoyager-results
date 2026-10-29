@@ -1,0 +1,181 @@
+{
+  "task_id": "Huggingface--25",
+  "website": "Huggingface",
+  "task": "In the Hugging Face documentation, find the tutorial on loading adapters with PEFT, tell me how to load in 8bit or 4bit.",
+  "task_record": "Huggingface/Huggingface--25/Huggingface--25_20261024_181704",
+  "task_definition_sha256": "32df785d35fe160ec37cc23b5c27f644d57c11b2fbc234756c0c6390d805ab0b",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Huggingface/Huggingface--25/Huggingface--25_20261024_181704"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "answer.txt only",
+  "answer": "In the Hugging Face PEFT adapter-loading tutorial (https://huggingface.co/docs/transformers/peft), to load an adapter in 8bit or 4bit you use bitsandbytes quantization: create a BitsAndBytesConfig with load_in_8bit=True for 8-bit (or load_in_4bit=True for 4-bit, optionally with bnb_4bit_quant_type=\"nf4\") and pass it as quantization_config to AutoPeftModelForCausalLM.from_pretrained / PeftModel.from_pretrained together with device_map=\"auto\". Example (8bit): quantization_config = BitsAndBytesConfig(load_in_8bit=True); model = AutoPeftModelForCausalLM.from_pretrained(\"peft_adapter_path\", quantization_config=quantization_config, device_map=\"auto\").",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Huggingface/Huggingface--25/Huggingface--25_20261024_181704/final_runs/run_002/screenshots/final_execution_1_peft_docs_index.png",
+      "sha256": "c0efab41cda1ea6602d93c9d73a33f352ae46d530dd1ba4cf79c36859e810465"
+    },
+    {
+      "path": "Huggingface/Huggingface--25/Huggingface--25_20261024_181704/final_runs/run_002/screenshots/final_execution_2_peft_adapter_tutorial.png",
+      "sha256": "26949a2f9d9cc265e64b11df87bafa4bdba52c2d8f04887de1f50d2599b90b6a"
+    },
+    {
+      "path": "Huggingface/Huggingface--25/Huggingface--25_20261024_181704/final_runs/run_002/screenshots/final_execution_3_quantization_8bit_4bit_section.png",
+      "sha256": "1e45d6adf1d117633a093263c4982f55eb3dbb7ddfe89de0c6ed7bedd85071b7"
+    },
+    {
+      "path": "Huggingface/Huggingface--25/Huggingface--25_20261024_181704/final_runs/run_002/screenshots/final_execution_4_final_state.png",
+      "sha256": "1e45d6adf1d117633a093263c4982f55eb3dbb7ddfe89de0c6ed7bedd85071b7"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "962b951daf3c5e536bc77efff4c4036e2819415358bc246e5a5c10bab8033724",
+  "fingerprint": "31254256db3ff7d5193135f90e71d8ecbc450a4324e8f80932260ea7e059625e",
+  "evaluated_at": "2026-10-28T23:45:13.029107+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation\n\n**Task requirements:**\n1. Find the Hugging Face documentation tutorial on loading adapters with PEFT.\n2. Explain how to load a model in 8-bit or 4-bit.\n\n**Screenshot analysis:**\n\n- **Screenshot 1:** Shows the Hugging Face PEFT documentation page (PEFT library docs), confirming navigation to the PEFT documentation area, with a \"Quantization\" guide visible in the sidebar.\n- **Screenshot 2:** Shows the Transformers \"Parameter-efficient fine-tuning\" documentation page, which includes sections such as \"Loading an adapter\" and \"PEFT with any quantized model.\"\n- **Screenshots 3 & 4:** Show the \"Loading an adapter\" section in detail. The text explicitly states: *\"For large models, load a quantized version in 8-bit or 4-bit precision with bitsandbytes to save memory. Add device_map=\"auto\" to distribute the model across available hardware.\"* Below this is a code example:\n```python\nfrom transformers import AutoModelForCausalLM, BitsAndBytesConfig\n\nmodel = AutoModelForCausalLM.from_pretrained(\n    \"klcsp/gemma7b-lora-alpaca-11-v1\",\n    quantization_config=BitsAndBytesConfig(load_in_8bit=True),\n    device_map=\"auto\",\n)\n```\n\n**Response analysis:**\n\nThe response correctly explains that loading in 8-bit or 4-bit is done via bitsandbytes quantization: create a `BitsAndBytesConfig` with `load_in_8bit=True` (or `load_in_4bit=True`, optionally with `bnb_4bit_quant_type=\"nf4\"`), pass it as `quantization_config` to `from_pretrained`, together with `device_map=\"auto\"`. This is fully consistent with the documentation shown in the screenshots (the 8-bit example with `BitsAndBytesConfig(load_in_8bit=True)` and `device_map=\"auto\"` matches exactly). The response additionally references `AutoPeftModelForCausalLM`/`PeftModel.from_pretrained`, which is not contradicted by the screenshots and aligns with the PEFT library's own adapter-loading docs — per the evaluation rules, content in the response not shown on the screenshot can be believed.\n\n**Conclusion:**\n\nThe relevant tutorial was located (the PEFT/adapter-loading documentation), and the answer to \"how to load in 8bit or 4bit\" was accurately extracted and explained, matching the screenshot evidence.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 6117,
+    "completion_tokens": 1776,
+    "total_tokens": 7893,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1251
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T23:45:13.578553+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 4,
+  "image_transports": [
+    {
+      "path": "Huggingface/Huggingface--25/Huggingface--25_20261024_181704/final_runs/run_002/screenshots/final_execution_1_peft_docs_index.png",
+      "source_sha256": "c0efab41cda1ea6602d93c9d73a33f352ae46d530dd1ba4cf79c36859e810465",
+      "source_bytes": 280100,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 170217,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "5a011a8e888db95bec62dfbf08961e99e049b3b13a503f7845f463fcf3f0a31e"
+    },
+    {
+      "path": "Huggingface/Huggingface--25/Huggingface--25_20261024_181704/final_runs/run_002/screenshots/final_execution_2_peft_adapter_tutorial.png",
+      "source_sha256": "26949a2f9d9cc265e64b11df87bafa4bdba52c2d8f04887de1f50d2599b90b6a",
+      "source_bytes": 738374,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1265,
+        7408
+      ],
+      "transmitted_dimensions": [
+        219,
+        1280
+      ],
+      "transmitted_bytes": 38770,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "65878b8385a7d99fd406fc4549490274ec2a27870ef708552e666769651dfb7a"
+    },
+    {
+      "path": "Huggingface/Huggingface--25/Huggingface--25_20261024_181704/final_runs/run_002/screenshots/final_execution_3_quantization_8bit_4bit_section.png",
+      "source_sha256": "1e45d6adf1d117633a093263c4982f55eb3dbb7ddfe89de0c6ed7bedd85071b7",
+      "source_bytes": 197526,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 167238,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "22af0814e55fa5b5cb5879939003d6724e75d2ecb5d7d7de75c7fdef1c1f65e4"
+    },
+    {
+      "path": "Huggingface/Huggingface--25/Huggingface--25_20261024_181704/final_runs/run_002/screenshots/final_execution_4_final_state.png",
+      "source_sha256": "1e45d6adf1d117633a093263c4982f55eb3dbb7ddfe89de0c6ed7bedd85071b7",
+      "source_bytes": 197526,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 167238,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "22af0814e55fa5b5cb5879939003d6724e75d2ecb5d7d7de75c7fdef1c1f65e4"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 4,
+  "request_json_bytes": 728204,
+  "response_id": "54ea44f4-c742-4c5a-b9bd-cb3d2d689edb",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2197,
+    "reasoning_content_chars": 5420
+  }
+}

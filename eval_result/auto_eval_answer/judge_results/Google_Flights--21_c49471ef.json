@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Flights--21",
+  "website": "Google Flights",
+  "task": "Locate the lowest-priced one-way flight from Tokyo to Sydney for an adult, departing o6 July 25, 2027, and include the flight duration and number of layovers.",
+  "task_record": "Google_Flights/Google Flights--21/Google Flights--21_20261022_134719",
+  "task_definition_sha256": "40f6b9ae16803d324afe415cf0410eb26a50c326947f9e2457a0094f6b251ebf",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google_Flights/Google Flights--21/Google Flights--21_20261022_134719"
+  ],
+  "final_run": "run_005",
+  "answer_input_mode": "answer.txt only",
+  "answer": "The lowest-priced one-way flight from Tokyo to Sydney for 1 adult departing Sunday, July 25, 2027 costs HK$2,612, with a total duration of 21 hr 25 min and 1 layover (operated by Vietjet).",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Google_Flights/Google Flights--21/Google Flights--21_20261022_134719/final_runs/run_005/screenshots/final_execution_2_calendar_selected.png",
+      "sha256": "8e9543b0127545b97c3937ecae1a4588af645e2eadaf6a8b573c71b1e812f05f"
+    },
+    {
+      "path": "Google_Flights/Google Flights--21/Google Flights--21_20261022_134719/final_runs/run_005/screenshots/final_execution_3_form_filled.png",
+      "sha256": "5d09fb879373e9805f2ad6f20c3f2c2820ce7249ba6731c62d3765846a672ffe"
+    },
+    {
+      "path": "Google_Flights/Google Flights--21/Google Flights--21_20261022_134719/final_runs/run_005/screenshots/final_execution_4_results.png",
+      "sha256": "862e97508f0ed106649504047e8d29c7fe521761076654bfd05c5712475e1777"
+    },
+    {
+      "path": "Google_Flights/Google Flights--21/Google Flights--21_20261022_134719/final_runs/run_005/screenshots/final_execution_5_sorted_by_price.png",
+      "sha256": "7f7443b5b9df920b7cecd0da3890a2f46f20c579a6ef8b4f72467ed21cc4d0ae"
+    },
+    {
+      "path": "Google_Flights/Google Flights--21/Google Flights--21_20261022_134719/final_runs/run_005/screenshots/final_execution_6_cheapest_flight.png",
+      "sha256": "1465afc46c28cea1f8dfee3c321436792b202c044d8b9f965fdfceb239857464"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "647614bf4030d86b049865496536e62764bfbfd1c3de842e9ba34abea23a18c2",
+  "fingerprint": "d638ad267eae9613dffedceef370b64514644b96f39982cc01af6ab12f87d3cf",
+  "evaluated_at": "2026-10-28T21:54:05.191808+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation\n\n**Task requirements:**\n1. One-way flight from Tokyo to Sydney\n2. For 1 adult\n3. Departing July 25, 2027\n4. Identify the lowest-priced option\n5. Include flight duration and number of layovers\n\n**Screenshot analysis:**\n\n- **Screenshot 1:** Google Flights is set to \"One way,\" 1 passenger, Economy. The date picker shows \"Sun, Jul 25\" with the July 2027 calendar open and the 25th selected — confirming the correct date (July 25, 2027).\n- **Screenshot 2:** The search form shows Tokyo → Sydney, One way, 1 passenger, Sun, Jul 25 — all parameters correctly entered before searching.\n- **Screenshot 3:** Results page shows \"Top flights\" with the Vietjet flight at 8:55 AM – 7:20 AM+1, 21 hr 25 min duration, 1 stop (7 hr SGN), priced at HK$2,612. The \"Cheapest\" tab confirms \"from HK$2,612.\"\n- **Screenshot 4:** Results sorted by price (loading state), same top result visible.\n- **Screenshot 5:** \"All flights\" sorted by price confirms the Vietjet flight at HK$2,612 is the first (lowest-priced) result, with 21 hr 25 min duration and 1 stop (7 hr SGN).\n\n**Response analysis:**\nThe response states the lowest-priced one-way flight from Tokyo to Sydney for 1 adult departing Sunday, July 25, 2027 costs HK$2,612, with a total duration of 21 hr 25 min and 1 layover, operated by Vietjet. This matches the screenshot evidence exactly:\n- Price: HK$2,612 ✓\n- Duration: 21 hr 25 min ✓\n- Layovers: 1 stop ✓\n- Airline: Vietjet ✓\n- Date: July 25, 2027 ✓\n- Route: Tokyo → Sydney ✓\n- Passengers: 1 adult ✓\n\nAll task components were completed accurately, and the response is fully consistent with the screenshots.\n\n## Verdict: **SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8123,
+    "completion_tokens": 928,
+    "total_tokens": 9051,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 463
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T21:54:05.857073+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Google_Flights/Google Flights--21/Google Flights--21_20261022_134719/final_runs/run_005/screenshots/final_execution_2_calendar_selected.png",
+      "source_sha256": "8e9543b0127545b97c3937ecae1a4588af645e2eadaf6a8b573c71b1e812f05f",
+      "source_bytes": 284245,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 181480,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "d011397c8c25442d5303495dba1639d795b37e53e1e6b59b1c5b49dfc091fc61"
+    },
+    {
+      "path": "Google_Flights/Google Flights--21/Google Flights--21_20261022_134719/final_runs/run_005/screenshots/final_execution_3_form_filled.png",
+      "source_sha256": "5d09fb879373e9805f2ad6f20c3f2c2820ce7249ba6731c62d3765846a672ffe",
+      "source_bytes": 323290,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 192020,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "bddaa4502ace0a3e30b1462a480a12f373ba12d72bdaa89f67dd52055d399583"
+    },
+    {
+      "path": "Google_Flights/Google Flights--21/Google Flights--21_20261022_134719/final_runs/run_005/screenshots/final_execution_4_results.png",
+      "source_sha256": "862e97508f0ed106649504047e8d29c7fe521761076654bfd05c5712475e1777",
+      "source_bytes": 264276,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 195977,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "ee1f772e1141dc3e42d0002070a13da8ae0d83f801b7ded76e57341b1b751128"
+    },
+    {
+      "path": "Google_Flights/Google Flights--21/Google Flights--21_20261022_134719/final_runs/run_005/screenshots/final_execution_5_sorted_by_price.png",
+      "source_sha256": "7f7443b5b9df920b7cecd0da3890a2f46f20c579a6ef8b4f72467ed21cc4d0ae",
+      "source_bytes": 262468,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 197911,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "04110e92fa756cb6f9b238effd71c5bc14cc2b8bcdcefd96290427836ea7cfc4"
+    },
+    {
+      "path": "Google_Flights/Google Flights--21/Google Flights--21_20261022_134719/final_runs/run_005/screenshots/final_execution_6_cheapest_flight.png",
+      "source_sha256": "1465afc46c28cea1f8dfee3c321436792b202c044d8b9f965fdfceb239857464",
+      "source_bytes": 266898,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 198884,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "9741b7759032b7e5c08520c1de938139c0646c981e19f85d0227e2444cffed1b"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1291593,
+  "response_id": "b3a2911a-291a-45b8-97c8-c1a8a4f852e2",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1637,
+    "reasoning_content_chars": 1591
+  }
+}

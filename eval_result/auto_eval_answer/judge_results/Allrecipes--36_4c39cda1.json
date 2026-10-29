@@ -1,0 +1,181 @@
+{
+  "task_id": "Allrecipes--36",
+  "website": "Allrecipes",
+  "task": "Locate a recipe for an American apple pie on Allrecipes with a rating of at least 4 stars and more than 50 reviews. Note the maximum temperature mentioned in the Directions.",
+  "task_record": "Allrecipes/Allrecipes--36/Allrecipes--36_20261025_142139",
+  "task_definition_sha256": "cdaf2b588d43b820d8e520c84a85d52a379e6e1ad1d8c61f5a6a39521008568b",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Allrecipes/Allrecipes--36/Allrecipes--36_20261025_142139"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Recipe: Apple Pie by Grandma Ople (https://www.allrecipes.com/recipe/12682/apple-pie-by-grandma-ople/) - rating 4.8 stars, 10,027 reviews. Maximum temperature mentioned in the Directions: 425 degrees F (220 degrees C).",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Allrecipes/Allrecipes--36/Allrecipes--36_20261025_142139/final_runs/run_002/screenshots/final_execution_1_search_results.png",
+      "sha256": "93f61886c15ced3143619b0a1fe2a4d237923247ee787fd9096b37b5881bb63c"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--36/Allrecipes--36_20261025_142139/final_runs/run_002/screenshots/final_execution_2_recipe_page.png",
+      "sha256": "78079c9eff23b680bacac48ceb43689581569c034235e787a77d7b0f5bae34d2"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--36/Allrecipes--36_20261025_142139/final_runs/run_002/screenshots/final_execution_3_directions.png",
+      "sha256": "713e333f419e7cbfe2cbc836f98d96a186e4524cd80ab38892bf2d162d4ae92d"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--36/Allrecipes--36_20261025_142139/final_runs/run_002/screenshots/final_execution_4_final_state.png",
+      "sha256": "afb7f431fff1c323ee3a8e3a87fe46f2affe3cba55a97e9621897b2e6abd43ab"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "47f67a4160ab28c52083490dbe149f3033184411b05aba72aec74062d6decda1",
+  "fingerprint": "5d1b6000782bc05bee22e8bef2f1ee5aa3b7105f71cb3b301a51eab0767d7284",
+  "evaluated_at": "2026-10-28T17:29:55.912000+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements:\n1. Locate an American apple pie recipe on Allrecipes\n2. Recipe must have a rating of at least 4 stars\n3. Recipe must have more than 50 reviews\n4. Note the maximum temperature mentioned in the Directions\n\n## Screenshot Verification:\n\n**Screenshot 1 (Search Results):** Shows Allrecipes search results for \"apple pie\" with multiple recipes displayed, including \"Apple Pie by Grandma Ople\" with a 5-star visual rating and 13,028 ratings.\n\n**Screenshot 2 (Recipe Page):** Shows the \"Apple Pie by Grandma Ople\" recipe page with:\n- Rating: 4.8 stars (13,028 ratings) ✓ — exceeds the 4-star minimum\n- Reviews: 10,027 Reviews ✓ — far exceeds the 50-review minimum\n- This is a classic American apple pie recipe on Allrecipes ✓\n\n**Screenshot 3 (Directions):** Shows the Ingredients and Directions sections. Step 1 explicitly states: \"Gather the ingredients. Preheat the oven to **425 degrees F (220 degrees C)**.\" Step 2 mentions only medium/low heat with no temperature values.\n\n**Screenshot 4:** Confirms the same recipe page details (4.8 rating, 10,027 reviews).\n\n## Response Verification:\n- Recipe identified: Apple Pie by Grandma Ople ✓\n- Rating reported: 4.8 stars ✓ (matches screenshot)\n- Reviews reported: 10,027 ✓ (matches screenshot)\n- Maximum temperature: 425 degrees F (220 degrees C) ✓ (matches Step 1 in Directions; no higher temperature appears in the visible directions)\n\nAll criteria from the instruction are satisfied: the recipe was located on Allrecipes, it meets the rating threshold (4.8 ≥ 4 stars), it exceeds the review requirement (10,027 > 50), and the maximum temperature from the Directions was correctly noted as 425°F.\n\n## Verdict: **SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 6608,
+    "completion_tokens": 885,
+    "total_tokens": 7493,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 469
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T17:29:56.418467+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 4,
+  "image_transports": [
+    {
+      "path": "Allrecipes/Allrecipes--36/Allrecipes--36_20261025_142139/final_runs/run_002/screenshots/final_execution_1_search_results.png",
+      "source_sha256": "93f61886c15ced3143619b0a1fe2a4d237923247ee787fd9096b37b5881bb63c",
+      "source_bytes": 1433265,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 292535,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "d0a57499b38a01735d887d4164c85c277ab5ddcb1f8d2547306cba72e68a4455"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--36/Allrecipes--36_20261025_142139/final_runs/run_002/screenshots/final_execution_2_recipe_page.png",
+      "source_sha256": "78079c9eff23b680bacac48ceb43689581569c034235e787a77d7b0f5bae34d2",
+      "source_bytes": 552166,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 201167,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "01a962e52063abffb219a15b9c9f4f8ef1e672fa4f74e539a44c31144c420d15"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--36/Allrecipes--36_20261025_142139/final_runs/run_002/screenshots/final_execution_3_directions.png",
+      "source_sha256": "713e333f419e7cbfe2cbc836f98d96a186e4524cd80ab38892bf2d162d4ae92d",
+      "source_bytes": 583404,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 177299,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "ee6e42a86e6a80c7e3be0fd4130cc0a7658812bebd8c3ed93f011bea0c9bcfa1"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--36/Allrecipes--36_20261025_142139/final_runs/run_002/screenshots/final_execution_4_final_state.png",
+      "source_sha256": "afb7f431fff1c323ee3a8e3a87fe46f2affe3cba55a97e9621897b2e6abd43ab",
+      "source_bytes": 578021,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 221445,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "aa04571ad67932f3ea783cf4421b98c5bc4f8b50f95127c7f5e0aa036b444265"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 4,
+  "request_json_bytes": 1193126,
+  "response_id": "f6c74aa2-83c0-4b44-ab60-79fb1712520f",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1708,
+    "reasoning_content_chars": 1866
+  }
+}

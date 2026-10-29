@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Map--3",
+  "website": "Google Map",
+  "task": "The least amount of walking from Central Park Zoo to the Broadway Theater in New York.",
+  "task_record": "Google_Map/Google Map--3/Google Map--3_20261024_115153",
+  "task_definition_sha256": "23f875c33083624fad042ab6efac7956df50e57551f6598aa5fdae97755da3f8",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google_Map/Google Map--3/Google Map--3_20261024_115153"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "answer.txt only",
+  "answer": "The least amount of walking from Central Park Zoo to the Broadway Theater (Broadway Theatre, New York) is about 0.9 miles (0.9 英里), roughly 20 minutes on foot, via 7th Ave. Google Maps walking directions show this as the shortest walking route (the alternative via 6th Ave takes about 21 minutes).",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Google_Map/Google Map--3/Google Map--3_20261024_115153/final_runs/run_002/screenshots/final_execution_2_origin_set.png",
+      "sha256": "23c4b1b57876baebf76db95579bbfa6c1fde43a2d6e5486844e949bf592f88dc"
+    },
+    {
+      "path": "Google_Map/Google Map--3/Google Map--3_20261024_115153/final_runs/run_002/screenshots/final_execution_3_destination_set.png",
+      "sha256": "c5b21132dd475b7e60d3a2bd93f2cec964f313b329ae009517e4798050c320cc"
+    },
+    {
+      "path": "Google_Map/Google Map--3/Google Map--3_20261024_115153/final_runs/run_002/screenshots/final_execution_4_walking_mode.png",
+      "sha256": "2dd3d459036cb6e91d3436392e44f684cbc983a779082aaac169825816298dd7"
+    },
+    {
+      "path": "Google_Map/Google Map--3/Google Map--3_20261024_115153/final_runs/run_002/screenshots/final_execution_5_walking_routes.png",
+      "sha256": "2dd3d459036cb6e91d3436392e44f684cbc983a779082aaac169825816298dd7"
+    },
+    {
+      "path": "Google_Map/Google Map--3/Google Map--3_20261024_115153/final_runs/run_002/screenshots/final_execution_6_final_state.png",
+      "sha256": "2dd3d459036cb6e91d3436392e44f684cbc983a779082aaac169825816298dd7"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "bfd8db22cafa50b543b7ba4a6ebfd7dc24d11e40324908fd3d14b0bf87ef11fc",
+  "fingerprint": "71f7bcd7b218f4b53a51af5f6a112e48f417d6863a3fb1052566bc3eda59ccc0",
+  "evaluated_at": "2026-10-28T22:13:37.843510+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\nThe task was to find the route with the least amount of walking from Central Park Zoo to the Broadway Theater in New York.\n\n## Screenshot Evidence\n\n**Screenshot 1:** Shows Google Maps in directions mode with the starting point entered as \"中央公園動物園 10021美國 New York\" (Central Park Zoo, 10021, New York, USA), with walking mode selected. The destination field is still empty at this stage.\n\n**Screenshots 2-5:** Show the completed route search:\n- **Starting point:** 中央公園動物園 (Central Park Zoo), 10021, New York\n- **Destination:** 百老匯劇院 (Broadway Theatre), 10019, New York\n- **Travel mode:** Walking (步行) is selected, as indicated by the highlighted pedestrian icon\n- **Route options displayed:**\n  - Route 1 (selected): 經7th Ave (via 7th Ave) — **20 分 (20 minutes), 0.9 英里 (0.9 miles)**\n  - Route 2: 經6th Ave/Ave of the Americas 和 W 53rd St (via 6th Ave/Ave of the Americas and W 53rd St) — **21 分 (21 minutes), 0.9 英里 (0.9 miles)**\n- The map displays the highlighted route from Central Park Zoo through the park (past Gapstow Bridge, The Plaza) down to the destination near Broadway, with a label showing \"20 分鐘 0.9 哩\" (20 min, 0.9 miles)\n\n## Response Consistency Check\nThe result response states:\n- Least walking route: ~0.9 miles, ~20 minutes via 7th Ave ✓ (matches screenshot)\n- Alternative via 6th Ave takes ~21 minutes ✓ (matches screenshot)\n- This is the shortest walking route ✓ (the 20-minute route is listed first and highlighted as the primary option)\n\nThe response is fully consistent with the visual evidence in the screenshots. Both the origin (Central Park Zoo) and destination (Broadway Theatre, New York) match the task instruction, and the walking mode was correctly used to determine the route requiring the least walking.\n\n## Verdict\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8351,
+    "completion_tokens": 1140,
+    "total_tokens": 9491,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 642
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T22:13:38.284834+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Google_Map/Google Map--3/Google Map--3_20261024_115153/final_runs/run_002/screenshots/final_execution_2_origin_set.png",
+      "source_sha256": "23c4b1b57876baebf76db95579bbfa6c1fde43a2d6e5486844e949bf592f88dc",
+      "source_bytes": 417977,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1360,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        941
+      ],
+      "transmitted_bytes": 193446,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "4cf73c3dd0d4ec2015be3c9004c8b56dfa0faea1dadd44403593528e99871d68"
+    },
+    {
+      "path": "Google_Map/Google Map--3/Google Map--3_20261024_115153/final_runs/run_002/screenshots/final_execution_3_destination_set.png",
+      "source_sha256": "c5b21132dd475b7e60d3a2bd93f2cec964f313b329ae009517e4798050c320cc",
+      "source_bytes": 695771,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1360,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        941
+      ],
+      "transmitted_bytes": 316508,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "522027f4a9adb8b25ab695cfac50637646fc11b70d39cdb5b0983ebf78c5ecbf"
+    },
+    {
+      "path": "Google_Map/Google Map--3/Google Map--3_20261024_115153/final_runs/run_002/screenshots/final_execution_4_walking_mode.png",
+      "source_sha256": "2dd3d459036cb6e91d3436392e44f684cbc983a779082aaac169825816298dd7",
+      "source_bytes": 696280,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1360,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        941
+      ],
+      "transmitted_bytes": 315318,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a07d07761c46e271b94503ff4ccf7316b809b94d6a9b0261a2bcb5955ac5c721"
+    },
+    {
+      "path": "Google_Map/Google Map--3/Google Map--3_20261024_115153/final_runs/run_002/screenshots/final_execution_5_walking_routes.png",
+      "source_sha256": "2dd3d459036cb6e91d3436392e44f684cbc983a779082aaac169825816298dd7",
+      "source_bytes": 696280,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1360,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        941
+      ],
+      "transmitted_bytes": 315318,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a07d07761c46e271b94503ff4ccf7316b809b94d6a9b0261a2bcb5955ac5c721"
+    },
+    {
+      "path": "Google_Map/Google Map--3/Google Map--3_20261024_115153/final_runs/run_002/screenshots/final_execution_6_final_state.png",
+      "source_sha256": "2dd3d459036cb6e91d3436392e44f684cbc983a779082aaac169825816298dd7",
+      "source_bytes": 696280,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1360,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        941
+      ],
+      "transmitted_bytes": 315318,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a07d07761c46e271b94503ff4ccf7316b809b94d6a9b0261a2bcb5955ac5c721"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1944474,
+  "response_id": "7ce29be5-fe66-49e2-870e-4b11a5f6e5a0",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1806,
+    "reasoning_content_chars": 2447
+  }
+}

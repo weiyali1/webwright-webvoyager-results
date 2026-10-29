@@ -54,11 +54,10 @@ Result Response: <answer>
 VERDICT_PROMPT = "Your verdict:\n"
 
 SCHEMA_VERSION = 1
-ANSWER_SOURCE = "final_response.txt (fallback: final_script_log.txt:Final Response)"
-ANSWER_POLICY = ("Use the selected run's final_response.txt when it contains a usable answer. If that file is absent, empty, or incomplete, "
-                 "extract the last non-empty Final Response block from that same run's "
-                 "final_script_log.txt. Never use evidence files or older runs; INCOMPLETE "
-                 "placeholders are excluded.")
+ANSWER_SOURCE = "answer.txt only"
+ANSWER_POLICY = ("Use only the selected run's answer.txt. If answer.txt is absent or empty, "
+                 "the task is missing an answer. Never read final_response.txt, "
+                 "final_script_log.txt, evidence files, or older runs.")
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp"}
 TRANSIENT_HTTP_CODES = {408, 409, 425, 429, 500, 502, 503, 504}
 TERMINAL_STATUSES = {"success", "failure", "missing_evidence", "parse_error"}
@@ -122,20 +121,44 @@ def is_within(path: Path, parent: Path) -> bool:
         return False
 
 
-def discover_records(input_root: Path) -> Dict[str, List[dict]]:
+def discover_records(input_root: Path, task_def_root: Optional[Path] = None) -> Dict[str, List[dict]]:
+    """Discover execution records and their task definitions.
+
+    Normally each record contains ``task.json``.  Extracted ``final_run_by_site``
+    trees intentionally contain only execution artifacts and ``answer.txt``;
+    for those trees, ``task_def_root`` supplies the matching task.json files.
+    """
     grouped = defaultdict(list)
+    seen_records = set()
     for directory, children, files in os.walk(input_root, followlinks=False):
         children[:] = sorted(c for c in children if c not in {".git", "__pycache__"})
-        if "task.json" not in files:
+        directory_path = Path(directory)
+        task_path = directory_path / "task.json"
+        if "task.json" not in files and task_def_root is not None:
+            # An extracted record is identified by its final_runs directory.
+            # Resolve its task definition using the same relative record path.
+            if "final_runs" not in children:
+                continue
+            relative = directory_path.relative_to(input_root)
+            candidate = task_def_root / relative / "task.json"
+            if candidate.is_file():
+                task_path = candidate
+            else:
+                continue
+        elif "task.json" not in files:
             continue
-        task_path = Path(directory) / "task.json"
         task = read_json(task_path)
         if not isinstance(task, dict) or not isinstance(task.get("task_id"), str):
             raise ValueError(f"Invalid task_id in {task_path}")
         if not isinstance(task.get("task"), str) or not task["task"].strip():
             raise ValueError(f"Missing task instruction in {task_path}")
         task_id = task["task_id"]
-        grouped[task_id].append({"directory": Path(directory), "definition": task})
+        record_path = directory_path.resolve()
+        if record_path in seen_records:
+            continue
+        seen_records.add(record_path)
+        grouped[task_id].append({"directory": directory_path, "definition": task,
+                                 "definition_path": task_path})
         children[:] = []
     if not grouped:
         raise ValueError(f"No task.json records found under {input_root}")
@@ -151,64 +174,18 @@ def latest_final_run(record_directory: Path) -> Optional[Path]:
 
 
 def final_answer(run_directory: Path) -> Tuple[str, str]:
-    """Read the selected run's answer, with a narrowly scoped log fallback.
+    """Read only the explicitly extracted answer.txt from the selected run.
 
-    ``final_response.txt`` is authoritative when it contains a usable answer.
-    If it is absent, empty, or marked ``[INCOMPLETE]``, extract a labelled
-    ``Final Response`` block from the same run's ``final_script_log.txt``.
-    Evidence JSON files and older runs are intentionally never consulted.
+    This deliberately does not consult final_response.txt, final_script_log.txt,
+    evidence files, or older runs, so internal execution or judge text cannot
+    enter the evaluation answer.
     """
-    answer_path = run_directory / "final_response.txt"
+    answer_path = run_directory / "answer.txt"
     if answer_path.is_file():
         answer = answer_path.read_text(encoding="utf-8").strip()
-        if answer and not answer.startswith("[INCOMPLETE]"):
-            return answer, "final_response.txt"
-        # An empty/incomplete artifact is unusable; apply the same scoped
-        # fallback as for a missing file rather than consulting another run.
-
-    log_path = run_directory / "final_script_log.txt"
-    if log_path.is_file():
-        answer = extract_final_response_from_log(log_path)
         if answer:
-            return answer, "final_script_log.txt:Final Response"
+            return answer, "answer.txt"
     return "", "missing"
-
-
-def extract_final_response_from_log(log_path: Path) -> str:
-    """Extract the last complete, labelled Final Response block from a log."""
-    text = log_path.read_text(encoding="utf-8", errors="replace")
-    lines = text.splitlines()
-    marker = re.compile(
-        r"^\s*(?:(?:\[[^\]\r\n]+\]|\d{4}-\d{2}-\d{2}T\S+)\s*)?"
-        r"Final[ _]Response:[ \t]*(.*?)[ \t]*$", re.IGNORECASE)
-    boundary = re.compile(
-        r"^\s*(?:\[[^\]\r\n]+\]\s*)?(?:"
-        r"TASK(?:_|\s+)(?:SUCCESS|FAILURE|COMPLETE|COMPLETED)\b|"
-        r"FINAL_SCRIPT(?:_(?:SUCCESS|FAILURE|COMPLETE|COMPLETED))?\b|"
-        r"DONE\b|EXIT(?:_CODE)?\s*[:=]|RC\s*=|BROWSER_ADVISORY\s*:|"
-        r"(?:CP\d+|Screenshot saved)\s*:|RUNTIME_VALIDATION\s*:|"
-        r"evidence\.(?:finish|written|saved)\b|Evidence\s+(?:finished|written|saved)\b|"
-        r"(?:LOG WRITTEN|RUN_DIR|RUN COMPLETE|RUN END|RUN_END)\s*[:=]?)",
-        re.IGNORECASE,
-    )
-    timestamped_event = re.compile(
-        r"^\s*(?:\[(?:\d{2}:\d{2}:\d{2}|\d{4}-\d{2}-\d{2}T)[^\]]*\]|"
-        r"\d{4}-\d{2}-\d{2}T\S+)"
-    )
-    starts = [(index, match.group(1)) for index, line in enumerate(lines)
-              for match in [marker.match(line)] if match]
-    for candidate_index in range(len(starts) - 1, -1, -1):
-        start_index, first_line = starts[candidate_index]
-        next_marker = starts[candidate_index + 1][0] if candidate_index + 1 < len(starts) else len(lines)
-        answer_lines = [first_line]
-        for line in lines[start_index + 1:next_marker]:
-            if boundary.match(line) or timestamped_event.match(line):
-                break
-            answer_lines.append(line)
-        answer = "\n".join(answer_lines).strip()
-        if answer and not answer.startswith("[INCOMPLETE]"):
-            return answer
-    return ""
 
 
 def evaluation_answer(run_directory: Path) -> Tuple[str, str]:
@@ -273,11 +250,11 @@ def prepare_selection(grouped: Dict[str, List[dict]], input_root: Path,
             "task_id": task_id, "website": website,
             "task": record["definition"]["task"],
             "task_record": relative_record,
-            "task_definition_sha256": file_digest(directory / "task.json"),
+            "task_definition_sha256": file_digest(record.get("definition_path", directory / "task.json")),
             "candidate_record_count": len(records),
             "candidate_records": [r["directory"].relative_to(input_root).as_posix() for r in records],
             "final_run": run.name if run else None,
-            "answer_input_mode": "final_response.txt with final_script_log.txt fallback",
+            "answer_input_mode": "answer.txt only",
             "answer": "", "answer_source": "missing", "screenshots": [],
             "screenshot_order": None, "input_error": None,
         }
@@ -287,8 +264,7 @@ def prepare_selection(grouped: Dict[str, List[dict]], input_root: Path,
             try:
                 item["answer"], item["answer_source"] = evaluation_answer(run)
                 if item["answer"]:
-                    source_path = run / ("final_response.txt" if item["answer_source"] == "final_response.txt"
-                                         else "final_script_log.txt")
+                    source_path = run / "answer.txt"
                     item["answer_file_sha256"] = file_digest(source_path)
                 screenshots, order = screenshot_files(run)
                 screenshots = screenshots[-max_images:]
@@ -299,7 +275,7 @@ def prepare_selection(grouped: Dict[str, List[dict]], input_root: Path,
                 ]
                 missing = []
                 if not item["answer"]:
-                    missing.append("answer (final_response.txt or final_script_log.txt:Final Response)")
+                    missing.append("answer.txt")
                 if not screenshots:
                     missing.append("execution screenshots")
                 if missing:
@@ -839,6 +815,9 @@ def add_image_transport_arguments(parser: argparse.ArgumentParser) -> None:
 def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--input-root", type=Path, default=Path("outputs/webvoyager"))
+    parser.add_argument("--task-def-root", type=Path, default=None,
+                        help="Optional root containing task.json definitions when input records "
+                             "(for example final_run_by_site) omit them")
     parser.add_argument("--output-dir", type=Path, default=None,
                         help="New directory, or the same directory with --resume")
     parser.add_argument("--endpoint", default=None,
@@ -928,7 +907,10 @@ def main(argv: Optional[List[str]] = None) -> int:
         config["image_transport"] = transport_policy
     if args.image_detail != "default" or args.thinking != "default":
         config["request_options"] = {"image_detail": args.image_detail, "thinking": args.thinking}
-    grouped = discover_records(input_root)
+    task_def_root = args.task_def_root.resolve() if args.task_def_root else None
+    if task_def_root is not None and not task_def_root.is_dir():
+        raise ValueError(f"Task definition root not found: {task_def_root}")
+    grouped = discover_records(input_root, task_def_root)
     items = prepare_selection(grouped, input_root, args.website, args.task_id,
                               args.limit, args.max_attached_imgs)
     if args.expected_tasks is not None and len(items) != args.expected_tasks:

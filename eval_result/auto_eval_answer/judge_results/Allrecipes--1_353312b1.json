@@ -1,0 +1,181 @@
+{
+  "task_id": "Allrecipes--1",
+  "website": "Allrecipes",
+  "task": "Find a recipe for a vegetarian lasagna that has at least a four-star rating and uses zucchini.",
+  "task_record": "Allrecipes/Allrecipes--1/Allrecipes--1_20261025_003333",
+  "task_definition_sha256": "27af063df1026af60df50a30a29819252db21f7f7b45359e05d31868e8683fb7",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Allrecipes/Allrecipes--1/Allrecipes--1_20261025_003333"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Found a qualifying vegetarian zucchini lasagna on Allrecipes: 'Eggless Zucchini Lasagna' at https://www.allrecipes.com/recipe/229288/eggless-zucchini-lasagna/. It has a 5-star aggregate rating (from 4 ratings, exceeding the required 4-star minimum), uses zucchini as a main ingredient, and its ingredient list contains no meat, poultry, or fish items (olive oil, onion, garlic, bread crumbs, Parmesan, tomato sauce, zucchini, mozzarella, etc.), making it vegetarian. The search was performed on Allrecipes for 'zucchini lasagna'; since the results page offers no dietary filter/sort controls, constraints were verified from each candidate recipe's ingredient list and rating.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Allrecipes/Allrecipes--1/Allrecipes--1_20261025_003333/final_runs/run_001/screenshots/final_execution_1_search_results.png",
+      "sha256": "67d7c4a0524ec124af2e4587214b35003de4b4071cab2761c6eae8929b16570c"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--1/Allrecipes--1_20261025_003333/final_runs/run_001/screenshots/final_execution_2_recipe_top_rating.png",
+      "sha256": "9fbb1d4413d56ae1e3a6e0891bcaa897e2733690a41a5fc6899055e6c0df7659"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--1/Allrecipes--1_20261025_003333/final_runs/run_001/screenshots/final_execution_3_ingredients.png",
+      "sha256": "fb549f00e0f30aa0848001223e9a0b5219dd796bdcbdf97a653fbf88738782d4"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--1/Allrecipes--1_20261025_003333/final_runs/run_001/screenshots/final_execution_4_final_state.png",
+      "sha256": "fb549f00e0f30aa0848001223e9a0b5219dd796bdcbdf97a653fbf88738782d4"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "89ee9adeef8d7371ed6c07a76b34ee127bdfe6a6d2328a4299daa980a553e697",
+  "fingerprint": "0ad200679cae31a5694b900fa07d32cf803444b8ddd3f1ba3b5f7b29b7ec0b54",
+  "evaluated_at": "2026-10-28T17:16:04.826925+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\nThe task was to find a recipe for a **vegetarian lasagna** that:\n1. Has at least a **four-star rating**\n2. **Uses zucchini**\n\n## Screenshot Evidence Review\n\n**Screenshot 1 (Search Results):** The agent searched Allrecipes for \"zucchini lasagna\" and the results page displays multiple candidate recipes, including \"Eggless Zucchini Lasagna\" with a 5-star rating (4 ratings).\n\n**Screenshot 2 (Recipe Page):** The agent navigated to the \"Eggless Zucchini Lasagna\" recipe page, which clearly shows:\n- Title: \"Eggless Zucchini Lasagna\"\n- Rating: **5.0 stars (4 ratings)** — exceeds the 4-star minimum ✓\n- Description: \"Eggless version of zucchini lasagna\" — confirms zucchini usage ✓\n\n**Screenshots 3 & 4 (Ingredients & Directions):** The visible ingredient list contains only vegetarian items:\n- Olive oil, onion, garlic, seasoned bread crumbs, Parmesan cheese, Italian herb seasoning, tomato sauce\n- No meat, poultry, or fish products appear ✓\n- The directions explicitly reference \"zucchini slices\" (Step 2: \"add zucchini slices; boil for 3 minutes\" and Step 5 layering instructions), confirming zucchini is a core ingredient ✓\n\n## Cross-Verification with Response\nThe result response accurately matches the screenshots: the recipe name, URL, 5.0-star rating from 4 ratings, and vegetarian ingredient verification all align with the visual evidence. The agent also reasonably explained its methodology (verifying constraints from ingredient lists since no dietary filters were available).\n\n## Conclusion\nAll three constraints are satisfied:\n- ✅ Vegetarian (no meat ingredients in the list)\n- ✅ Rating of 5.0 stars (≥ 4 stars required)\n- ✅ Uses zucchini (in title, description, and directions)\n\nVerdict: **SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8344,
+    "completion_tokens": 1115,
+    "total_tokens": 9459,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 703
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T17:16:05.335256+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 4,
+  "image_transports": [
+    {
+      "path": "Allrecipes/Allrecipes--1/Allrecipes--1_20261025_003333/final_runs/run_001/screenshots/final_execution_1_search_results.png",
+      "source_sha256": "67d7c4a0524ec124af2e4587214b35003de4b4071cab2761c6eae8929b16570c",
+      "source_bytes": 1134375,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1400
+      ],
+      "transmitted_dimensions": [
+        1170,
+        1280
+      ],
+      "transmitted_bytes": 342389,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a41ce60e6b3fb404d9aa9ae5bacd5108c2f86b0895bc75dd81467b60a10280ec"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--1/Allrecipes--1_20261025_003333/final_runs/run_001/screenshots/final_execution_2_recipe_top_rating.png",
+      "source_sha256": "9fbb1d4413d56ae1e3a6e0891bcaa897e2733690a41a5fc6899055e6c0df7659",
+      "source_bytes": 578580,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1400
+      ],
+      "transmitted_dimensions": [
+        1170,
+        1280
+      ],
+      "transmitted_bytes": 203525,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "2ed9ac291a38290f1f1c369ffcfd7fc55c2c737a39999c157344e4e54e7e573e"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--1/Allrecipes--1_20261025_003333/final_runs/run_001/screenshots/final_execution_3_ingredients.png",
+      "source_sha256": "fb549f00e0f30aa0848001223e9a0b5219dd796bdcbdf97a653fbf88738782d4",
+      "source_bytes": 223331,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1400
+      ],
+      "transmitted_dimensions": [
+        1170,
+        1280
+      ],
+      "transmitted_bytes": 206758,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "096a7995d44dc9faf6e6a26b93a231034345db3897da138dcc926601c63af842"
+    },
+    {
+      "path": "Allrecipes/Allrecipes--1/Allrecipes--1_20261025_003333/final_runs/run_001/screenshots/final_execution_4_final_state.png",
+      "source_sha256": "fb549f00e0f30aa0848001223e9a0b5219dd796bdcbdf97a653fbf88738782d4",
+      "source_bytes": 223331,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1400
+      ],
+      "transmitted_dimensions": [
+        1170,
+        1280
+      ],
+      "transmitted_bytes": 206758,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "096a7995d44dc9faf6e6a26b93a231034345db3897da138dcc926601c63af842"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 4,
+  "request_json_bytes": 1282820,
+  "response_id": "9144a2e5-d7ac-483f-954b-a1f9a8560d90",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1756,
+    "reasoning_content_chars": 2852
+  }
+}

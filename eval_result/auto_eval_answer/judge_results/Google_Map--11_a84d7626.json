@@ -1,0 +1,151 @@
+{
+  "task_id": "Google Map--11",
+  "website": "Google Map",
+  "task": "Locate a large store in Washington that has kids' and maternity products, also check if it has a parking lot.",
+  "task_record": "Google_Map/Google Map--11/Google Map--11_20261024_143039",
+  "task_definition_sha256": "85341995a5ff1d32dde002c5a406f831eebec96183a0a07046281e599bec5c07",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google_Map/Google Map--11/Google Map--11_20261024_143039"
+  ],
+  "final_run": "run_007",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Located Childish Things in Seattle, WA on Google Maps. Its place page shows on-page evidence of kids' products (description: 'used clothes for babies, kids & mothers, plus toys & gear'; review quote about children's clothing/toys) and maternity products (review topic chip 'maternity wear', category Maternity/Children's clothing store). The About tab confirms 'Wheelchair-accessible car park', so the store has a parking lot.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Google_Map/Google Map--11/Google Map--11_20261024_143039/final_runs/run_007/screenshots/final_execution_1_search_result.png",
+      "sha256": "4ede4baf283e1cd7153dbd31204c216cef49431dda061b905f2479a17013c627"
+    },
+    {
+      "path": "Google_Map/Google Map--11/Google Map--11_20261024_143039/final_runs/run_007/screenshots/final_execution_2_about_parking.png",
+      "sha256": "d935cbe6c7b11ed8b8760d6c339b038fa39f4640669ae0102cd6d5a15328026a"
+    },
+    {
+      "path": "Google_Map/Google Map--11/Google Map--11_20261024_143039/final_runs/run_007/screenshots/final_execution_3_final_state.png",
+      "sha256": "d935cbe6c7b11ed8b8760d6c339b038fa39f4640669ae0102cd6d5a15328026a"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "77a53d01865a8c6428a406a7b202a53ec353d8b97f27a39e7cef590b647cbc7e",
+  "fingerprint": "3493789131f68e817845adb8be207ca87a91029515fdd990d4f47ac6738894b0",
+  "evaluated_at": "2026-10-28T22:23:06.429157+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements Breakdown\n1. **Locate a store in Washington** — must be physically located in Washington state\n2. **Store has kids' products** — must carry children's items\n3. **Store has maternity products** — must carry maternity items\n4. **Check if it has a parking lot** — must verify parking availability\n\n## Evidence Review from Screenshots\n\n**Screenshot 1 (Overview tab):**\n- **Location:** \"9776 Holman Rd NW Unit 102, Seattle, WA 98117, United States\" and plus code \"FJ2P+7W Seattle, Washington, USA\" — confirms the store is in Washington ✓\n- **Kids' products:** Category shown as \"Children's clothing store\"; description reads \"Seller/buyer of used clothes for babies, kids & mothers, plus toys & gear\"; review quote: \"Great selection of children's clothing, toys, gifts\" ✓\n- **Maternity products:** A review topic chip \"**maternity wear 14**\" is visible at the bottom of the page, and the description explicitly mentions clothes for \"mothers\" ✓\n\n**Screenshots 2 & 3 (About tab):**\n- Under \"Accessibility,\" it lists \"**Wheelchair-accessible car park**\" (along with wheelchair-accessible entrance and toilet) — this confirms the store has a car park/parking lot ✓\n\n## Assessment\nThe agent located a store (Childish Things) in Washington state and verified, with on-page evidence visible in the screenshots, that it carries kids' products (children's clothing store category, description, reviews) and maternity products (\"maternity wear\" review topic chip, description mentioning mothers). The parking lot question was answered via the About tab's \"Wheelchair-accessible car park\" listing.\n\nThe only soft point is the \"large\" descriptor — the store appears to be a specialty/consignment shop rather than a big-box retailer. However, \"large\" is subjective and unquantified in the instruction; the store is an established physical retail location (206 reviews, 153 photos, located in a commercial plaza), and all functionally verifiable requirements of the task are demonstrably satisfied with direct screenshot evidence. The response is consistent with what the screenshots show.\n\n## Verdict\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 5105,
+    "completion_tokens": 6990,
+    "total_tokens": 12095,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6512
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T22:23:06.884213+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 3,
+  "image_transports": [
+    {
+      "path": "Google_Map/Google Map--11/Google Map--11_20261024_143039/final_runs/run_007/screenshots/final_execution_1_search_result.png",
+      "source_sha256": "4ede4baf283e1cd7153dbd31204c216cef49431dda061b905f2479a17013c627",
+      "source_bytes": 1001021,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 275395,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "28f6a161e8ff7710171b237dd0ceb9c88642c110b6a703b340170a984a2fd79a"
+    },
+    {
+      "path": "Google_Map/Google Map--11/Google Map--11_20261024_143039/final_runs/run_007/screenshots/final_execution_2_about_parking.png",
+      "source_sha256": "d935cbe6c7b11ed8b8760d6c339b038fa39f4640669ae0102cd6d5a15328026a",
+      "source_bytes": 703704,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 215322,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "277345591cbcc927973453c043d5a9cbe9e6a1b1384006f4dea21efc94390242"
+    },
+    {
+      "path": "Google_Map/Google Map--11/Google Map--11_20261024_143039/final_runs/run_007/screenshots/final_execution_3_final_state.png",
+      "source_sha256": "d935cbe6c7b11ed8b8760d6c339b038fa39f4640669ae0102cd6d5a15328026a",
+      "source_bytes": 703704,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 215322,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "277345591cbcc927973453c043d5a9cbe9e6a1b1384006f4dea21efc94390242"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 3,
+  "request_json_bytes": 944654,
+  "response_id": "1da6542f-fd05-49fc-a911-e915f53f6d66",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2138,
+    "reasoning_content_chars": 29623
+  }
+}

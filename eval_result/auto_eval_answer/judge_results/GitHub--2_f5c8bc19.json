@@ -1,0 +1,181 @@
+{
+  "task_id": "GitHub--2",
+  "website": "GitHub",
+  "task": "Look for the trending Python repositories on GitHub with most stars.",
+  "task_record": "GitHub/GitHub--2/GitHub--2_20261025_112654",
+  "task_definition_sha256": "cc4e3c3b98c706606f240de7fe3868a67089826a5594f248ce7a1d3997c4bed7",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "GitHub/GitHub--2/GitHub--2_20261025_112654"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Top trending Python repositories on GitHub (dedicated trending view at https://github.com/trending/python?since=daily, ranked by stars, with stars gained today): 1. aws/agent-toolkit-for-aws - 3,166 stars, 13 stars today 2. luongnv89/claude-howto - 44,631 stars, 392 stars today 3. jbiaojerry/ebook-treasure-chest - 22,728 stars, 227 stars today 4. pollen-robotics/microduck_rl - 2,618 stars, 34 stars today 5. SnailSploit/Claude-Red - 8,855 stars, 630 stars today 6. anthropics/knowledge-work-plugins - 32,675 stars, 524 stars today 7. TauricResearch/TradingAgents - 113,717 stars, 309 stars today 8. agentskills/agentskills - 26,580 stars, 53 stars today 9. crewAIInc/crewAI - 60,074 stars, 35 stars today 10. vectorize-io/hindsight - 53,475 stars, 329 stars today",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "GitHub/GitHub--2/GitHub--2_20261025_112654/final_runs/run_001/screenshots/final_execution_1_trending_page.png",
+      "sha256": "9886d7a9222502f82a6be21df6a62f42787d3595beebc26967703292a92fe84c"
+    },
+    {
+      "path": "GitHub/GitHub--2/GitHub--2_20261025_112654/final_runs/run_001/screenshots/final_execution_2_language_menu_open.png",
+      "sha256": "9943005fe4542b418eba3734e01b2b9c98d62450ed2764def7c11a0541f3b6cb"
+    },
+    {
+      "path": "GitHub/GitHub--2/GitHub--2_20261025_112654/final_runs/run_001/screenshots/final_execution_3_python_filter_applied.png",
+      "sha256": "422e52584489c76774fbcc06a3ae332a352ef44a70d7209a080223a12c02a428"
+    },
+    {
+      "path": "GitHub/GitHub--2/GitHub--2_20261025_112654/final_runs/run_001/screenshots/final_execution_4_python_trending_results.png",
+      "sha256": "1b9bf26d308e76f4d6b04c97f4862ac25674fed720496207db129f00dba9ea3e"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "7d6ac212ff6b74eedd201a30f267f627e7522771bdf99ca17b763a810429973e",
+  "fingerprint": "b585fd1c939bded4520c8c80be9553233b01a874dd80738961c8f265267740d7",
+  "evaluated_at": "2026-10-28T21:22:14.802533+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation Analysis\n\n**Task Instruction:** Look for the trending Python repositories on GitHub with most stars.\n\n**Screenshot Evidence:**\n1. **Screenshot 1:** Shows the GitHub Trending page with \"Language: Any\" — repositories across multiple languages (JavaScript, Rust, Python, CSS, TypeScript) are visible.\n2. **Screenshot 2:** Shows the language filter dropdown opened (\"Select a language\" with a filter box), indicating the agent was in the process of filtering by language.\n3. **Screenshots 3 & 4:** Show the GitHub Trending page with **\"Language: Python\"** and **\"Date range: Today\"** filters applied, displaying the trending Python repositories.\n\n**Verification of Response vs. Screenshots:**\nCross-checking the response against screenshots 3 and 4:\n- aws/agent-toolkit-for-aws — 3,166 stars, 13 today ✓\n- luongnv89/claude-howto — 44,631 stars, 392 today ✓\n- jbiaojerry/ebook-treasure-chest — 22,728 stars, 227 today ✓\n- pollen-robotics/microduck_rl — 2,618 stars, 34 today ✓\n- SnailSploit/Claude-Red — 8,855 stars, 630 today ✓\n- anthropics/knowledge-work-plugins — 32,675 stars, 524 today ✓\n- TauricResearch/TradingAgents — 113,717 stars, 309 today ✓\n- agentskills/agentskills — 26,580 stars, 53 today ✓\n- crewAIInc/crewAI — 60,074 stars, 35 today ✓\n- vectorize-io/hindsight — 53,475 stars, 329 today ✓\n\nAll listed repositories, star counts, and daily star gains match the screenshots exactly. The agent correctly navigated to GitHub Trending, applied the Python language filter, and reported the results with the dedicated URL (github.com/trending/python?since=daily).\n\n**Minor observations (not disqualifying):**\n- The response lists the top 10 in trending-page order rather than strictly by total star count (the repo with the most total stars, TauricResearch/TradingAgents at 113,717, appears 7th in the list). However, since GitHub Trending does not support sorting by total stars, listing the trending order with total star counts included is the correct/only way to fulfill this request — the star data allows the most-starred repo to be identified.\n- One additional repo visible in the screenshot (ComposioHQ/awesome-claude-skills, 77,852 stars) was not included, but providing the top 10 is a reasonable summary of the trending list.\n\n**Conclusion:** The core task — locating the trending Python repositories on GitHub along with their star counts — was successfully completed, with the screenshots confirming the correct navigation, filtering, and accurate data reporting.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 6693,
+    "completion_tokens": 4115,
+    "total_tokens": 10808,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3481
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T21:22:15.326780+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 4,
+  "image_transports": [
+    {
+      "path": "GitHub/GitHub--2/GitHub--2_20261025_112654/final_runs/run_001/screenshots/final_execution_1_trending_page.png",
+      "source_sha256": "9886d7a9222502f82a6be21df6a62f42787d3595beebc26967703292a92fe84c",
+      "source_bytes": 253236,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 172303,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "79d163924d65aad868de9964658fd67c6a16a7cc136321f5dd962edfc75bf212"
+    },
+    {
+      "path": "GitHub/GitHub--2/GitHub--2_20261025_112654/final_runs/run_001/screenshots/final_execution_2_language_menu_open.png",
+      "source_sha256": "9943005fe4542b418eba3734e01b2b9c98d62450ed2764def7c11a0541f3b6cb",
+      "source_bytes": 271278,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 182136,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "b82a10e8126fae68dcf80f436177fc01d889f422664c39c0e6786ac31d437a20"
+    },
+    {
+      "path": "GitHub/GitHub--2/GitHub--2_20261025_112654/final_runs/run_001/screenshots/final_execution_3_python_filter_applied.png",
+      "source_sha256": "422e52584489c76774fbcc06a3ae332a352ef44a70d7209a080223a12c02a428",
+      "source_bytes": 282745,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 193123,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "d49c29288bcc8bd76b438f0c4f78b613af47e125485589852d14879d06021bd0"
+    },
+    {
+      "path": "GitHub/GitHub--2/GitHub--2_20261025_112654/final_runs/run_001/screenshots/final_execution_4_python_trending_results.png",
+      "source_sha256": "1b9bf26d308e76f4d6b04c97f4862ac25674fed720496207db129f00dba9ea3e",
+      "source_bytes": 286370,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1265,
+        1892
+      ],
+      "transmitted_dimensions": [
+        856,
+        1280
+      ],
+      "transmitted_bytes": 177723,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "3424a043d12b9e8e8b9baa49b6dec46de75cbe48472831bf5680393bba5d75c7"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 4,
+  "request_json_bytes": 970689,
+  "response_id": "dcad1336-3438-4686-9a33-1baf03815ec1",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2515,
+    "reasoning_content_chars": 14589
+  }
+}

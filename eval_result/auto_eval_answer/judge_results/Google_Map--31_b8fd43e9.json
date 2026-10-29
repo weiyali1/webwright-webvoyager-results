@@ -1,0 +1,151 @@
+{
+  "task_id": "Google Map--31",
+  "website": "Google Map",
+  "task": "First search New York's Central Park Zoo on Google Map, and then find the way to share the map. What is the generated sharing link?",
+  "task_record": "Google_Map/Google Map--31/Google Map--31_20261025_025832",
+  "task_definition_sha256": "fad8f5fc934900b641293135229f49d28fb4787c273990d800535e620c8c477d",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Google_Map/Google Map--31/Google Map--31_20261025_025832"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Searched Central Park Zoo on Google Maps, opened the place panel, clicked Share, and copied the generated sharing link. https://maps.app.goo.gl/hYxFL6YiUwaCZRCb9",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Google_Map/Google Map--31/Google Map--31_20261025_025832/final_runs/run_001/screenshots/final_execution_1_search_central_park_zoo.png",
+      "sha256": "a22c4feeca4daac9e8777da0cba7721cb2c4258b594eb9f6bcbab086ca9521aa"
+    },
+    {
+      "path": "Google_Map/Google Map--31/Google Map--31_20261025_025832/final_runs/run_001/screenshots/final_execution_2_share_dialog.png",
+      "sha256": "9f44501a7c0d55cd49b3ae5dcf03bb5e812cb661c95c4e04e67034c6ae813bae"
+    },
+    {
+      "path": "Google_Map/Google Map--31/Google Map--31_20261025_025832/final_runs/run_001/screenshots/final_execution_3_generated_link.png",
+      "sha256": "3788575b2b98a7ea635f3f5006dccfcd584b5b9a35ac9cbeaaefb846af6649ea"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "79a78b4eca559e6bf5cef22f837f18b30179f07f9a217e1bd31008661236c75e",
+  "fingerprint": "eb592fd419a79edd0a62df4d376ae02cf42fcf283228ac87ef3d1d5f9f29443a",
+  "evaluated_at": "2026-10-28T23:08:29.944000+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation\n\n**Task Requirements:**\n1. Search New York's Central Park Zoo on Google Maps\n2. Find the way to share the map\n3. Report the generated sharing link\n\n**Analysis of Screenshots:**\n\n1. **Screenshot 1:** Shows Google Maps with \"Central Park Zoo\" typed in the search bar. The place panel for 中央公園動物園 (Central Park Zoo) is open, showing its rating (4.4, 26,627 reviews), address (10021美國 New York), and action buttons including 分享 (Share). This confirms the first step was completed correctly — the correct New York attraction was located.\n\n2. **Screenshot 2:** Shows the Share (分享) dialog opened after clicking the Share button. The dialog displays a preview card for Central Park Zoo with a link beginning with \"maps.app.goo.gl\", along with sharing options (Copy Link, WhatsApp, Gmail, Embed map). This confirms the sharing mechanism was found.\n\n3. **Screenshot 3:** Shows the \"Copied\" state on the Copy Link button and a \"Link copied\" toast notification at the bottom, confirming the link was successfully copied.\n\n**Analysis of Response:**\n\nThe response states the sharing link is `https://maps.app.goo.gl/hYxFL6YiUwaCZRCb9`. While the full URL is truncated in the screenshot (only \"maps.app.goo.gl\" is visible in the preview card), the visible portion is fully consistent with the reported link. Per the evaluation guidelines, content in the result response not explicitly shown on the screenshot should be believed, and nothing in the screenshots contradicts the reported link. The \"Copied\" confirmation further supports that a link was generated and captured.\n\nAll three parts of the task — searching for Central Park Zoo, finding the share function, and providing the generated link — were accomplished.\n\n## Verdict\n\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 4791,
+    "completion_tokens": 1058,
+    "total_tokens": 5849,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 662
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T23:08:30.182534+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 3,
+  "image_transports": [
+    {
+      "path": "Google_Map/Google Map--31/Google Map--31_20261025_025832/final_runs/run_001/screenshots/final_execution_1_search_central_park_zoo.png",
+      "source_sha256": "a22c4feeca4daac9e8777da0cba7721cb2c4258b594eb9f6bcbab086ca9521aa",
+      "source_bytes": 645961,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 231682,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "3ab114e973f52809832052d1b13d2c5b4d6fe6d91656ae35941acf61cd74b9c6"
+    },
+    {
+      "path": "Google_Map/Google Map--31/Google Map--31_20261025_025832/final_runs/run_001/screenshots/final_execution_2_share_dialog.png",
+      "source_sha256": "9f44501a7c0d55cd49b3ae5dcf03bb5e812cb661c95c4e04e67034c6ae813bae",
+      "source_bytes": 540850,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 147819,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "96b66f16f3f86cc6826495923f97a70a6a14297e8a418eaaca8a31bb0df5b247"
+    },
+    {
+      "path": "Google_Map/Google Map--31/Google Map--31_20261025_025832/final_runs/run_001/screenshots/final_execution_3_generated_link.png",
+      "source_sha256": "3788575b2b98a7ea635f3f5006dccfcd584b5b9a35ac9cbeaaefb846af6649ea",
+      "source_bytes": 540002,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 147476,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "78a12bbc1f86b614b7253375a38529c46deadc8fa65212859aeb4e7a7ff39e0d"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 3,
+  "request_json_bytes": 705663,
+  "response_id": "e8a64bdd-51eb-42d3-906a-bf008d3abee5",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1743,
+    "reasoning_content_chars": 2646
+  }
+}

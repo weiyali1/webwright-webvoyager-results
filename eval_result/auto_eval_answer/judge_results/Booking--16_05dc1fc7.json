@@ -1,0 +1,211 @@
+{
+  "task_id": "Booking--16",
+  "website": "Booking",
+  "task": "Look for a hotel in Paris with a user rating of 9 or higher and available for a 5-night stay starting January 15, 2027. The hotel should also offer free Wi-Fi and breakfast included in the price. Provide the name, location, and price per night.",
+  "task_record": "Booking/Booking--16/Booking--16_20261026_032831",
+  "task_definition_sha256": "b929da0347916fc3e694bd7f04263a29b8aec721ea92fa8d59d5502261172bef",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "Booking/Booking--16/Booking--16_20261026_032831"
+  ],
+  "final_run": "run_004",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Hotel: Paris j'Adore Hotel & Spa; Location: 17th arr., Paris (Paris, France); Price per night: US$489.80 (US$2,449.00 total for 5 nights, Jan 15-20, 2027, 2 adults); User rating: 9.2 (Wonderful, 1,176 reviews); filters applied: Wonderful: 9+, Breakfast included, Free Wi-Fi.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "Booking/Booking--16/Booking--16_20261026_032831/final_runs/run_004/screenshots/final_execution_4_filter_rating_9plus.png",
+      "sha256": "79a3eb4062f22846d4cc9b80af1a659c7a2682745e6f9a0161b843468dbe915c"
+    },
+    {
+      "path": "Booking/Booking--16/Booking--16_20261026_032831/final_runs/run_004/screenshots/final_execution_5_filter_breakfast.png",
+      "sha256": "8f9b2dcc865750c61732f3c5cb8c58b68f6e6b1d42420fb692d3afdf2555e921"
+    },
+    {
+      "path": "Booking/Booking--16/Booking--16_20261026_032831/final_runs/run_004/screenshots/final_execution_6_filter_free_wifi.png",
+      "sha256": "bad444b043490066dd2fc719bd2f9b6f5d21039ad43e9f57770f52fd43e9e826"
+    },
+    {
+      "path": "Booking/Booking--16/Booking--16_20261026_032831/final_runs/run_004/screenshots/final_execution_7_filtered_results.png",
+      "sha256": "e2225d7ac85258197c3b2891422995f26a88ffd8c8511728d0a0976c4be1eacd"
+    },
+    {
+      "path": "Booking/Booking--16/Booking--16_20261026_032831/final_runs/run_004/screenshots/final_execution_8_hotel_card_detail.png",
+      "sha256": "e2225d7ac85258197c3b2891422995f26a88ffd8c8511728d0a0976c4be1eacd"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "787ef225378f85285b64d8f27aa36b56aa42378f8f43e32c17649a8609a4961b",
+  "fingerprint": "285fe77ff07a99516dd9fb6f45c195e08c9a5dadf28016f134d5a9d00d4ee75b",
+  "evaluated_at": "2026-10-28T19:51:55.679104+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements:\n1. Find a hotel in Paris with user rating ≥ 9\n2. Available for a 5-night stay starting January 15, 2027\n3. Free Wi-Fi offered\n4. Breakfast included in price\n5. Provide name, location, and price per night\n\n## Screenshot Verification:\n\n**Search Parameters (all screenshots):**\n- Destination: Paris ✓\n- Dates: Fri, Jan 15 — Wed, Jan 20 (5 nights; Jan 15, 2027 is indeed a Friday, confirming the 2027 dates) ✓\n- Occupancy: 2 adults, 1 room ✓\n\n**Filters Progression:**\n- Screenshot 1: \"Wonderful: 9+\" filter applied (1,464 properties)\n- Screenshot 2: \"Breakfast included\" added (212 properties)\n- Screenshots 3-5: \"Free Wifi\" added (210 properties), with all three required filters checked: Wonderful: 9+, Breakfast included, Free Wifi ✓\n\n**Hotel Details (Paris j'Adore Hotel & Spa - first result):**\n- Name: Paris j'Adore Hotel & Spa ✓ (matches response)\n- Location: 17th arr., Paris ✓ (matches response)\n- Rating: 9.2 \"Wonderful\" with 1,176 reviews ✓ (matches response, meets ≥9 requirement)\n- Price: US$2,449 total for 5 nights (+US$131 taxes) — the response's per-night price of US$489.80 is a correct calculation ($2,449 ÷ 5 = $489.80) ✓\n- Breakfast included: explicitly shown in green text ✓\n- Free Wi-Fi: confirmed via the applied filter ✓\n- Availability: \"See availability\" button and \"We have 5 left at this price\" indicate availability ✓\n- It is a hotel (5-star property), not an apartment ✓\n\n## Response Consistency:\nThe result response accurately reflects the screenshot data: hotel name, location, rating (9.2, Wonderful, 1,176 reviews), total price (US$2,449 for 5 nights, Jan 15-20, 2027), and the filters applied. The per-night price is correctly derived from the total.\n\nAll task requirements were satisfied: correct dates, rating filter, free Wi-Fi, breakfast included, and the requested details (name, location, price per night) were provided.\n\n## Verdict: **SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 10944,
+    "completion_tokens": 1471,
+    "total_tokens": 12415,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 946
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-28T19:51:56.303077+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "Booking/Booking--16/Booking--16_20261026_032831/final_runs/run_004/screenshots/final_execution_4_filter_rating_9plus.png",
+      "source_sha256": "79a3eb4062f22846d4cc9b80af1a659c7a2682745e6f9a0161b843468dbe915c",
+      "source_bytes": 579291,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1400
+      ],
+      "transmitted_dimensions": [
+        1249,
+        1280
+      ],
+      "transmitted_bytes": 333100,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "96a43473fb514c35624f1cad36e94a72a13b18fa80ccff311ec7afcd08684d22"
+    },
+    {
+      "path": "Booking/Booking--16/Booking--16_20261026_032831/final_runs/run_004/screenshots/final_execution_5_filter_breakfast.png",
+      "source_sha256": "8f9b2dcc865750c61732f3c5cb8c58b68f6e6b1d42420fb692d3afdf2555e921",
+      "source_bytes": 575883,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1400
+      ],
+      "transmitted_dimensions": [
+        1249,
+        1280
+      ],
+      "transmitted_bytes": 330027,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "22f3c8f8c746dd9522b0c65ab98aaff5db185fc0430713e21f5a944c064b1bbc"
+    },
+    {
+      "path": "Booking/Booking--16/Booking--16_20261026_032831/final_runs/run_004/screenshots/final_execution_6_filter_free_wifi.png",
+      "source_sha256": "bad444b043490066dd2fc719bd2f9b6f5d21039ad43e9f57770f52fd43e9e826",
+      "source_bytes": 578395,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1400
+      ],
+      "transmitted_dimensions": [
+        1249,
+        1280
+      ],
+      "transmitted_bytes": 333570,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "1ea289d5c69284a58e9f4b160b5d435240e0f840d9bc7259fb4f7e3981565d8b"
+    },
+    {
+      "path": "Booking/Booking--16/Booking--16_20261026_032831/final_runs/run_004/screenshots/final_execution_7_filtered_results.png",
+      "source_sha256": "e2225d7ac85258197c3b2891422995f26a88ffd8c8511728d0a0976c4be1eacd",
+      "source_bytes": 578441,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1400
+      ],
+      "transmitted_dimensions": [
+        1249,
+        1280
+      ],
+      "transmitted_bytes": 333725,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "e31fb6c19475c47c61d1e8e7f27fc9f8419da4a8d52f53f2b6b83b47506c1d92"
+    },
+    {
+      "path": "Booking/Booking--16/Booking--16_20261026_032831/final_runs/run_004/screenshots/final_execution_8_hotel_card_detail.png",
+      "source_sha256": "e2225d7ac85258197c3b2891422995f26a88ffd8c8511728d0a0976c4be1eacd",
+      "source_bytes": 578441,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1400
+      ],
+      "transmitted_dimensions": [
+        1249,
+        1280
+      ],
+      "transmitted_bytes": 333725,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "e31fb6c19475c47c61d1e8e7f27fc9f8419da4a8d52f53f2b6b83b47506c1d92"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 2222261,
+  "response_id": "8cb43a6e-4d2a-4e81-8864-0c10631d8c83",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1927,
+    "reasoning_content_chars": 3214
+  }
+}
