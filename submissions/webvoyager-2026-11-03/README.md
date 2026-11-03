@@ -22,7 +22,9 @@ Missing-evidence tasks remain in the denominator and count as unsuccessful.
 
 ## Task Collection
 
-This evaluation uses 615 tasks from the filtered and updated WebVoyager-derived browser-control-fable-5 collection.
+This evaluation is based on the [browser-control-fable-5](https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5) task collection from omxyz/webvoyager.
+
+Before execution, stale dates in date-sensitive tasks were updated. The agent and external judge used the same updated task instructions. The exact executed and evaluated task definitions are published in this submission. The reported score applies to this date-updated collection of 615 tasks.
 
 The exact task definitions used in execution are published in `tasks/`.
 
