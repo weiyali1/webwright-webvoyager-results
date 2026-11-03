@@ -47,53 +47,42 @@ The external judge receives the task instruction, the selected run's `answer.txt
 
 Selection does not depend on internal success labels. The evaluator does not fall back to an earlier successful run.
 
-## Judge-Side Errors and Scoring Correction
+## Final Judgment Selection
 
-The original evaluation script and all raw judge outputs are preserved
-unchanged.
+Each unique task contributes one final evaluation result.
 
-The original harness recorded 11 initial outputs as parse_error and
-rejudged them using identical frozen inputs. Its last-line-only parser
-missed verdicts followed by explanatory text.
+Final results use the earliest saved judge output that provides a
+definitive verdict under the upstream WebVoyager parsing rule:
 
-Final scoring was reconstructed from the saved judge texts using the
-upstream WebVoyager parsing rule:
-
-- An output containing NOT SUCCESS is unsuccessful.
-- Otherwise, an output containing SUCCESS is successful.
+- An output containing NOT SUCCESS is counted as failure.
+- Otherwise, an output containing SUCCESS is counted as success.
 - An output containing neither remains unparseable.
 
-Matching is case-sensitive, as in the upstream implementation.
-Each task uses its earliest definitive judgment under this rule.
+Matching is case-sensitive.
 
-Reparsing the 11 initial outputs identifies two initial failures,
-three initial successes, and six initially unparseable outputs.
+ArXiv--38 is counted as failure based on its first judge output,
+which states NOT SUCCESS. Its later SUCCESS output is retained
+for auditing and is not used for scoring.
 
-The five rejudgments following an already parseable initial result
-remain published for auditing but are excluded from result selection:
+For six tasks whose initial outputs were unparseable, subsequent
+judgments using identical frozen inputs provide the final results.
 
-- Apple--21: use the initial SUCCESS.
-- ArXiv--38: use the initial NOT SUCCESS.
-- ESPN--29: use the initial SUCCESS.
-- Google Flights--26: use the initial SUCCESS.
-- Google Search--39: use the initial NOT SUCCESS.
+Five additional judgments are retained but excluded from result
+selection because the corresponding initial outputs already
+provided parseable verdicts.
 
-Only the six initially unparseable cases use later judgments.
+Tasks with missing evidence remain in the denominator and count
+as unsuccessful.
 
-ArXiv--38 changes from success to failure. The other four tasks retain
-their final outcome labels, but use their initial evaluation records.
+The final results are 600 successes, 11 failures, and 4
+missing-evidence tasks out of 615, yielding a success rate of 97.56%.
 
-The corrected total is 600 successes, 11 failures, and 4 missing-evidence
-tasks out of 615.
-
-Success rate = 600 / 615 × 100% = 97.5609756%, displayed as 97.56%.
-
-All raw records retain their historically saved status fields.
-Corrected selections and provenance are recorded in
+Selected judgments and their provenance are recorded in
 evaluation/merged_results.json and evaluation/REJUDGMENT_AUDIT.json.
+All saved judge outputs remain available in evaluation/raw/.
 
-This correction involved no additional model calls or browser-task
-executions. The original evaluation script remains unchanged.
+Further audit details are available in
+[the scoring correction report](SCORING_CORRECTION.md).
 
 ## Published Materials
 
