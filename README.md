@@ -1,6 +1,6 @@
 # Webwright WebVoyager Results
 
-**Webwright + Qwen3.8-Max: 601/615 tasks, 97.72%.**
+**webwright（qwen3.8max）: 600/615 tasks, 97.56%.**
 
 This repository publishes a self-reported system-level evaluation on 615 tasks adapted from the [browser-control-fable-5](https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5) task collection in omxyz/webvoyager.
 
@@ -12,8 +12,8 @@ Webwright supports self-repair during task execution. Multiple `final_runs/run_N
 
 | Outcome | Tasks |
 | --- | ---: |
-| Success | 601 |
-| Failure | 10 |
+| Success | 600 |
+| Failure | 11 |
 | Missing evidence | 4 |
 | Total | 615 |
 
@@ -27,3 +27,7 @@ Webwright supports self-repair during task execution. Multiple `final_runs/run_N
 - [Execution evidence downloads](https://github.com/weiyali1/webwright-webvoyager-results/releases/tag/webvoyager-2026-11-03)
 
 The 15 ZIP archives contain task records grouped by website.
+
+## Scoring correction
+
+The score is corrected to 600/615 (97.56%) after reinterpreting the saved judge outputs. The original evaluation script and raw records are unchanged. See [the correction report](submissions/webvoyager-2026-11-03/SCORING_CORRECTION.md).

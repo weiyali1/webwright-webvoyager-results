@@ -2,7 +2,7 @@
 
 ## System and Task Collection
 
-- Execution system: Webwright + Qwen3.8-Max.
+- Execution system: webwright（qwen3.8max）.
 - Base task collection: [browser-control-fable-5](https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5) from omxyz/webvoyager.
 - Task preparation: stale dates in date-sensitive tasks were updated before execution.
 - Evaluated collection: 615 tasks with the updated task instructions.
@@ -64,27 +64,65 @@ Exact prompts, configurations, image transport metadata, and judge outputs are r
 Judging prompt source:
 https://github.com/MinorJerry/WebVoyager/blob/main/evaluation/auto_eval.py
 
-## Judge-Side Errors and Rejudgments
+## Judge-Side Errors and Scoring Correction
 
-There are 615 first-evaluation records and 11 task-level parse-error rejudgments.
+The original evaluation script and all raw judge outputs are preserved
+unchanged.
 
-Only tasks whose initial judgment had `parse_error` are replaced by these rejudgments. The initial and retry input fingerprints are identical.
+The original harness recorded 11 initial outputs as parse_error and
+rejudged them using identical frozen inputs. Its last-line-only parser
+missed verdicts followed by explanatory text.
 
-These rejudgments concern the external judging process. They do not rerun browser tasks or add benchmark tasks.
+Final scoring was reconstructed from the saved judge texts using the
+upstream WebVoyager parsing rule:
 
-The final merged results contain one judgment per unique task and preserve evaluation-source provenance. Raw first-evaluation and retry files remain unchanged.
+- An output containing NOT SUCCESS is unsuccessful.
+- Otherwise, an output containing SUCCESS is successful.
+- An output containing neither remains unparseable.
+
+Matching is case-sensitive, as in the upstream implementation.
+Each task uses its earliest definitive judgment under this rule.
+
+Reparsing the 11 initial outputs identifies two initial failures,
+three initial successes, and six initially unparseable outputs.
+
+The five rejudgments following an already parseable initial result
+remain published for auditing but are excluded from result selection:
+
+- Apple--21: use the initial SUCCESS.
+- ArXiv--38: use the initial NOT SUCCESS.
+- ESPN--29: use the initial SUCCESS.
+- Google Flights--26: use the initial SUCCESS.
+- Google Search--39: use the initial NOT SUCCESS.
+
+Only the six initially unparseable cases use later judgments.
+
+ArXiv--38 changes from success to failure. The other four tasks retain
+their final outcome labels, but use their initial evaluation records.
+
+The corrected total is 600 successes, 11 failures, and 4 missing-evidence
+tasks out of 615.
+
+Success rate = 600 / 615 × 100% = 97.5609756%, displayed as 97.56%.
+
+All raw records retain their historically saved status fields.
+Corrected selections and provenance are recorded in
+evaluation/merged_results.json and evaluation/REJUDGMENT_AUDIT.json.
+
+This correction involved no additional model calls or browser-task
+executions. The original evaluation script remains unchanged.
 
 ## Scoring
 
 | Outcome | Tasks |
 | --- | ---: |
-| Success | 601 |
-| Failure | 10 |
+| Success | 600 |
+| Failure | 11 |
 | Missing evidence | 4 |
 | Unresolved | 0 |
 | Total | 615 |
 
-Success rate = 601 / 615 × 100% = 97.7236%, displayed as 97.72%.
+Success rate = 600 / 615 × 100% = 97.5610%, displayed as 97.56%.
 
 Missing evidence counts as unsuccessful and remains in the denominator.
 
