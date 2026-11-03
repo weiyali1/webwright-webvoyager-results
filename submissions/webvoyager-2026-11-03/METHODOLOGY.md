@@ -15,13 +15,59 @@ The exact task definitions used for execution and evaluation are published in `t
 
 ## Framework Self-Repair
 
-Webwright supports task-level self-repair.
+Webwright performs exploration, script development, execution validation,
+and repair within each submitted task record.
 
-After executing a task script, the framework inspects execution results and internal validation feedback. When problems are detected, it may revise the script and execute it again.
+The numbered directories under `final_runs/` record script execution and
+repair iterations within that task workflow. Scripts may be executed again
+after changes prompted by execution results or internal validation feedback.
 
-The numbered directories under `final_runs/` preserve artifacts from these internal execution and self-repair iterations. Multiple numbered runs do not increase the benchmark task count.
+The run directories present in the submitted task records are retained for
+inspection. Each unique task contributes one final evaluation result.
 
-All available internal iterations are retained for auditing. Each unique task contributes one final evaluation result.
+For external evaluation, the run with the largest numeric index is used;
+its internal pass/fail label is not consulted, and the evaluator does not
+fall back to an earlier run because it was internally marked successful.
+
+Internal validation can still guide script repair and task termination.
+It is distinct from the external evaluation used for the reported score.
+
+## Task Execution Budgets and Stopping Policy
+
+The archived `config_snapshot/merged_config.yaml` files for all 615
+submitted task records contain the following settings:
+
+| Configuration field | Recorded value |
+| --- | --- |
+| `agent.step_limit` | 200 |
+| `agent.max_run_seconds` | 14400 seconds (4 hours) |
+| `agent.max_idle_seconds` | 1800 seconds (30 minutes) |
+| `agent.require_self_reflection_success` | `true` |
+| `agent.require_task_success_marker` | `true` |
+
+These are configured execution limits and completion requirements,
+rather than measurements of the resources consumed by every task.
+
+The step limit applies to the main agent loop. It should not be interpreted
+as a limit of 200 browser actions, total model API requests, or final-script
+executions. Internal validation calls and API retries are separate operations.
+
+The idle limit concerns the time without a completed agent step.
+Normal successful submission is configured to require successful internal
+self-reflection and a task-success marker. A task can also terminate without
+successful submission when a budget, watchdog, or unrecoverable error
+condition is reached.
+
+Internal script execution and repair take place within the task's execution
+budget. The maximum observed selected run index of 20 is a property of this
+submitted collection, not a configured retry limit.
+
+Additional recovery settings are preserved in each task record's
+`config_snapshot/merged_config.yaml`.
+
+Final benchmark outcomes are assigned by the external evaluation,
+judgment-selection, and missing-evidence rules, rather than by internal
+completion flags.
 
 ## Evaluation Inputs
 
@@ -35,7 +81,7 @@ The judge inputs are:
 
 Screenshot ordering follows the run manifest when available, otherwise natural filename order.
 
-The evaluator does not choose runs according to internal success labels and does not fall back to earlier successful runs.
+The external evaluator selects the highest-numbered run without consulting internal pass/fail labels and does not fall back to an earlier run because it was internally marked successful.
 
 It does not use `final_response.txt`, execution logs, or internal judge verdict files as substitute answer inputs.
 
@@ -65,6 +111,19 @@ Judging prompt source:
 https://github.com/MinorJerry/WebVoyager/blob/main/evaluation/auto_eval.py
 
 ## Final Judgment Selection
+
+The published evaluator script is preserved unchanged, including the
+parsing behavior used when recording the raw evaluation results.
+
+Final scoring was reconstructed offline from the saved judge response
+texts using the upstream WebVoyager parsing rule and the judgment-selection
+policy described below.
+
+The status fields in `evaluation/raw/` preserve their originally recorded
+values. Final task outcomes and selected-record provenance are documented
+in `evaluation/merged_results.json` and `evaluation/REJUDGMENT_AUDIT.json`.
+
+This offline reparsing and aggregation step made no additional model calls.
 
 Each unique task contributes one final evaluation result.
 

@@ -29,13 +29,26 @@ The exact task definitions used for execution and evaluation are published in `t
 
 ## Framework Self-Repair Workflow
 
-Webwright supports self-repair during task execution.
+Webwright performs exploration, script development, execution validation,
+and repair within each submitted task record.
 
-The framework executes the task script, inspects execution results and internal validation feedback, and may revise the script and execute it again to address detected problems.
+The numbered directories under `final_runs/` record script execution and
+repair iterations within that task workflow. Scripts may be executed again
+after changes prompted by execution results or internal validation feedback.
 
-Multiple `final_runs/run_NNN` directories preserve the artifacts produced during these internal execution, validation, and self-repair iterations, including script snapshots, logs, screenshots, and available evidence.
+The run directories present in the submitted task records are retained for
+inspection. Each unique task contributes one final evaluation result.
 
-These internal iterations belong to the same task-level workflow. All available iterations are retained for auditing. Each unique task contributes one final evaluation result.
+For external evaluation, the run with the largest numeric index is used;
+its internal pass/fail label is not consulted, and the evaluator does not
+fall back to an earlier run because it was internally marked successful.
+
+Internal validation can still guide script repair and task termination.
+It is distinct from the external evaluation used for the reported score.
+
+In this submitted collection, 360 selected final runs have numeric indices
+of 2 or higher, and the maximum selected index is 20. These are recorded
+internal iteration indices, not counts of independent benchmark tasks.
 
 ## External Evaluation
 
@@ -43,9 +56,22 @@ The evaluator uses the highest-numbered `final_runs/run_NNN` directory for each 
 
 The external judge receives the task instruction, the selected run's `answer.txt`, and up to the last five screenshots, using the official WebVoyager judging prompt.
 
-Selection does not depend on internal success labels. The evaluator does not fall back to an earlier successful run.
+The external evaluator selects the highest-numbered run without consulting internal pass/fail labels and does not fall back to an earlier run because it was internally marked successful.
 
 ## Final Judgment Selection
+
+The published evaluator script is preserved unchanged, including the
+parsing behavior used when recording the raw evaluation results.
+
+Final scoring was reconstructed offline from the saved judge response
+texts using the upstream WebVoyager parsing rule and the judgment-selection
+policy described below.
+
+The status fields in `evaluation/raw/` preserve their originally recorded
+values. Final task outcomes and selected-record provenance are documented
+in `evaluation/merged_results.json` and `evaluation/REJUDGMENT_AUDIT.json`.
+
+This offline reparsing and aggregation step made no additional model calls.
 
 Each unique task contributes one final evaluation result.
 
