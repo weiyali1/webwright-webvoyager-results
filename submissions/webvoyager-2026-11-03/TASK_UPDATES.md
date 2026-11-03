@@ -7,7 +7,6 @@
 - Fixed upstream comparison commit: `df42681582be8125c5296473ad8efcd86f926cb6`.
 - Upstream task file: [WebVoyager_data.jsonl](https://github.com/omxyz/webvoyager/blob/df42681582be8125c5296473ad8efcd86f926cb6/benchmark/data/browser-control-fable-5/WebVoyager_data.jsonl).
 - SHA-256 of that upstream file: `3be3e58768816c8a0249ba48c4dec5d25a91047a2f9bb0e028bcbba73669ac40`.
-- Comparison verified on: November 3, 2026.
 - Exact executed and evaluated task definitions: [`tasks/`](tasks/).
 
 Before execution, stale dates in date-sensitive tasks were updated. The agent and external judge used the same updated task instructions. This document records every task-instruction difference between the fixed upstream reference and the task definitions published with this submission.
@@ -38,27 +37,6 @@ Of the 615 instruction strings, 566 are identical character for character and 49
 | Huggingface | 39 | 39 | 0 |
 | Wolfram Alpha | 46 | 46 | 0 |
 | **Total** | **615** | **566** | **49** |
-
-## Correspondence with execution and evaluation records
-
-Task instructions were compared by task ID. All 615 published task definitions match the instructions recorded in the original execution `task.json` files and in their public execution-copy counterparts. They also match all 615 records in [`evaluation/merged_results.json`](evaluation/merged_results.json) and all 626 task-level records in [`evaluation/raw/`](evaluation/raw/), including the 11 parse-error rejudgments.
-
-The reported score of 601/615 (97.72%) applies to this date-updated collection. All 615 tasks remain in the scoring denominator.
-
-## Calendar effects of the date changes
-
-Changing months can change weekday alignment, travel-date intervals, availability, and prices. The explicit updated dates below are the dates used for execution and evaluation.
-
-Two updated flight-date ranges have a different elapsed calendar-day interval:
-
-| Task ID | Upstream date range | Upstream interval | Executed date range | Executed interval |
-| --- | --- | ---: | --- | ---: |
-| Google Flights--28 | 2026-07-27 to 2026-08-01 | 5 days | 2026-11-27 to 2026-12-01 | 4 days |
-| Google Flights--36 | 2026-07-28 to 2026-08-04 | 7 days | 2026-11-28 to 2026-12-04 | 6 days |
-
-Intervals in this table are calendar-date differences, not flight durations.
-
-`Booking--19` retains the source phrase "weekend stay". Its upstream dates, August 18–20, 2026, fall on Tuesday–Thursday; its executed dates, November 18–20, 2026, fall on Wednesday–Friday. The exact wording and explicit dates are retained in the task comparison below.
 
 ## Updated-task index
 
@@ -617,13 +595,5 @@ Executed task definitions: [`tasks/google_flight.json`](tasks/google_flight.json
 **Executed and evaluated instruction**
 
 > Choose one way business class ticket from Hong Kong to Glacier National Park on 6 November 2026, offering a 1 stop ticket.
-
-## Verification method
-
-1. Load the fixed upstream JSONL and the 15 published task JSON files; check unique IDs and identical ID sets.
-2. Align records by task ID and compare every non-`ques` field for equality.
-3. Compare each `ques` string character for character. For differing strings, replace every full English month name with one common marker and confirm that the remaining strings are identical.
-4. Count the changed tasks and individual month substitutions, and preserve the full before-and-after instruction strings above.
-5. Compare the published instructions with execution `task.json` records, merged judgments, and raw judgments by task ID.
 
 This disclosure records the task definitions used for the submitted execution and evaluation artifacts.
