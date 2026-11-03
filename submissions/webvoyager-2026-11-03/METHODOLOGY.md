@@ -4,14 +4,14 @@
 
 - Execution system: webwright（qwen3.8max）.
 - Base task collection: [browser-control-fable-5](https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5) from omxyz/webvoyager.
-- Task preparation: stale dates in date-sensitive tasks were updated before execution.
+- Task preparation: month names were updated in 49 date-sensitive task instructions.
 - Evaluated collection: 615 tasks with the updated task instructions.
 - Exact executed task definitions: `tasks/`.
 - Evaluation type: self-reported, system-level post-hoc evaluation.
 
 All 615 tasks are included in the final denominator.
 
-Before execution, stale dates in date-sensitive tasks were updated. The agent and external judge used the same updated task instructions. The exact executed and evaluated task definitions are published in this submission. The reported score applies to this date-updated collection of 615 tasks.
+The exact task definitions used for execution and evaluation are published in `tasks/`. The agent and external judge used the same updated task instructions. The reported score applies to this date-updated collection of 615 tasks.
 
 ## Framework Self-Repair
 

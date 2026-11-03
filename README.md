@@ -4,7 +4,7 @@
 
 This repository publishes a self-reported system-level evaluation on 615 tasks adapted from the [browser-control-fable-5](https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5) task collection in omxyz/webvoyager.
 
-Before execution, stale dates in date-sensitive tasks were updated. The agent and external judge used the same updated task instructions. The exact executed and evaluated task definitions are published in this submission. The reported score applies to this date-updated collection of 615 tasks.
+The exact task definitions used for execution and evaluation are published in [`tasks/`](submissions/webvoyager-2026-11-03/tasks/). The agent and external judge used the same updated task instructions. The reported score applies to this date-updated collection of 615 tasks.
 
 The external judge is GLM-5.3-Flash, using the official WebVoyager judging prompt.
 

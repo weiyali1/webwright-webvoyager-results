@@ -9,7 +9,7 @@
 - SHA-256 of that upstream file: `3be3e58768816c8a0249ba48c4dec5d25a91047a2f9bb0e028bcbba73669ac40`.
 - Exact executed and evaluated task definitions: [`tasks/`](tasks/).
 
-Before execution, stale dates in date-sensitive tasks were updated. The agent and external judge used the same updated task instructions. This document records every task-instruction difference between the fixed upstream reference and the task definitions published with this submission.
+The exact task definitions used for execution and evaluation are published in `tasks/`. The agent and external judge used the same updated task instructions. This document records every task-instruction difference between the fixed upstream reference and the task definitions published with this submission.
 
 The fixed commit above identifies the upstream comparison reference; the published files in `tasks/` define the exact collection used for this evaluation.
 
