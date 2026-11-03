@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Map--12",
+  "website": "Google Map",
+  "task": "Find 5 places that serve burgers near 44012 zip code and sort these 5 places by highest rating.",
+  "task_record": "RERUNjsondata1019/Google Map--12/Google Map--12_20261031_133526",
+  "task_definition_sha256": "fc03cf8d645567519c19f569a5d9b3960857bdff06a243d6e93c681aaf93cd9e",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "RERUNjsondata1019/Google Map--12/Google Map--12_20261031_133526"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Final Response: 5 places that serve burgers near 44012, sorted by highest rating: 1. Sam's Supper Club - Avon Lake, OH - rating 4.9 | 2. Taki's Greek Kitchen - rating 4.8 | 3. Edacious Kitchen + Bar - rating 4.7 | 4. Dirte Pi - rating 4.7 | 5. Jake's On Lake - rating 4.6. Note: the current Google Maps UI exposes no dedicated 'Sort by' control for this search (verified via DOM search, results header, and All filters panel), so ratings were read from the visible result cards and ordered from highest to lowest rating directly from page content.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "RERUNjsondata1019/Google Map--12/Google Map--12_20261031_133526/final_runs/run_001/screenshots/cp1_search_submitted.png",
+      "sha256": "cd09e87c9de3e4efe205df4ed5f2300315e7968aa0e015a47b6eb4ebee4fff21"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--12/Google Map--12_20261031_133526/final_runs/run_001/screenshots/cp2_results_displayed.png",
+      "sha256": "cd09e87c9de3e4efe205df4ed5f2300315e7968aa0e015a47b6eb4ebee4fff21"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--12/Google Map--12_20261031_133526/final_runs/run_001/screenshots/cp3_no_sort_control.png",
+      "sha256": "cf7dbbb61e6aec9be402f1c8e72cb4b6fb18549ccf6bfe7a36a8670398d29d49"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--12/Google Map--12_20261031_133526/final_runs/run_001/screenshots/cp4_ratings_from_content.png",
+      "sha256": "cf7dbbb61e6aec9be402f1c8e72cb4b6fb18549ccf6bfe7a36a8670398d29d49"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--12/Google Map--12_20261031_133526/final_runs/run_001/screenshots/cp5_final_state.png",
+      "sha256": "cf7dbbb61e6aec9be402f1c8e72cb4b6fb18549ccf6bfe7a36a8670398d29d49"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "eda4f05cfd4309bb8a417464a2843d2ca1bbbed11f91c61e8336b2e8f6ea8a66",
+  "fingerprint": "4c28faf7dd7433288affff4cfe5cd7a24d25afc513dd104318b02af4f1aeb870",
+  "evaluated_at": "2026-11-02T06:33:04.095302+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\n1. Find 5 places that serve burgers near 44012 zip code\n2. Sort these 5 places by highest rating\n\n## Verification Against Screenshots\n\n**Search Execution:** The screenshots show a Google Maps search for \"burgers near 44012\" was performed, which correctly targets the specified zip code area (Avon/Avon Lake, Ohio region visible on the map).\n\n**Cross-checking the 5 places and ratings from the result cards:**\n\n| Place | Rating in Response | Rating in Screenshot | Match |\n|-------|-------------------|---------------------|-------|\n| Sam's Supper Club - Avon Lake, OH | 4.9 | 4.9 (214) | ✓ |\n| Taki's Greek Kitchen | 4.8 | 4.8 (384) | ✓ |\n| Edacious Kitchen + Bar | 4.7 | 4.7 (196) | ✓ |\n| Dirte Pi | 4.7 | 4.7 (329, partially visible) | ✓ |\n| Jake's On Lake | 4.6 | 4.6 (1,789) | ✓ |\n\n**Sorting Verification:** The order presented (4.9 → 4.8 → 4.7 → 4.7 → 4.6) is correctly sorted from highest to lowest rating. The tie between Edacious Kitchen + Bar and Dirte Pi (both 4.7) is acceptable.\n\n**Additional Notes:** Screenshots 3–5 show the \"All filters\" panel (Price, Rating at least, Hours), which supports the response's claim that no dedicated \"Sort by\" control exists in the current UI, justifying the manual sorting approach. All listed places appeared in the burger search results, so they qualify as places serving burgers near 44012.\n\n## Conclusion\nBoth components of the task were completed: 5 burger-serving places near 44012 were identified, and they were accurately sorted by highest rating, with all ratings verifiable in the screenshots.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8206,
+    "completion_tokens": 1125,
+    "total_tokens": 9331,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 685
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-02T06:33:04.684540+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "RERUNjsondata1019/Google Map--12/Google Map--12_20261031_133526/final_runs/run_001/screenshots/cp1_search_submitted.png",
+      "source_sha256": "cd09e87c9de3e4efe205df4ed5f2300315e7968aa0e015a47b6eb4ebee4fff21",
+      "source_bytes": 693882,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 252302,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "9832af86a7ed347e3cea78b09418e719ed342f659e63df9b25f87d58ae63cc29"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--12/Google Map--12_20261031_133526/final_runs/run_001/screenshots/cp2_results_displayed.png",
+      "source_sha256": "cd09e87c9de3e4efe205df4ed5f2300315e7968aa0e015a47b6eb4ebee4fff21",
+      "source_bytes": 693882,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 252302,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "9832af86a7ed347e3cea78b09418e719ed342f659e63df9b25f87d58ae63cc29"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--12/Google Map--12_20261031_133526/final_runs/run_001/screenshots/cp3_no_sort_control.png",
+      "source_sha256": "cf7dbbb61e6aec9be402f1c8e72cb4b6fb18549ccf6bfe7a36a8670398d29d49",
+      "source_bytes": 412365,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 161554,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "7b6937a64e666abe340ebf6125998f3925659713b38253d85ef6e314b63f74e4"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--12/Google Map--12_20261031_133526/final_runs/run_001/screenshots/cp4_ratings_from_content.png",
+      "source_sha256": "cf7dbbb61e6aec9be402f1c8e72cb4b6fb18549ccf6bfe7a36a8670398d29d49",
+      "source_bytes": 412365,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 161554,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "7b6937a64e666abe340ebf6125998f3925659713b38253d85ef6e314b63f74e4"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--12/Google Map--12_20261031_133526/final_runs/run_001/screenshots/cp5_final_state.png",
+      "source_sha256": "cf7dbbb61e6aec9be402f1c8e72cb4b6fb18549ccf6bfe7a36a8670398d29d49",
+      "source_bytes": 412365,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 161554,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "7b6937a64e666abe340ebf6125998f3925659713b38253d85ef6e314b63f74e4"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1322549,
+  "response_id": "39886dfd-1c88-4c6c-a576-e6d5b0a2f8f2",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1616,
+    "reasoning_content_chars": 2162
+  }
+}

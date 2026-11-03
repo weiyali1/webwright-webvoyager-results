@@ -1,0 +1,211 @@
+{
+  "task_id": "Booking--37",
+  "website": "Booking",
+  "task": "Search for a resort (not hotel) in Bali, detailing the available dates between November 20, 2026, and November 25, 2026, and checking any provided tour or cultural experiences.",
+  "task_record": "RERUNjsondata1019/Booking--37/Booking--37_20261030_211211",
+  "task_definition_sha256": "b292784d42a2fc09d100ac56f96daf23c3b098a929e49784164ff9b55fdd898a",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "RERUNjsondata1019/Booking--37/Booking--37_20261030_211211"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Found resort in Bali for Nov 20-25, 2026: 'Ramada Encore by Wyndham Seminyak Bali' (Resorts filter applied via the property-type filter, 25 resort results displayed for the selected dates). The resort page shows availability for Fri, Nov 20 — Wed, Nov 25, 2026. Tour/cultural experiences checked: the resort's 'Top attractions' section lists cultural sites including Bajra Sandhi Monument, Bali Museum, Dewa Ruci Roundabout, Garuda Wisnu Kencana, Le Mayeur Museum, Monument Veteran, Monument of Puputan Badung, and Pasifika Museum.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "RERUNjsondata1019/Booking--37/Booking--37_20261030_211211/final_runs/run_002/screenshots/cp5_resorts_filter_applied.png",
+      "sha256": "a1547e365bb8a856c69919326031ff74e7fb528e9bcc0e2438cbd7f59bb5df06"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--37/Booking--37_20261030_211211/final_runs/run_002/screenshots/cp6_resort_results.png",
+      "sha256": "a1547e365bb8a856c69919326031ff74e7fb528e9bcc0e2438cbd7f59bb5df06"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--37/Booking--37_20261030_211211/final_runs/run_002/screenshots/cp7_resort_availability.png",
+      "sha256": "4a30a8f0bebfc894594c78411f0062064301e4e13d2dd8fdba67c44e99d2c1d3"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--37/Booking--37_20261030_211211/final_runs/run_002/screenshots/cp7_resort_page_dates.png",
+      "sha256": "9271511ca2b0ba1e83d9775d0b78e4fa485d46a320131087a67bd968d72c69b3"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--37/Booking--37_20261030_211211/final_runs/run_002/screenshots/cp8_cultural_experiences_top_attractions.png",
+      "sha256": "2a061976560fca235c894f559d8c3049d2f65d401b2d089dd02155671cae8466"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "23c41de401122162552346b31a73f6b73cfc436be810ba5c30d63cfb1e209675",
+  "fingerprint": "4bdc92c695c3a97c8391afd7985d2f10b58382ac0de2fa4a84cf6d513f2948ba",
+  "evaluated_at": "2026-11-02T07:08:04.562362+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements Breakdown\n1. **Search for a resort (not hotel) in Bali** — Must use the resort filter, not hotels\n2. **Detail available dates between November 20–25, 2026** — Must show availability for those specific dates\n3. **Check any provided tour or cultural experiences** — Must investigate cultural/tour offerings\n\n## Screenshot Evidence Review\n\n**Requirement 1 — Resort search in Bali:**\n- Screenshots 1–2 show the Booking.com search for Bali with the **\"Resorts\" checkbox checked** in both \"Your previous filters\" and \"Property Type\" sections, plus a \"Resorts ×\" filter chip active\n- 574 resort properties found; results include Anantara Ubud Bali Resort, The Sallia Beach Resort, etc.\n- The selected property, Ramada Encore by Wyndham Seminyak Bali, is confirmed as a resort — the breadcrumb in Screenshot 4 reads \"All resorts > Indonesia > Bali > Seminyak > Ramada Encore by Wyndham Seminyak Bali **(Resort)**\" ✓\n\n**Requirement 2 — Dates Nov 20–25, 2026:**\n- Search bar shows \"Fri, Nov 20 — Wed, Nov 25\" with 1 adult, 0 children, 1 room\n- The year 2026 is confirmed by \"Map data ©2026 Google\" and the availability table showing \"free cancellation before November 15, **2026**\" and \"Pay nothing until November 13, **2026**\"\n- Screenshot 3 details the Availability section: room types (Flash Sale Superior Room US$190, Superior Double/Twin US$227–471, etc.) for the 5-night stay ✓\n\n**Requirement 3 — Tour/cultural experiences:**\n- Screenshot 5 shows the \"Area info\" → \"Top attractions\" section with cultural sites: Dewa Ruci Roundabout, Pemecutan Palace, Bali Museum, Puputan Badung Square, Monument of Puputan Badung, Bajra Sandhi Monument, Le Mayeur Museum, Garuda Wisnu Kencana, Pasifika Museum\n- The response accurately reports these cultural attractions, and the resort's own activities (Fitness center, Spa and wellness center, Playground) are visible ✓\n\n## Discrepancy Note\nThe response mentions \"25 resort results displayed\" while the screenshot shows 574 properties found — per evaluation rules, the screenshot prevails. This minor numerical error does not undermine the core task completion, as all substantive requirements (resort filter, correct dates, availability details, cultural experience check) are verified in the screenshots.\n\n## Verdict\nAll three task components were accomplished: a resort (not hotel) was searched via the Resorts filter in Bali, availability for November 20–25, 2026 was detailed with room options and prices, and cultural experiences/attractions were checked and reported.\n\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8209,
+    "completion_tokens": 2721,
+    "total_tokens": 10930,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2097
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-02T07:08:05.189753+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "RERUNjsondata1019/Booking--37/Booking--37_20261030_211211/final_runs/run_002/screenshots/cp5_resorts_filter_applied.png",
+      "source_sha256": "a1547e365bb8a856c69919326031ff74e7fb528e9bcc0e2438cbd7f59bb5df06",
+      "source_bytes": 759883,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 283414,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "94d0af1e7b8995923428ff55e56e9c6e6dacf6f78c305230da1b3a57f513bcfd"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--37/Booking--37_20261030_211211/final_runs/run_002/screenshots/cp6_resort_results.png",
+      "source_sha256": "a1547e365bb8a856c69919326031ff74e7fb528e9bcc0e2438cbd7f59bb5df06",
+      "source_bytes": 759883,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 283414,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "94d0af1e7b8995923428ff55e56e9c6e6dacf6f78c305230da1b3a57f513bcfd"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--37/Booking--37_20261030_211211/final_runs/run_002/screenshots/cp7_resort_availability.png",
+      "source_sha256": "4a30a8f0bebfc894594c78411f0062064301e4e13d2dd8fdba67c44e99d2c1d3",
+      "source_bytes": 282231,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 269467,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "c52218259130a1d346a3f3ddf346c23c472365f948631ed7192ef1437b6880b8"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--37/Booking--37_20261030_211211/final_runs/run_002/screenshots/cp7_resort_page_dates.png",
+      "source_sha256": "9271511ca2b0ba1e83d9775d0b78e4fa485d46a320131087a67bd968d72c69b3",
+      "source_bytes": 994164,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 313168,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "f01225370db5dca9fd2cb138aa068c39cb56e7ac608df6f84cf7929ffdbcb8de"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--37/Booking--37_20261030_211211/final_runs/run_002/screenshots/cp8_cultural_experiences_top_attractions.png",
+      "source_sha256": "2a061976560fca235c894f559d8c3049d2f65d401b2d089dd02155671cae8466",
+      "source_bytes": 181509,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 169818,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "8632fc55e4c27f037165733894b9aecf7d283d5f753a13436fbe59c061983787"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1762636,
+  "response_id": "87872119-b535-4118-afb8-4ab7687fab1d",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2564,
+    "reasoning_content_chars": 9456
+  }
+}

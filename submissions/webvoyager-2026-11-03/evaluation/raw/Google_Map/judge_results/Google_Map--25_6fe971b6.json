@@ -1,0 +1,181 @@
+{
+  "task_id": "Google Map--25",
+  "website": "Google Map",
+  "task": "Search for a parking facility near the Fox Theater in Detroit that closes at night.",
+  "task_record": "RERUNjsondata1019/Google Map--25/Google Map--25_20261101_073837",
+  "task_definition_sha256": "965d00a88dd5c30b3d8825de08fec400cde9a68f02feff9f692a7e03541c2247",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "RERUNjsondata1019/Google Map--25/Google Map--25_20261101_073837"
+  ],
+  "final_run": "run_003",
+  "answer_input_mode": "answer.txt only",
+  "answer": "McLaren Garage (90 E Fisher Service Dr, Detroit, MI 48201) is a parking facility near the Fox Theater in Detroit that closes at night. Its posted hours are 9 am–5 pm every day (currently Closed), so it is not open 24 hours and closes overnight. Verified on Google Maps via search 'parking near Fox Theater Detroit', results feed, and the McLaren Garage place panel showing weekly hours.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "RERUNjsondata1019/Google Map--25/Google Map--25_20261101_073837/final_runs/run_003/screenshots/final_execution_1_search_results.png",
+      "sha256": "8e0d09caba456e34698a120b4529fa622975de8640f536feb543d062f87bbc16"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--25/Google Map--25_20261101_073837/final_runs/run_003/screenshots/final_execution_2_parking_results.png",
+      "sha256": "36e8c56e04a527210ba78277b5892f0434b99ec3ebe397b836c83ab7edc79cc4"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--25/Google Map--25_20261101_073837/final_runs/run_003/screenshots/final_execution_3_hours_closes_at_night.png",
+      "sha256": "2ea21a4e998f0a5ae291155b3f28aa1796487eb1a168d2f838b98664ce05338d"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--25/Google Map--25_20261101_073837/final_runs/run_003/screenshots/final_execution_4_final_state.png",
+      "sha256": "2ea21a4e998f0a5ae291155b3f28aa1796487eb1a168d2f838b98664ce05338d"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "cd906c9354ef3721918d40dc7a7a6cd018c8c58d02f0faaa341f822d6742272d",
+  "fingerprint": "45dbf756c4c4651b1573d6da7f2b633439047af29333f9dd3a973585f6880472",
+  "evaluated_at": "2026-11-02T06:55:18.176065+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\nThe task was to search for a parking facility near the Fox Theater in Detroit that closes at night (i.e., not a 24-hour facility).\n\n## Screenshot Evidence\n\n**Screenshots 1 & 2 (Search Results):**\n- Google Maps search was performed with the query \"parking near Fox Theater Detr...\" (Detroit)\n- The results list shows multiple parking options, many of which are explicitly \"Open 24 hours\" (Comerica Garage, The Z Garage, Public Parking - 231 Winder, Tigers Parking Garage)\n- The map view shows the area around the Fox Theater/Fox Theatre (2211 Woodward Ave), with \"McLaren Garage\" visible as a labeled parking facility near the search location marker\n\n**Screenshots 3 & 4 (McLaren Garage Place Panel):**\n- The place panel for **McLaren Garage** is open, confirming:\n  - Type: Parking garage (4.3★, 248 reviews)\n  - Address: 90 E Fisher Service Dr, Detroit, MI 48201 — located in the stadium district adjacent to the Fox Theater area\n  - Hours: **Closed** (currently), with weekly hours listed as **9 am–5 pm every day** (Saturday through Friday)\n- This confirms the facility is NOT open 24 hours — it closes daily and remains closed overnight\n\n## Response Consistency\nThe response accurately matches the screenshots:\n- Correct facility name (McLaren Garage) and address (90 E Fisher Service Dr)\n- Correct hours (9 am–5 pm daily, currently Closed)\n- Correct reasoning that it is not open 24 hours and therefore closes overnight\n- The methodology described (search → results → place panel with weekly hours) aligns with the visual evidence\n\n## Task Fulfillment\n1. ✅ Search for parking near Fox Theater, Detroit — performed (\"parking near Fox Theater Detroit\")\n2. ✅ Identified a facility that closes at night — McLaren Garage closes at 5 pm daily and is closed overnight, distinguishing it from the many 24-hour options in the results\n3. ✅ The facility is near the Fox Theater — visible in the same map area as the Fox Theater search location\n\n## Verdict\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 6614,
+    "completion_tokens": 1633,
+    "total_tokens": 8247,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1160
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-02T06:55:18.738412+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 4,
+  "image_transports": [
+    {
+      "path": "RERUNjsondata1019/Google Map--25/Google Map--25_20261101_073837/final_runs/run_003/screenshots/final_execution_1_search_results.png",
+      "source_sha256": "8e0d09caba456e34698a120b4529fa622975de8640f536feb543d062f87bbc16",
+      "source_bytes": 1236819,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 362076,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "af0293e24ebb28c610e18aefe90f8f79a719596f93abcde3f3b43900abb22664"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--25/Google Map--25_20261101_073837/final_runs/run_003/screenshots/final_execution_2_parking_results.png",
+      "source_sha256": "36e8c56e04a527210ba78277b5892f0434b99ec3ebe397b836c83ab7edc79cc4",
+      "source_bytes": 1236824,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 362047,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "14a7bcb53e3a69d4dc1b9857400a0c044f8a6e8b7f0af229c3f4d214fb9937ce"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--25/Google Map--25_20261101_073837/final_runs/run_003/screenshots/final_execution_3_hours_closes_at_night.png",
+      "source_sha256": "2ea21a4e998f0a5ae291155b3f28aa1796487eb1a168d2f838b98664ce05338d",
+      "source_bytes": 1492013,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 323634,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "616f0b4c9724570e5eda298dcb9715908c4f85d163f01f376d5e48c2b2ec6b63"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--25/Google Map--25_20261101_073837/final_runs/run_003/screenshots/final_execution_4_final_state.png",
+      "source_sha256": "2ea21a4e998f0a5ae291155b3f28aa1796487eb1a168d2f838b98664ce05338d",
+      "source_bytes": 1492013,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 323634,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "616f0b4c9724570e5eda298dcb9715908c4f85d163f01f376d5e48c2b2ec6b63"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 4,
+  "request_json_bytes": 1831798,
+  "response_id": "e3c6c7a6-f9cc-43df-bd83-d3fcbffab5a1",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2005,
+    "reasoning_content_chars": 4775
+  }
+}

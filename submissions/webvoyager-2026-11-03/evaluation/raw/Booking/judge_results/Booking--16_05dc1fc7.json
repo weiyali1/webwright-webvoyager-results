@@ -1,0 +1,211 @@
+{
+  "task_id": "Booking--16",
+  "website": "Booking",
+  "task": "Look for a hotel in Paris with a user rating of 9 or higher and available for a 5-night stay starting January 15, 2027. The hotel should also offer free Wi-Fi and breakfast included in the price. Provide the name, location, and price per night.",
+  "task_record": "RERUNjsondata1019/Booking--16/Booking--16_20261030_165000",
+  "task_definition_sha256": "b929da0347916fc3e694bd7f04263a29b8aec721ea92fa8d59d5502261172bef",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "RERUNjsondata1019/Booking--16/Booking--16_20261030_165000"
+  ],
+  "final_run": "run_004",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Hotel: Le 123 Sébastopol - Astotel; Location: 2nd arr., Paris, Ile de France, France; Price per night: US$285.40 (5-night total US$1,427 for Jan 15-20, 2027); Guest review score: 9.2/10 (Wonderful: 9+ filter); free Wi-Fi and breakfast included.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "RERUNjsondata1019/Booking--16/Booking--16_20261030_165000/final_runs/run_004/screenshots/cp3_search_results_paris.png",
+      "sha256": "fa744dc09fae24958be32cfd836aaa441732fe82a0924c33f870b6cc971b7f0b"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--16/Booking--16_20261030_165000/final_runs/run_004/screenshots/cp4_filter_wonderful_9plus.png",
+      "sha256": "fe51749c541aca5e88f8b3ff381e039f027c99221d0985775f91ab63a55ccc65"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--16/Booking--16_20261030_165000/final_runs/run_004/screenshots/cp5_filter_free_wifi.png",
+      "sha256": "ea8561dba8a58a3843e56bcfa79862406dc07db2f7d16ce540ffb822ae28f878"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--16/Booking--16_20261030_165000/final_runs/run_004/screenshots/cp6_filter_breakfast_included.png",
+      "sha256": "40be2abc000fa1331a7b809fba9dcb850941b0ce9db57b5e000fb6c035fe3500"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--16/Booking--16_20261030_165000/final_runs/run_004/screenshots/cp7_final_result_card.png",
+      "sha256": "40be2abc000fa1331a7b809fba9dcb850941b0ce9db57b5e000fb6c035fe3500"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "bf146312d4633f6165336689f8eb710fe94abc43ca8b7cf18b39ba04b8712ed1",
+  "fingerprint": "cd18dd5cd8aa6df7483fb3ba58367054e0ebb3c1227c0994d39241c5f46622d3",
+  "evaluated_at": "2026-11-02T06:49:47.836077+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements Breakdown:\n1. Hotel in Paris with user rating ≥ 9\n2. Available for 5-night stay starting January 15, 2027\n3. Free Wi-Fi offered\n4. Breakfast included in price\n5. Provide name, location, and price per night\n\n## Screenshot Verification:\n\n**Search Parameters (all screenshots):**\n- Destination: Paris ✓\n- Dates: Fri, Jan 15 — Wed, Jan 20 (5 nights) ✓ — Jan 15, 2027 is indeed a Friday, confirming the correct year\n- Occupancy: 2 adults, 1 room\n\n**Filter Progression:**\n- Screenshot 1: Initial search (7,251 properties)\n- Screenshot 2: \"Wonderful: 9+\" filter applied (1,468 properties) — satisfies rating ≥ 9 requirement\n- Screenshot 3: \"Free Wifi\" filter added (1,384 properties) — satisfies free Wi-Fi requirement\n- Screenshot 4/5: \"Breakfast included\" filter added (218 properties) — satisfies breakfast requirement\n\n**Selected Hotel — Le 123 Sébastopol - Astotel:**\n- Guest rating: 9.2/10 (Wonderful, 1,499 reviews) — meets ≥ 9 requirement ✓\n- Location: 2nd arr., Paris ✓\n- Room: Twin Room with \"Breakfast included\" label explicitly shown ✓\n- Price: US$1,427 for 5 nights (+US$94 taxes) ✓\n- Availability: \"See availability\" button present, indicating bookable ✓\n\n## Response Verification:\n- **Name:** Le 123 Sébastopol - Astotel — matches screenshot ✓\n- **Location:** 2nd arr., Paris, Ile de France, France — matches screenshot ✓\n- **Price per night:** US$285.40 — consistent with screenshot total (US$1,427 ÷ 5 = $285.40) ✓\n- **Rating:** 9.2/10 — matches screenshot ✓\n- **Free Wi-Fi and breakfast included** — confirmed by applied filters and \"Breakfast included\" label ✓\n\nAll criteria from the instruction are satisfied: the hotel has a 9.2 rating (≥9), is available for the exact 5-night stay (Jan 15–20, 2027), includes free Wi-Fi and breakfast (both filters applied and reflected in results), and the response provides the name, location, and price per night as requested.\n\n## Verdict: **SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 7714,
+    "completion_tokens": 1672,
+    "total_tokens": 9386,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1131
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-02T06:49:48.230698+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "RERUNjsondata1019/Booking--16/Booking--16_20261030_165000/final_runs/run_004/screenshots/cp3_search_results_paris.png",
+      "source_sha256": "fa744dc09fae24958be32cfd836aaa441732fe82a0924c33f870b6cc971b7f0b",
+      "source_bytes": 395615,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 208445,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "7d1b64380aa55de7740dd9f56e28ea385ef8c24a20f22d13f4b6374397640b40"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--16/Booking--16_20261030_165000/final_runs/run_004/screenshots/cp4_filter_wonderful_9plus.png",
+      "source_sha256": "fe51749c541aca5e88f8b3ff381e039f027c99221d0985775f91ab63a55ccc65",
+      "source_bytes": 382854,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 220038,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "4812d8f69a0e2cfa6f42a929c974330698bed2f152f3b880adba7f89139205f3"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--16/Booking--16_20261030_165000/final_runs/run_004/screenshots/cp5_filter_free_wifi.png",
+      "source_sha256": "ea8561dba8a58a3843e56bcfa79862406dc07db2f7d16ce540ffb822ae28f878",
+      "source_bytes": 383812,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 222653,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "2464fb4526266b5d777f4495f1fed5938c0b329b1b7160918ac46ea96e312f07"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--16/Booking--16_20261030_165000/final_runs/run_004/screenshots/cp6_filter_breakfast_included.png",
+      "source_sha256": "40be2abc000fa1331a7b809fba9dcb850941b0ce9db57b5e000fb6c035fe3500",
+      "source_bytes": 387649,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 228724,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "734368a3d4623ab48f09c6a227c8be5591763fcc155ce1dc8e601ad88757bfa2"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--16/Booking--16_20261030_165000/final_runs/run_004/screenshots/cp7_final_result_card.png",
+      "source_sha256": "40be2abc000fa1331a7b809fba9dcb850941b0ce9db57b5e000fb6c035fe3500",
+      "source_bytes": 387649,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        843
+      ],
+      "transmitted_bytes": 228724,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "734368a3d4623ab48f09c6a227c8be5591763fcc155ce1dc8e601ad88757bfa2"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1481484,
+  "response_id": "cc145665-737e-4e99-8768-9c267495aa05",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1946,
+    "reasoning_content_chars": 3651
+  }
+}

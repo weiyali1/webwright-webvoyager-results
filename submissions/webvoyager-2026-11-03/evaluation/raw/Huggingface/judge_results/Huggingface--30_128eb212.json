@@ -1,0 +1,211 @@
+{
+  "task_id": "Huggingface--30",
+  "website": "Huggingface",
+  "task": "Identify the most downloaded English-Chinese (en-zh) machine translation model on Huggingface and report its latest performance metrics and usage guidelines.",
+  "task_record": "RERUNjsondata1019/Huggingface--30/Huggingface--30_20261102_035044",
+  "task_definition_sha256": "78b26293bc54ec8544c28ee39954da8df76531e6bb4abc3813fe180ee9c45c32",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "RERUNjsondata1019/Huggingface--30/Huggingface--30_20261102_035044"
+  ],
+  "final_run": "run_003",
+  "answer_input_mode": "answer.txt only",
+  "answer": "The most downloaded English-Chinese (en-zh) machine translation model on Hugging Face is facebook/nllb-200-distilled-600M, with approximately 963k downloads (963,076 downloads last month). It was identified by applying the site's Translation task filter, English + Chinese language filters, and sorting by Most downloads on the Models hub. Latest performance metrics from the model card: evaluated with BLEU, spBLEU, and chrF++ automatic metrics across 200 languages, plus human evaluation using the XSTS protocol and toxicity measurement. Usage guidelines: this is a research model for machine translation among 200 languages; it is intended for single-sentence translation of general-domain text only, with input limited to 512 tokens; it is not for production deployment, document translation, or certified translations; use it via the Fairseq repository (NLLB-200) under the CC-BY-NC license.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "RERUNjsondata1019/Huggingface--30/Huggingface--30_20261102_035044/final_runs/run_003/screenshots/final_execution_4_sort_downloads.png",
+      "sha256": "648a58d7cb62283f6c50d9619ac2adad2381c9cadb3b6e403c3dea5f7beb9113"
+    },
+    {
+      "path": "RERUNjsondata1019/Huggingface--30/Huggingface--30_20261102_035044/final_runs/run_003/screenshots/final_execution_5_top_model.png",
+      "sha256": "ec966e8c34c876ff9cfcab5a7a17c284a6a933603fd9ae0d0e807c7151411d57"
+    },
+    {
+      "path": "RERUNjsondata1019/Huggingface--30/Huggingface--30_20261102_035044/final_runs/run_003/screenshots/final_execution_6_model_metrics.png",
+      "sha256": "857c92cc82bee2004ead5ad291753aacc45ee8e0155f7c46c37ac953e1a3fcb4"
+    },
+    {
+      "path": "RERUNjsondata1019/Huggingface--30/Huggingface--30_20261102_035044/final_runs/run_003/screenshots/final_execution_7_usage_guidelines.png",
+      "sha256": "c0ac5c75928761efdeeedf9a8fc9d94cd72be11140c80d6bb5fdb95b49536f74"
+    },
+    {
+      "path": "RERUNjsondata1019/Huggingface--30/Huggingface--30_20261102_035044/final_runs/run_003/screenshots/final_execution_8_final_state.png",
+      "sha256": "c0ac5c75928761efdeeedf9a8fc9d94cd72be11140c80d6bb5fdb95b49536f74"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "5ae4de319aaacf23c9c6038b33c8ef67c577f1f03c55047362a9b07c0a4d3c05",
+  "fingerprint": "3998a1882ce7d3f2241c168699d855d221541926fa0e8f4892f81e29ca020476",
+  "evaluated_at": "2026-11-02T07:59:25.085516+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements Breakdown\nThe task required three components:\n1. **Identify** the most downloaded English-Chinese (en-zh) machine translation model on Hugging Face\n2. **Report** its latest performance metrics\n3. **Report** its usage guidelines\n\n## Verification Against Screenshots\n\n**Step 1 - Model Identification:**\n- Screenshots 1-2 show the Hugging Face Models hub with the **Translation task filter**, **English + Chinese language filters** applied (visible as \"English ×\" and \"Chinese ×\" tags), and **sorted by \"Most downloads\"** — exactly as described in the response.\n- The top result is **facebook/nllb-200-distilled-600M** with **963k downloads**, ahead of Helsinki-NLP/opus-mt-zh-en (650k) and facebook/nllb-200-distilled-1.3B (468k).\n- Screenshot 3 confirms the model page shows **\"Downloads last month: 963,076\"**, matching the response's claim of ~963k downloads.\n\n**Step 2 - Performance Metrics:**\n- Screenshots 3-5 show the model card's **Metrics** section: \"NLLB-200 model was evaluated using BLEU, spBLEU, and chrF++ metrics widely adopted by machine translation community. Additionally, we performed human evaluation with the XSTS protocol and measured the toxicity of the generated translations.\"\n- This matches the response's reported metrics exactly (BLEU, spBLEU, chrF++, XSTS human evaluation, toxicity measurement).\n\n**Step 3 - Usage Guidelines:**\n- The **Intended Use** section in the screenshots confirms:\n  - Primary intended use: research in machine translation, especially low-resource languages; single sentence translation among 200 languages ✓\n  - Primary users: researchers and MT research community ✓\n  - Out-of-scope: not for production deployment, not for domain-specific (medical/legal) texts, not for document translation, input lengths not exceeding 512 tokens, cannot be used as certified translations ✓\n- The license tag **cc-by-nc-4.0** is visible on the model page, and the Fairseq repository reference appears in the model card — both mentioned in the response.\n\n## Consistency Check\n- The response aligns fully with the screenshots; no contradictions found.\n- All three task components (identification, metrics, usage guidelines) are addressed with accurate, screenshot-corroborated details.\n\n## Verdict\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 9171,
+    "completion_tokens": 1527,
+    "total_tokens": 10698,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 999
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-02T07:59:25.653135+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "RERUNjsondata1019/Huggingface--30/Huggingface--30_20261102_035044/final_runs/run_003/screenshots/final_execution_4_sort_downloads.png",
+      "source_sha256": "648a58d7cb62283f6c50d9619ac2adad2381c9cadb3b6e403c3dea5f7beb9113",
+      "source_bytes": 525689,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 226589,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "58ef4204e5dec75ea10f660db4ab0393e76d8de6a1edb5dcd07cc36a543114b5"
+    },
+    {
+      "path": "RERUNjsondata1019/Huggingface--30/Huggingface--30_20261102_035044/final_runs/run_003/screenshots/final_execution_5_top_model.png",
+      "source_sha256": "ec966e8c34c876ff9cfcab5a7a17c284a6a933603fd9ae0d0e807c7151411d57",
+      "source_bytes": 525691,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 226650,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "263eb1066c6f8810610d650b5ba1f1677a91c4070f08e32f1f1173f5bf17f8c1"
+    },
+    {
+      "path": "RERUNjsondata1019/Huggingface--30/Huggingface--30_20261102_035044/final_runs/run_003/screenshots/final_execution_6_model_metrics.png",
+      "source_sha256": "857c92cc82bee2004ead5ad291753aacc45ee8e0155f7c46c37ac953e1a3fcb4",
+      "source_bytes": 232028,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 239406,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "e6899edfff52797d57ee9199f779dc5d6f08a938dad5856e1f20b2d55956ed55"
+    },
+    {
+      "path": "RERUNjsondata1019/Huggingface--30/Huggingface--30_20261102_035044/final_runs/run_003/screenshots/final_execution_7_usage_guidelines.png",
+      "source_sha256": "c0ac5c75928761efdeeedf9a8fc9d94cd72be11140c80d6bb5fdb95b49536f74",
+      "source_bytes": 173895,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 226616,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "03ac169e75ed5a15b0d9e1d222c5b69bc1a83c3fc0a6f2c6bbd3bf65e81daa9f"
+    },
+    {
+      "path": "RERUNjsondata1019/Huggingface--30/Huggingface--30_20261102_035044/final_runs/run_003/screenshots/final_execution_8_final_state.png",
+      "source_sha256": "c0ac5c75928761efdeeedf9a8fc9d94cd72be11140c80d6bb5fdb95b49536f74",
+      "source_bytes": 173895,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1024,
+        1280
+      ],
+      "transmitted_bytes": 226616,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "03ac169e75ed5a15b0d9e1d222c5b69bc1a83c3fc0a6f2c6bbd3bf65e81daa9f"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1531768,
+  "response_id": "359e916e-616d-415c-a1f1-3592a08c25a6",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2288,
+    "reasoning_content_chars": 4499
+  }
+}

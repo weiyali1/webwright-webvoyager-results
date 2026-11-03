@@ -1,0 +1,211 @@
+{
+  "task_id": "Booking--17",
+  "website": "Booking",
+  "task": "Find a hotel in Paris with a fitness center and a rating of 8 or higher available for a 5-night stay starting from February 14, 2027, and sort the results by best reviewed.",
+  "task_record": "RERUNjsondata1019/Booking--17/Booking--17_20261030_174555",
+  "task_definition_sha256": "721a5394bd3d711265e00d31c247b6ef5d78b27dbdf8cc7186b533a0a2ed27d8",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "RERUNjsondata1019/Booking--17/Booking--17_20261030_174555"
+  ],
+  "final_run": "run_003",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Found hotels in Paris with a fitness center and a rating of 8+ available for a 5-night stay Feb 14-19, 2027, sorted by 'Best reviewed & lowest price'. Destination set to Paris, dates selected Feb 14-19, 2027 (5 nights), search submitted (7,367 properties), 'Fitness center' filter applied (404 properties), 'Very Good: 8+' filter applied (262-264 properties), and results sorted by best reviewed. Top result: UrbanFlat 93 - 2 Bedroom apartment in perfect location (Scored 10, Exceptional). Other top results: Charming Apt - AC - 2BR-6P - Near Bastille (10), UrbanFlat 231 - Grand Appartement de 4 Chambres en plein Centre de Paris (10), Hôtel des Arts Montmartre (9.6, 2,442 reviews), Goralska Résidences Paris Bastille (9.5).",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "RERUNjsondata1019/Booking--17/Booking--17_20261030_174555/final_runs/run_003/screenshots/cp4_fitness_filter.png",
+      "sha256": "61a1e2691c79cfb54df3ad5003778444928ef9c8bb49e4b828ed8ea347ad344e"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--17/Booking--17_20261030_174555/final_runs/run_003/screenshots/cp5_review_8plus_filter.png",
+      "sha256": "461ff18571a5ef5a5193263b0e048ac45af50301c2e0ba2168591f413ed25dac"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--17/Booking--17_20261030_174555/final_runs/run_003/screenshots/cp6_sort_button.png",
+      "sha256": "9149abd047f3d3bc0076f9f38e4883cc704a6b3a4ff553c1399e2957766220b8"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--17/Booking--17_20261030_174555/final_runs/run_003/screenshots/cp6_sort_selected.png",
+      "sha256": "95622d4cd392e4bbda140798498a147623c2f8541638af347e1628180f21ef87"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--17/Booking--17_20261030_174555/final_runs/run_003/screenshots/cp7_final_results.png",
+      "sha256": "9149abd047f3d3bc0076f9f38e4883cc704a6b3a4ff553c1399e2957766220b8"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "7a61b5509b91655e4cc4d6050160fe938a18f891cc43aa9971ba96fa3fefc28a",
+  "fingerprint": "f634ec8a09b2fdd8d3b5beaa4e61f9a9839f4c01da7ab208f57dfa3ce68d27ae",
+  "evaluated_at": "2026-11-02T06:50:24.709753+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation Analysis\n\n**Task Requirements:**\n1. Search for a hotel in Paris\n2. Fitness center amenity\n3. Rating of 8 or higher\n4. 5-night stay starting February 14, 2027\n5. Sort results by best reviewed\n\n**Checking against the screenshots:**\n\n1. **Destination (Paris):** ✓ The search bar shows \"Enter destination: Paris\" and the breadcrumb confirms \"France > Ile de France > Paris > Search results\".\n\n2. **Dates (Feb 14, 2027, 5 nights):** ✓ The date selector shows \"Sun, Feb 14 — Fri, Feb 19\". Feb 14, 2027 falls on a Sunday, which matches the displayed day of week, confirming the correct year. Each listing shows \"5 nights, 2 adults,\" confirming the 5-night duration.\n\n3. **Fitness center filter:** ✓ The \"Fitness center\" filter chip is visible at the top of the results, and the checkbox under \"Your previous filters\" is checked (404 properties initially, then narrowed further).\n\n4. **Rating 8+ filter:** ✓ The \"Very Good: 8+\" filter chip is visible and the checkbox is checked, reducing results to 262–264 properties.\n\n5. **Sorted by best reviewed:** ✓ The sort control shows \"Sort by: Best reviewed & lowest price\" (Booking.com's best-reviewed sort option). Screenshot 4 shows the sort dropdown was opened, and the final state reflects the applied sort. Results are ordered with the highest scores first (10, 10, 10, 9.6, 9.5).\n\n6. **Hotel found:** ✓ The results include qualifying hotels, e.g., Hôtel des Arts Montmartre (9.6, Exceptional, 2,442 reviews) and Goralska Résidences Paris Bastille (9.5), both meeting the 8+ rating requirement with fitness center.\n\n**Response consistency:** The result response accurately matches the screenshots — destination, dates, filter counts (404 → 262–264 properties), sort option, and top results (UrbanFlat 93 scored 10, Hôtel des Arts Montmartre 9.6, Goralska Résidences 9.5) are all corroborated by the visual evidence.\n\nAll task requirements have been fulfilled: correct destination, correct dates with 5-night duration, fitness center filter, 8+ rating filter, and best-reviewed sorting applied.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 9889,
+    "completion_tokens": 1576,
+    "total_tokens": 11465,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1054
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-02T06:50:25.308998+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "RERUNjsondata1019/Booking--17/Booking--17_20261030_174555/final_runs/run_003/screenshots/cp4_fitness_filter.png",
+      "source_sha256": "61a1e2691c79cfb54df3ad5003778444928ef9c8bb49e4b828ed8ea347ad344e",
+      "source_bytes": 759568,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 307164,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "d2701432350e0529cb721c761593eacc2ecf856631ffc5b76b24fcf9a25b5a56"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--17/Booking--17_20261030_174555/final_runs/run_003/screenshots/cp5_review_8plus_filter.png",
+      "source_sha256": "461ff18571a5ef5a5193263b0e048ac45af50301c2e0ba2168591f413ed25dac",
+      "source_bytes": 762043,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 310289,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "6f7ac1a9e02bb79443aea2ca7fbeb3d162b258ff4a38bab49e21b98b7e1e0189"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--17/Booking--17_20261030_174555/final_runs/run_003/screenshots/cp6_sort_button.png",
+      "source_sha256": "9149abd047f3d3bc0076f9f38e4883cc704a6b3a4ff553c1399e2957766220b8",
+      "source_bytes": 715265,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 315117,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "aa67e07a63f0e8fa7f27f2e72c6669bad6bdb725e43fb260e9c6799bb444882a"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--17/Booking--17_20261030_174555/final_runs/run_003/screenshots/cp6_sort_selected.png",
+      "source_sha256": "95622d4cd392e4bbda140798498a147623c2f8541638af347e1628180f21ef87",
+      "source_bytes": 621957,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 314440,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "0290a5c43da8ef6c532b8e7ff0dd780f31b71c83ad371a84b2d20457cf5ea4f1"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--17/Booking--17_20261030_174555/final_runs/run_003/screenshots/cp7_final_results.png",
+      "source_sha256": "9149abd047f3d3bc0076f9f38e4883cc704a6b3a4ff553c1399e2957766220b8",
+      "source_bytes": 715265,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 315117,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "aa67e07a63f0e8fa7f27f2e72c6669bad6bdb725e43fb260e9c6799bb444882a"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 2086615,
+  "response_id": "a272cb68-f5e6-4ff4-ac69-f07a8975041f",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2071,
+    "reasoning_content_chars": 3806
+  }
+}

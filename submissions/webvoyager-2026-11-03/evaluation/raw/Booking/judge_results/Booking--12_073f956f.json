@@ -1,0 +1,211 @@
+{
+  "task_id": "Booking--12",
+  "website": "Booking",
+  "task": "Find a hotel in Paris with a customer review score of 8 or higher, free Wi-Fi, and available for a 5-night stay starting on January 5th, 2027.",
+  "task_record": "RERUNjsondata1019/Booking--12/Booking--12_20261030_155217",
+  "task_definition_sha256": "36bedb68e8919893f06724a51a47e3b075c57bef0d2599c7e6d4767ec6ba72d9",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "RERUNjsondata1019/Booking--12/Booking--12_20261030_155217"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Found hotel: Le 123 Sébastopol - Astotel in Paris with customer review score 9.2 (>=8), free Wi-Fi, available for a 5-night stay Jan 5-10, 2027. Filters applied: Very Good: 8+, Free Wifi, Hotels.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "RERUNjsondata1019/Booking--12/Booking--12_20261030_155217/final_runs/run_002/screenshots/final_execution_4_filter_review_8plus.png",
+      "sha256": "318119e29cd86a9a2b34b26412842b907d62516862d668b001b97c5f3dc746b2"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--12/Booking--12_20261030_155217/final_runs/run_002/screenshots/final_execution_5_filter_free_wifi.png",
+      "sha256": "48ab94225ae336218d2c6554098cc46efdde34b2a7d39467d94222e388158985"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--12/Booking--12_20261030_155217/final_runs/run_002/screenshots/final_execution_6_filter_hotels.png",
+      "sha256": "7fd7d2e1de2ec0e7b7732e1c665d4c99fe3213d62f6908c79692929b26329b7c"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--12/Booking--12_20261030_155217/final_runs/run_002/screenshots/final_execution_7_filtered_results.png",
+      "sha256": "7fd7d2e1de2ec0e7b7732e1c665d4c99fe3213d62f6908c79692929b26329b7c"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--12/Booking--12_20261030_155217/final_runs/run_002/screenshots/final_execution_8_selected_hotel.png",
+      "sha256": "7fd7d2e1de2ec0e7b7732e1c665d4c99fe3213d62f6908c79692929b26329b7c"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "2584ddf1319edc6da4758390fcc81e3ceea7661677e2a0666440091670639a31",
+  "fingerprint": "ffbdd61d59543924ad0c655a7fc2ff235ace200bed3d44e2bf98e5f915c00829",
+  "evaluated_at": "2026-11-02T06:48:45.134170+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements Breakdown\nThe task required finding a hotel in Paris that meets ALL of the following criteria:\n1. **Customer review score of 8 or higher**\n2. **Free Wi-Fi**\n3. **Available for a 5-night stay starting January 5th, 2027**\n\n## Screenshot Verification\n\n**Search Parameters:**\n- Destination: Paris ✓\n- Dates: Tue, Jan 5 — Sun, Jan 10 (this is a 5-night stay; Jan 5, 2027 falls on a Tuesday, confirming the year 2027) ✓\n- Occupancy: 2 adults, 0 children, 1 room\n\n**Filters Applied (visible in screenshots):**\n- Screenshot 1: \"Very Good: 8+\" filter applied (3,804 properties found)\n- Screenshot 2: \"Free Wifi\" filter added (3,657 properties found)\n- Screenshots 3-5: \"Hotels\" filter added (1,148 properties found), with all three filter chips visible: \"Very Good: 8+\", \"Free Wifi\", \"Hotels\"\n\n**Resulting Hotel — Le 123 Sébastopol - Astotel:**\n- Location: 2nd arr., Paris ✓\n- Review score: 9.2 \"Wonderful\" (1,499 reviews) — exceeds the 8+ requirement ✓\n- Free Wifi: 9.1 (explicitly displayed, and the Free Wifi filter is active) ✓\n- Availability: Shows \"5 nights, 2 adults\" at US$1,064 with a \"See availability\" button, confirming availability for the requested dates ✓\n\n## Response Consistency\nThe Result Response accurately matches the screenshots: it identifies Le 123 Sébastopol - Astotel with a 9.2 review score, free Wi-Fi, and availability for Jan 5–10, 2027 (5 nights). The filters mentioned in the response (Very Good: 8+, Free Wifi, Hotels) are all visibly applied in the screenshots.\n\nAll task criteria have been satisfied and verified against the visual evidence.\n\n## Verdict\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 9741,
+    "completion_tokens": 1081,
+    "total_tokens": 10822,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 631
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-02T06:48:45.791264+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "RERUNjsondata1019/Booking--12/Booking--12_20261030_155217/final_runs/run_002/screenshots/final_execution_4_filter_review_8plus.png",
+      "source_sha256": "318119e29cd86a9a2b34b26412842b907d62516862d668b001b97c5f3dc746b2",
+      "source_bytes": 673959,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 286742,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "0925ebf17ded721b024fb47b111e20501615edd04cb839173042784210bde996"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--12/Booking--12_20261030_155217/final_runs/run_002/screenshots/final_execution_5_filter_free_wifi.png",
+      "source_sha256": "48ab94225ae336218d2c6554098cc46efdde34b2a7d39467d94222e388158985",
+      "source_bytes": 670899,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 289412,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "2163e8f285e1c45b50481b6e4911a985e3ea4dc2af561ac2da23b5aafce1751b"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--12/Booking--12_20261030_155217/final_runs/run_002/screenshots/final_execution_6_filter_hotels.png",
+      "source_sha256": "7fd7d2e1de2ec0e7b7732e1c665d4c99fe3213d62f6908c79692929b26329b7c",
+      "source_bytes": 731537,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 301064,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a5dad46d4b009ae0e981976010ecbf770f453c6f010bdc3c2d6dede4db842a04"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--12/Booking--12_20261030_155217/final_runs/run_002/screenshots/final_execution_7_filtered_results.png",
+      "source_sha256": "7fd7d2e1de2ec0e7b7732e1c665d4c99fe3213d62f6908c79692929b26329b7c",
+      "source_bytes": 731537,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 301064,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a5dad46d4b009ae0e981976010ecbf770f453c6f010bdc3c2d6dede4db842a04"
+    },
+    {
+      "path": "RERUNjsondata1019/Booking--12/Booking--12_20261030_155217/final_runs/run_002/screenshots/final_execution_8_selected_hotel.png",
+      "source_sha256": "7fd7d2e1de2ec0e7b7732e1c665d4c99fe3213d62f6908c79692929b26329b7c",
+      "source_bytes": 731537,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1366,
+        1600
+      ],
+      "transmitted_dimensions": [
+        1093,
+        1280
+      ],
+      "transmitted_bytes": 301064,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "a5dad46d4b009ae0e981976010ecbf770f453c6f010bdc3c2d6dede4db842a04"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1975681,
+  "response_id": "39d1ea38-709e-43b0-9305-59bc9685a8b0",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1635,
+    "reasoning_content_chars": 2055
+  }
+}

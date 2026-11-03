@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Map--0",
+  "website": "Google Map",
+  "task": "Find 5 beauty salons with ratings greater than 4.8 in Seattle, WA.",
+  "task_record": "RERUNjsondata1019/Google Map--0/Google Map--0_20261031_082803",
+  "task_definition_sha256": "800d7f5a787b071d8fc71ba78df3f75cab14ce08580af4d8754b55df1fdadc39",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "RERUNjsondata1019/Google Map--0/Google Map--0_20261031_082803"
+  ],
+  "final_run": "run_002",
+  "answer_input_mode": "answer.txt only",
+  "answer": "5 beauty salons in Seattle, WA with rating >4.8: Lady Neptune Hair Salon, University District (5.0); Aurora Beauty - Head Spa (5.0); Antonio Salon (4.9); Mai Flower Beauty Salon (4.9); Nola (4.9)",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "RERUNjsondata1019/Google Map--0/Google Map--0_20261031_082803/final_runs/run_002/screenshots/final_execution_5_qualified_salon_1_Lady_Neptune_Hair_Sa.png",
+      "sha256": "8b2eb45ec3a1f2a9d6e20b32646bb67f6480de2d694455ad2416d23707649523"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--0/Google Map--0_20261031_082803/final_runs/run_002/screenshots/final_execution_6_qualified_salon_2_Aurora_Beauty_-_Head.png",
+      "sha256": "ae69c22605e8836de55f2a4fa21bb89a4c09b6f3c51d536af143a8a89da798b0"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--0/Google Map--0_20261031_082803/final_runs/run_002/screenshots/final_execution_7_qualified_salon_3_Antonio_Salon.png",
+      "sha256": "ebe35f290e2436b7467cb6de661feed97554852829e958d1690d8c7a319d5cb9"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--0/Google Map--0_20261031_082803/final_runs/run_002/screenshots/final_execution_8_qualified_salon_4_Mai_Flower_Beauty_Sa.png",
+      "sha256": "52459adb2c3f6724d8b06a465ab4ffade5830f06733e7c4ecba717d1c7d0de3d"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--0/Google Map--0_20261031_082803/final_runs/run_002/screenshots/final_execution_9_qualified_salon_5_Nola.png",
+      "sha256": "0dfd5ef159047a564a7a9173606d5368a92df894e5a66538f3427a5cd538138c"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "06d02b58fb9bedeb12dadde019536a894eca2680fa712cb91a9ed2ff8c4217a5",
+  "fingerprint": "b0e8c9bf409196272363696834070d5b2c9625e95b09f4a5cff8f69b1f513c2f",
+  "evaluated_at": "2026-11-02T06:27:18.477712+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\nFind 5 beauty salons with ratings **greater than 4.8** in Seattle, WA.\n\n## Verification of Response Against Screenshots\n\nThe response lists 5 salons. I cross-checked each against the screenshots:\n\n| Salon | Claimed Rating | Screenshot Evidence | > 4.8? |\n|-------|---------------|---------------------|--------|\n| Lady Neptune Hair Salon, University District | 5.0 | Screenshot 1: \"5.0 ★★★★★ (520), Beauty salon, 5611 University Way NE #100A\" | ✓ |\n| Aurora Beauty - Head Spa | 5.0 | Screenshots 2 & 3: \"5.0 ★★★★★ (475), Beauty salon, 4208 SW Oregon St Ste A\" | ✓ |\n| Antonio Salon | 4.9 | Screenshots 2 & 3: \"4.9 ★★★★★ (681), 113 Virginia St\" | ✓ |\n| Mai Flower Beauty Salon | 4.9 | Screenshot 4: \"4.9 ★★★★★ (47), Beauty salon, 5101 25th Ave NE Ste 30\" | ✓ |\n| Nola | 4.9 | Screenshot 5: \"4.9 ★★★★★ (138), 1090 N Northlake Way\" | ✓ |\n\n## Assessment Points\n\n1. **Rating criterion (>4.8)**: All five salons have ratings of 5.0 or 4.9, which are strictly greater than 4.8. ✓\n2. **Location (Seattle, WA)**: The search query was \"beauty salon Seattle, WA,\" and all listed addresses (University Way NE, SW Oregon St, Virginia St, 25th Ave NE, N Northlake Way) are Seattle locations. ✓\n3. **Quantity**: Exactly 5 salons were provided. ✓\n4. **Category note**: Antonio Salon and Nola are labeled \"Hair salon\" rather than \"Beauty salon,\" but they appeared organically in the \"beauty salon Seattle, WA\" search results, so they are reasonable inclusions for this task.\n5. The browsing process is well documented — the agent scrolled through the results list (with a 4.5+ filter applied) across multiple screenshots to identify salons exceeding the 4.8 threshold, rather than just taking the first results (which included many 4.7–4.8 salons that don't qualify).\n\nAll information in the response is consistent with the screenshots, and the task's core requirements (5 salons, ratings > 4.8, Seattle location) are fully satisfied.\n\n## Verdict\n**SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 7191,
+    "completion_tokens": 1789,
+    "total_tokens": 8980,
+    "prompt_tokens_details": {
+      "cached_tokens": 7168
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1222
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-02T06:27:18.973229+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "RERUNjsondata1019/Google Map--0/Google Map--0_20261031_082803/final_runs/run_002/screenshots/final_execution_5_qualified_salon_1_Lady_Neptune_Hair_Sa.png",
+      "source_sha256": "8b2eb45ec3a1f2a9d6e20b32646bb67f6480de2d694455ad2416d23707649523",
+      "source_bytes": 575616,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        800
+      ],
+      "transmitted_bytes": 258388,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "3d758efbfe61136d42b006ee699a068d382fa024e702ac775efc95fc3f4e4f98"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--0/Google Map--0_20261031_082803/final_runs/run_002/screenshots/final_execution_6_qualified_salon_2_Aurora_Beauty_-_Head.png",
+      "source_sha256": "ae69c22605e8836de55f2a4fa21bb89a4c09b6f3c51d536af143a8a89da798b0",
+      "source_bytes": 562107,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        800
+      ],
+      "transmitted_bytes": 254232,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "177174b1d70ee65fcd3d5b5d344c7c89be45debeb4c2b51c3f1863c1c9de138d"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--0/Google Map--0_20261031_082803/final_runs/run_002/screenshots/final_execution_7_qualified_salon_3_Antonio_Salon.png",
+      "source_sha256": "ebe35f290e2436b7467cb6de661feed97554852829e958d1690d8c7a319d5cb9",
+      "source_bytes": 551617,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        800
+      ],
+      "transmitted_bytes": 252011,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "719e573ac768b98c56eef76f9afd3a92225fb9193688c0ffe60695a2b4992d16"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--0/Google Map--0_20261031_082803/final_runs/run_002/screenshots/final_execution_8_qualified_salon_4_Mai_Flower_Beauty_Sa.png",
+      "source_sha256": "52459adb2c3f6724d8b06a465ab4ffade5830f06733e7c4ecba717d1c7d0de3d",
+      "source_bytes": 589755,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        800
+      ],
+      "transmitted_bytes": 261492,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "90fc370a010d70bb8227281d1cd3d0f0cf623f5d2414f306ca8c2a52fe04335a"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--0/Google Map--0_20261031_082803/final_runs/run_002/screenshots/final_execution_9_qualified_salon_5_Nola.png",
+      "source_sha256": "0dfd5ef159047a564a7a9173606d5368a92df894e5a66538f3427a5cd538138c",
+      "source_bytes": 568670,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1440,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        800
+      ],
+      "transmitted_bytes": 257610,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "7bc2546b5e424c90089c9789262b4485166fa196a29d54839d5fd222f125e318"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 1714784,
+  "response_id": "59141c15-9f0e-4d6e-8a79-affcc4b91790",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1985,
+    "reasoning_content_chars": 4099
+  }
+}

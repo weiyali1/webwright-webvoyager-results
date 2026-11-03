@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-02T07:51:55.627353+00:00",
+  "purpose": "pilot",
+  "model_name": "glm-5.3-flash",
+  "prompt_source": "https://github.com/MinorJerry/WebVoyager/blob/main/evaluation/auto_eval.py",
+  "prompt_variant": "standard",
+  "answer_source": "answer.txt only",
+  "answer_policy": "Use only the selected run's answer.txt. If answer.txt is absent or empty, the task is missing an answer. Never read final_response.txt, final_script_log.txt, evidence files, or older runs.",
+  "official_acceptance_claimed": false,
+  "selection_policy": "Newest timestamped task record; highest run_NNN within that record; no success-based selection or fallback.",
+  "response_models": [
+    "glm-5.3-flash"
+  ],
+  "total_tasks": 40,
+  "success": 37,
+  "failure": 1,
+  "missing_evidence": 1,
+  "api_error": 0,
+  "parse_error": 1,
+  "evaluation_error": 0,
+  "pending": 0,
+  "unresolved": 1,
+  "complete": false,
+  "acceptance_rate_percent": null,
+  "provisional_success_over_all_tasks_percent": 92.5,
+  "denominator_policy": "All selected unique tasks; missing evidence counts as unsuccessful; API/parse errors remain unresolved.",
+  "usage": {
+    "prompt_tokens": 330112,
+    "completion_tokens": 93729,
+    "total_tokens": 423841
+  },
+  "websites": {
+    "Google Flights": {
+      "website": "Google Flights",
+      "answer_source": "answer.txt only",
+      "prompt_variant": "standard",
+      "total_tasks": 40,
+      "success": 37,
+      "failure": 1,
+      "missing_evidence": 1,
+      "api_error": 0,
+      "parse_error": 1,
+      "evaluation_error": 0,
+      "pending": 0,
+      "unresolved": 1,
+      "complete": false,
+      "acceptance_rate_percent": null,
+      "provisional_success_over_all_tasks_percent": 92.5,
+      "denominator_policy": "All selected unique tasks; missing evidence counts as unsuccessful; API/parse errors remain unresolved.",
+      "usage": {
+        "prompt_tokens": 330112,
+        "completion_tokens": 93729,
+        "total_tokens": 423841
+      },
+      "files": "websites/Google_Flights_dd4d1b7e"
+    }
+  },
+  "image_transport": {
+    "format": "jpeg",
+    "quality": 85,
+    "subsampling": 0,
+    "resize": true,
+    "crop": false,
+    "alpha_background": "white",
+    "pillow_version": "12.3.0",
+    "max_size": "1280x1280"
+  },
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  }
+}

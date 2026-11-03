@@ -1,0 +1,211 @@
+{
+  "task_id": "Google Map--32",
+  "website": "Google Map",
+  "task": "Search for plumbers available now but not open 24 hours in Orlando, FL.",
+  "task_record": "RERUNjsondata1019/Google Map--32/Google Map--32_20261101_091451",
+  "task_definition_sha256": "3cdb1bf863de345cdcac0393239155646a4e38206734bc3a58cf4683fe841a33",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "RERUNjsondata1019/Google Map--32/Google Map--32_20261101_091451"
+  ],
+  "final_run": "run_009",
+  "answer_input_mode": "answer.txt only",
+  "answer": "Searched 'plumbers in Orlando, FL' on Google Maps and applied the Hours > 'Open now' filter via the site filter control. The Hours filter offers only Any time / Open now / Open 24 hours / Open on (no 'not open 24 hours' control), so the not-open-24-hours constraint was verified from result content: plumbers available now but NOT open 24 hours include Grace Plumbing (Open · Closes 12 am) and RooterMan Orlando Florida (Closes soon).",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "RERUNjsondata1019/Google Map--32/Google Map--32_20261101_091451/final_runs/run_009/screenshots/final_execution_3_hours_filter_options.png",
+      "sha256": "1d034ad939906b588532b6809d790f023b0860ff64e0c38480942f9c8ffa3022"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--32/Google Map--32_20261101_091451/final_runs/run_009/screenshots/final_execution_4_open_now_applied.png",
+      "sha256": "8712cfc5b6a635c01a83fd199e6962527b7527e18513eec66c5cdd7374770a4d"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--32/Google Map--32_20261101_091451/final_runs/run_009/screenshots/final_execution_5_open_now_selected.png",
+      "sha256": "9db974b07986ea138e6554d154b72f27803d6d0e1c54486d74565913712978a6"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--32/Google Map--32_20261101_091451/final_runs/run_009/screenshots/final_execution_6_not_24h_results.png",
+      "sha256": "00da9cb46ea8f01c6868b73a6c46bb93754f0d9b777f9a5be80df60e8be38343"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--32/Google Map--32_20261101_091451/final_runs/run_009/screenshots/final_execution_7_final_filtered_state.png",
+      "sha256": "2d4a744c485f1d8414c554b5b33d147aaea883565551f26d01f8b2c90e2fc19b"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "f0171ab12120a9b96a8ccabbab295966b694878577b4d0fc6a292bf03dcfbbd9",
+  "fingerprint": "66853f8aa46d3fbf50c37809446e0ac3a547a67949e5b9823a35c3c4bf43a51a",
+  "evaluated_at": "2026-11-02T06:58:12.498253+00:00",
+  "status": "success",
+  "predicted_label": 1,
+  "judge_reasoning": "## Evaluation Analysis\n\n**Task Requirements:**\n1. Search for plumbers in Orlando, FL\n2. Filter/identify those available **now** (open now)\n3. Exclude those **open 24 hours** (i.e., find ones that are open now but NOT 24-hour operations)\n\n**Screenshot Evidence:**\n\n1. **Screenshot 1:** Confirms the search \"plumbers in Orlando, FL\" was performed on Google Maps, and the Hours filter dropdown is open, showing the available options: \"Any time,\" \"Open now,\" \"Open 24 hours,\" and \"Open on.\" This confirms the response's claim that Google Maps offers **no direct \"not open 24 hours\" filter** — the agent had to verify this constraint manually from result content.\n\n2. **Screenshot 2:** Shows the \"Open now\" filter successfully applied (checkmark visible next to \"Open now\" in the filter bar), with results displayed.\n\n3. **Screenshot 3:** Confirms the \"Open now\" radio button is selected in the Hours dropdown.\n\n4. **Screenshots 4 & 5:** With the \"Open now\" filter active, **Grace Plumbing** is visible showing \"Open · Closes 12am\" — this directly satisfies both constraints: it is open now, and since it has a closing time (12 am) rather than \"Open 24 hours,\" it is not a 24-hour plumber. Other results like Modern Plumbing Industries, Bryan Plumbing LLC, Reliance Plumbing, and Lapin Services show \"Open 24 hours\" and were correctly not included in the final answer.\n\n**Response Consistency:**\n- The response accurately describes the filter limitation (no \"not open 24 hours\" option), which matches Screenshot 1.\n- Grace Plumbing (Open · Closes 12 am) is confirmed in the screenshots as open now and not 24 hours.\n- RooterMan Orlando Florida (Closes soon) is not visible in the screenshots, but per evaluation guidelines, content in the response not shown in screenshots is believed — \"Closes soon\" indicates open now but not 24 hours.\n\n**Conclusion:** The agent performed the search, applied the \"Open now\" filter, worked around the missing negative filter by inspecting result content, and correctly identified plumbers that are available now but not open 24 hours. Both parts of the compound constraint were addressed.\n\n**Verdict: SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 8155,
+    "completion_tokens": 2028,
+    "total_tokens": 10183,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1530
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-02T06:58:12.955776+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 5,
+  "image_transports": [
+    {
+      "path": "RERUNjsondata1019/Google Map--32/Google Map--32_20261101_091451/final_runs/run_009/screenshots/final_execution_3_hours_filter_options.png",
+      "source_sha256": "1d034ad939906b588532b6809d790f023b0860ff64e0c38480942f9c8ffa3022",
+      "source_bytes": 847257,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 308281,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "d1f51673f9df14c8e1deb7ee6a23cc3e035923866edba4808288fb1c1ffbabfb"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--32/Google Map--32_20261101_091451/final_runs/run_009/screenshots/final_execution_4_open_now_applied.png",
+      "source_sha256": "8712cfc5b6a635c01a83fd199e6962527b7527e18513eec66c5cdd7374770a4d",
+      "source_bytes": 992891,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 326706,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "8c3bb5441bcf99666f3d096664933cb5b9626f46dae65ea1dcd41c18657eb969"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--32/Google Map--32_20261101_091451/final_runs/run_009/screenshots/final_execution_5_open_now_selected.png",
+      "source_sha256": "9db974b07986ea138e6554d154b72f27803d6d0e1c54486d74565913712978a6",
+      "source_bytes": 846976,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1800
+      ],
+      "transmitted_dimensions": [
+        910,
+        1280
+      ],
+      "transmitted_bytes": 308596,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "c449acc4c499eebe57ac318b4824f19845d17737bdd2cdb43b5bbb8598dbb772"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--32/Google Map--32_20261101_091451/final_runs/run_009/screenshots/final_execution_6_not_24h_results.png",
+      "source_sha256": "00da9cb46ea8f01c6868b73a6c46bb93754f0d9b777f9a5be80df60e8be38343",
+      "source_bytes": 570503,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        900
+      ],
+      "transmitted_bytes": 301155,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "8696aefcf8f0af06f717dd015538e60315bf7586c0b6621613129f374988c70f"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--32/Google Map--32_20261101_091451/final_runs/run_009/screenshots/final_execution_7_final_filtered_state.png",
+      "source_sha256": "2d4a744c485f1d8414c554b5b33d147aaea883565551f26d01f8b2c90e2fc19b",
+      "source_bytes": 570620,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        900
+      ],
+      "transmitted_dimensions": [
+        1280,
+        900
+      ],
+      "transmitted_bytes": 301110,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "b69fa99c37ab3f273ebc3e970cb3a80c1030bc40e66572cc8fcbb7a8d33adf98"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 5,
+  "request_json_bytes": 2064517,
+  "response_id": "0698e774-32a7-48d6-828d-837b51a08367",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 2140,
+    "reasoning_content_chars": 6395
+  }
+}

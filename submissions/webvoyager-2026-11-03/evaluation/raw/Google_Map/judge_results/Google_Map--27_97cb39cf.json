@@ -1,0 +1,151 @@
+{
+  "task_id": "Google Map--27",
+  "website": "Google Map",
+  "task": "Locate the Target stores in Atlanta, GA. How many results are shown on the map.",
+  "task_record": "RERUNjsondata1019/Google Map--27/Google Map--27_20261101_081016",
+  "task_definition_sha256": "d27f2a3947d658713cbdd91f701c5bed0158f52f131b976d38c6e4f08c8794cb",
+  "candidate_record_count": 1,
+  "candidate_records": [
+    "RERUNjsondata1019/Google Map--27/Google Map--27_20261101_081016"
+  ],
+  "final_run": "run_001",
+  "answer_input_mode": "answer.txt only",
+  "answer": "7 results are shown on the map for Target stores in Atlanta, GA.",
+  "answer_source": "answer.txt",
+  "screenshots": [
+    {
+      "path": "RERUNjsondata1019/Google Map--27/Google Map--27_20261101_081016/final_runs/run_001/screenshots/final_execution_1_query_entered.png",
+      "sha256": "0986a79cf565f6afdf3f271af21ecec61d4d454821b3fe17acfd0a96fd22cced"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--27/Google Map--27_20261101_081016/final_runs/run_001/screenshots/final_execution_2_results_panel.png",
+      "sha256": "6c12ed24322f4d55f7906de0d404dba4d87bf6ba9d78c25dea3c47aab42c9118"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--27/Google Map--27_20261101_081016/final_runs/run_001/screenshots/final_execution_5_final_state.png",
+      "sha256": "ed3e7ad3052d9e16ccbf9505a0eb34854906674efc12e1c790250086511332c0"
+    }
+  ],
+  "screenshot_order": "run_manifest_sequence",
+  "input_error": null,
+  "answer_file_sha256": "af49cf8c32994dbaab9dd70c0a232f3bbcd131bf5a79f8ef3e106bd1a064244e",
+  "fingerprint": "654a7e5cd3b3f40448e0b23dbc7e6eed213752293dcfc2c601956d9146546e3b",
+  "evaluated_at": "2026-11-02T06:56:09.788510+00:00",
+  "status": "failure",
+  "predicted_label": 0,
+  "judge_reasoning": "# Evaluation Analysis\n\n## Task Requirements\n1. Locate Target stores in Atlanta, GA (perform the search)\n2. Report how many results are shown on the map\n\n## Screenshot Analysis\n\n**Screenshot 1:** Shows \"Target Atlanta, GA\" typed into the Google Maps search bar, but the map still displays Hong Kong/Shenzhen — the search had not yet been executed.\n\n**Screenshots 2 & 3:** Show the executed search results for \"Target Atlanta, GA\":\n- The left panel lists Target locations (375 18th St NW, 1275 Caroline St NE, 3535 Peachtree Rd NE, 2539 Piedmont Rd NE, plus a partially visible 5th entry)\n- Counting the red Target pins visible on the map itself:\n  1. Pin near Peachtree Corners/Norcross (top right)\n  2. Pin near Chamblee\n  3. Pin near Clarkston/Tucker\n  4. Pin in central Atlanta\n  5. Pin near Emory/Decatur area\n  6. Pin near Hapeville (south)\n\n**Total pins visible on the map: 6**\n\n## Comparison with Response\n\nThe Result Response claims: *\"7 results are shown on the map for Target stores in Atlanta, GA.\"*\n\nHowever, the screenshot clearly shows **6** Target pins on the map, not 7. The results list also only shows 5 entries (4 full + 1 partially cut off). Neither count supports the claim of 7.\n\nPer the evaluation guidelines, when the Result Response contradicts the screenshot, the content of the screenshot prevails. The map visibly displays 6 Target markers, so the reported count of 7 is inaccurate.\n\n## Verdict\n\nWhile the search was successfully executed and Target stores in Atlanta were located, the specific numerical answer to the question (\"How many results are shown on the map\") is incorrect — the response states 7 while the map shows 6.\n\n**NOT SUCCESS**",
+  "api_attempts": 1,
+  "response_model": "glm-5.3-flash",
+  "usage": {
+    "prompt_tokens": 5439,
+    "completion_tokens": 4679,
+    "total_tokens": 10118,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4264
+    }
+  },
+  "error": null,
+  "api_attempt_history": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-02T06:56:09.946782+00:00",
+      "outcome": "response"
+    }
+  ],
+  "screenshot_count": 3,
+  "image_transports": [
+    {
+      "path": "RERUNjsondata1019/Google Map--27/Google Map--27_20261101_081016/final_runs/run_001/screenshots/final_execution_1_query_entered.png",
+      "source_sha256": "0986a79cf565f6afdf3f271af21ecec61d4d454821b3fe17acfd0a96fd22cced",
+      "source_bytes": 558542,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_bytes": 261350,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "31fa47fd43a6c59ccc6f5c5719475f2253beba43d45b6efb69ae4940d1ef3078"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--27/Google Map--27_20261101_081016/final_runs/run_001/screenshots/final_execution_2_results_panel.png",
+      "source_sha256": "6c12ed24322f4d55f7906de0d404dba4d87bf6ba9d78c25dea3c47aab42c9118",
+      "source_bytes": 780034,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_bytes": 379793,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "68bc5adcb266be226841224f5669364f66ba26fa5ddaa4abc486c5f5d34106af"
+    },
+    {
+      "path": "RERUNjsondata1019/Google Map--27/Google Map--27_20261101_081016/final_runs/run_001/screenshots/final_execution_5_final_state.png",
+      "source_sha256": "ed3e7ad3052d9e16ccbf9505a0eb34854906674efc12e1c790250086511332c0",
+      "source_bytes": 780022,
+      "transport_policy": {
+        "format": "jpeg",
+        "quality": 85,
+        "subsampling": 0,
+        "resize": true,
+        "crop": false,
+        "alpha_background": "white",
+        "pillow_version": "12.3.0",
+        "max_size": "1280x1280"
+      },
+      "source_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_dimensions": [
+        1280,
+        1000
+      ],
+      "transmitted_bytes": 379808,
+      "transmitted_mime": "image/jpeg",
+      "transmitted_sha256": "22394a8fea9bb9e60bb163ed95b9c44c6475fa399af189d42cb849801aa33408"
+    }
+  ],
+  "request_options": {
+    "image_detail": "default",
+    "thinking": "on"
+  },
+  "attached_image_count": 3,
+  "request_json_bytes": 1364146,
+  "response_id": "05ffd273-c7c3-445f-b95e-2f865e706392",
+  "finish_reason": "stop",
+  "response_diagnostics": {
+    "content_chars": 1673,
+    "reasoning_content_chars": 15828
+  }
+}
