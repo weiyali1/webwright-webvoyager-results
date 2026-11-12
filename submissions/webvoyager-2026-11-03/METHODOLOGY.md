@@ -2,7 +2,8 @@
 
 ## System and Task Collection
 
-- Execution system: webwright（qwen3.8max）.
+- Execution system: Webwright (Qwen3.8-Max).
+- Reporting organization: [XYDT](https://www.xydigit.com/).
 - Base task collection: [browser-control-fable-5](https://github.com/omxyz/webvoyager/tree/main/benchmark/data/browser-control-fable-5) from omxyz/webvoyager.
 - Task preparation: month names were updated in 49 date-sensitive task instructions.
 - Evaluated collection: 615 tasks with the updated task instructions.
@@ -13,14 +14,20 @@ All 615 tasks are included in the final denominator.
 
 The exact task definitions used for execution and evaluation are published in `tasks/`. The agent and external judge used the same updated task instructions. The reported score applies to this date-updated collection of 615 tasks.
 
+Before the executions included in this submission, the previous results under `RERUNjsondata1019` were deleted, leaving the output directory empty. The runner retained the same output-root name. The [task-definition timing supplement](evidence/report_time/) provides the retained comparison records and their correspondence with the submitted execution records.
+
 ## Framework Self-Repair
 
 Webwright performs exploration, script development, execution validation,
-and repair within each submitted task record.
+and repair within each submitted task record. The agent generates the critical
+points and expected answer used by its internal self-reflection judge. Feedback
+from that check can trigger script revisions and additional executions within
+the same task record, until the self-check passes or the task reaches a budget
+or unrecoverable-error condition.
 
-The numbered directories under `final_runs/` record script execution and
-repair iterations within that task workflow. Scripts may be executed again
-after changes prompted by execution results or internal validation feedback.
+The numbered directories under `final_runs/` record these script execution and
+repair iterations within that task workflow. They are internal iterations of one
+benchmark task, not additional benchmark tasks.
 
 The run directories present in the submitted task records are retained for
 inspection. Each unique task contributes one final evaluation result.

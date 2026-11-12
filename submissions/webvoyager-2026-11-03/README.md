@@ -6,8 +6,8 @@ Submission: `webvoyager-2026-11-03`
 
 | Item | Value |
 | --- | --- |
-| System | webwright（qwen3.8max） |
-| Organization | XYDT |
+| System | Webwright (Qwen3.8-Max) |
+| Organization | [XYDT](https://www.xydigit.com/) |
 | Judge model | GLM-5.3-Flash |
 | Evaluation type | Self-reported, system-level post-hoc evaluation |
 | Total tasks | 615 |
@@ -27,14 +27,20 @@ This evaluation is based on the [browser-control-fable-5](https://github.com/omx
 
 The exact task definitions used for execution and evaluation are published in `tasks/`. The agent and external judge used the same updated task instructions. The reported score applies to this date-updated collection of 615 tasks.
 
+Before the executions included in this submission, the previous results under `RERUNjsondata1019` were deleted, leaving the output directory empty. The runner retained the same output-root name, and the submitted archives contain the records generated for this submission. The [task-definition timing supplement](evidence/report_time/) documents the retained comparison records and their correspondence with the submitted execution records.
+
 ## Framework Self-Repair Workflow
 
 Webwright performs exploration, script development, execution validation,
-and repair within each submitted task record.
+and repair within each submitted task record. The agent generates the critical
+points and expected answer used by its internal self-reflection judge. Feedback
+from that check can trigger script revisions and additional executions within
+the same task record, until the self-check passes or the task reaches a budget
+or unrecoverable-error condition.
 
-The numbered directories under `final_runs/` record script execution and
-repair iterations within that task workflow. Scripts may be executed again
-after changes prompted by execution results or internal validation feedback.
+The numbered directories under `final_runs/` record these script execution and
+repair iterations within the task workflow. They are internal iterations of one
+benchmark task, not additional benchmark tasks.
 
 The run directories present in the submitted task records are retained for
 inspection. Each unique task contributes one final evaluation result.
@@ -119,6 +125,7 @@ Further audit details are available in
 - [Archive manifest](artifacts/PACKAGING_MANIFEST.json)
 - [Archive checksums](artifacts/SHA256SUMS.txt)
 - [Execution evidence downloads](https://github.com/weiyali1/webwright-webvoyager-results/releases/tag/webvoyager-2026-11-03)
+- [Task-definition timing supplement](evidence/report_time/)
 
 The 15 ZIP archives contain task records grouped by website.
 
