@@ -26,6 +26,13 @@ The times above are taken from the existing local report, original-file metadata
 
 ## Content correspondence
 
-The current google_flight.json SHA-256 exactly matches the value recorded in the historical report. For Booking.json, removing one additional newline and two spaces reproduces the historical SHA-256; all 40 parsed Booking task objects match. The 49 historical edited task definitions also match the published definitions and saved execution inputs.
+The following checks distinguish byte-for-byte file equality from equality of parsed task objects:
+
+- Of the 15 website task-definition files, 13—including `google_flight.json`—have SHA-256 hashes that exactly match the values recorded in the historical report.
+- For `Booking.json`, removing one additional newline and two spaces from the current file reproduces the historical SHA-256. All 40 parsed Booking task objects match the definitions reconstructed from the retained comparison records and upstream reference.
+- For `Google_Map.json`, removing two additional indentation spaces from the current file reproduces the historical SHA-256. All 40 parsed Google Map task objects likewise match the reconstructed historical definitions.
+- The historical report also records a hash for `manifest.json`. That file is not present in the current task-definition directory, so this entry has not been verified. It is separate from the 15 website task-definition files; all 615 task objects are accounted for and match the reconstructed historical definitions.
+
+For all 49 edited tasks, the historical definitions match the published task definitions, the saved execution instructions, and the first saved user messages.
 
 The original report files have not been changed. These public copies retain their contents except that one absolute local project path in report.md has been replaced with <LOCAL_PROJECT> for privacy.
