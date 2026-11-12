@@ -27,7 +27,7 @@ This evaluation is based on the [browser-control-fable-5](https://github.com/omx
 
 The exact task definitions used for execution and evaluation are published in `tasks/`. The agent and external judge used the same updated task instructions. The reported score applies to this date-updated collection of 615 tasks.
 
-Before the executions included in this submission, the previous results under `RERUNjsondata1019` were deleted, leaving the output directory empty. The runner retained the same output-root name, and the submitted archives contain the records generated for this submission. The [task-definition timing supplement](evidence/report_time/) documents the retained comparison records and their correspondence with the submitted execution records.
+The [task-definition timing supplement](evidence/report_time/) documents the retained comparison records and their correspondence with the submitted execution records.
 
 ## Framework Self-Repair Workflow
 

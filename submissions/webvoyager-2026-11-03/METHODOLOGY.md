@@ -14,7 +14,7 @@ All 615 tasks are included in the final denominator.
 
 The exact task definitions used for execution and evaluation are published in `tasks/`. The agent and external judge used the same updated task instructions. The reported score applies to this date-updated collection of 615 tasks.
 
-Before the executions included in this submission, the previous results under `RERUNjsondata1019` were deleted, leaving the output directory empty. The runner retained the same output-root name. The [task-definition timing supplement](evidence/report_time/) provides the retained comparison records and their correspondence with the submitted execution records.
+The [task-definition timing supplement](evidence/report_time/) provides the retained comparison records and their correspondence with the submitted execution records.
 
 ## Framework Self-Repair
 
